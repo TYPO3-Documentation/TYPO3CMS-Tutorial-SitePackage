@@ -20,10 +20,10 @@ Site Package Tutorial
       forDevelopers, forAdmins
 
 :Copyright:
-      2017
+      2017 TYPO3 Documentation Team
 
 :Author:
-      TYPO3 Documentation Team
+      Michael Schams
 
 :Email:
       documentation@typo3.org
@@ -50,11 +50,9 @@ This document is a Tutorial. Tutorials are designed to be step-by-step instructi
 Summary
 =======
 
-The development of a website can be approached in several ways. Standard websites usually consist of HTML documents, which have texts, images, videos, styles, etc. embedded. The enterprise content management system TYPO3 provides a clean separation between design, content and functionality of a website and allows developers/integrators to add simple as well as sophisticated functions to the system.
+This tutorial describes the steps required to turn a basic design template (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive website powered by TYPO3. By using a so-called _extension_ (which is called the "Site Package" extension), all relevant files are stored at a central point and changes can easily be tracked in a version control system such as Git.
 
-This tutorial describes the steps required to turn a design template (HTML, CSS, JavaScript files, etc.) into a fully working website powered by TYPO3 CMS. The main target audience are web developers and integrators who have not worked with TYPO3 before and developers (even without programming knowledge) who have experience with older versions of TYPO3 already and who would like to learn a new, modern approach to set up a website from scratch.
-
-After working through this tutorial (which usually takes between x and x minutes), ... (you will have ...).
+Despite the fact that TYPO3 supports several methods of implementing websites, this approach is a very flexible and professional way. At the same time, the process is not overly complicated and does not require any programming knowledge.
 
 
 Table of Contents
