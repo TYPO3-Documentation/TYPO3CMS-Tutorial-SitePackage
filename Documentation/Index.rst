@@ -8,7 +8,7 @@ Site Package Tutorial
 =====================
 
 :Version:
-      8.6 LTS
+      8.7 LTS
 
 :Language:
       en
