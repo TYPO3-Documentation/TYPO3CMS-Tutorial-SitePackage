@@ -35,14 +35,6 @@ Site package extension can also be distributed via TER.
 You can still overwrite the _global_ site configuration of the site package by TypoScript Setup and Constants as required.
 
 
-.. _target-audience:
-
-Target Audience
-^^^^^^^^^^^^^^^
-
-[...]
-
-
 .. _prerequisites:
 
 Prerequisites
