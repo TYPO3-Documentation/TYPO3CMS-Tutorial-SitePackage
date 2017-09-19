@@ -36,4 +36,14 @@ Last, but not least, configuration implemented in the site package can be overwr
 Prerequisites
 ^^^^^^^^^^^^^
 
-[...]
+This TYPO3 tutorial assumes that the reader has some basic knowledge in the following areas:
+
+* HTML, CSS and JavaScript
+* Git (version control system, client-side)
+* SSH/FTP (copy files and directories to and from the server)
+
+It is also beneficial (but not mandatory), if the reader has worked with TYPO3 before, knows what the *frontend*, *backend* and *Extension Manager* is and how to access the *Install Tool*.
+
+Missing knowledge can be acquired by working throught the detailed TYPO3 documentation available, for example the :ref:`Getting Started Tutorial <t3start>`.
+
+A TYPO3 backend user with administrator privileges are also required.
