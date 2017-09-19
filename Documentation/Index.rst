@@ -63,8 +63,8 @@ Table of Contents
    :titlesonly:
    :glob:
 
-   Introduction/Index
    Preface/Index
+   Introduction/Index
    FirstTimeBackend/Index
    SitePackageExtension/Index
    AddTemplateFiles/Index

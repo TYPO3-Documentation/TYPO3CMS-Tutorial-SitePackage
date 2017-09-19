@@ -4,46 +4,41 @@
 .. _preface:
 
 Preface
-------------
+-------
 
 
-.. _site-package-benefits:
+.. _about-this-document:
 
-Site Package Benefits
-^^^^^^^^^^^^^^^^^^^^^
+About this Document
+^^^^^^^^^^^^^^^^^^^
 
-The development of a website can be approached in several ways. Standard websites usually consist of HTML documents, which contain texts and have image files, video files, styles, etc. referenced. The enterprise content management system TYPO3 features a clean separation between design, content and functionality of a website and allows developers/integrators to add simple as well as sophisticated functions to the system easily.
-
-Using extensions are a powerful way to get the most out of TYPO3. Extensions can be installed, deinstalled, replaced, etc. and extend the core system with functions and features not shipped with the core system. An extension typically consists of PHP files, but can also (or only) contain design templates (HTML, CSS, JavaScript files, etc.) and global configuration. The visual appearance of a website does not require any PHP code and therefore the site package extension described in this tutorial consists of design template and some basic site configuration files only. This means, the reader does not require any programming knowledge as such.
-
-By building the site package as an extension, all relevant files are stored at a central point and changes can easily be tracked in a version control system such as Git. Despite the fact that TYPO3 supports several methods of implementing websites, this approach is a very flexible and professional way. At the same time the process is not overly complicated.
-
-Another important benefit or a TYPO3 extension is the fact that dependencies to other extensions and/or the TYPO3 version can be defined. This makes deployments easier and more fail-safe. This feature is called "Dependency Management". Most TYPO3 sites require a number of extensions. This could be "News" or "..." for example. By building a site package extension, which could contain global configuration for these add-ons, the dependencies can be defined easily. When the site package extension is installed in an empty TYPO3 instance, all dependent extensions are downloaded from the TER and installed automatically.
-
-Without using an extension, template files are often stored in the ``fileadmin/`` directory of a TYPO3 instance. As a matter of fact, files in this directory are indexed by TYPO3's File Abstraction Layer (FAL). This results in irrelevant and avoidable records in the database. From a logical perspective, the ``fileadmin/`` area is the "userspace". This area is meant to belong to editors. Even if access permissions restrict editors from accessing or manipulating files in ``fileadmin/``, site configuration components should not be stored in the userspace by all means.
-
-Files in ``fileadmin/`` are typically meant to be publicly accessible per convention. To avoid a so-called information disclosure vulnerability (see the :ref:`TYPO3 Security Guide <t3security>` for further details), configuration files should not be exposed to the public.
-
-Modern versions of TYPO3 CMS follow the *convention over configuration* paradigm. As a consequence, if files and directories of the site package extension use a specific naming convention, they are loaded automatically as soon as the extension is installed/activated in the system. This leads to another important advantage of the site package extension. The extension can be deployed easily by using the Extension Manager and/or the PHP composer method. This also enables system administrators to automate the deployment for example.
-
-In virtue of the motto "TYPO3 inspires people to share!", the site package extension can also be distributed via `TYPO3 Extension Repository <https://extensions.typo3.org>`_.
-
-Last, but not least, configuration implemented in the site package can be overwritten in the TypoScript setup and constants as required.
+[...]
 
 
-.. _prerequisites:
+.. _target-audience:
 
-Prerequisites
-^^^^^^^^^^^^^
+Target Audience
+^^^^^^^^^^^^^^^
 
-This TYPO3 tutorial assumes that the reader has some basic knowledge in the following areas:
+[...]
 
-* HTML, CSS and JavaScript
-* Git (version control system, client-side)
-* SSH/FTP (copy files and directories to and from the server)
 
-It is also beneficial (but not mandatory), if the reader has worked with TYPO3 before, knows what the *frontend*, *backend* and *Extension Manager* is and how to access the *Install Tool*.
+.. _credits:
 
-Missing knowledge can be acquired by working throught the detailed TYPO3 documentation available, for example the :ref:`Getting Started Tutorial <t3start>`.
+Credits
+^^^^^^^
 
-A TYPO3 backend user with administrator privileges are also required.
+Inspired by some initial discussions with some core members of the TYPO3 community in mid 2016, this tutorial was written by Michael Schams and published by the TYPO3 Documentation Team in September 2017.
+
+
+.. _feedback:
+
+Feedback
+^^^^^^^^
+
+For general questions about the documentation get in touch by writing to `documentation@typo3.org <mailto:documentation@typo3.org>`_.
+
+If you find any issues in this document (small typos or major mistakes), please check the online version on https://docs.typo3.org/typo3cms/SitePackageTutorial/. Follow the "Edit me on GitHub" button at the top right corner and submit a pull request via GitHub. Alternatively you can just report issues using the bug tracker: https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage/issues.
+
+Maintaining high quality documentation requires time and effort and the TYPO3 Documentation Team always appreciates
+support. If you want to support us, please consider joining the Documentation Team.
