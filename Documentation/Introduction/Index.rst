@@ -22,7 +22,7 @@ Another important benefit or a TYPO3 extension is the fact that dependencies to 
 
 Without using an extension, template files are often stored in the ``fileadmin/`` directory of a TYPO3 instance. As a matter of fact, files in this directory are indexed by TYPO3's File Abstraction Layer (FAL). This results in irrelevant and avoidable records in the database. From a logical perspective, the ``fileadmin/`` area is the "userspace". This area is meant to belong to editors. Even if access permissions restrict editors from accessing or manipulating files in ``fileadmin/``, site configuration components should not be stored in the userspace by all means.
 
-Files in ``fileadmin/`` are typically meant to be publicly accessible per convention. To avoid a so-called information disclosure vulnerability (see the :ref:`TYPO3 Security Guide <t3security>` for further details), configuration files should not be exposed to the public.
+Files in ``fileadmin/`` are typically meant to be publicly accessible per convention. To avoid a so-called information disclosure vulnerability (see the :ref:`TYPO3 Security Guide <t3security:start>` for further details), configuration files should not be exposed to the public.
 
 Modern versions of TYPO3 CMS follow the *convention over configuration* paradigm. As a consequence, if files and directories of the site package extension use a specific naming convention, they are loaded automatically as soon as the extension is installed/activated in the system. This leads to another important advantage of the site package extension. The extension can be deployed easily by using the Extension Manager and/or the PHP composer method. This also enables system administrators to automate the deployment for example.
 
@@ -44,6 +44,6 @@ This TYPO3 tutorial assumes that the reader has some basic knowledge in the foll
 
 It is also beneficial (but not mandatory), if the reader has worked with TYPO3 before, knows what the *frontend*, *backend* and *Extension Manager* is and how to access the *Install Tool*.
 
-Missing knowledge can be acquired by working throught the detailed TYPO3 documentation available, for example the :ref:`Getting Started Tutorial <t3start>`.
+Missing knowledge can be acquired by working throught the detailed TYPO3 documentation available, for example the :ref:`Getting Started Tutorial <t3start:start>`.
 
 A TYPO3 backend user with administrator privileges are also required.
