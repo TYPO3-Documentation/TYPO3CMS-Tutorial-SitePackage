@@ -50,7 +50,7 @@ This document is a Tutorial. Tutorials are designed to be step-by-step instructi
 Summary
 =======
 
-This tutorial describes the steps required to turn a basic design template (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive website powered by TYPO3. By using a so-called _extension_ (which is called the "Site Package" extension), all relevant files are stored at a central point and changes can easily be tracked in a version control system such as Git.
+This tutorial describes the steps required to turn a basic design template (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive website powered by TYPO3. By using a so-called *extension* (which is called the "Site Package" extension), all relevant files are stored at a central point and changes can easily be tracked in a version control system such as Git.
 
 Despite the fact that TYPO3 supports several methods of implementing websites, this approach is a very flexible and professional way. At the same time, the process is not overly complicated and does not require any programming knowledge.
 
@@ -65,8 +65,8 @@ Table of Contents
 
    Preface/Index
    Introduction/Index
-   FirstTimeBackend/Index
-   SitePackageExtension/Index
+   DesignTemplate/Index
+   DirectoryStructure/Index
    AddTemplateFiles/Index
    AdjustTemplatesFiles/Index
    InitialSiteConfiguration/Index
