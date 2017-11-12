@@ -1,10 +1,10 @@
 .. include:: ../Includes.txt
 
 
-.. fluid:
+.. fluid-templates:
 
-Fluid
------
+Fluid Templates
+---------------
 
 Before we describe how the static files discussed in the previous section :ref:`design-template` can be converted into Fluid templates, we should understand what *Fluid* is and what the main ideas behind this powerful rendering engine are. It is important to point out that the following section is just a quick introduction. More comprehensive documentation of Fluid can be found on the `TYPO3 website <https://typo3.org/typo3-cms/additional-products/fluid/>`_ and the `project repository at GitHub <https://github.com/TYPO3Fluid/Fluid>`_ for example.
 

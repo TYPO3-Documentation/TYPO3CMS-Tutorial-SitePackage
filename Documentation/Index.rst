@@ -66,7 +66,7 @@ Table of Contents
    Preface/Index
    Introduction/Index
    DesignTemplate/Index
-   DirectoryStructure/Index
+   FluidTemplates/Index
    AddTemplateFiles/Index
    AdjustTemplatesFiles/Index
    InitialSiteConfiguration/Index
