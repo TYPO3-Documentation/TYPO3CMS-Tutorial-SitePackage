@@ -67,12 +67,9 @@ Table of Contents
    Introduction/Index
    DesignTemplate/Index
    FluidTemplates/Index
-   AddTemplateFiles/Index
-   AdjustTemplatesFiles/Index
-   InitialSiteConfiguration/Index
-   InstallSitePackageExtension/Index
-   CreatePage/Index
+   TypoScriptConfiguration/Index
+   ExtensionInstallation/Index
+   PageCreation/Index
    ContentMapping/Index
-   LogoAndNavigation/Index
-   CustomContentElement/Index
+   MainNavigation/Index
    Targets
