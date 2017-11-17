@@ -73,92 +73,110 @@ File ``setup.typoscript`` is a little it more complex, so we explain it section 
     page {
       typeNum = 0
 
-      10 = FLUIDTEMPLATE
-      10 {
-        // Fluid template section
-      }
-
-      includeCSS {
-        // CSS file inclusion
-      }
-
-      includeJSFooter {
-        // JavaScript file inclusion
-      }
+      // Task 1: add Fluid template section
+      // Task 2: add CSS file inclusion
+      // Task 3: add JavaScript file inclusion
     }
 
     config {
-      // global site configuration
+      // Task 4: add global site configuration
     }
 
 
-The first two lines (``<INCLUDE_TYPOSCRIPT ...>``) include other TypoScript files. One from the "Fluid Styled Content" extension (which is part of the TYPO3 core) and the other from the "Site Package" extension.
+The first two lines (``<INCLUDE_TYPOSCRIPT ...>``) include other TypoScript files. One from the "Fluid Styled Content" extension (which is part of the TYPO3 core) and the other from the "Site Package" extension. The ``page`` section defines the so-called PAGE object and the ``config`` section the global site configuration. We will replace the four "Tasks" (which are shown as comments in the example above) in the following steps.
 
 
-Fluid Template Section
-~~~~~~~~~~~~~~~~~~~~~~
+Task 1: Fluid Template Section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, extend ``// Task 1: add Fluid template section`` by adding the following lines.
 
 ::
 
-      10 = FLUIDTEMPLATE
-      10 {
-        templateName = TEXT
-        templateName.stdWrap.cObject = CASE
-        templateName.stdWrap.cObject {
-          key.data = pagelayout
+    // Task 1: Fluid template section
+    10 = FLUIDTEMPLATE
+    10 {
+      templateName = TEXT
+      templateName.stdWrap.cObject = CASE
+      templateName.stdWrap.cObject {
+        key.data = pagelayout
 
-          pagets__test_default = TEXT
-          pagets__test_default.value = Default
+        pagets__test_default = TEXT
+        pagets__test_default.value = Default
 
-          default = TEXT
-          default.value = Default
-        }
-        templateRootPaths {
-          0 = EXT:site_package/Resources/Private/Templates/
-          1 = {$page.fluidtemplate.templateRootPath}
-        }
-        partialRootPaths {
-          0 = EXT:site_package/Resources/Private/Partials/
-          1 = {$page.fluidtemplate.partialRootPath}
-        }
-        layoutRootPaths {
-          0 = EXT:site_package/Resources/Private/Layouts/
-          1 = {$page.fluidtemplate.layoutRootPath}
-        }
-        dataProcessing {
-          10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-          10 {
-            levels = 2
-            includeSpacer = 1
-            as = mainnavigation
-          }
+        default = TEXT
+        default.value = Default
+      }
+      templateRootPaths {
+        0 = EXT:site_package/Resources/Private/Templates/
+        1 = {$page.fluidtemplate.templateRootPath}
+      }
+      partialRootPaths {
+        0 = EXT:site_package/Resources/Private/Partials/
+        1 = {$page.fluidtemplate.partialRootPath}
+      }
+      layoutRootPaths {
+        0 = EXT:site_package/Resources/Private/Layouts/
+        1 = {$page.fluidtemplate.layoutRootPath}
+      }
+      dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 {
+          levels = 2
+          includeSpacer = 1
+          as = mainnavigation
         }
       }
+    }
+
+We do not want to go into too much detail, but what this configuration basically does is, it uses Fluid (the template rendering engine) the generate the page layout and some output. Template files are stored in the aforementioned folders ``Templates``, ``Partials`` and ``Layouts`` (if not overwritten by constants). The TypoScript configuration also defines a special data processing logic that will generate the menu (as ``mainnavigation``).
 
 
-CSS and JavaScript File Inclusion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 2 and 3: CSS and JavaScript File Inclusion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We have combined task 2 and 3, because the inclusion of CSS and JavaScript files in TypoScript are pretty straight forward. Extend ``Task 2: add CSS file inclusion`` and ``// Task 3: add JavaScript file inclusion`` by adding the following lines.
 
 ::
 
+    // Task 2: CSS file inclusion
     includeCSS {
       website = EXT:site_package/Resources/Public/Css/website.css
     }
 
+    // Task 3: JavaScript file inclusion
     includeJSFooter {
-      jquery = ...
+      jquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
       jquery.external = 1
-      bootstrap = ...
+      popper = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js
+      popper.external = 1
+      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
       bootstrap.external = 1
       website = EXT:site_package/Resources/Public/JavaScript/website.js
     }
 
+.. https://code.jquery.com/jquery-3.2.1.slim.min.js
+.. integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+..
+.. https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js
+.. integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+..
+.. https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
+.. integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 
-Global Site Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Section ``includeCSS { ... }`` simply instructs TYPO3 to include file ``website.css`` from the site package extension. We copied this file into the appropriate folder before.
+
+Section ``includeJSFooter { ... }`` includes four JavaScript files in total. The first three are externally hosted files (jQuery, Popper and Bootstrap). Therefore, ``.external = 1`` forces TYPO3, not to check for their local existence. The fourth JavaScript file is the file we added before to the site package extension itself.
+
+
+Task 4: Global Site Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Finally, extend ``// Task 4: add global site configuration`` by adding the following lines.
 
 ::
 
+    // Task 4: global site configuration
     config {
       absRefPrefix = auto
       no_cache = {$config.no_cache}
@@ -193,4 +211,4 @@ Global Site Configuration
       concatenateCss = 0
     }
 
-*((TODO ... ))*
+Again, it does not make sense to explain each line.
