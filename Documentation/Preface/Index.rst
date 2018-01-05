@@ -28,7 +28,7 @@ Target Audience
 Credits
 ^^^^^^^
 
-Inspired by some initial discussions with some core members of the TYPO3 community in mid 2016, this tutorial was written by Michael Schams and published by the TYPO3 Documentation Team in September 2017.
+Inspired by some initial discussions with some core members of the TYPO3 community in mid 2016, this tutorial was written by Michael Schams and published by the TYPO3 Documentation Team in 2018.
 
 
 .. _feedback:

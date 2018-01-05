@@ -20,7 +20,7 @@ Site Package Tutorial
       forDevelopers, forAdmins
 
 :Copyright:
-      2017 TYPO3 Documentation Team
+      2018 TYPO3 Documentation Team
 
 :Author:
       Michael Schams
