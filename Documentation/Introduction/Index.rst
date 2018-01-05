@@ -63,6 +63,6 @@ This TYPO3 tutorial assumes that the reader has some basic knowledge in the foll
 * Git (version control system, client-side)
 * SSH/FTP (copy files and directories to and from the server)
 
-It is also beneficial (but not mandatory), if the reader has worked with TYPO3 before, knows what the *frontend*, *backend* and *Extension Manager* is and how to access the *Install Tool*. Missing knowledge can be acquired by working throught the detailed TYPO3 documentation available, for example the :ref:`Getting Started Tutorial <t3start:start>`.
+It is also recommended that the reader has worked with TYPO3 before, knows what the *frontend*, *backend* and *Extension Manager* is and how to access the *Install Tool*. Missing knowledge can be acquired by working through the TYPO3 documentation, for example the :ref:`Getting Started Tutorial <t3start:start>`.
 
 Due to the fact that the site package discussed in the next chapters implements a new, fresh, clean website skin from scratch, an empty TYPO3 instance is a prerequisite, too. This means, we assume we have a TYPO3 site without any pages, any design templates, any configuration, etc. However, a valid TYPO3 backend user with administrator privileges is required and SSH/FTP access to the server is recommended.
