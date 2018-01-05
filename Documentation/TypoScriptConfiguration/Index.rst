@@ -46,9 +46,9 @@ Add the following lines to file ``constants.typoscript``.
 
     page {
       fluidtemplate {
-        layoutRootPath = EXT:site_package/Resources/Private/Layouts/
-        partialRootPath = EXT:site_package/Resources/Private/Partials/
-        templateRootPath = EXT:site_package/Resources/Private/Templates/
+        layoutRootPath = EXT:site_package/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:site_package/Resources/Private/Partials/Page/
+        templateRootPath = EXT:site_package/Resources/Private/Templates/Page/
       }
     }
 
@@ -108,15 +108,15 @@ First, extend ``// Task 1: add Fluid template section`` by adding the following 
         default.value = Default
       }
       templateRootPaths {
-        0 = EXT:site_package/Resources/Private/Templates/
+        0 = EXT:site_package/Resources/Private/Templates/Pages/
         1 = {$page.fluidtemplate.templateRootPath}
       }
       partialRootPaths {
-        0 = EXT:site_package/Resources/Private/Partials/
+        0 = EXT:site_package/Resources/Private/Partials/Pages/
         1 = {$page.fluidtemplate.partialRootPath}
       }
       layoutRootPaths {
-        0 = EXT:site_package/Resources/Private/Layouts/
+        0 = EXT:site_package/Resources/Private/Layouts/Pages/
         1 = {$page.fluidtemplate.layoutRootPath}
       }
       dataProcessing {
