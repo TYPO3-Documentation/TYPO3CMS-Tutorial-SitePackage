@@ -52,6 +52,7 @@ Add the following lines to file ``constants.typoscript``.
       }
     }
 
+
 *((TODO ... ))*
 
 
@@ -73,27 +74,27 @@ File ``setup.typoscript`` is a little it more complex, so we explain it section 
     page {
       typeNum = 0
 
-      // Task 1: add Fluid template section
-      // Task 2: add CSS file inclusion
-      // Task 3: add JavaScript file inclusion
+      // Part 1: add Fluid template section
+      // Part 2: add CSS file inclusion
+      // Part 3: add JavaScript file inclusion
     }
 
     config {
-      // Task 4: add global site configuration
+      // Part 4: add global site configuration
     }
 
 
-The first two lines (``<INCLUDE_TYPOSCRIPT ...>``) include other TypoScript files. One from the "Fluid Styled Content" extension (which is part of the TYPO3 core) and the other from the "Site Package" extension. The ``page`` section defines the so-called PAGE object and the ``config`` section the global site configuration. We will replace the four "Tasks" (which are shown as comments in the example above) in the following steps.
+The first two lines (``<INCLUDE_TYPOSCRIPT ...>``) include other TypoScript files. One from the "Fluid Styled Content" extension (which is part of the TYPO3 core) and the other from the "Site Package" extension. The ``page`` section defines the so-called PAGE object and the ``config`` section the global site configuration. We will replace the four "Parts" (which are shown as comments in the example above) in the following steps.
 
 
-Task 1: Fluid Template Section
+Part 1: Fluid Template Section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, extend ``// Task 1: add Fluid template section`` by adding the following lines.
+First, extend ``// Part 1: add Fluid template section`` by adding the following lines.
 
 ::
 
-    // Task 1: Fluid template section
+    // Part 1: Fluid template section
     10 = FLUIDTEMPLATE
     10 {
       templateName = TEXT
@@ -101,22 +102,22 @@ First, extend ``// Task 1: add Fluid template section`` by adding the following 
       templateName.stdWrap.cObject {
         key.data = pagelayout
 
-        pagets__test_default = TEXT
-        pagets__test_default.value = Default
+        pagets__site_package_default = TEXT
+        pagets__site_package_default.value = Default
 
         default = TEXT
         default.value = Default
       }
       templateRootPaths {
-        0 = EXT:site_package/Resources/Private/Templates/Pages/
+        0 = EXT:site_package/Resources/Private/Templates/Page/
         1 = {$page.fluidtemplate.templateRootPath}
       }
       partialRootPaths {
-        0 = EXT:site_package/Resources/Private/Partials/Pages/
+        0 = EXT:site_package/Resources/Private/Partials/Page/
         1 = {$page.fluidtemplate.partialRootPath}
       }
       layoutRootPaths {
-        0 = EXT:site_package/Resources/Private/Layouts/Pages/
+        0 = EXT:site_package/Resources/Private/Layouts/Page/
         1 = {$page.fluidtemplate.layoutRootPath}
       }
       dataProcessing {
@@ -132,19 +133,21 @@ First, extend ``// Task 1: add Fluid template section`` by adding the following 
 We do not want to go into too much detail, but what this configuration basically does is, it uses Fluid (the template rendering engine) the generate the page layout and some output. Template files are stored in the aforementioned folders ``Templates``, ``Partials`` and ``Layouts`` (if not overwritten by constants). The TypoScript configuration also defines a special data processing logic that will generate the menu (as ``mainnavigation``).
 
 
-Task 2 and 3: CSS and JavaScript File Inclusion
+Part 2 and 3: CSS and JavaScript File Inclusion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We have combined task 2 and 3, because the inclusion of CSS and JavaScript files in TypoScript are pretty straight forward. Extend ``Task 2: add CSS file inclusion`` and ``// Task 3: add JavaScript file inclusion`` by adding the following lines.
+We have combined part 2 and 3, because the inclusion of CSS and JavaScript files in TypoScript is pretty straight forward. Extend ``Part 2: add CSS file inclusion`` and ``// Part 3: add JavaScript file inclusion`` by adding the following lines.
 
 ::
 
-    // Task 2: CSS file inclusion
+    // Part 2: CSS file inclusion
     includeCSS {
+      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css
+      bootstrap.external = 1
       website = EXT:site_package/Resources/Public/Css/website.css
     }
 
-    // Task 3: JavaScript file inclusion
+    // Part 3: JavaScript file inclusion
     includeJSFooter {
       jquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
       jquery.external = 1
@@ -169,42 +172,40 @@ Section ``includeCSS { ... }`` simply instructs TYPO3 to include file ``website.
 Section ``includeJSFooter { ... }`` includes four JavaScript files in total. The first three are externally hosted files (jQuery, Popper and Bootstrap). Therefore, ``.external = 1`` forces TYPO3, not to check for their local existence. The fourth JavaScript file is the file we added before to the site package extension itself.
 
 
-Task 4: Global Site Configuration
+Part 4: Global Site Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, extend ``// Task 4: add global site configuration`` by adding the following lines.
+Finally, extend ``// Part 4: add global site configuration`` by adding the following lines.
 
 ::
 
-    // Task 4: global site configuration
+    // Part 4: global site configuration
     config {
       absRefPrefix = auto
-      no_cache = {$config.no_cache}
+      no_cache = 0
       uniqueLinkVars = 1
       pageTitleFirst = 1
       linkVars = L
-      prefixLocalAnchors = {$config.prefixLocalAnchors}
+      prefixLocalAnchors = all
       renderCharset = utf-8
       metaCharset = utf-8
       doctype = html5
-      removeDefaultJS = {$config.removeDefaultJS}
+      removeDefaultJS = 0
       inlineStyle2TempFile = 1
-      admPanel = {$config.admPanel}
       debug = 0
       cache_period = 86400
-      sendCacheHeaders = {$config.sendCacheHeaders}
+      sendCacheHeaders = 1
       intTarget =
       extTarget =
       disablePrefixComment = 1
       index_enable = 1
       index_externals = 1
       index_metatags = 1
-      headerComment = {$config.headerComment}
 
-      // Disable Image Upscaling
+      // Disable image upscaling
       noScaleUp = 1
 
-      // Compression and Concatenation of CSS and JS Files
+      // Compression and concatenation of CSS and JS Files
       compressJs = 0
       compressCss = 0
       concatenateJs = 0

@@ -88,6 +88,7 @@ At this point in time, we can review the final directory and file structure of t
     site_package/Resources/Public
     site_package/Resources/Public/Css
     site_package/Resources/Public/Css/website.js
-    site_package/Resources/Public/Images
+    site_package/Resources/Public/Images/
+    site_package/Resources/Public/Images/logo.png
     site_package/Resources/Public/JavaScript
     site_package/Resources/Public/JavaScript/website.js
