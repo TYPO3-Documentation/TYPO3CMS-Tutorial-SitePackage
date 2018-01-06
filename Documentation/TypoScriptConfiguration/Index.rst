@@ -68,19 +68,32 @@ File ``setup.typoscript`` is a little it more complex, so we explain it section 
 ::
 
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:site_package/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:site_package/Configuration/TypoScript/Helper/content.typoscript">
 
     page = PAGE
     page {
       typeNum = 0
 
-      // Part 1: add Fluid template section
-      // Part 2: add CSS file inclusion
-      // Part 3: add JavaScript file inclusion
+      // Part 1: Fluid template section
+      10 = FLUIDTEMPLATE
+      10 {
+        ...
+      }
+
+      // Part 2: CSS file inclusion
+      includeCSS {
+        ...
+      }
+
+      // Part 3: JavaScript file inclusion
+      includeJSFooter {
+        ...
+      }
     }
 
+    // Part 4: global site configuration
     config {
-      // Part 4: add global site configuration
+      ...
     }
 
 
@@ -90,7 +103,7 @@ The first two lines (``<INCLUDE_TYPOSCRIPT ...>``) include other TypoScript file
 Part 1: Fluid Template Section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, extend ``// Part 1: add Fluid template section`` by adding the following lines.
+First, extend ``// Part 1: Fluid template section`` by the following lines.
 
 ::
 
@@ -136,7 +149,7 @@ We do not want to go into too much detail, but what this configuration basically
 Part 2 and 3: CSS and JavaScript File Inclusion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We have combined part 2 and 3, because the inclusion of CSS and JavaScript files in TypoScript is pretty straight forward. Extend ``Part 2: add CSS file inclusion`` and ``// Part 3: add JavaScript file inclusion`` by adding the following lines.
+We have combined part 2 and 3, because the inclusion of CSS and JavaScript files in TypoScript is pretty straight forward. Extend ``Part 2: add CSS file inclusion`` and ``// Part 3: JavaScript file inclusion`` by the following lines.
 
 ::
 
@@ -175,7 +188,7 @@ Section ``includeJSFooter { ... }`` includes four JavaScript files in total. The
 Part 4: Global Site Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, extend ``// Part 4: add global site configuration`` by adding the following lines.
+Finally, extend ``// Part 4: global site configuration`` by adding the following lines.
 
 ::
 
@@ -212,4 +225,4 @@ Finally, extend ``// Part 4: add global site configuration`` by adding the follo
       concatenateCss = 0
     }
 
-Again, it does not make sense to explain each line.
+Explaining each line of the code above would go beyond the scope of this tutorial. A detailed documentation of all configuration options can be found in the :ref:`TypoScript Reference <t3tsref:config>`.
