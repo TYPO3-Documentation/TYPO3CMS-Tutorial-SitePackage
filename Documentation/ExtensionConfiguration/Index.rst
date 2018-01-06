@@ -58,6 +58,38 @@ Not as important as the extension declaration file above, every extension can fe
 It should be noted, that newer versions of TYPO3 support alternative formats and file locations. However, for the sake of simplicity, we stick to the specification outlined above for the time being.
 
 
+.. make-typoscript-available:
+
+Make TypoScript Available
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+File ``Configuration/TCA/Override/sys_template.php`` ...
+
+::
+
+    <?php
+    defined('TYPO3_MODE') || die();
+
+    call_user_func(function()
+    {
+      /**
+       * Extension key
+       */
+      $extensionKey = 'site_package';
+
+      /**
+       * Default TypoScript
+       */
+      \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/TypoScript',
+        'Site Package'
+      );
+    });
+
+.. @TODO: convert this into a proper "Info box"
+
+
 .. directory-structure:
 
 Directory and File Structure
@@ -69,6 +101,9 @@ Let's review the directory and file structure of the site package extension as i
 
     site_package/
     site_package/Configuration
+    site_package/Configuration/TCA
+    site_package/Configuration/TCA/Override
+    site_package/Configuration/TCA/Override/sys_template.php
     site_package/Configuration/TypoScript
     site_package/Configuration/TypoScript/constants.typoscript
     site_package/Configuration/TypoScript/setup.typoscript
