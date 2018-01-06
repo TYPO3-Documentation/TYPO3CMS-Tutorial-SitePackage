@@ -68,7 +68,7 @@ Table of Contents
    DesignTemplate/Index
    FluidTemplates/Index
    TypoScriptConfiguration/Index
-   ExtensionControlFiles/Index
+   ExtensionConfiguration/Index
    ExtensionInstallation/Index
    PageCreation/Index
    ContentMapping/Index
