@@ -33,10 +33,8 @@ As shown above, these two files are ``constants.typoscript`` and ``setup.typoscr
 
 .. file-constants-typoscript:
 
-File ``constants.typoscript``
-"""""""""""""""""""""""""""""
-
-.. TODO: describe main purpose of the file.
+TypoScript Constants
+""""""""""""""""""""
 
 Add the following lines to file ``constants.typoscript``.
 
@@ -52,16 +50,15 @@ Add the following lines to file ``constants.typoscript``.
       }
     }
 
-
-*((TODO ... ))*
+.. @TODO: describe main purpose of the file.
 
 
 .. file-setup-typoscript:
 
-File ``setup.typoscript``
-"""""""""""""""""""""""""
+TypoScript Setup
+""""""""""""""""
 
-.. TODO: describe main purpose of the file.
+.. @TODO: describe main purpose of the file.
 
 File ``setup.typoscript`` is a little it more complex, so we explain it section by section. First, add the following lines to that file.
 
@@ -96,7 +93,7 @@ File ``setup.typoscript`` is a little it more complex, so we explain it section 
     }
 
 
-The first two lines (``<INCLUDE_TYPOSCRIPT ...>``) include other TypoScript files. One from the "Fluid Styled Content" extension (which is part of the TYPO3 core) and the other from the "Site Package" extension. The ``page`` section defines the so-called PAGE object and the ``config`` section the global site configuration. We will replace the four "Parts" (which are shown as comments in the example above) in the following steps.
+The first line (``<INCLUDE_TYPOSCRIPT ...>``) includes the default constants from the "Fluid Styled Content" extension (which is part of the TYPO3 core). The ``page`` section defines the so-called PAGE object and the ``config`` section the global site configuration. We will replace the four "Parts" (which are shown as comments in the example above) in the following steps.
 
 
 Part 1: Fluid Template Section
@@ -142,7 +139,7 @@ First, extend ``// Part 1: Fluid template section`` by the following lines.
       }
     }
 
-We do not want to go into too much detail, but what this configuration basically does is, it uses Fluid (the template rendering engine) the generate the page layout and some output. Template files are stored in the aforementioned folders ``Templates``, ``Partials`` and ``Layouts`` (if not overwritten by constants). The TypoScript configuration also defines a special data processing logic that will generate the menu (as ``mainnavigation``).
+We do not want to go into too much detail, but what this configuration basically does is, it uses Fluid (the template rendering engine) to generate the page layout and some output. Template files are stored in the aforementioned folders ``Templates/Page/``, ``Partials/Page/`` and ``Layouts/Page/`` (if not overwritten by constants). The TypoScript configuration also defines a special data processing logic that will generate the menu (as variable ``mainnavigation``).
 
 
 Part 2 and 3: CSS and JavaScript File Inclusion
