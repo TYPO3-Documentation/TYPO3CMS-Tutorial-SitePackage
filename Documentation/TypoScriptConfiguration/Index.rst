@@ -68,7 +68,6 @@ File ``setup.typoscript`` is a little it more complex, so we explain it section 
 ::
 
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:site_package/Configuration/TypoScript/Helper/content.typoscript">
 
     page = PAGE
     page {
@@ -136,7 +135,7 @@ First, extend ``// Part 1: Fluid template section`` by the following lines.
       dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         10 {
-          levels = 2
+          levels = 1
           includeSpacer = 1
           as = mainnavigation
         }
