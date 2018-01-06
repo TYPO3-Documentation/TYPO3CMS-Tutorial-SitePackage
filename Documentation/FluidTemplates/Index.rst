@@ -182,7 +182,7 @@ Now, remove the lines from file ``Resources/Private/Template/Page/Default.html``
 
 ::
 
-    <f:render partial="Page/Jumbotron" />
+    <f:render partial="Jumbotron" />
 
 Congratulations -- you just applied your first ViewHelper! HTML tags starting with ``<f:...>`` are typically core ViewHelpers in Fluid. The tag ``<f:render>`` is the so-called Render-ViewHelper, which (as the name suggests) renders the content of a section or partial. In our case it is the latter, because of the ``partial="..."`` argument. Note: do not append ``.html`` here. HTML is the default format and as a convention, the ViewHelper automatically knows the file name and its location: ``Partials/Page/Jumbotron.html``.
 
