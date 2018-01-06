@@ -1,9 +1,9 @@
 .. include:: ../Includes.txt
 
 
-.. extension-control-files:
+.. extension-configuration:
 
-Extension Control Files
+Extension Configuration
 -----------------------
 
 .. extension-manager-configuration:
@@ -58,12 +58,12 @@ Not as important as the extension declaration file above, every extension can fe
 It should be noted, that newer versions of TYPO3 support alternative formats and file locations. However, for the sake of simplicity, we stick to the specification outlined above for the time being.
 
 
-.. final-directory-structure:
+.. directory-structure:
 
-Final Directory and File Structure
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Directory and File Structure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At this point in time, we can review the final directory and file structure of the site package extension.
+Let's review the directory and file structure of the site package extension as it stands now.
 
 ::
 
