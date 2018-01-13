@@ -129,14 +129,6 @@ First, extend ``// Part 1: Fluid template section`` by the following lines.
         0 = EXT:site_package/Resources/Private/Layouts/Page/
         1 = {$page.fluidtemplate.layoutRootPath}
       }
-      dataProcessing {
-        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-        10 {
-          levels = 1
-          includeSpacer = 1
-          as = mainnavigation
-        }
-      }
     }
 
 We do not want to go into too much detail, but what this configuration basically does is, it uses Fluid (the template rendering engine) to generate the page layout and some output. Template files are stored in the aforementioned folders ``Templates/Page/``, ``Partials/Page/`` and ``Layouts/Page/`` (if not overwritten by constants). The TypoScript configuration also defines a special data processing logic that will generate the menu (as variable ``mainnavigation``).
