@@ -11,8 +11,8 @@ bla bla bla...
 
 .. typo3-backend-create-sub-pages:
 
-TYPO3 Backend: Create Sub-Pages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create Sub-Pages in the TYPO3 Backend
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Page tree...
 
@@ -27,8 +27,8 @@ Page tree...
 
 .. typo3script-add-menu-processor:
 
-Add Menu Processor
-^^^^^^^^^^^^^^^^^^
+Add MenuProcessor
+^^^^^^^^^^^^^^^^^
 
 Open file ``setup.typoscript`` and add the section `dataProcessing{...}` as follows.
 
@@ -59,3 +59,28 @@ Open file ``setup.typoscript`` and add the section `dataProcessing{...}` as foll
     }
 
 
+.. fluid-implement-main-menu:
+
+Update Fluid and Implement Main Menu
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <f:for each="{mainnavigation}" as="mainnavigationItem">
+            <li class="nav-item {f:if(condition: mainnavigationItem.active, then:'active')}">
+              <a class="nav-link" href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
+                {mainnavigationItem.title}
+              </a>
+            </li>
+          </f:for>
+        </ul>
+      </div>
+    </nav>
