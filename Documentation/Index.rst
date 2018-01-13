@@ -8,7 +8,7 @@ Site Package Tutorial
 =====================
 
 :Version:
-      8.7 LTS
+      8.7
 
 :Language:
       en
@@ -70,7 +70,7 @@ Table of Contents
    TypoScriptConfiguration/Index
    ExtensionConfiguration/Index
    ExtensionInstallation/Index
-   PageCreation/Index
+   PageCreationAndMainMenu/Index
    ContentMapping/Index
    MainNavigation/Index
    Targets
