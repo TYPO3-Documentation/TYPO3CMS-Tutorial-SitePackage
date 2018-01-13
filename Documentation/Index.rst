@@ -72,5 +72,4 @@ Table of Contents
    ExtensionInstallation/Index
    PageCreationAndMainMenu/Index
    ContentMapping/Index
-   MainNavigation/Index
    Targets
