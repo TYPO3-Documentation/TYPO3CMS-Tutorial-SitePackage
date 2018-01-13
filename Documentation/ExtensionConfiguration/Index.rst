@@ -63,7 +63,7 @@ It should be noted, that newer versions of TYPO3 support alternative formats and
 Make TypoScript Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-File ``Configuration/TCA/Override/sys_template.php`` ...
+File ``Configuration/TCA/Overrides/sys_template.php`` ...
 
 ::
 
@@ -102,8 +102,8 @@ Let's review the directory and file structure of the site package extension as i
     site_package/
     site_package/Configuration
     site_package/Configuration/TCA
-    site_package/Configuration/TCA/Override
-    site_package/Configuration/TCA/Override/sys_template.php
+    site_package/Configuration/TCA/Overrides
+    site_package/Configuration/TCA/Overrides/sys_template.php
     site_package/Configuration/TypoScript
     site_package/Configuration/TypoScript/constants.typoscript
     site_package/Configuration/TypoScript/setup.typoscript
