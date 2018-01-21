@@ -63,7 +63,7 @@ It should be noted, that newer versions of TYPO3 support alternative formats and
 Make TypoScript Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-File ``Configuration/TCA/Overrides/sys_template.php`` ...
+In order to automatically load the TypoScript files we have created in the previous step, a new PHP file File ``sys_template.php`` needs to be created and stored in directory ``Configuration/TCA/Overrides/``. The content of this file should look like the following code.
 
 ::
 
@@ -86,8 +86,6 @@ File ``Configuration/TCA/Overrides/sys_template.php`` ...
         'Site Package'
       );
     });
-
-.. @TODO: convert this into a proper "Info box"
 
 
 .. directory-structure:
@@ -127,3 +125,5 @@ Let's review the directory and file structure of the site package extension as i
     site_package/Resources/Public/Images/logo.png
     site_package/Resources/Public/JavaScript
     site_package/Resources/Public/JavaScript/website.js
+
+At this point we can install the site package extension in a TYPO3 instance, which we will do in the next step.
