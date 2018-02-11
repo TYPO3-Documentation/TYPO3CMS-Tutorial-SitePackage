@@ -143,7 +143,7 @@ We have combined part 2 and 3, because the inclusion of CSS and JavaScript files
 
     // Part 2: CSS file inclusion
     includeCSS {
-      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css
+      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
       bootstrap.external = 1
       website = EXT:site_package/Resources/Public/Css/website.css
     }
@@ -154,7 +154,7 @@ We have combined part 2 and 3, because the inclusion of CSS and JavaScript files
       jquery.external = 1
       popper = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js
       popper.external = 1
-      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
+      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
       bootstrap.external = 1
       website = EXT:site_package/Resources/Public/JavaScript/website.js
     }
