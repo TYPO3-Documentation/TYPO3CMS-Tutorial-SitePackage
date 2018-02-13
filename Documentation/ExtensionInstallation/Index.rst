@@ -19,55 +19,60 @@ If you do not have SSH/FTP access, create a ZIP file of the **content** of your 
 
 .. typo3-backend-extension-manager:
 
-TYPO3 Backend: Extension Manager
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Extension Manager
+^^^^^^^^^^^^^^^^^
 
-First of all, login at the backend of TYPO3 as a user with administrator privileges. At the left side you find a section "ADMIN TOOLS" with a module named "Extensions". Open this module and make sure, the drop down box on the right hand side shows "Installed Extensions". If you have uploaded the site package extension via SSH/FTP already, search for "Site Package". If you have created a ZIP file, upload the ZIP'ed extension by clicking the upload icon (see marker 1).
+First of all, login at the backend of TYPO3 as a user with administrator privileges. At the left side you find a section **ADMIN TOOLS** with a module named "Extensions". Open this module and make sure, the drop down box on the right hand side shows "Installed Extensions". If you uploaded the site package extension via SSH/FTP already, search for "Site Package". If you created a ZIP file, upload the ZIP'ed extension by clicking the upload icon (see marker 1).
 
 .. @TODO screenshot
 
-Once the site package extension appears in the list, you can install it by clicking the "plus" icon.
+Once the site package extension appears in the list, you can install it by clicking the "plus" icon, if not already done.
 
 
-.. typo3-backend-create-pages:
+.. typo3-backend-create-initial-pages:
 
-TYPO3 Backend: Create Pages:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create Initial Pages
+^^^^^^^^^^^^^^^^^^^^
 
-WEB → Page
+In the next step, we create some initial pages. You and your editors will be able to create further pages, remove pages, enable and disable pages and shuffle pages around in the future. The following page tree is just an example as a starting point.
 
-::
+Go to **WEB → Page**. Assuming, we are using a fresh installation of TYPO3 as outlined in section xxx, an almost empty area is shown in the page tree area. The only entry is the name of the website as defined during the installation process (e.g. "New TYPO3 site") with an grey TYPO3 logo.
 
-    NEW TYPO3 site
-      example.com
-        Page 1
-        Page 2
+.. @TODO replace xxx above
+
+By clicking the page icon with the "plus" at the top, and then dragging the "standard page" icon to its appropriate position in the page tree, you can build the following page tree.
+
+.. @TODO screenshot
+
+By default, all new pages are disabled (marked as a red icon at the bottom right). Enable all pages by clicking the "Enable" link in the context menu.
+
+.. @TODO screenshot
+
+Once all pages have been created, you should end up with exactly the following page tree.
+
+.. @TODO screenshot
 
 
 .. typo3-backend-typoscript-template:
 
-TYPO3 Backend: Template
-^^^^^^^^^^^^^^^^^^^^^^^
+TypoScript Template
+^^^^^^^^^^^^^^^^^^^
 
-WEB → Template → page "example.com" → Create template for a new site
+Now we will add a TypoScript template to the site and include the TypoScript configuration we have created during the development of our site package. Do not be confused about the terminology "template". In this context, we are referring to a so-called TypoScript template, not a HTML/CSS/JS template.
 
-Change to "Info/Modify"
+Go to **WEB → Template** and select the page named "example.com". Then, click button "Create template for a new site" and change the dropdown box at the top to "Info/Modify". Click button "Edit the whole template record", which opens an editor for Constants and Setup. The latter contains a few example lines ("HELLO WORLD!"). Remove these lines, so that the box is completely empty.
 
-Edit the whole template record
+Change to tab "Includes" and look for section "Include static (from extensions)", which shows two boxes: "Selected Items" (left hand side) and "Available Items" (right hand side). Under "Available Items", click "Site Package (site_package)", which moves the entry to the left box.
 
-Remove everything in box "Setup:"
+.. @TODO screenshot
 
-Change to tab "Includes".
-
-Under "Available Items", click "Site Package (site_package)", which moves the entry to the left box.
-
-→ Save
+Now save your changes by clicking the "save" icon at the top.
 
 
 Preview Page
 ^^^^^^^^^^^^
 
-WEB → View (switch Width to "Auto Size").
+At this point, it is a good time to preview what we have done so far. Go to **WEB → View** and switch the width to "Auto Size".
 
 .. @TODO describe what we see
 ..
