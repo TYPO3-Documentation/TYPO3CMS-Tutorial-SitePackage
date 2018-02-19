@@ -1,10 +1,10 @@
 .. include:: ../Includes.txt
 
 
-.. page-creation-and-main-menu:
+.. main-menu-creation:
 
-Page Creation and Main Menu
----------------------------
+Main Menu Creation
+------------------
 
 The following section explains how to implement a simple one-level menu by using TYPO3's Frontend Data Processor ``MenuProcessor``. Other options are available (e.g. the ``HMENU cObject`` as described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
 

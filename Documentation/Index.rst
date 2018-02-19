@@ -70,6 +70,6 @@ Table of Contents
    TypoScriptConfiguration/Index
    ExtensionConfiguration/Index
    ExtensionInstallation/Index
-   PageCreationAndMainMenu/Index
+   MainMenuCreation/Index
    ContentMapping/Index
    Targets
