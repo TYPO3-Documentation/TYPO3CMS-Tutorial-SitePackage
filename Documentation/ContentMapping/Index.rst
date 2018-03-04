@@ -134,11 +134,9 @@ Add Content in the TYPO3 Backend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now it's a great time to add some content at the backend to make sure, everything is working as expected.
-Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the columns labelled *normal* and choose the "Text and Image" content element. Enter a headline, some arbitrary text in the Rich Text Editor (RTE) and save your changes (button "save and close" at the top).
+Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the columns labelled "*normal*" and choose the "Text and Image" content element. Enter a headline, some arbitrary text in the Rich Text Editor (RTE) and save your changes (button "save and close" at the top).
 
-Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty.
-
-Clear frontend cache and preview the page.
+Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty. Finally, clear the frontend cache and preview the page.
 
 .. @TODO screenshot
 
