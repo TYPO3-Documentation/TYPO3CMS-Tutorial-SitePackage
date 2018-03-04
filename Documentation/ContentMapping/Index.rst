@@ -6,7 +6,8 @@
 Content Mapping
 ---------------
 
-Bla, bla bla...
+Having a perfect visual appearance of a website is pointless, if the content editors enter in the backend is not shown at the frontend. In the last step, we map some of the backend columns, which hold content elements such as text, images, etc. to areas in the frontend.
+This can be achieved easily by using custom TypoScript.
 
 
 .. dynamic-content-rendering-in-typoscript:
@@ -65,13 +66,15 @@ Create a new directory ``Configuration/TypoScript/Helper/`` and inside this dire
       30 = RESTORE_REGISTER
     }
 
+Once again, describing what exactly this TypoScript does is not part of this tutorial. The only fact that is important is, that the variable ``lib.dynamicContent`` contains the content in subject to the column and language in the backend. More details about the TypoScript can be found in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
+
 
 .. typo3-backend-create-pages:
 
 Include Dynamic Content Rendering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Open file ``Configuration/TypoScript/setup.typoscript`` and add line ``<INCLUDE_TYPOSCRIPT: ... >`` as shown below (second line).
+To use the TypoScript, it needs to be loaded (*included*), so open file ``Configuration/TypoScript/setup.typoscript`` and add line ``<INCLUDE_TYPOSCRIPT: ... >`` as shown below (second line).
 
 ::
 
@@ -95,7 +98,7 @@ Typoscript Mapping in Fluid Template
 
 Open file ``Resources/Private/Templates/Page/Default.html`` and locate the three columns. They all show a "Headline" (look for the ``<h2>``-tags) and some dummy content (look for the ``<p>``-tags).
 
-Simply replace these lines with cObject-ViewHelper (``<f:cObject ... >``), so that file ``Default.html`` show the following HTML code. Make sure, you specify the column positions correctly (`1`, `0` and `2`) and in exactly this order.
+Simply replace these lines with the cObject-ViewHelper (``<f:cObject ... >``), so that file ``Default.html`` shows the following HTML code. Make sure, you specify the column positions correctly (`1`, `0` and `2`) and in exactly this order.
 
 ::
 
@@ -130,8 +133,13 @@ Simply replace these lines with cObject-ViewHelper (``<f:cObject ... >``), so th
 Add Content in the TYPO3 Backend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-WEB → Page → "Page 1"
+Now it's a great time to add some content at the backend to make sure, everything is working as expected.
+Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the columns labelled *normal* and choose the "Text and Image" content element. Enter a headline, some arbitrary text in the Rich Text Editor (RTE) and save your changes (button "save and close" at the top).
 
-Add some example content in columns "left", "middle" and "right" (leave column "border" empty).
+Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty.
 
 Clear frontend cache and preview the page.
+
+.. @TODO screenshot
+
+.. @TODO describe what the users sees
