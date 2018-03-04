@@ -72,4 +72,5 @@ Table of Contents
    ExtensionInstallation/Index
    MainMenuCreation/Index
    ContentMapping/Index
+   Summary/Index
    Targets
