@@ -20,7 +20,8 @@ About this Document
 Target Audience
 ^^^^^^^^^^^^^^^
 
-[...]
+This tutorial predominately aims to support TYPO3 integrators and web developers. It requires some basic knowledge in HTML, CSS and JavaScript.
+Readers should have worked with TYPO3 and the administration interface (the *backend* of TYPO3) before. However, this tutorial does not require any software development experience.
 
 
 .. _credits:
