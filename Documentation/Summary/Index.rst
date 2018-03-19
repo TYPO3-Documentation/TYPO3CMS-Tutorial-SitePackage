@@ -34,6 +34,8 @@ The Site Package extension as it stands now still has some shortfalls. Let's hav
 .. navigation menu just one level
 .. backend columns
 
+*TODO: list known issues such as one page layout, just one menu level, BE columns, etc.*
+
 Please understand, that describing these actions is beyond the scope of this tutorial.
 
 
@@ -42,8 +44,9 @@ Please understand, that describing these actions is beyond the scope of this tut
 Site Package Builder
 ^^^^^^^^^^^^^^^^^^^^
 
-.. @TODO point out that instead of writing all files from scratch, the site package builder can be used as a freeonline service.
+*TODO: Add some basic information and a reference to `http://sitepackagebuilder.com/`_.*
 
+.. @TODO point out that instead of writing all files from scratch, the site package builder can be used as a freeonline service.
 .. @TODO screenshot
 
 
@@ -51,3 +54,5 @@ Site Package Builder
 
 Site Package Free to Download
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*TODO: Add link to Github, where to download the extension.*
