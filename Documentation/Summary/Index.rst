@@ -28,12 +28,13 @@ This all sounds very sophisticated and complicated, but keep in mind, the extens
 Next Steps
 ^^^^^^^^^^
 
-The Site Package extension as it stands now still has some shortfalls.
-[...]
+The Site Package extension as it stands now still has some shortfalls. Let's have a closer look what you could or should do as the next steps to address these.
 
+.. one page layout only
+.. navigation menu just one level
 .. backend columns
 
-
+Please understand, that describing these actions is beyond the scope of this tutorial.
 
 
 .. site-package-builder:
