@@ -28,7 +28,7 @@ Target Audience
 Credits
 ^^^^^^^
 
-Inspired by some initial discussions with some core members of the TYPO3 community in mid 2016, this tutorial was written by Michael Schams and published by the TYPO3 Documentation Team in 2018.
+Inspired by some initial discussions between Christian Kuhn, Benni Mack, Xavier Perseguers, Michael Schams and Mathias Schreiber in mid 2016, this tutorial was written by Michael Schams. It is loosley based on the concepts by Benjamin Kott, which he presented in a video with Mathias Schreiber in November 2017. The final version of this document was published by the TYPO3 Documentation Team in April 2018.
 
 
 .. _feedback:
