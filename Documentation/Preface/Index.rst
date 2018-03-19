@@ -12,7 +12,7 @@ Preface
 About this Document
 ^^^^^^^^^^^^^^^^^^^
 
-[...]
+This tutorial describes the steps required to turn a basic web design template (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive website in TYPO3 by building a so-called *TYPO3 extension*. Build upon an empty, clean TYPO3 instance, this tutorial can be understood as a "walk-through" for beginners to develop the visua appearance of a site in TYPO3.
 
 
 .. _target-audience:
