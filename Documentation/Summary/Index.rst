@@ -6,11 +6,21 @@
 Summary
 -------
 
-First and foremost: **congratulations!** You reached a point where you successfully implemented a custom Site Package for TYPO3. In fact, you have not only developed a "theme" for your website, you also built a fully working extension for TYPO3, which can be installed, uninstalled, copied to another TYPO3 instance and put under version control. You could also share your Site Package with others by uploading your extension to the `TYPO3 Extension Repository <https://extensions.typo3.org>`_.
+First and foremost: **congratulations!** You reached a point where you have successfully implemented a custom Site Package for TYPO3. In fact, you have not only developed a "theme" for your website, you also built a fully working extension for TYPO3, which can be installed, uninstalled, copied to another TYPO3 instance and put under version control. You could also share your Site Package with others by uploading your extension to the `TYPO3 Extension Repository <https://extensions.typo3.org>`_.
 
+The list below shows a quick summary what you have achieved by working through this tutorial.
 
-.. @TODO describe what we have achieved.
-.. @TODO point out, the site package extension includes x files only (plus template files)
+- Split a "static" HTML/CSS/JavaScript template into Fluid templates (Layout, Templates and Partial).
+- Applied "Fluid Styled Content" TypoScript (files ``constants.typoscript`` and ``setup.typoscript``).
+- Included the `Bootstrap framework <https://getbootstrap.com>`_ and `jQuery <https://jquery.com>`_ library as external resources.
+- Built a fully functional TYPO3 extension and installed this extension via the Extension Manager.
+- Created some initial Pages, the TypoScript templates and learned how to preview a page in the backend.
+- Developed a navigation menu using TypoScript and Fluid.
+- Applied TypoScript to render the content (file ``DynamicContent.typoscript``).
+
+This all sounds very sophisticated and complicated, but keep in mind, the extension (as it stands at this point in time) contains xxx files only, plus the HTML/CSS files. Except xxx files in the root level of the extension directory, non of these files are PHP files.
+
+.. @TODO add number of files
 
 
 .. next-steps:
