@@ -12,7 +12,7 @@ Preface
 About this Document
 ^^^^^^^^^^^^^^^^^^^
 
-This tutorial describes the steps required to turn a basic web design template (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive website in TYPO3 by building a so-called *TYPO3 extension*. Build upon an empty, clean TYPO3 instance, this tutorial can be understood as a "walk-through" for beginners to develop the visua appearance of a site in TYPO3.
+This tutorial describes the steps required to turn a basic web design template (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive website in TYPO3 by building a so-called *TYPO3 extension*. Build upon an empty, clean TYPO3 instance, this tutorial can be understood as a "walk-through" for beginners to develop the visual appearance of a site in TYPO3.
 
 
 .. _target-audience:
@@ -21,7 +21,7 @@ Target Audience
 ^^^^^^^^^^^^^^^
 
 This tutorial predominately aims to support TYPO3 integrators and web developers. It requires some basic knowledge in HTML, CSS and JavaScript.
-Readers should have worked with TYPO3 and the administration interface (the *backend* of TYPO3) before. However, this tutorial does not require any software development experience.
+Readers should have worked with TYPO3 and the administration interface (the *backend* of TYPO3) before. However, this tutorial does not require any software programming experience.
 
 
 .. _credits:
@@ -29,7 +29,7 @@ Readers should have worked with TYPO3 and the administration interface (the *bac
 Credits
 ^^^^^^^
 
-Inspired by some initial discussions between Christian Kuhn, Benni Mack, Xavier Perseguers, Michael Schams and Mathias Schreiber in mid 2016, this tutorial was written by Michael Schams. It is loosley based on the concepts by Benjamin Kott, which he presented in a video with Mathias Schreiber in November 2017. The final version of this document was published by the TYPO3 Documentation Team in April 2018.
+Inspired by some initial discussions between Christian Kuhn, Benni Mack, Xavier Perseguers, Michael Schams and Mathias Schreiber in mid 2016, this tutorial was written by Michael Schams between 2017 and 2018. It is loosley based on the concepts by Benjamin Kott, which he presented in a video with Mathias Schreiber in November 2017 (see ). The final version of this document was published by the TYPO3 Documentation Team in April 2018.
 
 
 .. _feedback:
