@@ -17,7 +17,7 @@ The development of a website can be approached in several ways. Standard website
 Encapsulation
 ~~~~~~~~~~~~~
 
-Using extensions are a powerful way to get the most out of TYPO3. Extensions can be installed, deinstalled, replaced, etc. and extend the core system with functions and features not shipped with the core system. An extension typically consists of PHP files, but can also (or only) contain design templates (HTML, CSS, JavaScript files, etc.) and global configuration. The visual appearance of a website does not require any PHP code and therefore the site package extension described in this tutorial consists of design template and some basic site configuration files only. This means, the reader does not require any programming knowledge as such.
+Using extensions are a powerful way to get the most out of TYPO3. Extensions can be installed, deinstalled, replaced, etc. and extend the core system with functions and features not shipped with the core system. An extension typically consists of PHP files, but can also (or only) contain design templates (HTML, CSS, JavaScript files, etc.) and global configuration. The visual appearance of a website does not require any PHP code necessarily. However, the site package extension described in this tutorial contains exactly two PHP files (plus a handful of HTML/CSS and configuration files) to work as an *extension* in TYPO3. The PHP code can be copied from this tutorial if the reader does not have any programming knowledge as such.
 
 Version Control
 ~~~~~~~~~~~~~~~
@@ -27,7 +27,7 @@ By building the site package as an extension, all relevant files are stored at a
 Dependency Management
 ~~~~~~~~~~~~~~~~~~~~~
 
-Another important benefit or a TYPO3 extension is the fact that dependencies to other extensions and/or the TYPO3 version can be defined. This makes deployments easier and more fail-safe. This feature is called "Dependency Management". Most TYPO3 sites require a number of extensions. This could be "News" or "..." for example. By building a site package extension, which could contain global configuration for these add-ons, the dependencies can be defined easily. When the site package extension is installed in an empty TYPO3 instance, all dependent extensions are downloaded from the TER and installed automatically.
+Another important benefit or a TYPO3 extension is the fact that dependencies to other extensions and/or the TYPO3 version can be defined. This makes deployments easier and more fail-safe. This feature is called "Dependency Management". Most TYPO3 sites require a number of extensions. This could be "News", "Powermail" or "RealURL" for example. By building a site package extension, which may contain global configuration for these add-ons, the dependencies can be defined. When the site package extension is installed in an empty TYPO3 instance, all dependent extensions are downloaded from the `TYPO3 Extension Repository <https://extensions.typo3.org>`_ and installed automatically.
 
 Clean Separation from the Userspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +60,6 @@ Prerequisites
 This TYPO3 tutorial assumes that the reader has some basic knowledge in the following areas:
 
 * HTML, CSS and JavaScript
-* Git (version control system, client-side)
 * SSH/FTP (copy files and directories to and from the server)
 
 It is also recommended that the reader has worked with TYPO3 before, knows what the *frontend*, *backend* and *Extension Manager* is and how to access the *Install Tool*. Missing knowledge can be acquired by working through the TYPO3 documentation, for example the :ref:`Getting Started Tutorial <t3start:start>`.
