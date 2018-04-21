@@ -6,7 +6,7 @@
 Main Menu Creation
 ------------------
 
-The following section explains how to implement a simple one-level menu by using TYPO3's Frontend Data Processor ``MenuProcessor``. Other options are available (e.g. the ``HMENU cObject`` as described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
+At this point, we have a working *frontend* of a website, but an important part is missing: there is no easy way to navigate through the pages, which is a crucial part of every website. The following section explains how to implement a simple one-level menu by using TYPO3's Frontend Data Processor ``MenuProcessor``. Other options are available (e.g. the ``HMENU cObject`` as described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
 
 
 .. add-menu-processor:
@@ -76,9 +76,13 @@ To make the output of the ``MenuProcessor`` visible at the frontend, we have to 
 
     <f:render section="Main" />
 
-The changes are inside the ``<ul> ... </ul>`` tags. The new code extends the list by a so-called "For-ViewHelper", which builds a typical loop and iterates the variable ``{mainnavigation}``as single items named ``{mainnavigationItem}``. Each item represents one link to a page in the menu. The attributes we are using are ``{mainnavigationItem.link}`` (the actual link to the page or external resource), ``{mainnavigationItem.target}`` (if the link should be opened in a new window for example) and ``{mainnavigationItem.title}`` (the page or link title).
+The changes are inside the ``<ul> ... </ul>`` tags. The new code extends the list by a so-called "For-ViewHelper", which builds a typical loop and iterates the variable ``{mainnavigation}`` as single items named ``{mainnavigationItem}``. Each item represents one link to a page in the menu. The attributes we are using are:
 
-The construct ``{f:if(condition: mainnavigationItem.active, then: 'active')}`` is a special case: this is a so-called *inline notation*, that outputs the word ``active``, if variable ``mainnavigationItem.active`` is set. In this example, the inline notation is used to output ``active`` as the CSS class name.
+* ``{mainnavigationItem.link}``: the actual link to the page or external resource
+* ``{mainnavigationItem.target}``: if the link should be opened in a new window for example
+* ``{mainnavigationItem.title}``: the page or link title
+
+The construct ``{f:if(condition: mainnavigationItem.active, then: 'active')}`` is a special case. This is a so-called *inline notation*, that outputs the word ``active``, if variable ``mainnavigationItem.active`` is set. In this example, the inline notation is used to output ``active`` as the CSS class name.
 
 
 Preview Page
