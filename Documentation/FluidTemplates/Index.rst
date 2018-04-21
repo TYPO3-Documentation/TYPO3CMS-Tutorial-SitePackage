@@ -6,7 +6,7 @@
 Fluid Templates
 ---------------
 
-Before we describe how the static files discussed in the previous section :ref:`design-template` can be converted into Fluid templates, we should understand what *Fluid* is and what the main ideas behind this powerful rendering engine are. It is important to point out that the following section is just a quick introduction. More comprehensive documentation of Fluid can be found on the `TYPO3 website <https://typo3.org/typo3-cms/additional-products/fluid/>`_ and the `project repository at GitHub <https://github.com/TYPO3Fluid/Fluid>`_ for example.
+Before we describe how the static files discussed in the previous section :ref:`design-template` can be converted into Fluid templates, we should understand what *Fluid* is and what the main ideas behind this powerful rendering engine are. It is important to point out that the following section is just a quick introduction. Further details about Fluid can be found at the `project repository at GitHub <https://github.com/TYPO3Fluid/Fluid>`_ for example.
 
 
 .. quick-introduction-to-fluid:
@@ -26,7 +26,7 @@ More than 80 ViewHelpers are shipped with the TYPO3 core already. They enable in
 Directory Structure
 ^^^^^^^^^^^^^^^^^^^
 
-Fluid requires a specific directory structure to store the template files. It is a perfect time to create the first set of folders of the site package extension now. The initial directory can be named ``site_package/``, which we assume is located on your local machine. You can also choose a different name such as "site_example" or "site_clientname", but this tutorial uses "site_package".
+Fluid requires a specific directory structure to store the template files. If you are working through this tutorial now, this is a perfect time to create the first set of folders of the site package extension. The initial directory can be named ``site_package/``, which we assume is located on your local machine. You can also choose a different name such as "site_example" or "site_clientname", but this tutorial uses "site_package".
 
 The aforementioned folders for Fluid are all located as sub-directories of a folder called ``Resources/``. Therefore, create the directory structure as listed below.
 
@@ -63,7 +63,7 @@ The most important fact about HTML files in the ``Templates/`` directory has bee
 
 Partials
 ~~~~~~~~
-Finally, we have a directory called ``Partials/``, which may contain small snippets of HTML template files. "Partials" are similar to templates, but their purpose is to represent small units, which are perfect to fulfil recurring tasks. A good example of a partial is a specially styled box with content that may appear on several pages. If this box would be part of a page layout, it would be implemented in one or more HTML files inside the ``Templates/`` directory. If an adjustment of the box is required at one point in the future, it would mean that several template files need to be updated. However, if we store the HTML code of the box as a small HTML snippet into the ``Partials/`` directory, we can include this snippet at several places. An adjustment only requires an update of the partial and therefore in one file only.
+Finally, we have a directory called ``Partials/``, which may contain small snippets of HTML template files. "Partials" are similar to templates, but their purpose is to represent small units, which are perfect to fulfil recurring tasks. A good example of a partial is a specially styled box with content that may appear on several pages. If this box would be part of a page layout, it would be implemented in one or more HTML files inside the ``Templates/`` directory. If an adjustment of the box is required at one point in the future, this would mean that several template files need to be updated. However, if we store the HTML code of the box as a small HTML snippet into the ``Partials/`` directory, we can include this snippet at several places. An adjustment only requires an update of the partial and therefore in one file only.
 
 The use of partials is optional, whereas files in the ``Layouts/`` and ``Templates/`` directories are mandatory for a typical site package extension.
 
