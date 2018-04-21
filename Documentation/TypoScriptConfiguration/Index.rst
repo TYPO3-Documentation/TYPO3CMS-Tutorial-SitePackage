@@ -137,7 +137,7 @@ We do not want to go into too much detail, but what this configuration basically
 Part 2 and 3: CSS and JavaScript File Inclusion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We have combined part 2 and 3, because the inclusion of CSS and JavaScript files in TypoScript is pretty straight forward. Extend ``Part 2: add CSS file inclusion`` and ``// Part 3: JavaScript file inclusion`` by the following lines.
+We have combined part 2 and 3, because the inclusion of CSS and JavaScript files in TypoScript is pretty straight forward. Extend ``// Part 2: add CSS file inclusion`` and ``// Part 3: JavaScript file inclusion`` by the following lines.
 
 ::
 
@@ -168,7 +168,7 @@ We have combined part 2 and 3, because the inclusion of CSS and JavaScript files
 .. https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
 .. integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 
-Section ``includeCSS { ... }`` simply instructs TYPO3 to include file ``website.css`` from the site package extension. We copied this file into the appropriate folder before.
+Section ``includeCSS { ... }`` instructs TYPO3 to include the CSS from the Bootstrap library from an external source. It also includes file ``website.css`` from the site package extension. We have copied this file into the appropriate folder before.
 
 Section ``includeJSFooter { ... }`` includes four JavaScript files in total. The first three are externally hosted files (jQuery, Popper and Bootstrap). Therefore, ``.external = 1`` forces TYPO3, not to check for their local existence. The fourth JavaScript file is the file we added before to the site package extension itself.
 
@@ -176,7 +176,7 @@ Section ``includeJSFooter { ... }`` includes four JavaScript files in total. The
 Part 4: Global Site Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, extend ``// Part 4: global site configuration`` by adding the following lines.
+Finally, extend ``// Part 4: global site configuration`` by adding the following lines. There is not need to understand what these lines exactly do. Feel free to simply copy them from this tutorial. Explaining each line of the code would go beyond the scope of this tutorial. A detailed documentation of all configuration options can be found in the :ref:`TypoScript Reference <t3tsref:config>`.
 
 ::
 
@@ -213,4 +213,4 @@ Finally, extend ``// Part 4: global site configuration`` by adding the following
       concatenateCss = 0
     }
 
-Explaining each line of the code above would go beyond the scope of this tutorial. A detailed documentation of all configuration options can be found in the :ref:`TypoScript Reference <t3tsref:config>`.
+This is all required for the "TypoScript Configuration" part at this point. The next step deals with the extension configuration and adds a couple of PHP files, so let's move on.
