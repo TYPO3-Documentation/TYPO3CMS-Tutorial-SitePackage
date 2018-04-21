@@ -6,9 +6,9 @@
 Extension Installation
 ----------------------
 
-This tutorial assumes, that the TYPO3 instance is a brand new installation, without any themes, templates, pages or content yet. Ssee the :ref:`TYPO3 Installation Guide <t3install:start>` for a detailed explanation how to set up a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed, that TYPO3 has been installed the *traditional way*, by extracting the source package into the web directory **without** "composer".
+This tutorial assumes, that the TYPO3 instance is a brand new installation, without any themes, templates, pages or content yet. Ssee the :ref:`TYPO3 Installation Guide <t3install:start>` for a detailed explanation how to set up a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed, that TYPO3 has been installed the *traditional way*, by extracting the source package into the web directory **without** using PHP *composer*.
 
-By using this method, extensions (e.g. the site package extension) can be installed via the Extension Manager, which is a so-called *module* of the backend of TYPO3. Before we can install the site package extension, we have to transfer the files from our local machine to the TYPO3 server (if all files and directories have been created on the local machine though).
+By using this method, extensions (e.g. the site package extension) can be installed using the Extension Manager, which is a so-called *module* of the backend of TYPO3. Before we can install the site package extension, we have to transfer the files from our local machine to the TYPO3 server (if all files and directories have been created on the local machine though).
 
 In case you have SSH/FTP access to the server, copy the directory ``site_package`` (including all files and sub-directories) to the following directory in your TYPO3 instance: ``typo3conf/ext/``.
 
@@ -36,7 +36,7 @@ Create Initial Pages
 
 In the next step, we create some initial pages. You and your editors will be able to create further pages, remove pages, enable and disable pages and shuffle pages around in the future. The following page tree is just an example as a starting point.
 
-Go to **WEB → Page**. Assuming, we are using a fresh installation of TYPO3 as outlined in section xxx, an almost empty area is shown in the page tree area. The only entry is the name of the website as defined during the installation process (e.g. "New TYPO3 site") with an grey TYPO3 logo.
+Go to **WEB → Page**. Assuming, we are using a fresh installation of TYPO3 as outlined in section xxx, an almost empty area is shown in the page tree area. The only entry is the name of the website as defined during the installation process (e.g. "New TYPO3 site") with a grey TYPO3 logo.
 
 .. @TODO replace xxx above
 
