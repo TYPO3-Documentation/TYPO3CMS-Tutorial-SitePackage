@@ -11,8 +11,8 @@ At this point, we have a working *frontend* of a website, but an important part 
 
 .. _add-menu-processor:
 
-Add MenuProcessor
-^^^^^^^^^^^^^^^^^
+Add ``MenuProcessor``
+^^^^^^^^^^^^^^^^^^^^^
 
 Open file ``Configuration/TypoScript/setup.typoscript`` and locate the part which defines the ``FLUIDTEMPLATE``. Add the ``dataProcessing { ... }`` section below the paths declarations as follows.
 
