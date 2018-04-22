@@ -24,7 +24,12 @@ Extension Manager
 
 First of all, login at the backend of TYPO3 as a user with administrator privileges. At the left side you find a section **ADMIN TOOLS** with a module named "Extensions". Open this module and make sure, the drop down box on the right hand side shows "Installed Extensions". If you uploaded the site package extension via SSH/FTP already, search for "Site Package". If you created a ZIP file, upload the ZIP'ed extension by clicking the upload icon (see marker 1).
 
-.. @TODO screenshot
+.. figure:: ../Images/ExtensionInstallation/ExtensionManager.png
+   :alt: Extension Manager
+   :width: 600
+
+   TYPO3 Extension Manager
+
 
 Once the site package extension appears in the list, you can install it by clicking the "plus" icon, if not already done.
 
@@ -36,21 +41,43 @@ Create Initial Pages
 
 In the next step, we create some initial pages. You and your editors will be able to create further pages, remove pages, enable and disable pages and shuffle pages around in the future. The following page tree is just an example as a starting point.
 
-Go to **WEB → Page**. Assuming, we are using a fresh installation of TYPO3 as outlined in section xxx, an almost empty area is shown in the page tree area. The only entry is the name of the website as defined during the installation process (e.g. "New TYPO3 site") with a grey TYPO3 logo.
+Go to **WEB → Page**. Assuming, we are using a fresh installation of TYPO3 as outlined in section :ref:`prerequisites`, an almost empty area is shown in the page tree area. The only entry is the name of the website as defined during the installation process (e.g. "New TYPO3 site") with a grey TYPO3 logo.
 
-.. @TODO replace xxx above
+.. @TODO check references link to section "Introduction" above
 
 By clicking the page icon with the "plus" at the top, and then dragging the "standard page" icon to its appropriate position in the page tree, you can build the following page tree.
 
-.. @TODO screenshot
+.. figure:: ../Images/ExtensionInstallation/CreateInitialPages.png
+   :alt: Create Initial Pages
+   :width: 600
+
+   Create initial pages
+
 
 By default, all new pages are disabled (marked as a red icon at the bottom right). Enable all pages by clicking the "Enable" link in the context menu.
 
-.. @TODO screenshot
+.. figure:: ../Images/ExtensionInstallation/EnablePagesInContextMenu.png
+   :alt: Enable Pages in Context Menu
+   :width: 600
+
+   Enable Pages in Context Menu
+
 
 Once all pages have been created, you should end up with exactly the following page tree.
 
-.. @TODO screenshot
+.. .. figure: : ../Images/ExtensionInstallation/FinalPageTree.png
+..   :alt: Final Page Tree
+
+
+.. code-block:: none
+
+   New TYPO3 site
+   │
+   ├── Page 1
+   │
+   ├── Page 2
+   │
+   └── Page 3
 
 
 .. typo3-backend-typoscript-template:
@@ -64,7 +91,10 @@ Go to **WEB → Template** and select the page named "example.com". Then, click 
 
 Change to tab "Includes" and look for section "Include static (from extensions)", which shows two boxes: "Selected Items" (left hand side) and "Available Items" (right hand side). Under "Available Items", click "Site Package (site_package)", which moves the entry to the left box.
 
-.. @TODO screenshot
+.. figure:: ../Images/ExtensionInstallation/IncludeTypoScriptTemplate.png
+   :alt: Include TypoScript Template
+   :width: 600
+
 
 Now save your changes by clicking the "save" icon at the top.
 
@@ -74,8 +104,12 @@ Preview Page
 
 At this point, it is a good time to preview what we have done so far. Go to **WEB → View** and switch the width to "Auto Size".
 
-.. @TODO describe what we see
-..
+.. figure:: ../Images/ExtensionInstallation/PreviewPage.png
+   :alt: Preview Page
+   :width: 600
+
+
+
 .. menu not working
 .. jumbotron
 .. three columns
