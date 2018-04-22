@@ -58,8 +58,6 @@ Add the following lines to file ``constants.typoscript``.
 TypoScript Setup
 """"""""""""""""
 
-.. @TODO: describe main purpose of the file.
-
 File ``setup.typoscript`` is a little it more complex, so we explain it section by section. First, add the following lines to that file.
 
 ::
