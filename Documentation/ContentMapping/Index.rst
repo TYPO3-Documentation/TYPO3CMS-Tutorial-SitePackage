@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 
 
-.. content-mapping:
+.. _content-mapping:
 
 Content Mapping
 ---------------
@@ -10,7 +10,7 @@ Having a perfect visual appearance of a website is pointless, if the content edi
 This can be achieved easily by using custom TypoScript.
 
 
-.. dynamic-content-rendering-in-typoscript:
+.. _dynamic-content-rendering-in-typoscript:
 
 Dynamic Content Rendering in TypoScript
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,7 +69,7 @@ Create a new directory ``Configuration/TypoScript/Helper/`` and inside this dire
 Once again, describing what exactly this TypoScript does is not part of this tutorial. The only fact that is important is, that the variable ``lib.dynamicContent`` contains the content in subject to the column and language in the backend. More details about the TypoScript can be found in the :ref:`TypoScript Reference <t3tsref:menu-objects>`_.
 
 
-.. typo3-backend-create-pages:
+.. _typo3-backend-create-pages:
 
 Include Dynamic Content Rendering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,7 +91,7 @@ To use the TypoScript, it needs to be loaded (*included*), so open file ``Config
     }
 
 
-.. fluid-typoscript-mapping:
+.. _fluid-typoscript-mapping:
 
 Typoscript Mapping in Fluid Template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -128,7 +128,7 @@ Simply replace these lines with the cObject-ViewHelper (``<f:cObject ... >``), s
     </f:section>
 
 
-.. typo3-backend-add-content:
+.. _typo3-backend-add-content:
 
 Add Content in the TYPO3 Backend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 
 
-.. extension-installation:
+.. _extension-installation:
 
 Extension Installation
 ----------------------
@@ -17,7 +17,7 @@ If you do not have SSH/FTP access, create a ZIP file of the **content** of your 
 .. @TODO clarify, if the file name of the ZIP is relevant.
 
 
-.. typo3-backend-extension-manager:
+.. _typo3-backend-extension-manager:
 
 Extension Manager
 ^^^^^^^^^^^^^^^^^
@@ -34,7 +34,7 @@ First of all, login at the backend of TYPO3 as a user with administrator privile
 Once the site package extension appears in the list, you can activate it by clicking the "plus" icon (marker 4), if not already done.
 
 
-.. typo3-backend-create-initial-pages:
+.. _typo3-backend-create-initial-pages:
 
 Create Initial Pages
 ^^^^^^^^^^^^^^^^^^^^
@@ -80,7 +80,7 @@ Once all pages have been created, you should end up with the following page tree
          └── Page 3
 
 
-.. typo3-backend-typoscript-template:
+.. _typo3-backend-typoscript-template:
 
 TypoScript Template
 ^^^^^^^^^^^^^^^^^^^

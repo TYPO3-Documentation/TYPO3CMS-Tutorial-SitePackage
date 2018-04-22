@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 
 
-.. main-menu-creation:
+.. _main-menu-creation:
 
 Main Menu Creation
 ------------------
@@ -9,7 +9,7 @@ Main Menu Creation
 At this point, we have a working *frontend* of a website, but an important part is missing: there is no easy way to navigate through the pages, which is a crucial part of every website. The following section explains how to implement a simple one-level menu by using TYPO3's Frontend Data Processor ``MenuProcessor``. Other options are available (e.g. the ``HMENU cObject`` as described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
 
 
-.. add-menu-processor:
+.. _add-menu-processor:
 
 Add MenuProcessor
 ^^^^^^^^^^^^^^^^^
@@ -45,7 +45,7 @@ Open file ``Configuration/TypoScript/setup.typoscript`` and locate the part whic
 Note the directive ``as = mainnavigation``: this defines the name of the menu (here: ``mainnavigation``), which will be used in the next step.
 
 
-.. fluid-implement-main-menu:
+.. _fluid-implement-main-menu:
 
 Update Fluid and Implement Main Menu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

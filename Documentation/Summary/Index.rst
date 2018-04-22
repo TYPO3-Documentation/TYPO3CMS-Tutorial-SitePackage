@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 
 
-.. summary:
+.. _summary:
 
 Summary
 -------
@@ -23,7 +23,7 @@ This all sounds very sophisticated and complicated, but keep in mind, the extens
 .. @TODO add number of files
 
 
-.. next-steps:
+.. _next-steps:
 
 Next Steps
 ^^^^^^^^^^
@@ -43,17 +43,17 @@ The nature of a tutorial, such as this document, is to provide detailed instruct
 When you create Site Packages in the future, you probably do not want to create every file over and over again, but use a pre-built version of the Site Package extension. Therefore, it make sense to store and maintain the current state in a central place, such as a Git repository. Despite the fact that for a learning experience it is always beneficial to develop the extension yourself, you find the extension built in this tutorial at `GitHub <https://github.com>`_.
 
 
-.. site-package-free-to-download:
+.. _download-site-package-extension:
 
-Site Package Free to Download
-#############################
+Download Site Package Extension
+###############################
 
 `GitHub <https://github.com>`_
 
 *TODO: update link, once extension has been committed to GitHub.*
 
 
-.. site-package-builder:
+.. _site-package-builder:
 
 Site Package Builder
 ####################
@@ -65,6 +65,8 @@ Another option to create a Site Package extension quickly is an online tool deve
    :alt: Site Package Builder
    :width: 800
 
+
+.. _youtube-videos:
 
 Videos on YouTube
 #################

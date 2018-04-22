@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 
 
-.. typoscript-configuration:
+.. _typoscript-configuration:
 
 TypoScript Configuration
 ------------------------
@@ -11,7 +11,7 @@ TYPO3 uses "TypoScript" as a specific *language* to configure a website. TypoScr
 As part of this tutorial, we focus on the basics only and how to apply them. A comprehensive documentation about TypoScript and all its objects, properties and functions can be found in the :ref:`TypoScript Reference <t3tsref:start>`.
 
 
-.. files-and-directories:
+.. _files-and-directories:
 
 Files and Directories
 ^^^^^^^^^^^^^^^^^^^^^
@@ -31,7 +31,7 @@ First of all, we create two new files in the site package directory structure, w
 As shown above, these two files are ``constants.typoscript`` and ``setup.typoscript`` inside the ``Configuration/TypoScript/`` folder. The Fluid template files we have created in the previous step are located in the ``Resources/`` directory, but not listed above for clarity reasons.
 
 
-.. file-constants-typoscript:
+.. _file-constants-typoscript:
 
 TypoScript Constants
 """"""""""""""""""""
@@ -53,7 +53,7 @@ Add the following lines to file ``constants.typoscript``.
 .. @TODO: describe main purpose of the file.
 
 
-.. file-setup-typoscript:
+.. _file-setup-typoscript:
 
 TypoScript Setup
 """"""""""""""""

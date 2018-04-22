@@ -1,12 +1,12 @@
 .. include:: ../Includes.txt
 
 
-.. extension-configuration:
+.. _extension-configuration:
 
 Extension Configuration
 -----------------------
 
-.. extension-manager-configuration:
+.. _extension-manager-configuration:
 
 Extension Declaration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,7 +46,7 @@ The values can and should be customized of course. A more meaningful and longer 
 Create and customize this file and store it as ``site_package/ext_emconf.php``. The configration shown above will do the job, if you do not want to customize the declaration file at the moment.
 
 
-.. extension-icon:
+.. _extension-icon:
 
 Extension Icon
 ^^^^^^^^^^^^^^
@@ -60,7 +60,7 @@ Not as important as the extension declaration file above, every extension can fe
    It should be noted, that newer versions of TYPO3 support alternative formats and file locations. However, for the sake of simplicity, we stick to the specification outlined above for the time being.
 
 
-.. make-typoscript-available:
+.. _make-typoscript-available:
 
 Make TypoScript Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -90,7 +90,7 @@ In order to automatically load the TypoScript files we have created in the previ
     });
 
 
-.. directory-structure:
+.. _directory-structure:
 
 Directory and File Structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

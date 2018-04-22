@@ -1,12 +1,12 @@
 .. include:: ../Includes.txt
 
 
-.. design-template:
+.. _design-template:
 
 Design Template
 ---------------
 
-.. external-resources:
+.. _external-resources:
 
 External Resources
 ^^^^^^^^^^^^^^^^^^
@@ -16,7 +16,7 @@ A typical use case of developing a standard website includes the implementation 
 The project discussed in this tutorial uses the well-known and popular `Bootstrap framework <https://getbootstrap.com>`_ version 4 and `jQuery <https://jquery.com>`_ version 3. Both are not mandatory for a site package in TYPO3 as such and can be replaced with similar frameworks or JavaScript libraries as required by the individual project.
 
 
-.. directory-structure:
+.. _directory-structure:
 
 Directory Structure
 ^^^^^^^^^^^^^^^^^^^
@@ -43,7 +43,7 @@ Another file we can ignore is the jQuery library ``jquery-3.2.1.min.js`` in the 
 This leaves us with the remaining file ``index.html``, which is explained in more detail in the next section.
 
 
-.. file-index-html:
+.. _file-index-html:
 
 File ``index.html``
 ^^^^^^^^^^^^^^^^^^^
