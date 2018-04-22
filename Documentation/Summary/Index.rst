@@ -28,7 +28,7 @@ This all sounds very sophisticated and complicated, but keep in mind, the extens
 Next Steps
 ^^^^^^^^^^
 
-The Site Package extension as it stands now still has some shortfalls. Let's have a closer look what you could or should do as the next steps to address these.
+The Site Package extension, as it stands now, still has some shortfalls. Let's have a closer look what you could or should do as the next steps to address these.
 
 .. one page layout only
 .. navigation menu just one level
@@ -36,12 +36,21 @@ The Site Package extension as it stands now still has some shortfalls. Let's hav
 
 *TODO: list known issues such as one page layout, just one menu level, BE columns, etc.*
 
-Please understand, that describing these actions is beyond the scope of this tutorial.
+It should be understood, that describing these actions is beyond the scope of this tutorial.
+
+The nature of a tutorial, such as this document, is to provide detailed instructions to walk a beginner through a particular task. By building your own Site Package extension from scratch, you have learned each step that is required to turn a basic web design template into a fully working website in TYPO3.
+
+When you create Site Packages in the future, you probably do not want to create every file over and over again, but use a pre-built version of the Site Package extension. Therefore, it make sense to store and maintain the current state in a central place, such as a Git repository. Despite the fact that for a learning experience it is always beneficial to develop the extension yourself, you find the extension built in this tutorial at `GitHub <https://github.com>`_.
 
 
+.. site-package-free-to-download:
 
+Site Package Free to Download
+#############################
 
+`GitHub <https://github.com>`_
 
+*TODO: update link, once extension has been committed to GitHub.*
 
 
 .. site-package-builder:
