@@ -76,11 +76,11 @@ To make the output of the ``MenuProcessor`` visible at the frontend, we have to 
 
     <f:render section="Main" />
 
-The changes are inside the ``<ul> ... </ul>`` tags. The new code extends the list by a so-called "For-ViewHelper", which builds a typical loop and iterates the variable ``{mainnavigation}`` as single items named ``{mainnavigationItem}``. Each item represents one link to a page in the menu. The attributes we are using are:
+The changes are inside the ``<ul> ... </ul>`` tags. The new code extends the list by a so-called "For-ViewHelper", which builds a loop and iterates variable ``mainnavigation`` as single items named ``mainnavigationItem``. Each item represents one link to a page in the menu. The attributes we are using are:
 
-* ``{mainnavigationItem.link}``: the actual link to the page or external resource
-* ``{mainnavigationItem.target}``: if the link should be opened in a new window for example
-* ``{mainnavigationItem.title}``: the page or link title
+* ``mainnavigationItem.link``: the actual link to the page or external resource
+* ``mainnavigationItem.target``: if the link should be opened in a new window for example
+* ``mainnavigationItem.title``: the page or link title
 
 The construct ``{f:if(condition: mainnavigationItem.active, then: 'active')}`` is a special case. This is a so-called *inline notation*, that outputs the word ``active``, if variable ``mainnavigationItem.active`` is set. In this example, the inline notation is used to output ``active`` as the CSS class name.
 
