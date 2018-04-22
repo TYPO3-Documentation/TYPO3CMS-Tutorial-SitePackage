@@ -53,8 +53,6 @@ Extension Icon
 
 Not as important as the extension declaration file above, every extension can feature an icon as a PNG file. This image should be located in the root directory of the extension as well, and must be named ``ext_icon.png``. Choose or create an image of 64px width by 64px height.
 
-.. @TODO: convert this into a proper "Info box"
-
 .. note::
 
    It should be noted, that newer versions of TYPO3 support alternative formats and file locations. However, for the sake of simplicity, we stick to the specification outlined above for the time being.
