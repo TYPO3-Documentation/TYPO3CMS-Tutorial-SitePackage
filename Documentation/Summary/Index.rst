@@ -64,3 +64,11 @@ Another option to create a Site Package extension quickly is an online tool deve
 .. figure:: ../Images/Summary/SitePackageBuilder.png
    :alt: Site Package Builder
    :width: 800
+
+
+Videos on YouTube
+#################
+
+In this three-parts series, Mathias Schreiber and Benjamin Kott set up a TYPO3 site from scratch by building a Site Package extension.
+
+   |youtube-teaser-HtBm-im7pc0o|
