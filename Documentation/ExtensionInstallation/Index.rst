@@ -31,7 +31,7 @@ First of all, login at the backend of TYPO3 as a user with administrator privile
    TYPO3 Extension Manager
 
 
-Once the site package extension appears in the list, you can install it by clicking the "plus" icon, if not already done.
+Once the site package extension appears in the list, you can activate it by clicking the "plus" icon, if not already done.
 
 
 .. typo3-backend-create-initial-pages:
@@ -43,9 +43,7 @@ In the next step, we create some initial pages. You and your editors will be abl
 
 Go to **WEB → Page**. Assuming, we are using a fresh installation of TYPO3 as outlined in section :ref:`prerequisites`, an almost empty area is shown in the page tree area. The only entry is the name of the website as defined during the installation process (e.g. "New TYPO3 site") with a grey TYPO3 logo.
 
-.. @TODO check references link to section "Introduction" above
-
-By clicking the page icon with the "plus" at the top, and then dragging the "standard page" icon to its appropriate position in the page tree, you can build the following page tree.
+By clicking the page icon with the "plus" at the top, and then dragging the "standard page" icon to its appropriate position in the page tree, you can build the following page tree. Enter the page names as shown (a double-click on the page name allows you to rename it).
 
 .. figure:: ../Images/ExtensionInstallation/CreateInitialPages.png
    :alt: Create Initial Pages
@@ -72,12 +70,14 @@ Once all pages have been created, you should end up with exactly the following p
 .. code-block:: none
 
    New TYPO3 site
-   │
-   ├── Page 1
-   │
-   ├── Page 2
-   │
-   └── Page 3
+    │
+    └── example.com
+         │
+         ├── Page 1
+         │
+         ├── Page 2
+         │
+         └── Page 3
 
 
 .. typo3-backend-typoscript-template:
@@ -102,17 +102,15 @@ Now save your changes by clicking the "save" icon at the top.
 Preview Page
 ^^^^^^^^^^^^
 
-At this point, it is a good time to preview what we have done so far. Go to **WEB → View** and switch the width to "Auto Size".
+At this point, it is a good time to preview what we have achieved so far. Go to **WEB → View** and try a few different screen widths. The two buttons at the top left of the screen (marker 1) allow you to show/hide the page tree and to minimize the function menu at the left.
 
 .. figure:: ../Images/ExtensionInstallation/PreviewPage.png
    :alt: Preview Page
    :width: 600
 
 
+The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile view (narrow screen width), a button provides access to a toggle menu. However, only one link is shown the in menu: "Home". The other pages we have created in the backend are still missing.
 
-.. menu not working
-.. jumbotron
-.. three columns
+Besides the menu, a large "Hello, world!" greets the visitors of the website. This is the "Jumbotron"-partial. Below that, three columns are shown, each of them with a "Heading". In a mobile view, these columns stack on top of each other nicely.
 
-Let's update the Fluid template files and implement a simple menu and enable dynamic content that can be edited in the TYPO3 backend.
-We will do this in the next steps.
+Let's update the Fluid template files and implement a simple menu and enable dynamic content that can be edited in the TYPO3 backend in the next steps.
