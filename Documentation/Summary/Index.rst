@@ -39,20 +39,19 @@ The Site Package extension as it stands now still has some shortfalls. Let's hav
 Please understand, that describing these actions is beyond the scope of this tutorial.
 
 
+
+
+
+
+
 .. site-package-builder:
 
 Site Package Builder
-^^^^^^^^^^^^^^^^^^^^
+####################
 
-*TODO: Add some basic information and a reference to `http://sitepackagebuilder.com/`_.*
-
-.. @TODO point out that instead of writing all files from scratch, the site package builder can be used as a freeonline service.
-.. @TODO screenshot
+Another option to create a Site Package extension quickly is an online tool developed by Benjamin Kott: the `Site Package Builder <http://sitepackagebuilder.com/>`_.
 
 
-.. site-package-free-to-download:
-
-Site Package Free to Download
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-*TODO: Add link to Github, where to download the extension.*
+.. figure:: ../Images/Summary/SitePackageBuilder.png
+   :alt: Site Package Builder
+   :width: 800
