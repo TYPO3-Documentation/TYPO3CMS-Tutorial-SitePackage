@@ -63,21 +63,21 @@ By default, all new pages are disabled (marked as a red icon at the bottom right
 
 Once all pages have been created, you should end up with the following page tree.
 
-.. figure: : ../Images/ExtensionInstallation/FinalPageTree.png
+.. figure:: ../Images/ExtensionInstallation/FinalPageTree.png
    :alt: Final Page Tree
 
 
-.. code-block:: none
-
-   New TYPO3 site
-    │
-    └── example.com
-         │
-         ├── Page 1
-         │
-         ├── Page 2
-         │
-         └── Page 3
+.. .. code-block: : none
+..
+..   New TYPO3 site
+..    │
+..    └── example.com
+..         │
+..         ├── Page 1
+..         │
+..         ├── Page 2
+..         │
+..         └── Page 3
 
 
 .. _typo3-backend-typoscript-template:
