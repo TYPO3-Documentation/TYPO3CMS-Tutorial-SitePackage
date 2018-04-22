@@ -109,8 +109,6 @@ At this point, it is a good time to preview what we have achieved so far. Go to 
    :width: 600
 
 
-The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile view (narrow screen width), a button provides access to a toggle menu. However, only one link is shown the in menu: "Home". The other pages we have created in the backend are still missing.
-
-Besides the menu, a large "Hello, world!" greets the visitors of the website. This is the "Jumbotron"-partial. Below that, three columns are shown, each of them with a "Heading". In a mobile view, these columns stack on top of each other nicely.
+The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile view (narrow screen width), a button provides access to a toggle menu. However, only one link is shown the in menu: "Home". The other pages we have created in the backend are still missing. Besides the menu, a large "Hello, world!" greets the visitors of the website. This is the "Jumbotron"-partial. Below that, three columns are shown, each of them with a "Heading". In a mobile view, these columns stack on top of each other nicely.
 
 Let's update the Fluid template files and implement a simple menu and enable dynamic content that can be edited in the TYPO3 backend in the next steps.
