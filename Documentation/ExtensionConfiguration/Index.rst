@@ -55,7 +55,9 @@ Not as important as the extension declaration file above, every extension can fe
 
 .. @TODO: convert this into a proper "Info box"
 
-It should be noted, that newer versions of TYPO3 support alternative formats and file locations. However, for the sake of simplicity, we stick to the specification outlined above for the time being.
+.. note::
+
+   It should be noted, that newer versions of TYPO3 support alternative formats and file locations. However, for the sake of simplicity, we stick to the specification outlined above for the time being.
 
 
 .. make-typoscript-available:
