@@ -36,7 +36,7 @@ Let's assume, we have the following directories and files, which represent a typ
     theme/js/website.js
     theme/index.html
 
-The two CSS and JavaScript files ``bootstrap.min.css`` and ``bootstrap.min.js`` belong to the Bootstrap framework. As a matter of fact, these files can be ignored (we will include the Bootstrap framework using TypoScript as shown in section xxx). The CSS file ``website.css`` implements the custom styles used for the website. Same as the JavaScript file ``website.js``, which contains custom JavaScript code. The only file inside the ``image/`` directory is a simple logo as a PNG image. Let's assume this is a square image of 100px width by 100px height.
+The two CSS and JavaScript files ``bootstrap.min.css`` and ``bootstrap.min.js`` belong to the Bootstrap framework. As a matter of fact, these files can be ignored (we will include the Bootstrap framework using TypoScript as shown in section :ref:`file-setup-typoscript`). The CSS file ``website.css`` implements the custom styles used for the website. Same as the JavaScript file ``website.js``, which contains custom JavaScript code. The only file inside the ``image/`` directory is a simple logo as a PNG image. Let's assume this is a square image of 100px width by 100px height.
 
 Another file we can ignore is the jQuery library ``jquery-3.2.1.min.js`` in the ``js/`` directory. Due to the fact that there is a better way to include external libraries in TYPO3, we do not need to worry about this library either.
 
