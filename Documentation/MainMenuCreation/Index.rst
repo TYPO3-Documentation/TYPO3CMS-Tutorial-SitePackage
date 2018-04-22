@@ -90,6 +90,9 @@ Preview Page
 
 When previewing the site as it stande now, we can verify if everything is working as expected and if the menu is generated. Go to **WEB → View** and check, if the menu reflects the pages you created in the backend. Add one or two further pages to the page tree and check, if they appear in the preview.
 
-.. @TODO screenshot
+.. figure:: ../Images/MainMenuCreation/PreviewPage.png
+   :alt: Preview Page
+   :width: 600
+
 
 If everything is working as expected, let's configure the dynamic content rendering as the next step.
