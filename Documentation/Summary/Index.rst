@@ -18,9 +18,7 @@ The list below shows a quick summary what you have achieved by working through t
 - Developed a navigation menu using TypoScript and Fluid.
 - Applied TypoScript to render the content (file ``DynamicContent.typoscript``).
 
-This all sounds very sophisticated and complicated, but keep in mind, the extension (as it stands at this point in time) contains xxx files only, plus the HTML/CSS files. Except xxx files in the root level of the extension directory, non of these files are PHP files.
-
-.. @TODO add number of files
+This all sounds very sophisticated and complicated, but keep in mind, the extension (as it stands at this point in time) contains approximately six files only, plus the HTML/CSS files. Only two files contain PHP code.
 
 
 .. _next-steps:
@@ -30,17 +28,38 @@ Next Steps
 
 The Site Package extension, as it stands now, still has some shortfalls. Let's have a closer look what you could or should do as the next steps to address these.
 
-.. one page layout only
-.. navigation menu just one level
-.. backend columns
+.. rst-class:: bignums
 
-*TODO: list known issues such as one page layout, just one menu level, BE columns, etc.*
+1. One page layout only
 
-It should be understood, that describing these actions is beyond the scope of this tutorial.
+   At the moment, the Site Package supports **one page layout** only (the Jumbotron area and three columns below), which is a typical layout for a standard homepage. However, this layout is the only layout and used across all pages. By extending the TypoScript template and creating variations of the ``Default.html`` Fluid template file, you could create a number of differnet templates. For example, one for the homepage and a different one for normal content pages.
 
-The nature of a tutorial, such as this document, is to provide detailed instructions to walk a beginner through a particular task. By building your own Site Package extension from scratch, you have learned each step that is required to turn a basic web design template into a fully working website in TYPO3.
+   By using `Backend Layouts <https://www.google.com/search?q=TYPO3+Backend+Layouts>`_, you can implement are layout structure in the backend of TYPO3, that reflects the layout used in the frontend. This makes it very easy for editors to understand where the content will appear on the website.
 
-When you create Site Packages in the future, you probably do not want to create every file over and over again, but use a pre-built version of the Site Package extension. Therefore, it make sense to store and maintain the current state in a central place, such as a Git repository. Despite the fact that for a learning experience it is always beneficial to develop the extension yourself, you find the extension built in this tutorial at `GitHub <https://github.com>`_.
+2. Navigation menu features one level only
+
+   The bigger the website becomes, the more likely is a multi-level page structure required. This means, editors will likely create sub-pages of the root page "Page 1" for example. At the moment, the menu does not support sub-pages.
+
+   If this becomes a requirement, the TypoScript code used to generate the menu (see chapter :ref:`main-menu-creation`) and the Fluid template file that outputs the menu (``Resources/Private/Layouts/Page/Default.html``) need to be updated.
+
+3. Unused, but visible column "border"
+
+   Backend users (e.g. editors) might be confused about the "*border*" column when working in the backend and entering/maintaining content. Only three of the four page columns shown in the backend are used and the far right column has no mapping. This results in the fact that even if editors add content elements to the "*border*" column, the content never appears anywhere.
+
+   To simply *disable* the column, enter the following line in the "Page TSConfig" box of page "example.com" (**Page Properties → Resources**):
+
+   ``TCEFORM.tt_content.colPos.removeItems = 3``
+
+   However, the aforementioned `Backend Layouts <https://www.google.com/search?q=TYPO3+Backend+Layouts>`_ give you much more control about columns, labels, positions, etc. and are the recommended way to implement layouts in the backend.
+
+4. Jumbotron not editable
+
+   The content of the Jumbotron area is currently not editable by editors or any other backend users of the system. We kept the Jumbotron area simple and hard-coded as a Partial in file ``Resources/Private/Partials/Page/Jumbotron.html`` intentionally. The Jumbotron stands as a place holder for various options in our example. Some readers may like to implement a banner with rotating images, some prefer a text content element or a video player instead. All this and much more is possible with TYPO3, but beyond the scope of this tutorial.
+
+
+In general, the nature of a tutorial, such as this document, is to provide detailed instructions to walk a beginner through a particular task. By building your own Site Package extension from scratch, you have learned each step that is required to turn a basic web design template into a fully working website in TYPO3.
+
+When you create Site Packages in the future, you probably do not want to create every file over and over again, but use a pre-built version of the Site Package extension. Therefore, it make sense to store and maintain the current state in a central place, such as a Git repository. Despite the fact that for a learning experience it is always beneficial to develop the extension yourself, you can also download the extension built in this tutorial below.
 
 
 .. _download-site-package-extension:
