@@ -22,7 +22,7 @@ If you do not have SSH/FTP access, create a ZIP file of the **content** of your 
 Extension Manager
 ^^^^^^^^^^^^^^^^^
 
-First of all, login at the backend of TYPO3 as a user with administrator privileges. At the left side you find a section **ADMIN TOOLS** with a module named "Extensions". Open this module and make sure, the drop down box on the right hand side shows "Installed Extensions". If you uploaded the site package extension via SSH/FTP already, search for "Site Package". If you created a ZIP file, upload the ZIP'ed extension by clicking the upload icon (see marker 1).
+First of all, login at the backend of TYPO3 as a user with administrator privileges. At the left side you find a section **ADMIN TOOLS** with a module named "Extensions" (marker 1). Open this module and make sure, the drop down box on the right hand side shows "Installed Extensions" (marker 2). If you uploaded the site package extension via SSH/FTP already, search for "Site Package". If you created a ZIP file, upload the ZIP'ed extension by clicking the upload icon (marker 3).
 
 .. figure:: ../Images/ExtensionInstallation/ExtensionManager.png
    :alt: Extension Manager
@@ -31,7 +31,7 @@ First of all, login at the backend of TYPO3 as a user with administrator privile
    TYPO3 Extension Manager
 
 
-Once the site package extension appears in the list, you can activate it by clicking the "plus" icon, if not already done.
+Once the site package extension appears in the list, you can activate it by clicking the "plus" icon (marker 4), if not already done.
 
 
 .. typo3-backend-create-initial-pages:
@@ -52,7 +52,7 @@ By clicking the page icon with the "plus" at the top, and then dragging the "sta
    Create initial pages
 
 
-By default, all new pages are disabled (marked as a red icon at the bottom right). Enable all pages by clicking the "Enable" link in the context menu.
+By default, all new pages are disabled (marked as a red icon at the bottom right). Enable all pages by clicking the "Enable" link in the context menu (marker 1).
 
 .. figure:: ../Images/ExtensionInstallation/EnablePagesInContextMenu.png
    :alt: Enable Pages in Context Menu
@@ -61,10 +61,10 @@ By default, all new pages are disabled (marked as a red icon at the bottom right
    Enable Pages in Context Menu
 
 
-Once all pages have been created, you should end up with exactly the following page tree.
+Once all pages have been created, you should end up with the following page tree.
 
-.. .. figure: : ../Images/ExtensionInstallation/FinalPageTree.png
-..   :alt: Final Page Tree
+.. figure: : ../Images/ExtensionInstallation/FinalPageTree.png
+   :alt: Final Page Tree
 
 
 .. code-block:: none

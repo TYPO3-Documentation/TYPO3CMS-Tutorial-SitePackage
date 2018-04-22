@@ -88,11 +88,12 @@ The construct ``{f:if(condition: mainnavigationItem.active, then: 'active')}`` i
 Preview Page
 ^^^^^^^^^^^^
 
-When previewing the site as it stande now, we can verify if everything is working as expected and if the menu is generated. Go to **WEB → View** and check, if the menu reflects the pages you created in the backend. Add one or two further pages to the page tree and check, if they appear in the preview.
+When previewing the site as it stande now, we can verify if everything is working as expected and if the menu is generated. Go to **WEB → View** and check, if the menu reflects the pages you created in the backend. Add one or two further pages to the page tree and check, if they appear in the preview. If the menu does not change, you possibly need to clear the frontend cache (marker 1), then reload the preview (marker 2).
 
 .. figure:: ../Images/MainMenuCreation/PreviewPage.png
    :alt: Preview Page
    :width: 600
 
 
-If everything is working as expected, let's configure the dynamic content rendering as the next step.
+The preview in the screenshot above shows the menu with three page links: "Page 1", "Page 2" and "Page 3".
+If everything is working as expected, let's configure the dynamic content rendering in the next step.

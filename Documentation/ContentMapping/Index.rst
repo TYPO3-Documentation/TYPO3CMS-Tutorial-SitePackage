@@ -66,7 +66,7 @@ Create a new directory ``Configuration/TypoScript/Helper/`` and inside this dire
       30 = RESTORE_REGISTER
     }
 
-Once again, describing what exactly this TypoScript does is not part of this tutorial. The only fact that is important is, that the variable ``lib.dynamicContent`` contains the content in subject to the column and language in the backend. More details about the TypoScript can be found in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
+Once again, describing what exactly this TypoScript does is not part of this tutorial. The only fact that is important is, that the variable ``lib.dynamicContent`` contains the content in subject to the column and language in the backend. More details about the TypoScript can be found in the :ref:`TypoScript Reference <t3tsref:menu-objects>`_.
 
 
 .. typo3-backend-create-pages:
@@ -133,26 +133,29 @@ Simply replace these lines with the cObject-ViewHelper (``<f:cObject ... >``), s
 Add Content in the TYPO3 Backend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now it's a great time to add some content at the backend to make sure, everything is working as expected. Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the columns labelle "*normal*" and choose the "Text and Image" content element.
+Now it's a great time to add some content in the backend. Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the column labelled "*normal*" and choose the "Regular Text Element" content element.
 
-.. figure:: ../Images/ContentMapping/AddTextAndImageContentElement.png
-   :alt: Add Text and Image Content Element
+.. figure:: ../Images/ContentMapping/CreateNewContentElement.png
+   :alt: Create New Content Element
    :width: 600
 
 
-Enter a headline, some arbitrary text in the Rich Text Editor (RTE) and save your changes (button "save and close" at the top).
+Enter a headline (marker 1) some arbitrary text in the Rich Text Editor (RTE) and save your changes by cliking button "Save and close" at the top (marker 2).
 
 .. figure:: ../Images/ContentMapping/SaveAndClose.png
    :alt: Save and Close
    :width: 600
 
 
-Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty.
+The new content element appears in the appropriate column. Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty.
 
 .. figure:: ../Images/ContentMapping/FillColumnsLeftAndRight.png
    :alt: Further Content Elements in Left and Right Columns
    :width: 600
 
+
+Preview Page
+^^^^^^^^^^^^
 
 Finally, clear the frontend cache and preview the page.
 
@@ -161,4 +164,6 @@ Finally, clear the frontend cache and preview the page.
    :width: 600
 
 
-.. @TODO describe what the users sees
+Each of the three columns shows the headline and content.
+
+The last section of this tutorial summarises the achievements, discusses some shortfalls of the extension as it stands now and provides some suggestions what to do next.
