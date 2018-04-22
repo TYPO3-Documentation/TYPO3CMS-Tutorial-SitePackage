@@ -133,11 +133,32 @@ Simply replace these lines with the cObject-ViewHelper (``<f:cObject ... >``), s
 Add Content in the TYPO3 Backend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now it's a great time to add some content at the backend to make sure, everything is working as expected.
-Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the columns labelled "*normal*" and choose the "Text and Image" content element. Enter a headline, some arbitrary text in the Rich Text Editor (RTE) and save your changes (button "save and close" at the top).
+Now it's a great time to add some content at the backend to make sure, everything is working as expected. Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the columns labelle "*normal*" and choose the "Text and Image" content element.
 
-Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty. Finally, clear the frontend cache and preview the page.
+.. figure:: ../Images/ContentMapping/AddTextAndImageContentElement.png
+   :alt: Add Text and Image Content Element
+   :width: 600
 
-.. @TODO screenshot
+
+Enter a headline, some arbitrary text in the Rich Text Editor (RTE) and save your changes (button "save and close" at the top).
+
+.. figure:: ../Images/ContentMapping/SaveAndClose.png
+   :alt: Save and Close
+   :width: 600
+
+
+Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty.
+
+.. figure:: ../Images/ContentMapping/FillColumnsLeftAndRight.png
+   :alt: Further Content Elements in Left and Right Columns
+   :width: 600
+
+
+Finally, clear the frontend cache and preview the page.
+
+.. figure:: ../Images/ContentMapping/PreviewPage.png
+   :alt: Preview Page
+   :width: 600
+
 
 .. @TODO describe what the users sees
