@@ -29,12 +29,12 @@ Site Package Tutorial
       documentation@typo3.org
 
 :License:
-      Open Publication License available from `www.opencontent.org/openpub/ <http://www.opencontent.org/openpub/>`_
+      Open Publication License available from http://www.opencontent.org/openpub/
 
 :Rendered:
       |today|
 
-The content of this document is related to TYPO3 CMS, a GNU/GPL CMS/Framework available from `typo3.org <https://typo3.org>`_ .
+The content of this document is related to TYPO3 CMS, a GNU/GPL CMS/Framework available from https://typo3.org/.
 
 
 **Official Documentation**
@@ -59,9 +59,7 @@ Table of Contents
 =================
 
 .. toctree::
-   :maxdepth: 2
    :titlesonly:
-   :glob:
 
    Preface/Index
    Introduction/Index
