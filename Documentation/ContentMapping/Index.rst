@@ -156,16 +156,12 @@ Element" content element.
 
 .. figure:: CreateNewContentElement.png
    :alt: Create New Content Element
-   :width: 600
-
 
 Enter a headline (marker 1) some arbitrary text in the Rich Text Editor (RTE)
 and save your changes by cliking button "Save and close" at the top (marker 2).
 
 .. figure:: SaveAndClose.png
    :alt: Save and Close
-   :width: 600
-
 
 The new content element appears in the appropriate column. Repeat this process
 and enter some further content in columns "*left*" and "*right*", but leave
@@ -173,7 +169,7 @@ column "*border*" empty.
 
 .. figure:: FillColumnsLeftAndRight.png
    :alt: Further Content Elements in Left and Right Columns
-   :width: 600
+
 
 .. _cm-Preview-page:
 
@@ -184,8 +180,6 @@ Finally, clear the frontend cache and preview the page.
 
 .. figure:: PreviewPage.png
    :alt: Preview Page
-   :width: 600
-
 
 Each of the three columns shows the headline and content.
 

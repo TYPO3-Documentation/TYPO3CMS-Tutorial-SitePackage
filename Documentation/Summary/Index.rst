@@ -147,7 +147,6 @@ developed by Benjamin Kott: the `Site Package Builder
 
 .. figure:: SitePackageBuilder.png
    :alt: Site Package Builder
-   :width: 800
 
 
 .. _youtube-videos:

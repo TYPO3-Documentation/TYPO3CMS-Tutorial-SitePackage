@@ -47,7 +47,6 @@ the upload icon (marker 3).
 
 .. figure:: ExtensionManager.png
    :alt: Extension Manager
-   :width: 600
 
    TYPO3 Extension Manager
 
@@ -78,7 +77,6 @@ the page name allows you to rename it).
 
 .. figure:: CreateInitialPages.png
    :alt: Create Initial Pages
-   :width: 600
 
    Create initial pages
 
@@ -89,7 +87,6 @@ right). Enable all pages by clicking the "Enable" link in the context menu
 
 .. figure:: EnablePagesInContextMenu.png
    :alt: Enable Pages in Context Menu
-   :width: 600
 
    Enable Pages in Context Menu
 
@@ -137,8 +134,6 @@ Package (site_package)", which moves the entry to the left box.
 
 .. figure:: IncludeTypoScriptTemplate.png
    :alt: Include TypoScript Template
-   :width: 600
-
 
 Now save your changes by clicking the "save" icon at the top.
 
@@ -153,8 +148,6 @@ minimize the function menu at the left.
 
 .. figure:: PreviewPage.png
    :alt: Preview Page
-   :width: 600
-
 
 The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile
 view (narrow screen width), a button provides access to a toggle menu. However,
