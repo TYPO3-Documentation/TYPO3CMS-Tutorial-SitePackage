@@ -45,7 +45,7 @@ uploaded the site package extension via SSH/FTP already, search for "Site
 Package". If you created a ZIP file, upload the ZIP'ed extension by clicking
 the upload icon (marker 3).
 
-.. figure:: ../Images/ExtensionInstallation/ExtensionManager.png
+.. figure:: ExtensionManager.png
    :alt: Extension Manager
    :width: 600
 
@@ -76,7 +76,7 @@ By clicking the page icon with the "plus" at the top, and then dragging the
 build the following page tree. Enter the page names as shown (a double-click on
 the page name allows you to rename it).
 
-.. figure:: ../Images/ExtensionInstallation/CreateInitialPages.png
+.. figure:: CreateInitialPages.png
    :alt: Create Initial Pages
    :width: 600
 
@@ -87,7 +87,7 @@ By default, all new pages are disabled (marked as a red icon at the bottom
 right). Enable all pages by clicking the "Enable" link in the context menu
 (marker 1).
 
-.. figure:: ../Images/ExtensionInstallation/EnablePagesInContextMenu.png
+.. figure:: EnablePagesInContextMenu.png
    :alt: Enable Pages in Context Menu
    :width: 600
 
@@ -97,7 +97,7 @@ right). Enable all pages by clicking the "Enable" link in the context menu
 Once all pages have been created, you should end up with the following page
 tree.
 
-.. figure:: ../Images/ExtensionInstallation/FinalPageTree.png
+.. figure:: FinalPageTree.png
    :alt: Final Page Tree
 
 
@@ -135,7 +135,7 @@ extensions)", which shows two boxes: "Selected Items" (left hand side) and
 "Available Items" (right hand side). Under "Available Items", click "Site
 Package (site_package)", which moves the entry to the left box.
 
-.. figure:: ../Images/ExtensionInstallation/IncludeTypoScriptTemplate.png
+.. figure:: IncludeTypoScriptTemplate.png
    :alt: Include TypoScript Template
    :width: 600
 
@@ -151,7 +151,7 @@ At this point, it is a good time to preview what we have achieved so far. Go to
 top left of the screen (marker 1) allow you to show/hide the page tree and to
 minimize the function menu at the left.
 
-.. figure:: ../Images/ExtensionInstallation/PreviewPage.png
+.. figure:: PreviewPage.png
    :alt: Preview Page
    :width: 600
 

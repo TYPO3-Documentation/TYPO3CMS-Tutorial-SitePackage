@@ -114,7 +114,7 @@ two further pages to the page tree and check, if they appear in the preview. If
 the menu does not change, you possibly need to clear the frontend cache (marker
 1), then reload the preview (marker 2).
 
-.. figure:: ../Images/MainMenuCreation/PreviewPage.png
+.. figure:: PreviewPage.png
    :alt: Preview Page
    :width: 600
 

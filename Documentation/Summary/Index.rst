@@ -145,7 +145,7 @@ developed by Benjamin Kott: the `Site Package Builder
 <http://sitepackagebuilder.com/>`_.
 
 
-.. figure:: ../Images/Summary/SitePackageBuilder.png
+.. figure:: SitePackageBuilder.png
    :alt: Site Package Builder
    :width: 800
 
