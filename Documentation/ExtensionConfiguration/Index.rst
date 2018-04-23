@@ -11,9 +11,14 @@ Extension Configuration
 Extension Declaration File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Every TYPO3 extension requires a configuration file (also known as the *extension declaration file*) to tell the TYPO3 instance some basic details of the extension, possible dependencies, etc. Without this file, TYPO3 would not know that the extension exists and as a consequence could not load it, nor display it in the *Extension Manager*.
+Every TYPO3 extension requires a configuration file (also known as the
+*extension declaration file*) to tell the TYPO3 instance some basic details of
+the extension, possible dependencies, etc. Without this file, TYPO3 would not
+know that the extension exists and as a consequence could not load it, nor
+display it in the *Extension Manager*.
 
-This file is named ``ext_emconf.php`` and is expected in the root level of the extension. The content should look as follows.
+This file is named `ext_emconf.php` and is expected in the root level of the
+extension. The content should look as follows.
 
 
 ::
@@ -47,7 +52,9 @@ description is recommended and defining some details about the author
 detailed description of all configuration options can be found in the
 :ref:`TypoScript Reference <t3coreapi:extension-declaration>`.
 
-Create and customize this file and store it as ``site_package/ext_emconf.php``. The configration shown above will do the job, if you do not want to customize the declaration file at the moment.
+Create and customize this file and store it as `site_package/ext_emconf.php`.
+The configration shown above will do the job, if you do not want to customize
+the declaration file at the moment.
 
 
 .. _extension-icon:
@@ -55,11 +62,16 @@ Create and customize this file and store it as ``site_package/ext_emconf.php``. 
 Extension Icon
 ^^^^^^^^^^^^^^
 
-Not as important as the extension declaration file above, every extension can feature an icon as a PNG file. This image should be located in the root directory of the extension as well, and must be named ``ext_icon.png``. Choose or create an image of 64px width by 64px height.
+Not as important as the extension declaration file above, every extension can
+feature an icon as a PNG file. This image should be located in the root
+directory of the extension as well, and must be named :file:`ext_icon.png`.
+Choose or create an image of 64px width by 64px height.
 
 .. note::
 
-   It should be noted, that newer versions of TYPO3 support alternative formats and file locations. However, for the sake of simplicity, we stick to the specification outlined above for the time being.
+   It should be noted, that newer versions of TYPO3 support alternative formats
+   and file locations. However, for the sake of simplicity, we stick to the
+   specification outlined above for the time being.
 
 
 .. _make-typoscript-available:
@@ -67,7 +79,10 @@ Not as important as the extension declaration file above, every extension can fe
 Make TypoScript Available
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to automatically load the TypoScript files we have created in the previous step, a new PHP file ``sys_template.php`` needs to be created and stored in directory ``Configuration/TCA/Overrides/``. The content of this file should look like the following code.
+In order to automatically load the TypoScript files we have created in the
+previous step, a new PHP file :file:`sys_template.php` needs to be created and
+stored in directory `Configuration/TCA/Overrides/`. The content of this file
+should look like the following code.
 
 ::
 
@@ -97,7 +112,8 @@ In order to automatically load the TypoScript files we have created in the previ
 Directory and File Structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Let's review the directory and file structure of the site package extension as it stands now.
+Let's review the directory and file structure of the site package extension as
+it stands now.
 
 ::
 
@@ -130,4 +146,5 @@ Let's review the directory and file structure of the site package extension as i
     site_package/Resources/Public/JavaScript
     site_package/Resources/Public/JavaScript/website.js
 
-At this point we can install the site package extension in a TYPO3 instance, which we will do in the next step.
+At this point we can install the site package extension in a TYPO3 instance,
+which we will do in the next step.

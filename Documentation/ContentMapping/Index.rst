@@ -6,8 +6,11 @@
 Content Mapping
 ---------------
 
-Having a perfect visual appearance of a website is pointless, if the content editors enter in the backend is not shown at the frontend. In the last step, we map some of the backend columns, which hold content elements such as text, images, etc. to areas in the frontend.
-This can be achieved easily by using custom TypoScript.
+Having a perfect visual appearance of a website is pointless, if the content
+editors enter in the backend is not shown at the frontend. In the last step, we
+map some of the backend columns, which hold content elements such as text,
+images, etc. to areas in the frontend. This can be achieved easily by using
+custom TypoScript.
 
 
 .. _cm-dynamic-content-rendering-in-typoscript:
@@ -15,7 +18,9 @@ This can be achieved easily by using custom TypoScript.
 Dynamic Content Rendering in TypoScript
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Create a new directory ``Configuration/TypoScript/Helper/`` and inside this directory, a new file called ``DynamicContent.typoscript`` with the following content.
+Create a new directory `Configuration/TypoScript/Helper/` and inside this
+directory, a new file called `DynamicContent.typoscript` with the following
+content.
 
 ::
 
@@ -66,7 +71,11 @@ Create a new directory ``Configuration/TypoScript/Helper/`` and inside this dire
       30 = RESTORE_REGISTER
     }
 
-Once again, describing what exactly this TypoScript does is not part of this tutorial. The only fact that is important is, that the variable ``lib.dynamicContent`` contains the content in subject to the column and language in the backend. More details about the TypoScript can be found in the :ref:`TypoScript Reference <t3tsref:menu-objects>`.
+Once again, describing what exactly this TypoScript does is not part of this
+tutorial. The only fact that is important is, that the variable
+`lib.dynamicContent` contains the content in subject to the column and
+language in the backend. More details about the TypoScript can be found in the
+:ref:`TypoScript Reference <t3tsref:menu-objects>`.
 
 
 .. _cm-typo3-backend-create-pages:
@@ -74,7 +83,9 @@ Once again, describing what exactly this TypoScript does is not part of this tut
 Include Dynamic Content Rendering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To use the TypoScript, it needs to be loaded (*included*), so open file ``Configuration/TypoScript/setup.typoscript`` and add line ``<INCLUDE_TYPOSCRIPT: ... >`` as shown below (second line).
+To use the TypoScript, it needs to be loaded (*included*), so open file
+`Configuration/TypoScript/setup.typoscript` and add line
+`<INCLUDE_TYPOSCRIPT: ... >` as shown below (second line).
 
 ::
 
@@ -96,9 +107,14 @@ To use the TypoScript, it needs to be loaded (*included*), so open file ``Config
 Typoscript Mapping in Fluid Template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Open file ``Resources/Private/Templates/Page/Default.html`` and locate the three columns. They all show a "Headline" (look for the ``<h2>``-tags) and some dummy content (look for the ``<p>``-tags).
+Open file `Resources/Private/Templates/Page/Default.html` and locate the
+three columns. They all show a "Headline" (look for the `<h2>`-tags) and some
+dummy content (look for the `<p>`-tags).
 
-Simply replace these lines with the cObject-ViewHelper (``<f:cObject ... >``), so that file ``Default.html`` shows the following HTML code. Make sure, you specify the column positions correctly (`1`, `0` and `2`) and in exactly this order.
+Simply replace these lines with the cObject-ViewHelper (`<f:cObject ... >`),
+so that file `Default.html` shows the following HTML code. Make sure, you
+specify the column positions correctly (`1`, `0` and `2`) and in exactly this
+order.
 
 ::
 
@@ -133,21 +149,27 @@ Simply replace these lines with the cObject-ViewHelper (``<f:cObject ... >``), s
 Add Content in the TYPO3 Backend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now it's a great time to add some content in the backend. Go to **WEB → Page** and select any of the pages you created before (e.g. "Page 1"). Click the "plus" icon in the column labelled "*normal*" and choose the "Regular Text Element" content element.
+Now it's a great time to add some content in the backend. Go to **WEB → Page**
+and select any of the pages you created before (e.g. "Page 1"). Click the
+"plus" icon in the column labelled "*normal*" and choose the "Regular Text
+Element" content element.
 
 .. figure:: ../Images/ContentMapping/CreateNewContentElement.png
    :alt: Create New Content Element
    :width: 600
 
 
-Enter a headline (marker 1) some arbitrary text in the Rich Text Editor (RTE) and save your changes by cliking button "Save and close" at the top (marker 2).
+Enter a headline (marker 1) some arbitrary text in the Rich Text Editor (RTE)
+and save your changes by cliking button "Save and close" at the top (marker 2).
 
 .. figure:: ../Images/ContentMapping/SaveAndClose.png
    :alt: Save and Close
    :width: 600
 
 
-The new content element appears in the appropriate column. Repeat this process and enter some further content in columns "*left*" and "*right*", but leave column "*border*" empty.
+The new content element appears in the appropriate column. Repeat this process
+and enter some further content in columns "*left*" and "*right*", but leave
+column "*border*" empty.
 
 .. figure:: ../Images/ContentMapping/FillColumnsLeftAndRight.png
    :alt: Further Content Elements in Left and Right Columns
@@ -167,4 +189,6 @@ Finally, clear the frontend cache and preview the page.
 
 Each of the three columns shows the headline and content.
 
-The last section of this tutorial summarises the achievements, discusses some shortfalls of the extension as it stands now and provides some suggestions what to do next.
+The last section of this tutorial summarises the achievements, discusses some
+shortfalls of the extension as it stands now and provides some suggestions what
+to do next.
