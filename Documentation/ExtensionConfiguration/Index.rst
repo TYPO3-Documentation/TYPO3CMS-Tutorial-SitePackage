@@ -41,7 +41,11 @@ This file is named ``ext_emconf.php`` and is expected in the root level of the e
       'clearCacheOnLoad' => 1
     ];
 
-The values can and should be customized of course. A more meaningful and longer description is recommended and defining some details about the author (``author``, ``author_email`` and ``author_company``) make also perfect sense. A detailed description of all configuration options can be found in the :ref:`TypoScript Reference <t3coreapi:declaration-file>`.
+The values can and should be customized of course. A more meaningful and longer
+description is recommended and defining some details about the author
+(`author`, `author_email` and `author_company`) make also perfect sense. A
+detailed description of all configuration options can be found in the
+:ref:`TypoScript Reference <t3coreapi:extension-declaration>`.
 
 Create and customize this file and store it as ``site_package/ext_emconf.php``. The configration shown above will do the job, if you do not want to customize the declaration file at the moment.
 

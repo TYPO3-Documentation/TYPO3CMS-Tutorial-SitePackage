@@ -50,7 +50,11 @@ Note the directive ``as = mainnavigation``: this defines the name of the menu (h
 Update Fluid and Implement Main Menu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To make the output of the ``MenuProcessor`` visible at the frontend, we have to adjust the Fluid template slightly. You possibly remember, that we moved the main menu to the Fluid layout file, which is located under ``Resources/Private/Layouts/Default.html`` (see section :ref:`the-website-layout-file`). Open this file and adjust it as shown below.
+To make the output of the `MenuProcessor` visible at the frontend, we have to
+adjust the Fluid template slightly. You possibly remember, that we moved the
+main menu to the Fluid layout file, which is located under
+:file:`Resources/Private/Layouts/Default.html` (see section
+:ref:`the-website-layout-file`). Open this file and adjust it as shown below.
 
 
 ::

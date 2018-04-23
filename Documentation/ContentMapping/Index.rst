@@ -10,7 +10,7 @@ Having a perfect visual appearance of a website is pointless, if the content edi
 This can be achieved easily by using custom TypoScript.
 
 
-.. _dynamic-content-rendering-in-typoscript:
+.. _cm-dynamic-content-rendering-in-typoscript:
 
 Dynamic Content Rendering in TypoScript
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,10 +66,10 @@ Create a new directory ``Configuration/TypoScript/Helper/`` and inside this dire
       30 = RESTORE_REGISTER
     }
 
-Once again, describing what exactly this TypoScript does is not part of this tutorial. The only fact that is important is, that the variable ``lib.dynamicContent`` contains the content in subject to the column and language in the backend. More details about the TypoScript can be found in the :ref:`TypoScript Reference <t3tsref:menu-objects>`_.
+Once again, describing what exactly this TypoScript does is not part of this tutorial. The only fact that is important is, that the variable ``lib.dynamicContent`` contains the content in subject to the column and language in the backend. More details about the TypoScript can be found in the :ref:`TypoScript Reference <t3tsref:menu-objects>`.
 
 
-.. _typo3-backend-create-pages:
+.. _cm-typo3-backend-create-pages:
 
 Include Dynamic Content Rendering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,7 +91,7 @@ To use the TypoScript, it needs to be loaded (*included*), so open file ``Config
     }
 
 
-.. _fluid-typoscript-mapping:
+.. _cm-fluid-typoscript-mapping:
 
 Typoscript Mapping in Fluid Template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -128,7 +128,7 @@ Simply replace these lines with the cObject-ViewHelper (``<f:cObject ... >``), s
     </f:section>
 
 
-.. _typo3-backend-add-content:
+.. _cm-typo3-backend-add-content:
 
 Add Content in the TYPO3 Backend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -153,6 +153,7 @@ The new content element appears in the appropriate column. Repeat this process a
    :alt: Further Content Elements in Left and Right Columns
    :width: 600
 
+.. _cm-Preview-page:
 
 Preview Page
 ^^^^^^^^^^^^

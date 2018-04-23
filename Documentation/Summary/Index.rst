@@ -90,6 +90,7 @@ Another option to create a Site Package extension quickly is an online tool deve
 Videos on YouTube
 #################
 
-In this three-parts series, Mathias Schreiber and Benjamin Kott set up a TYPO3 site from scratch by building a Site Package extension.
+In this three-parts series, Mathias Schreiber and Benjamin Kott set up a TYPO3
+site from scratch by building a Site Package extension.
 
-   |youtube-teaser-HtBm-im7pc0o|
+((add link / youtube))

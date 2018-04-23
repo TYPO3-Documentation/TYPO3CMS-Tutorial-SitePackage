@@ -50,8 +50,8 @@ The ``Public/`` directory branch is self-explanatory: it contains folders such a
 
 The ``Private/`` directory with its three sub-folders ``Layouts/``, ``Partials/`` and ``Templates/`` in contrast, require some explanation.
 
-Folders under ``Private/``
-"""""""""""""""""""""""""
+Folders under :file:`Private/`
+""""""""""""""""""""""""""""""
 
 Layouts
 ~~~~~~~
@@ -240,7 +240,7 @@ As described above, files inside the ``Templates/`` directory are page-specific 
 The updated template file shows two additional lines at the top (``<f:layout>`` and ``<f:section>``) and an additional line at the bottom (the closing ``</f:section>`` tag). The Layout-ViewHelper refers to the "Default" template file, which we will create in the next step. The Section-ViewHelper simply wraps the page template code we created before and therefore defines a section named "Main".
 
 
-.. the-website-layout-file:
+.. _the-website-layout-file:
 
 The Website Layout File
 ^^^^^^^^^^^^^^^^^^^^^^^
