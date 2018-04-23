@@ -47,20 +47,18 @@ This document is included as part of the official TYPO3 documentation. It has be
 This document is a Tutorial. Tutorials are designed to be step-by-step instructions specifically created to walk a beginner through a particular task from beginning to end. To facilitate effective learning, Tutorials provide examples to illustrate the subjects they cover. In addition, Tutorials provide guidance on how to avoid common pitfalls and highlight key concepts that should be remembered for future reference.
 
 
-Summary
-=======
+**Summary**
 
 This tutorial describes the steps required to turn a basic design template (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive website powered by TYPO3. By using a so-called *extension* (which is called the "Site Package" extension), all relevant files are stored at a central point and changes can easily be tracked in a version control system such as Git.
 
 Despite the fact that TYPO3 supports several methods of implementing websites, this approach is a very flexible and professional way. At the same time, the process is not overly complicated and does not require any programming knowledge.
 
-
-Table of Contents
-=================
+:ref:`Sitemap`
 
 .. toctree::
-   :titlesonly:
+   :hidden:
 
+   Sitemap/Index
    Preface/Index
    Introduction/Index
    DesignTemplate/Index
