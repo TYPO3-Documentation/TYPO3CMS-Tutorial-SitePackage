@@ -89,7 +89,7 @@ The :file:`Private/` directory with its three sub-folders :file:`Layouts/`,
 :file:`Partials/` and :file:`Templates/` in contrast, require some explanation.
 
 Folders under 'Private/'
-""""""""""""""""""""""""
+------------------------
 
 Layouts
 ~~~~~~~
