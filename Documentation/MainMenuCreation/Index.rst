@@ -17,8 +17,8 @@ described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
 
 .. _add-menu-processor:
 
-Add :ts:`MenuProcessor`
-=======================
+Add 'MenuProcessor'
+===================
 
 Open file :file:`Configuration/TypoScript/setup.typoscript` and locate the part
 which defines the :ts:`FLUIDTEMPLATE`. Add the :ts:`dataProcessing { ... }` section
