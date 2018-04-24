@@ -155,12 +155,14 @@ Element" content element.
 
 .. figure:: CreateNewContentElement.png
    :alt: Create New Content Element
+   :class: with-shadow
 
 Enter a headline (marker 1) some arbitrary text in the Rich Text Editor (RTE)
 and save your changes by cliking button "Save and close" at the top (marker 2).
 
 .. figure:: SaveAndClose.png
    :alt: Save and Close
+   :class: with-shadow
 
 The new content element appears in the appropriate column. Repeat this process
 and enter some further content in columns "*left*" and "*right*", but leave
@@ -168,6 +170,7 @@ column "*border*" empty.
 
 .. figure:: FillColumnsLeftAndRight.png
    :alt: Further Content Elements in Left and Right Columns
+   :class: with-shadow
 
 
 .. _cm-Preview-page:
@@ -179,6 +182,8 @@ Finally, clear the frontend cache and preview the page.
 
 .. figure:: PreviewPage.png
    :alt: Preview Page
+   :class: with-shadow
+
 
 Each of the three columns shows the headline and content.
 

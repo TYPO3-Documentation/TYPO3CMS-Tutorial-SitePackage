@@ -148,6 +148,8 @@ developed by Benjamin Kott: the `Site Package Builder
 
 .. figure:: SitePackageBuilder.png
    :alt: Site Package Builder
+   :class: with-shadow
+
 
 
 .. _youtube-videos:

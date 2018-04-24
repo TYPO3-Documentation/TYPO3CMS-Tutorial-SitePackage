@@ -117,6 +117,8 @@ the menu does not change, you possibly need to clear the frontend cache (marker
 
 .. figure:: PreviewPage.png
    :alt: Preview Page
+   :class: with-shadow
+
 
 The preview in the screenshot above shows the menu with three page links: "Page
 1", "Page 2" and "Page 3". If everything is working as expected, let's
