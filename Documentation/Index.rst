@@ -14,7 +14,7 @@ Site Package Tutorial
       en
 
 :Description:
-      The official tutorial how to create a site package in TYPO3 from scratch.
+      The official tutorial how to create a site package in TYPO3 from scratch
 
 :Keywords:
       forDevelopers, forAdmins
@@ -24,9 +24,6 @@ Site Package Tutorial
 
 :Author:
       Michael Schams
-
-:Email:
-      documentation@typo3.org
 
 :License:
       Open Publication License available from
