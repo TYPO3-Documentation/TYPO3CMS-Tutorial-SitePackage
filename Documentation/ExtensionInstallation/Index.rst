@@ -21,11 +21,11 @@ directories have been created on the local machine though).
 
 In case you have SSH/FTP access to the server, copy the directory
 :file:`site_package` (including all files and sub-directories) to the
-following directory in your TYPO3 instance: `typo3conf/ext/`.
+following directory in your TYPO3 instance: :file:`typo3conf/ext/`.
 
 If you do not have SSH/FTP access, create a ZIP file of the **content** of your
 :file:`site_package` folder. It is important that the ZIP archive does not
-contain the directory `site_package` and its files and directories inside this
+contain the directory :file:`site_package` and its files and directories inside this
 folder. The files and folders must be directly located on the first level of
 ZIP archive.
 

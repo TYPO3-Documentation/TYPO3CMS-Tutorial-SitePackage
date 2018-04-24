@@ -20,7 +20,7 @@ wide range of web browser.
 
 The project discussed in this tutorial uses the well-known and popular
 `Bootstrap framework <https://getbootstrap.com>`_ version 4 and `jQuery
-<https://jquery.com>`_ version 3. Both are not mandatory for a site package in
+<https://jquery.com>`__ version 3. Both are not mandatory for a site package in
 TYPO3 as such and can be replaced with similar frameworks or JavaScript
 libraries as required by the individual project.
 
@@ -46,30 +46,30 @@ typical website theme as we know it from a static website.
     theme/js/website.js
     theme/index.html
 
-The two CSS and JavaScript files `bootstrap.min.css` and `bootstrap.min.js`
+The two CSS and JavaScript files :file:`bootstrap.min.css` and :file:`bootstrap.min.js`
 belong to the Bootstrap framework. As a matter of fact, these files can be
 ignored (we will include the Bootstrap framework using TypoScript as shown in
-section :ref:`file-setup-typoscript`). The CSS file `website.css` implements
+section :ref:`file-setup-typoscript`). The CSS file :file:`website.css` implements
 the custom styles used for the website. Same as the JavaScript file
-`website.js`, which contains custom JavaScript code. The only file inside the
-`image/` directory is a simple logo as a PNG image. Let's assume this is a
+:file:`website.js`, which contains custom JavaScript code. The only file inside the
+:file:`image/` directory is a simple logo as a PNG image. Let's assume this is a
 square image of 100px width by 100px height.
 
-Another file we can ignore is the jQuery library `jquery-3.2.1.min.js` in the
-`js/` directory. Due to the fact that there is a better way to include
+Another file we can ignore is the jQuery library :file:`jquery-3.2.1.min.js` in the
+:file:`js/` directory. Due to the fact that there is a better way to include
 external libraries in TYPO3, we do not need to worry about this library either.
 
-This leaves us with the remaining file `index.html`, which is explained in
+This leaves us with the remaining file :file:`index.html`, which is explained in
 more detail in the next section.
 
 
 .. _dt-file-index-html:
 
-File `index.html`
-^^^^^^^^^^^^^^^^^^^
+File :file:`index.html`
+^^^^^^^^^^^^^^^^^^^^^^^
 
 A typical HTML document consists of a *header* and a *body* section. These
-parts are wrapped by the `<html> ... </html>` tags as shown below.
+parts are wrapped by the :code:`<html> ... </html>` tags as shown below.
 
 ::
 
@@ -82,7 +82,7 @@ parts are wrapped by the `<html> ... </html>` tags as shown below.
       </body>
     </html>
 
-At this point, we only need to focus on the `<body> ... </body>` part.
+At this point, we only need to focus on the :code:`<body> ... </body>` part.
 
 The next section of this tutorial describes how the design templates are
 converted into "Fluid" templates, which can be used by TYPO3 to render the

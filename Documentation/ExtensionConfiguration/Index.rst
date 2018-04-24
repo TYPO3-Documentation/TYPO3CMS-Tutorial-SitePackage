@@ -17,7 +17,7 @@ the extension, possible dependencies, etc. Without this file, TYPO3 would not
 know that the extension exists and as a consequence could not load it, nor
 display it in the *Extension Manager*.
 
-This file is named `ext_emconf.php` and is expected in the root level of the
+This file is named :file:`ext_emconf.php` and is expected in the root level of the
 extension. The content should look as follows.
 
 
@@ -48,11 +48,11 @@ extension. The content should look as follows.
 
 The values can and should be customized of course. A more meaningful and longer
 description is recommended and defining some details about the author
-(`author`, `author_email` and `author_company`) make also perfect sense. A
+(`author`, :code:`author_email` and :code:`author_company`) make also perfect sense. A
 detailed description of all configuration options can be found in the
 :ref:`TypoScript Reference <t3coreapi:extension-declaration>`.
 
-Create and customize this file and store it as `site_package/ext_emconf.php`.
+Create and customize this file and store it as :file:`site_package/ext_emconf.php`.
 The configration shown above will do the job, if you do not want to customize
 the declaration file at the moment.
 
@@ -81,7 +81,7 @@ Make TypoScript Available
 
 In order to automatically load the TypoScript files we have created in the
 previous step, a new PHP file :file:`sys_template.php` needs to be created and
-stored in directory `Configuration/TCA/Overrides/`. The content of this file
+stored in directory :file:`Configuration/TCA/Overrides/`. The content of this file
 should look like the following code.
 
 ::

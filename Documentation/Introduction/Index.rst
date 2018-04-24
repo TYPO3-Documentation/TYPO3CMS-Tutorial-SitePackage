@@ -53,25 +53,25 @@ Management". Most TYPO3 sites require a number of extensions. This could be
 extension, which may contain global configuration for these add-ons, the
 dependencies can be defined. When the site package extension is installed in an
 empty TYPO3 instance, all dependent extensions are downloaded from the `TYPO3
-Extension Repository <https://extensions.typo3.org>`_ and installed
+Extension Repository <https://extensions.typo3.org>`__ and installed
 automatically.
 
 Clean Separation from the Userspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Without using an extension, template files are often stored in the
-`fileadmin/` directory of a TYPO3 instance. As a matter of fact, files in
+:file:`fileadmin/` directory of a TYPO3 instance. As a matter of fact, files in
 this directory are indexed by TYPO3's File Abstraction Layer (FAL). This
 results in irrelevant and avoidable records in the database. From a logical
-perspective, the `fileadmin/` area is the "userspace". This area is meant to
+perspective, the :file:`fileadmin/` area is the "userspace". This area is meant to
 belong to editors. Even if access permissions restrict editors from accessing
-or manipulating files in `fileadmin/`, site configuration components should
+or manipulating files in :file:`fileadmin/`, site configuration components should
 not be stored in the userspace by all means.
 
 Security
 ~~~~~~~~
 
-Files in `fileadmin/` are typically meant to be publicly accessible per
+Files in :file:`fileadmin/` are typically meant to be publicly accessible per
 convention. To avoid a so-called information disclosure vulnerability (see the
 :ref:`TYPO3 Security Guide <t3security:start>` for further details),
 configuration files should not be exposed to the public.
@@ -92,8 +92,8 @@ Distributable
 
 In virtue of the motto "TYPO3 inspires people to share!", the site package
 extension can also be shared with the community via the official `TYPO3
-Extension Repository <https://extensions.typo3.org>`_ and/or in a publicly
-accessible version control system such as `GitHub <https://github.com>`_.
+Extension Repository <https://extensions.typo3.org>`__ and/or in a publicly
+accessible version control system such as `GitHub <https://github.com>`__.
 
 Last, but not least, configuration implemented in the site package can be
 overwritten in the TypoScript setup and constants as required.

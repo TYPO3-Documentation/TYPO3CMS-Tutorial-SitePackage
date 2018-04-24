@@ -12,7 +12,7 @@ only developed a "theme" for your website, you also built a fully working
 extension for TYPO3, which can be installed, uninstalled, copied to another
 TYPO3 instance and put under version control. You could also share your Site
 Package with others by uploading your extension to the `TYPO3 Extension
-Repository <https://extensions.typo3.org>`_.
+Repository <https://extensions.typo3.org>`__.
 
 The list below shows a quick summary what you have achieved by working through
 this tutorial.
@@ -20,11 +20,11 @@ this tutorial.
 - Split a "static" HTML/CSS/JavaScript template into Fluid templates (Layout,
   Templates and Partial).
 
-- Applied "Fluid Styled Content" TypoScript (files `constants.typoscript` and
-  `setup.typoscript`).
+- Applied "Fluid Styled Content" TypoScript (files :file:`constants.typoscript` and
+  :file:`setup.typoscript`).
 
-- Included the `Bootstrap framework <https://getbootstrap.com>`_ and `jQuery
-  <https://jquery.com>`_ library as external resources.
+- Included the `Bootstrap framework <https://getbootstrap.com>`__ and `jQuery
+  <https://jquery.com>`__ library as external resources.
 
 - Built a fully functional TYPO3 extension and installed this extension via the
   Extension Manager.
@@ -35,7 +35,7 @@ this tutorial.
 - Developed a navigation menu using TypoScript and Fluid.
 
 - Applied TypoScript to render the content (file
-  `DynamicContent.typoscript`).
+  :file:`DynamicContent.typoscript`).
 
 This all sounds very sophisticated and complicated, but keep in mind, the
 extension (as it stands at this point in time) contains approximately six files
@@ -64,7 +64,7 @@ these.
    for normal content pages.
 
    By using `Backend Layouts
-   <https://www.google.com/search?q=TYPO3+Backend+Layouts>`_, you can implement
+   <https://www.google.com/search?q=TYPO3+Backend+Layouts>`__, you can implement
    are layout structure in the backend of TYPO3, that reflects the layout used
    in the frontend. This makes it very easy for editors to understand where the
    content will appear on the website.
@@ -92,10 +92,10 @@ these.
    To simply *disable* the column, enter the following line in the "Page
    TSConfig" box of page "example.com" (**Page Properties → Resources**):
 
-   `TCEFORM.tt_content.colPos.removeItems = 3`
+   :ts:`TCEFORM.tt_content.colPos.removeItems = 3`
 
    However, the aforementioned `Backend Layouts
-   <https://www.google.com/search?q=TYPO3+Backend+Layouts>`_ give you much more
+   <https://www.google.com/search?q=TYPO3+Backend+Layouts>`__ give you much more
    control about columns, labels, positions, etc. and are the recommended way
    to implement layouts in the backend.
 
@@ -142,7 +142,7 @@ Site Package Builder
 
 Another option to create a Site Package extension quickly is an online tool
 developed by Benjamin Kott: the `Site Package Builder
-<http://sitepackagebuilder.com/>`_.
+<http://sitepackagebuilder.com/>`__.
 
 
 .. figure:: SitePackageBuilder.png

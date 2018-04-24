@@ -18,8 +18,8 @@ custom TypoScript.
 Dynamic Content Rendering in TypoScript
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Create a new directory `Configuration/TypoScript/Helper/` and inside this
-directory, a new file called `DynamicContent.typoscript` with the following
+Create a new directory :file:`Configuration/TypoScript/Helper/` and inside this
+directory, a new file called :file:`DynamicContent.typoscript` with the following
 content.
 
 ::
@@ -107,13 +107,13 @@ To use the TypoScript, it needs to be loaded (*included*), so open file
 Typoscript Mapping in Fluid Template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Open file `Resources/Private/Templates/Page/Default.html` and locate the
-three columns. They all show a "Headline" (look for the `<h2>`-tags) and some
-dummy content (look for the `<p>`-tags).
+Open file :file:`Resources/Private/Templates/Page/Default.html` and locate the
+three columns. They all show a "Headline" (look for the :code:`<h2>`-tags) and some
+dummy content (look for the :code:`<p>`-tags).
 
 Simply replace these lines with the cObject-ViewHelper (`<f:cObject ... >`),
-so that file `Default.html` shows the following HTML code. Make sure, you
-specify the column positions correctly (`1`, `0` and `2`) and in exactly this
+so that file :file:`Default.html` shows the following HTML code. Make sure, you
+specify the column positions correctly (`1`, :code:`0` and :code:`2`) and in exactly this
 order.
 
 ::
