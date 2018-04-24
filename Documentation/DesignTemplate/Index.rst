@@ -67,8 +67,8 @@ in more detail in the next section.
 
 .. _dt-file-index-html:
 
-File :file:`index.html`
-=======================
+File 'index.html'
+=================
 
 A typical HTML document consists of a *header* and a *body* section. These
 parts are wrapped by the :html:`<html> ... </html>` tags as shown below.
