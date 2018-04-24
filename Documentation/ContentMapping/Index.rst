@@ -19,55 +19,55 @@ custom TypoScript.
 Dynamic Content Rendering in TypoScript
 =======================================
 
+.. highlight:: typoscript
+
 Create a new directory :file:`Configuration/TypoScript/Helper/` and inside this
 directory, a new file called :file:`DynamicContent.typoscript` with the following
-content.
+content::
 
-::
-
-    lib.dynamicContent = COA
-    lib.dynamicContent {
+   lib.dynamicContent = COA
+   lib.dynamicContent {
       10 = LOAD_REGISTER
       10 {
-        colPos.cObject = TEXT
-        colPos.cObject {
-          field = colPos
-          ifEmpty.cObject = TEXT
-          ifEmpty.cObject {
-            value.current = 1
-            ifEmpty = 0
-          }
-        }
-        pageUid.cObject = TEXT
-        pageUid.cObject {
-          field = pageUid
-          ifEmpty.data = TSFE:id
-        }
-        contentFromPid.cObject = TEXT
-        contentFromPid.cObject {
-          data = DB:pages:{register:pageUid}:content_from_pid
-          data.insertData = 1
-        }
-        wrap.cObject = TEXT
-        wrap.cObject {
-          field = wrap
-        }
+         colPos.cObject = TEXT
+         colPos.cObject {
+            field = colPos
+            ifEmpty.cObject = TEXT
+            ifEmpty.cObject {
+               value.current = 1
+               ifEmpty = 0
+            }
+         }
+         pageUid.cObject = TEXT
+         pageUid.cObject {
+            field = pageUid
+            ifEmpty.data = TSFE:id
+         }
+         contentFromPid.cObject = TEXT
+         contentFromPid.cObject {
+            data = DB:pages:{register:pageUid}:content_from_pid
+            data.insertData = 1
+         }
+         wrap.cObject = TEXT
+         wrap.cObject {
+            field = wrap
+         }
       }
       20 = CONTENT
       20 {
-        table = tt_content
-        select {
-          includeRecordsWithoutDefaultTranslation = 1
-          orderBy = sorting
-          where = {#colPos}={register:colPos}
-          where.insertData = 1
-          pidInList.data = register:pageUid
-          pidInList.override.data = register:contentFromPid
-        }
-        stdWrap {
-          dataWrap = {register:wrap}
-          required = 1
-        }
+         table = tt_content
+         select {
+            includeRecordsWithoutDefaultTranslation = 1
+            orderBy = sorting
+            where = {#colPos}={register:colPos}
+            where.insertData = 1
+            pidInList.data = register:pageUid
+            pidInList.override.data = register:contentFromPid
+         }
+         stdWrap {
+            dataWrap = {register:wrap}
+            required = 1
+         }
       }
       30 = RESTORE_REGISTER
     }
@@ -86,21 +86,19 @@ Include Dynamic Content Rendering
 
 To use the TypoScript, it needs to be loaded (*included*), so open file
 `Configuration/TypoScript/setup.typoscript` and add line
-`<INCLUDE_TYPOSCRIPT: ... >` as shown below (second line).
+`<INCLUDE_TYPOSCRIPT: ... >` as shown here in the second line::
 
-::
+   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:site_package/Configuration/TypoScript/Helper/DynamicContent.typoscript">
 
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:site_package/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+   page = PAGE
+   page {
+      // ...
+   }
 
-    page = PAGE
-    page {
-      ...
-    }
-
-    config {
-      ...
-    }
+   config {
+      // ...
+   }
 
 
 .. _cm-fluid-typoscript-mapping:
@@ -108,41 +106,41 @@ To use the TypoScript, it needs to be loaded (*included*), so open file
 Typoscript Mapping in Fluid Template
 ====================================
 
+.. highlight:: html
+
 Open file :file:`Resources/Private/Templates/Page/Default.html` and locate the
 three columns. They all show a "Headline" (look for the :code:`<h2>`-tags) and some
 dummy content (look for the :code:`<p>`-tags).
 
 Simply replace these lines with the cObject-ViewHelper (`<f:cObject ... >`),
 so that file :file:`Default.html` shows the following HTML code. Make sure, you
-specify the column positions correctly (`1`, :code:`0` and :code:`2`) and in exactly this
-order.
+specify the column positions correctly (:code:`1`, :code:`0` and :code:`2`) and
+in exactly this order::
 
-::
-
-    <f:layout name="Default" />
-    <f:section name="Main">
+   <f:layout name="Default" />
+   <f:section name="Main">
 
       <main role="main">
 
-        <f:render partial="Jumbotron" />
+         <f:render partial="Jumbotron" />
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+               </div>
+               <div class="col-md-4">
+                  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+               </div>
+               <div class="col-md-4">
+                  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
+               </div>
             </div>
-            <div class="col-md-4">
-              <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
-            </div>
-            <div class="col-md-4">
-              <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
-            </div>
-          </div>
-        </div>
+         </div>
 
       </main>
 
-    </f:section>
+   </f:section>
 
 
 .. _cm-typo3-backend-add-content:
