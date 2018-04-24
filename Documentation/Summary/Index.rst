@@ -158,4 +158,17 @@ Videos on YouTube
 In this three-parts series, Mathias Schreiber and Benjamin Kott set up a TYPO3
 site from scratch by building a Site Package extension.
 
-((add link / youtube))
+Tutorial - Site Packages - Part 1 of 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: HtBmim7pc0o
+
+Tutorial - Site Packages - Part 2 of 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: deSMVfCSCXY
+
+Tutorial - Site Packages - Part 3 of 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: SEoWOBT0rQE
