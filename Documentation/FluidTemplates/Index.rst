@@ -34,7 +34,7 @@ original functionality of Fluid to their heart's content. ViewHelpers are built
 in the programming language PHP. Having said that, website integrators or
 editors are not required to learn or understand these (this is the
 responsibility of a software developer). Integrators only need to **apply**
-them -- and this is as easy as adding a HTML tag such as :html:`<image ... />` to a
+them -- and this is as easy as adding a HTML tag such as :html:`<image.../>` to a
 HTML file.
 
 More than 80 ViewHelpers are shipped with the TYPO3 core already. They enable
