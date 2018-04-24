@@ -7,8 +7,8 @@
 Fluid Templates
 ===============
 
-Before we describe how the static files discussed in the previous section :ref
-:`design-template` can be converted into Fluid templates, we should understand
+Before we describe how the static files discussed in the previous section 
+:ref:`design-template` can be converted into Fluid templates, we should understand
 what *Fluid* is and what the main ideas behind this powerful rendering engine
 are. It is important to point out that the following section is just a quick
 introduction. Further details about Fluid can be found at the `project
