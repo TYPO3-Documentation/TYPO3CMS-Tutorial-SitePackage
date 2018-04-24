@@ -3,8 +3,9 @@
 
 .. _typoscript-configuration:
 
+========================
 TypoScript Configuration
-------------------------
+========================
 
 TYPO3 uses "TypoScript" as a specific *language* to configure a website.
 TypoScript is a very powerful tool in the TYPO3 universe, because it allows
@@ -23,7 +24,7 @@ and functions can be found in the :ref:`TypoScript Reference <t3tsref:start>`.
 .. _files-and-directories:
 
 Files and Directories
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 First of all, we create two new files in the site package directory structure,
 which will contain all TypoScript configurations. By following the official
@@ -49,7 +50,7 @@ template files we have created in the previous step are located in the
 .. _file-constants-typoscript:
 
 TypoScript Constants
-""""""""""""""""""""
+--------------------
 
 Add the following lines to file :file:`constants.typoscript`.
 
@@ -71,7 +72,7 @@ Add the following lines to file :file:`constants.typoscript`.
 .. _file-setup-typoscript:
 
 TypoScript Setup
-""""""""""""""""
+----------------
 
 File :file:`setup.typoscript` is a little it more complex, so we explain it
 section by section. First, add the following lines to that file.

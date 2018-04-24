@@ -3,13 +3,14 @@
 
 .. _extension-configuration:
 
+=======================
 Extension Configuration
------------------------
+=======================
 
 .. _extension-manager-configuration:
 
 Extension Declaration File
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==========================
 
 Every TYPO3 extension requires a configuration file (also known as the
 *extension declaration file*) to tell the TYPO3 instance some basic details of
@@ -60,7 +61,7 @@ the declaration file at the moment.
 .. _extension-icon:
 
 Extension Icon
-^^^^^^^^^^^^^^
+==============
 
 Not as important as the extension declaration file above, every extension can
 feature an icon as a PNG file. This image should be located in the root
@@ -77,7 +78,7 @@ Choose or create an image of 64px width by 64px height.
 .. _make-typoscript-available:
 
 Make TypoScript Available
-^^^^^^^^^^^^^^^^^^^^^^^^^
+=========================
 
 In order to automatically load the TypoScript files we have created in the
 previous step, a new PHP file :file:`sys_template.php` needs to be created and
@@ -110,7 +111,7 @@ should look like the following code.
 .. _directory-structure:
 
 Directory and File Structure
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+============================
 
 Let's review the directory and file structure of the site package extension as
 it stands now.

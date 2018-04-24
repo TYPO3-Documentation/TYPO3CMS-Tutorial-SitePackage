@@ -3,13 +3,14 @@
 
 .. _design-template:
 
+===============
 Design Template
----------------
+===============
 
 .. _dt-external-resources:
 
 External Resources
-^^^^^^^^^^^^^^^^^^
+==================
 
 A typical use case of developing a standard website includes the implementation
 of the visual appearance of the site. In most cases this is a set of HTML and
@@ -28,7 +29,7 @@ libraries as required by the individual project.
 .. _dt-directory-structure:
 
 Directory Structure
-^^^^^^^^^^^^^^^^^^^
+===================
 
 Let's assume, we have the following directories and files, which represent a
 typical website theme as we know it from a static website.
@@ -66,7 +67,7 @@ more detail in the next section.
 .. _dt-file-index-html:
 
 File :file:`index.html`
-^^^^^^^^^^^^^^^^^^^^^^^
+=======================
 
 A typical HTML document consists of a *header* and a *body* section. These
 parts are wrapped by the :code:`<html> ... </html>` tags as shown below.

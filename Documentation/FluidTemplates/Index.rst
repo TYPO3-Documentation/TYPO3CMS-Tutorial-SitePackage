@@ -3,8 +3,9 @@
 
 .. fluid-templates:
 
+===============
 Fluid Templates
----------------
+===============
 
 Before we describe how the static files discussed in the previous section :ref
 :`design-template` can be converted into Fluid templates, we should understand
@@ -17,7 +18,7 @@ repository at GitHub <https://github.com/TYPO3Fluid/Fluid>`__ for example.
 .. quick-introduction-to-fluid:
 
 Quick Introduction to Fluid
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================
 
 Like many other templating engines, Fluid reads so-called *template files*,
 processes them and replaces certain variables and specific tags with dynamic
@@ -49,7 +50,7 @@ not maintained by the TYPO3 Documentation Team.
 .. directory-structure:
 
 Directory Structure
-^^^^^^^^^^^^^^^^^^^
+===================
 
 Fluid requires a specific directory structure to store the template files. If
 you are working through this tutorial now, this is a perfect time to create the
@@ -135,7 +136,7 @@ directory :file:`Page/`.
 .. implement-templates-files:
 
 Implement Template Files
-^^^^^^^^^^^^^^^^^^^^^^^^
+========================
 
 Based on the facts explained above, it should be easy to copy the *static
 files* from the :ref:`design-template` into the appropriate folders of the site
@@ -210,7 +211,7 @@ change should be implemented.
 .. the-page-layout-file:
 
 The Page Layout File
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 As described before, a typical static :file:`index.html` file contains a :html:`<head>`
 and a :html:`<body>` section, but we only need to focus on the :html:`<body>`. Open
@@ -375,7 +376,7 @@ named "Main".
 .. _the-website-layout-file:
 
 The Website Layout File
-^^^^^^^^^^^^^^^^^^^^^^^
+=======================
 
 Now, let's implement the website layout file. First, we create a new file
 `Default.html` inside directory

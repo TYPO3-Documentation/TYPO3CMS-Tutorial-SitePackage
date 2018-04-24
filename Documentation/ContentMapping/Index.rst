@@ -3,8 +3,9 @@
 
 .. _content-mapping:
 
+===============
 Content Mapping
----------------
+===============
 
 Having a perfect visual appearance of a website is pointless, if the content
 editors enter in the backend is not shown at the frontend. In the last step, we
@@ -16,7 +17,7 @@ custom TypoScript.
 .. _cm-dynamic-content-rendering-in-typoscript:
 
 Dynamic Content Rendering in TypoScript
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=======================================
 
 Create a new directory :file:`Configuration/TypoScript/Helper/` and inside this
 directory, a new file called :file:`DynamicContent.typoscript` with the following
@@ -81,7 +82,7 @@ language in the backend. More details about the TypoScript can be found in the
 .. _cm-typo3-backend-create-pages:
 
 Include Dynamic Content Rendering
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=================================
 
 To use the TypoScript, it needs to be loaded (*included*), so open file
 `Configuration/TypoScript/setup.typoscript` and add line
@@ -105,7 +106,7 @@ To use the TypoScript, it needs to be loaded (*included*), so open file
 .. _cm-fluid-typoscript-mapping:
 
 Typoscript Mapping in Fluid Template
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+====================================
 
 Open file :file:`Resources/Private/Templates/Page/Default.html` and locate the
 three columns. They all show a "Headline" (look for the :code:`<h2>`-tags) and some
@@ -147,7 +148,7 @@ order.
 .. _cm-typo3-backend-add-content:
 
 Add Content in the TYPO3 Backend
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================
 
 Now it's a great time to add some content in the backend. Go to **WEB → Page**
 and select any of the pages you created before (e.g. "Page 1"). Click the
@@ -174,7 +175,7 @@ column "*border*" empty.
 .. _cm-Preview-page:
 
 Preview Page
-^^^^^^^^^^^^
+============
 
 Finally, clear the frontend cache and preview the page.
 

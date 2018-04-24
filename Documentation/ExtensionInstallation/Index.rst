@@ -3,8 +3,9 @@
 
 .. _extension-installation:
 
+======================
 Extension Installation
-----------------------
+======================
 
 This tutorial assumes, that the TYPO3 instance is a brand new installation,
 without any themes, templates, pages or content yet. Ssee the :ref:`TYPO3
@@ -35,7 +36,7 @@ ZIP archive.
 .. _typo3-backend-extension-manager:
 
 Extension Manager
-^^^^^^^^^^^^^^^^^
+=================
 
 First of all, login at the backend of TYPO3 as a user with administrator
 privileges. At the left side you find a section **ADMIN TOOLS** with a module
@@ -58,7 +59,7 @@ clicking the "plus" icon (marker 4), if not already done.
 .. _typo3-backend-create-initial-pages:
 
 Create Initial Pages
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 In the next step, we create some initial pages. You and your editors will be
 able to create further pages, remove pages, enable and disable pages and
@@ -114,7 +115,7 @@ tree.
 .. _typo3-backend-typoscript-template:
 
 TypoScript Template
-^^^^^^^^^^^^^^^^^^^
+===================
 
 Now we will add a TypoScript template to the site and include the TypoScript
 configuration we have created during the development of our site package. Do
@@ -139,7 +140,7 @@ Now save your changes by clicking the "save" icon at the top.
 
 
 Preview Page
-^^^^^^^^^^^^
+============
 
 At this point, it is a good time to preview what we have achieved so far. Go to
 **WEB → View** and try a few different screen widths. The two buttons at the

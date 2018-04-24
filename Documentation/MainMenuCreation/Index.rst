@@ -3,8 +3,9 @@
 
 .. _main-menu-creation:
 
+==================
 Main Menu Creation
-------------------
+==================
 
 At this point, we have a working *frontend* of a website, but an important part
 is missing: there is no easy way to navigate through the pages, which is a
@@ -17,7 +18,7 @@ described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
 .. _add-menu-processor:
 
 Add :ts:`MenuProcessor`
-^^^^^^^^^^^^^^^^^^^^^^^
+=======================
 
 Open file :file:`Configuration/TypoScript/setup.typoscript` and locate the part
 which defines the :ts:`FLUIDTEMPLATE`. Add the :ts:`dataProcessing { ... }` section
@@ -56,7 +57,7 @@ Note the directive :ts:`as = mainnavigation`: this defines the name of the menu
 .. _fluid-implement-main-menu:
 
 Update Fluid and Implement Main Menu
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+====================================
 
 To make the output of the :ts:`MenuProcessor` visible at the frontend, we have to
 adjust the Fluid template slightly. You possibly remember, that we moved the
@@ -105,7 +106,7 @@ the inline notation is used to output :html:`active` as the CSS class name.
 
 
 Preview Page
-^^^^^^^^^^^^
+============
 
 When previewing the site as it stande now, we can verify if everything is
 working as expected and if the menu is generated. Go to **WEB → View** and

@@ -3,8 +3,9 @@
 
 .. _summary:
 
+=======
 Summary
--------
+=======
 
 First and foremost: **congratulations!** You reached a point where you have
 successfully implemented a custom Site Package for TYPO3. In fact, you have not
@@ -45,7 +46,7 @@ only, plus the HTML/CSS files. Only two files contain PHP code.
 .. _next-steps:
 
 Next Steps
-^^^^^^^^^^
+==========
 
 The Site Package extension, as it stands now, still has some shortfalls. Let's
 have a closer look what you could or should do as the next steps to address
@@ -128,7 +129,7 @@ also download the extension built in this tutorial below.
 .. _download-site-package-extension:
 
 Download Site Package Extension
-###############################
+-------------------------------
 
 `GitHub <https://github.com>`_
 
@@ -138,7 +139,7 @@ Download Site Package Extension
 .. _site-package-builder:
 
 Site Package Builder
-####################
+--------------------
 
 Another option to create a Site Package extension quickly is an online tool
 developed by Benjamin Kott: the `Site Package Builder
@@ -152,7 +153,7 @@ developed by Benjamin Kott: the `Site Package Builder
 .. _youtube-videos:
 
 Videos on YouTube
-#################
+-----------------
 
 In this three-parts series, Mathias Schreiber and Benjamin Kott set up a TYPO3
 site from scratch by building a Site Package extension.
