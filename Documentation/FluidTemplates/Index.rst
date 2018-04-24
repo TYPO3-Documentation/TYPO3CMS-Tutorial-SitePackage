@@ -1,5 +1,5 @@
 .. include:: ../Includes.txt
-
+.. highlight:: html
 
 .. fluid-templates:
 
@@ -63,21 +63,21 @@ The aforementioned folders for Fluid are all located as sub-directories of a
 folder called :file:`Resources/`. Therefore, create the directory structure as
 listed below.
 
-::
+.. code-block:: none
 
-    site_package/
-    site_package/Resources/
-    site_package/Resources/Private/
-    site_package/Resources/Private/Layouts/
-    site_package/Resources/Private/Layouts/Page/
-    site_package/Resources/Private/Partials/
-    site_package/Resources/Private/Partials/Page/
-    site_package/Resources/Private/Templates/
-    site_package/Resources/Private/Templates/Page/
-    site_package/Resources/Public/
-    site_package/Resources/Public/Css/
-    site_package/Resources/Public/Images/
-    site_package/Resources/Public/JavaScript/
+   site_package/
+   site_package/Resources/
+   site_package/Resources/Private/
+   site_package/Resources/Private/Layouts/
+   site_package/Resources/Private/Layouts/Page/
+   site_package/Resources/Private/Partials/
+   site_package/Resources/Private/Partials/Page/
+   site_package/Resources/Private/Templates/
+   site_package/Resources/Private/Templates/Page/
+   site_package/Resources/Public/
+   site_package/Resources/Public/Css/
+   site_package/Resources/Public/Images/
+   site_package/Resources/Public/JavaScript/
 
 The :file:`Public/` directory branch is self-explanatory: it contains folders
 such as :file:`Css/`, :file:`Images/` and :file:`JavaScript/`. All files in these folders
@@ -173,25 +173,25 @@ to visualize that this file represents the layout of a default page).
 
 As a result, we end up with the following structure.
 
-::
+.. code-block:: none
 
-    site_package/
-    site_package/Resources/
-    site_package/Resources/Private/
-    site_package/Resources/Private/Layouts/
-    site_package/Resources/Private/Layouts/Page/
-    site_package/Resources/Private/Partials/
-    site_package/Resources/Private/Partials/Page/
-    site_package/Resources/Private/Templates/
-    site_package/Resources/Private/Templates/Page/
-    site_package/Resources/Private/Templates/Page/Default.html
-    site_package/Resources/Public/
-    site_package/Resources/Public/Css/
-    site_package/Resources/Public/Css/website.css
-    site_package/Resources/Public/Images/
-    site_package/Resources/Public/Images/logo.png
-    site_package/Resources/Public/JavaScript/
-    site_package/Resources/Public/JavaScript/website.js
+   site_package/
+   site_package/Resources/
+   site_package/Resources/Private/
+   site_package/Resources/Private/Layouts/
+   site_package/Resources/Private/Layouts/Page/
+   site_package/Resources/Private/Partials/
+   site_package/Resources/Private/Partials/Page/
+   site_package/Resources/Private/Templates/
+   site_package/Resources/Private/Templates/Page/
+   site_package/Resources/Private/Templates/Page/Default.html
+   site_package/Resources/Public/
+   site_package/Resources/Public/Css/
+   site_package/Resources/Public/Css/website.css
+   site_package/Resources/Public/Images/
+   site_package/Resources/Public/Images/logo.png
+   site_package/Resources/Public/JavaScript/
+   site_package/Resources/Public/JavaScript/website.js
 
 It is important to note that at this point in time the site package extension
 contains four files only: :file:`Default.html`, :file:`website.css`, :file:`logo.png` and
@@ -221,54 +221,55 @@ and after the closing :html:`</body>` tag. Then, remove these two lines, too. As
 result, file :file:`Default.html` only contains the HTML code *inside* the body.
 
 Your file may look different, but let's assume it contains something like the
-following HTML code.
+following HTML code::
 
-::
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button  class="navbar-toggler"
+               type="button"
+               data-toggle="collapse"
+               data-target="#navbarsExampleDefault"
+               aria-controls="navbarsExampleDefault"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               >
+         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home
-            </a>
-          </li>
-        </ul>
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#">
+                  Home
+               </a>
+            </li>
+         </ul>
       </div>
-    </nav>
+   </nav>
 
-    <main role="main">
-
+   <main role="main">
       <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">Hello, world!</h1>
-          <p> ... </p>
-        </div>
+         <div class="container">
+            <h1 class="display-3">Hello, world!</h1>
+            <p> ... </p>
+         </div>
       </div>
-
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Heading 1</h2>
-            <p> ... </p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading 2</h2>
-            <p> ... </p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading 3</h2>
-            <p> ... </p>
-          </div>
-        </div>
+         <div class="row">
+            <div class="col-md-4">
+               <h2>Heading 1</h2>
+               <p> ... </p>
+            </div>
+            <div class="col-md-4">
+               <h2>Heading 2</h2>
+               <p> ... </p>
+            </div>
+            <div class="col-md-4">
+               <h2>Heading 3</h2>
+               <p> ... </p>
+            </div>
+         </div>
       </div>
-
-    </main>
+   </main>
 
 In case you have worked with the Bootstrap library before, you will quickly
 realize that this is a simplified version of the well-known template called
@@ -292,11 +293,9 @@ character.
 
 Now, remove the lines from file
 :file:`Resources/Private/Template/Page/Default.html` and replace them with the
-following single line:
+following single line::
 
-::
-
-    <f:render partial="Jumbotron" />
+   <f:render partial="Jumbotron" />
 
 Congratulations -- you just applied your first ViewHelper! HTML tags starting
 with :html:`<f:...>` are typically core ViewHelpers in Fluid. The tag
@@ -316,54 +315,54 @@ layouts. An additional component allows web developers to build the overall
 `Resources/Private/Layouts/Page/` folder that we name :file:`Default.html`, too.
 Before we create this file, we need to tell our page layout template
 (:file:`Resource/Templates/Page/Default.html`) which website template it should
-use.
+use::
 
-::
-
-    <f:layout name="Default" />
-    <f:section name="Main">
+   <f:layout name="Default" />
+   <f:section name="Main">
 
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Home
-              </a>
-            </li>
-          </ul>
-        </div>
+         <a class="navbar-brand" href="#">Navbar</a>
+         <button  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarsExampleDefault"
+                  aria-controls="navbarsExampleDefault"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  >
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                     Home
+                  </a>
+               </li>
+            </ul>
+         </div>
       </nav>
 
       <main role="main">
-
-        <f:render partial="Jumbotron" />
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <h2>Heading 1</h2>
-              <p> ... </p>
+         <f:render partial="Jumbotron" />
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <h2>Heading 1</h2>
+                  <p> ... </p>
+               </div>
+               <div class="col-md-4">
+                  <h2>Heading 2</h2>
+                  <p> ... </p>
+               </div>
+               <div class="col-md-4">
+                  <h2>Heading 3</h2>
+                  <p> ... </p>
+               </div>
             </div>
-            <div class="col-md-4">
-              <h2>Heading 2</h2>
-              <p> ... </p>
-            </div>
-            <div class="col-md-4">
-              <h2>Heading 3</h2>
-              <p> ... </p>
-            </div>
-          </div>
-        </div>
-
+         </div>
       </main>
-
-    </f:section>
+   </f:section>
 
 The updated template file shows two additional lines at the top (`<f:layout>`
 and :html:`<f:section>`) and an additional line at the bottom (the closing
@@ -380,11 +379,9 @@ The Website Layout File
 
 Now, let's implement the website layout file. First, we create a new file
 `Default.html` inside directory
-`site_package/Resources/Private/Layouts/Page/` and add the following line.
+`site_package/Resources/Private/Layouts/Page/` and add the following line::
 
-::
-
-    <f:render section="Main" />
+   <f:render section="Main" />
 
 Surprisingly, that is all required. This line instructs Fluid to render section
 "Main", which we have implemented in the page layout template file
@@ -399,29 +396,33 @@ all pages, it can be part of the global website layout. Therefore, file
 
 Move the :html:`<nav> ... </nav>` part from file
 `Resources/Private/Templates/Page/Default.html` to
-`Resources/Private/Layouts/Page/Default.html` as shown below.
+`Resources/Private/Layouts/Page/Default.html` as shown here::
 
-::
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button  class="navbar-toggler"
+               type="button"
+               data-toggle="collapse"
+               data-target="#navbarsExampleDefault"
+               aria-controls="navbarsExampleDefault"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               >
+         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home
-            </a>
-          </li>
-        </ul>
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#">
+                  Home
+               </a>
+            </li>
+         </ul>
       </div>
-    </nav>
+   </nav>
 
-    <f:render section="Main" />
+   <f:render section="Main" />
 
 Do not forget to remove the lines from the
-`Resources/Private/Templates/Page/Default.html` file. If you do not remove
-them, the menu would appear twice in the frontend.
+:file:`Resources/Private/Templates/Page/Default.html` file. If you do not
+remove them, the menu would appear twice in the frontend.

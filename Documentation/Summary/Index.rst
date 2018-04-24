@@ -145,11 +145,9 @@ Another option to create a Site Package extension quickly is an online tool
 developed by Benjamin Kott: the `Site Package Builder
 <http://sitepackagebuilder.com/>`__.
 
-
 .. figure:: SitePackageBuilder.png
    :alt: Site Package Builder
    :class: with-shadow
-
 
 
 .. _youtube-videos:

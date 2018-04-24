@@ -26,9 +26,9 @@ following directory in your TYPO3 instance: :file:`typo3conf/ext/`.
 
 If you do not have SSH/FTP access, create a ZIP file of the **content** of your
 :file:`site_package` folder. It is important that the ZIP archive does not
-contain the directory :file:`site_package` and its files and directories inside this
-folder. The files and folders must be directly located on the first level of
-ZIP archive.
+contain the directory :file:`site_package` and its files and directories inside
+this folder. The files and folders must be directly located on the first level
+of ZIP archive.
 
 .. @TODO clarify, if the file name of the ZIP is relevant.
 
@@ -49,7 +49,6 @@ the upload icon (marker 3).
 .. figure:: ExtensionManager.png
    :alt: Extension Manager
    :class: with-shadow
-
 
    TYPO3 Extension Manager
 
@@ -82,7 +81,6 @@ the page name allows you to rename it).
    :alt: Create Initial Pages
    :class: with-shadow
 
-
    Create initial pages
 
 
@@ -94,7 +92,6 @@ right). Enable all pages by clicking the "Enable" link in the context menu
    :alt: Enable Pages in Context Menu
    :class: with-shadow
 
-
    Enable Pages in Context Menu
 
 
@@ -104,7 +101,6 @@ tree.
 .. figure:: FinalPageTree.png
    :alt: Final Page Tree
    :class: with-shadow
-
 
 
 .. .. code-block: : none
@@ -145,7 +141,6 @@ Package (site_package)", which moves the entry to the left box.
    :alt: Include TypoScript Template
    :class: with-shadow
 
-
 Now save your changes by clicking the "save" icon at the top.
 
 
@@ -160,7 +155,6 @@ minimize the function menu at the left.
 .. figure:: PreviewPage.png
    :alt: Preview Page
    :class: with-shadow
-
 
 The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile
 view (narrow screen width), a button provides access to a toggle menu. However,

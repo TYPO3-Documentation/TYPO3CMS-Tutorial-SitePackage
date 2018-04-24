@@ -24,34 +24,34 @@ Open file :file:`Configuration/TypoScript/setup.typoscript` and locate the part
 which defines the :ts:`FLUIDTEMPLATE`. Add the :ts:`dataProcessing { ... }` section
 below the paths declarations as follows.
 
-::
+.. code-block:: typoscript
 
-    // Part 1: Fluid template section
-    10 = FLUIDTEMPLATE
-    10 {
-        ...
+   // Part 1: Fluid template section
+   10 = FLUIDTEMPLATE
+   10 {
+         // ...
       }
       templateRootPaths {
-        ...
+         // ...
       }
       partialRootPaths {
-        ...
+         // ...
       }
       layoutRootPaths {
-        ...
+         // ...
       }
       dataProcessing {
-        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-        10 {
-          levels = 1
-          includeSpacer = 1
-          as = mainnavigation
-        }
+         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+         10 {
+            levels = 1
+            includeSpacer = 1
+            as = mainnavigation
+         }
       }
-    }
+   }
 
 Note the directive :ts:`as = mainnavigation`: this defines the name of the menu
-(here: :ts:`mainnavigation`), which will be used in the next step.
+which will be used in the next step. It is 'mainnavigation' in this case.
 
 
 .. _fluid-implement-main-menu:
@@ -63,40 +63,52 @@ To make the output of the :ts:`MenuProcessor` visible at the frontend, we have t
 adjust the Fluid template slightly. You possibly remember, that we moved the
 main menu to the Fluid layout file, which is located under
 :file:`Resources/Private/Layouts/Default.html` (see section
-:ref:`the-website-layout-file`). Open this file and adjust it as shown below.
+:ref:`the-website-layout-file`). Open this file and adjust it as shown here:
 
+.. code-block:: html
 
-::
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button  class="navbar-toggler"
+               type="button"
+               data-toggle="collapse"
+               data-target="#navbarsExampleDefault"
+               aria-controls="navbarsExampleDefault"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               >
+         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <f:for each="{mainnavigation}" as="mainnavigationItem">
-            <li class="nav-item {f:if(condition: mainnavigationItem.active, then: 'active')}">
-              <a class="nav-link" href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
-                {mainnavigationItem.title}
-              </a>
-            </li>
-          </f:for>
-        </ul>
+         <ul class="navbar-nav mr-auto">
+            <f:for each="{mainnavigation}" as="mainnavigationItem">
+               <li class="nav-item {f:if(condition: mainnavigationItem.active, then: 'active')}">
+                  <a class="nav-link"
+                     href="{mainnavigationItem.link}"
+                     target="{mainnavigationItem.target}"
+                     title="{mainnavigationItem.title}"
+                     >
+                     {mainnavigationItem.title}
+                  </a>
+               </li>
+            </f:for>
+         </ul>
       </div>
-    </nav>
+   </nav>
 
-    <f:render section="Main" />
+   <f:render section="Main" />
 
 The changes are inside the :html:`<ul> ... </ul>` tags. The new code extends the
 list by a so-called "For-ViewHelper", which builds a loop and iterates variable
 `mainnavigation` as single items named :ts:`mainnavigationItem`. Each item
 represents one link to a page in the menu. The attributes we are using are:
 
-* :ts:`mainnavigationItem.link`: the actual link to the page or external resource
+* :ts:`mainnavigationItem.link`: the actual link to the page or external
+  resource
+
 * :ts:`mainnavigationItem.target`: if the link should be opened in a new window
   for example
+
 * :ts:`mainnavigationItem.title`: the page or link title
 
 The construct :html:`{f:if(condition: mainnavigationItem.active, then: 'active')}`
@@ -118,7 +130,6 @@ the menu does not change, you possibly need to clear the frontend cache (marker
 .. figure:: PreviewPage.png
    :alt: Preview Page
    :class: with-shadow
-
 
 The preview in the screenshot above shows the menu with three page links: "Page
 1", "Page 2" and "Page 3". If everything is working as expected, let's

@@ -1,5 +1,5 @@
 .. include:: ../Includes.txt
-
+.. highlight:: php
 
 .. _extension-configuration:
 
@@ -19,13 +19,9 @@ know that the extension exists and as a consequence could not load it, nor
 display it in the *Extension Manager*.
 
 This file is named :file:`ext_emconf.php` and is expected in the root level of the
-extension. The content should look as follows.
+extension. The content should look as follows::
 
-
-::
-
-    <?php
-    $EM_CONF[$_EXTKEY] = [
+   $EM_CONF[$_EXTKEY] = [
       'title' => 'TYPO3 Site Package',
       'description' => 'TYPO3 Site Package',
       'category' => 'templates',
@@ -35,17 +31,17 @@ extension. The content should look as follows.
       'version' => '1.0.0',
       'state' => 'stable',
       'constraints' => [
-        'depends' => [
-          'typo3' => '8.7.0-9.5.99',
-          'fluid_styled_content' => '8.7.0-9.5.99'
-        ],
-        'conflicts' => [
-        ],
+         'depends' => [
+            'typo3' => '8.7.0-9.5.99',
+            'fluid_styled_content' => '8.7.0-9.5.99'
+         ],
+         'conflicts' => [
+         ],
       ],
       'uploadfolder' => 0,
       'createDirs' => '',
       'clearCacheOnLoad' => 1
-    ];
+   ];
 
 The values can and should be customized of course. A more meaningful and longer
 description is recommended and defining some details about the author
@@ -70,9 +66,9 @@ Choose or create an image of 64px width by 64px height.
 
 .. note::
 
-   It should be noted, that newer versions of TYPO3 support alternative formats
-   and file locations. However, for the sake of simplicity, we stick to the
-   specification outlined above for the time being.
+   Newer versions of TYPO3 support alternative formats and file locations.
+   However, for the sake of simplicity, we stick to the specification outlined
+   above for the time being.
 
 
 .. _make-typoscript-available:
@@ -83,15 +79,12 @@ Make TypoScript Available
 In order to automatically load the TypoScript files we have created in the
 previous step, a new PHP file :file:`sys_template.php` needs to be created and
 stored in directory :file:`Configuration/TCA/Overrides/`. The content of this file
-should look like the following code.
+should look like the following code::
 
-::
+   defined('TYPO3_MODE') || die();
 
-    <?php
-    defined('TYPO3_MODE') || die();
-
-    call_user_func(function()
-    {
+   call_user_func(function()
+   {
       /**
        * Extension key
        */
@@ -101,11 +94,11 @@ should look like the following code.
        * Default TypoScript
        */
       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
-        'Configuration/TypoScript',
-        'Site Package'
+         $extensionKey,
+         'Configuration/TypoScript',
+         'Site Package'
       );
-    });
+   });
 
 
 .. _directory-structure:
@@ -116,7 +109,7 @@ Directory and File Structure
 Let's review the directory and file structure of the site package extension as
 it stands now.
 
-::
+.. code-block:: none
 
     site_package/
     site_package/Configuration
