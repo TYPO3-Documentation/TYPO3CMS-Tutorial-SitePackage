@@ -26,8 +26,8 @@ Site Package Tutorial
       Michael Schams
 
 :License:
-      Open Publication License available from
-      http://www.opencontent.org/openpub/
+      Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+      (CC BY-NC-SA 4.0), https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 :Rendered:
       |today|
