@@ -68,6 +68,7 @@ listed below.
    site_package/
    site_package/Resources/
    site_package/Resources/Private/
+   site_package/Resources/Private/Languages/
    site_package/Resources/Private/Layouts/
    site_package/Resources/Private/Layouts/Page/
    site_package/Resources/Private/Partials/
