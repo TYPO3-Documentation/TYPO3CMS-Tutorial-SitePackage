@@ -85,8 +85,9 @@ will be delivered to the user (website visitors) *as they are*. These are
 **static** files which are not modified by TYPO3 at all before they are sent to
 the user.
 
-The :file:`Private/` directory with its three sub-folders :file:`Layouts/`,
-:file:`Partials/` and :file:`Templates/` in contrast, require some explanation.
+The :file:`Private/` directory with its four sub-folders :file:`Languages/`,
+:file:`Layouts/`, :file:`Partials/` and :file:`Templates/` in contrast, require
+some explanation.
 
 Folders under 'Private/'
 ------------------------
@@ -134,18 +135,11 @@ directory :file:`Page/`.
 
 Language
 ~~~~~~~~
-The directory :file:`Partials/` will contain the :file:`.xlf` files that are used by
-TYPO3 for the localization of text strings (both on Frontend and Backend); 
-this topic is not strictly related to the fluid template engine and is covered in this
-documentation section: https://docs.typo3.org/typo3cms/CoreApiReference/latest/ApiOverview/Internationalization/Index.html
-
-For example, each page of your site may contain an anchor that brings you 
-at the beginning of your site that reads "To top". Harcoding this string inside your
-HTML template (or partial) is never a good practice because if your site will be 
-translated in another language you would require a different partial for each language
-or some cumbersome :html:`if ... then ... else ...` logic.
-If you manage it as a label inside a :file:`locallang.xlf` file, TYPO3 will automatically
-change it with the selected language variant ("to top" in english; "torna all'inizio" in italian and so forth).
+The directory :file:`Languages/` may contain :file:`.xlf` files that are used for
+the localization of labels and text strings (frontend as well as backend) by
+TYPO3. This topic is not strictly related to the Fluid template engine and is
+documented in section
+:ref:`Internationalization and Localization <t3coreapi:internationalization-and-localization>`.
 
 
 .. implement-templates-files:
