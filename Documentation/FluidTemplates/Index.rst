@@ -112,7 +112,7 @@ columns), the :file:`Templates/` directory may contain one or multiple HTML file
 
 Partials
 ~~~~~~~~
-Finally, we have a directory called :file:`Partials/`, which may contain small
+The directory called :file:`Partials/` may contain small
 snippets of HTML template files. "Partials" are similar to templates, but their
 purpose is to represent small units, which are perfect to fulfil recurring
 tasks. A good example of a partial is a specially styled box with content that
@@ -131,6 +131,21 @@ The site package extension described in this tutorial focuses on the
 implementation of pages, rather than specific content elements. Therefore,
 folders :file:`Layouts/`, :file:`Templates/` and :file:`Partials/` all show a sub-
 directory :file:`Page/`.
+
+Language
+~~~~~~~~
+The directory :file:`Partials/` will contain the :file:`.xlf` files that are used by
+TYPO3 for the localization of text strings (both on Frontend and Backend); 
+this topic is not strictly related to the fluid template engine and is covered in this
+documentation section: https://docs.typo3.org/typo3cms/CoreApiReference/latest/ApiOverview/Internationalization/Index.html
+
+For example, each page of your site may contain an anchor that brings you 
+at the beginning of your site that reads "To top". Harcoding this string inside your
+HTML template (or partial) is never a good practice because if your site will be 
+translated in another language you would require a different partial for each language
+or some cumbersome :html:`if ... then ... else ...` logic.
+If you manage it as a label inside a :file:`locallang.xlf` file, TYPO3 will automatically
+change it with the selected language variant ("to top" in english; "torna all'inizio" in italian and so forth).
 
 
 .. implement-templates-files:
