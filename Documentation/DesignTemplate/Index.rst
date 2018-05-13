@@ -17,7 +17,7 @@ of the visual appearance of the site. In most cases this is a set of HTML and
 CSS files, as well as some images, e.g. a company logo, etc. As of today,
 modern frameworks build a perfect foundation and provide features such as
 clean, structured layouts, mobile responsiveness and compatibility across a
-wide range of web browser.
+wide range of web browsers.
 
 The project discussed in this tutorial uses the well-known and popular
 `Bootstrap framework <https://getbootstrap.com>`_ version 4 and `jQuery
@@ -53,8 +53,8 @@ fact, these files can be ignored (we will include the Bootstrap framework using
 TypoScript as shown in section :ref:`file-setup-typoscript`). The CSS file
 :file:`website.css` implements the custom styles used for the website. Same as
 the JavaScript file :file:`website.js`, which contains custom JavaScript code.
-The only file inside the :file:`image/` directory is a simple logo as a PNG
-image. Let's assume this is a square image of 100px width by 100px height.
+The only file inside the :file:`images/` directory is a simple logo. Let's 
+assume this is a square image of 100px width by 100px height.
 
 Another file we can ignore is the jQuery library :file:`jquery-3.2.1.min.js` in
 the :file:`js/` directory. Due to the fact that there is a better way to
