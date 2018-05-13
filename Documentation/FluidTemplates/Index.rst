@@ -274,10 +274,10 @@ following HTML code::
 In case you have worked with the Bootstrap library before, you will quickly
 realize that this is a simplified version of the well-known template called
 `Bootstrap Jumbotron <http://getbootstrap.com/docs/4.0/examples/jumbotron/>`__.
-The first section creates a mobile responsive navigation menu (``<nav> ...
+The first section creates a mobile responsive navigation menu (`<nav> ...
 </nav>`) and the second section a container for the content (`<main> ...
 </main>`). Inside the content area we see a full-width section (`<div
-class="jumbotron"> ... </div>``) and a simple container with three columns.
+class="jumbotron"> ... </div>`) and a simple container with three columns.
 
 The code above misses a few lines at the end, which include some JavaScript
 files such as jQuery and Bootstrap. You are adviced to remove these line from
