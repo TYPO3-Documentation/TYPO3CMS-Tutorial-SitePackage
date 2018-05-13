@@ -207,6 +207,11 @@ extension, he/she knows the locations and naming of files. This reduces
 development time significantly, e.g. if an issue needs to be investigated or a
 change should be implemented.
 
+Furthermore, you might want to consider technologies such as Sass, SCSS and
+TypeScript for improved productivity and mainainability of your style sheets
+and JavaScript code. For the sake of simplicity, this tutorial uses the basic
+implementation of Cascading Style Sheets (CSS) and JavaScript files.
+
 
 .. the-page-layout-file:
 
