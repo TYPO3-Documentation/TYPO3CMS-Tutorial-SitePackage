@@ -8,7 +8,7 @@ Extension Installation
 ======================
 
 This tutorial assumes, that the TYPO3 instance is a brand new installation,
-without any themes, templates, pages or content yet. Ssee the :ref:`TYPO3
+without any themes, templates, pages or content yet. See the :ref:`TYPO3
 Installation Guide <t3install:start>` for a detailed explanation how to set up
 a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed,
 that TYPO3 has been installed the *traditional way*, by extracting the source
@@ -158,7 +158,7 @@ minimize the function menu at the left.
 
 The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile
 view (narrow screen width), a button provides access to a toggle menu. However,
-only one link is shown the in menu: "Home". The other pages we have created in
+only one link is shown in the menu: "Home". The other pages we have created in
 the backend are still missing. Besides the menu, a large "Hello, world!" greets
 the visitors of the website. This is the "Jumbotron"-partial. Below that, three
 columns are shown, each of them with a "Heading". In a mobile view, these
