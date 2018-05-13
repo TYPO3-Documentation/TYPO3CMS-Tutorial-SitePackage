@@ -274,9 +274,9 @@ following HTML code::
 In case you have worked with the Bootstrap library before, you will quickly
 realize that this is a simplified version of the well-known template called
 `Bootstrap Jumbotron <http://getbootstrap.com/docs/4.0/examples/jumbotron/>`__.
-The first section creates a mobile responsive navigation menu (`<nav> ...
-</nav>`) and the second section a container for the content (`<main> ...
-</main>`). Inside the content area we see a full-width section (`<div
+The first section creates a mobile responsive navigation menu (:html:`<nav> ...
+</nav>`) and the second section a container for the content (:html:`<main> ...
+</main>`). Inside the content area we see a full-width section (:html:`<div
 class="jumbotron"> ... </div>`) and a simple container with three columns.
 
 The code above misses a few lines at the end, which include some JavaScript
@@ -299,7 +299,7 @@ following single line::
 
 Congratulations -- you just applied your first ViewHelper! HTML tags starting
 with :html:`<f:...>` are typically core ViewHelpers in Fluid. The tag
-`<f:render>` is the so-called Render-ViewHelper, which (as the name suggests)
+:html:`<f:render>` is the so-called Render-ViewHelper, which (as the name suggests)
 renders the content of a section or partial. In our case it is the latter,
 because of the :html:`partial="..."` argument. Note: do not append :file:`.html` here.
 HTML is the default format and as a convention, the ViewHelper automatically
@@ -312,7 +312,7 @@ in your text editor, because we need to make one more small adjustment.
 As described above, files inside the :file:`Templates/` directory are page-specific
 layouts. An additional component allows web developers to build the overall
 *layout* (the skeleton) of the website: this is an HTML file in the
-`Resources/Private/Layouts/Page/` folder that we name :file:`Default.html`, too.
+:file:`Resources/Private/Layouts/Page/` folder that we name :file:`Default.html`, too.
 Before we create this file, we need to tell our page layout template
 (:file:`Resource/Templates/Page/Default.html`) which website template it should
 use::
@@ -385,17 +385,17 @@ Now, let's implement the website layout file. First, we create a new file
 
 Surprisingly, that is all. This line instructs Fluid to render section
 "Main", which we have implemented in the page layout template file
-`Resources/Private/Templates/Page/Default.html`.
+:file:`Resources/Private/Templates/Page/Default.html`.
 
 However, we will do an additional step. The navigation menu will be shown on
 all pages across the entire website. Similar to the "Jumbotron" partial, it
 makes perfect sense to move the `<nav> ... </nav>` section from the page
 layout template to a central place. Due to the fact that a menu is required on
 all pages, it can be part of the global website layout. Therefore, file
-`Resources/Private/Layouts/Page/Default.html` is a suitable destination.
+:file:`Resources/Private/Layouts/Page/Default.html` is a suitable destination.
 
 Move the `<nav> ... </nav>` part from file
-`Resources/Private/Templates/Page/Default.html` to
+:file:`Resources/Private/Templates/Page/Default.html` to
 `Resources/Private/Layouts/Page/Default.html` as shown here::
 
    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
