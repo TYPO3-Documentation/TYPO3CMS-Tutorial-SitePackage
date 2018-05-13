@@ -280,7 +280,7 @@ The first section creates a mobile responsive navigation menu (`<nav> ...
 class="jumbotron"> ... </div>`) and a simple container with three columns.
 
 The code above misses a few lines at the end, which include some JavaScript
-files such as jQuery and Bootstrap. You are adviced to remove these line from
+files such as jQuery and Bootstrap. You are advised to remove these line from
 the :file:`Resources/Private/Template/Page/Default.html` file, too.
 
 Due to the fact that the "jumbotron" elements could be used on several pages
@@ -365,7 +365,7 @@ use::
    </f:section>
 
 The updated template file shows two additional lines at the top (`<f:layout>`
-and :html:`<f:section>`) and an additional line at the bottom (the closing
+and `<f:section>`) and an additional line at the bottom (the closing
 `</f:section>` tag). The Layout-ViewHelper refers to the "Default" template
 file, which we will create in the next step. The Section-ViewHelper simply
 wraps the page template code we created before and therefore defines a section
@@ -383,18 +383,18 @@ Now, let's implement the website layout file. First, we create a new file
 
    <f:render section="Main" />
 
-Surprisingly, that is all required. This line instructs Fluid to render section
+Surprisingly, that is all. This line instructs Fluid to render section
 "Main", which we have implemented in the page layout template file
 `Resources/Private/Templates/Page/Default.html`.
 
 However, we will do an additional step. The navigation menu will be shown on
 all pages across the entire website. Similar to the "Jumbotron" partial, it
-makes perfect sense to move the :html:`<nav> ... </nav>` section from the page
+makes perfect sense to move the `<nav> ... </nav>` section from the page
 layout template to a central place. Due to the fact that a menu is required on
 all pages, it can be part of the global website layout. Therefore, file
 `Resources/Private/Layouts/Page/Default.html` is a suitable destination.
 
-Move the :html:`<nav> ... </nav>` part from file
+Move the `<nav> ... </nav>` part from file
 `Resources/Private/Templates/Page/Default.html` to
 `Resources/Private/Layouts/Page/Default.html` as shown here::
 
