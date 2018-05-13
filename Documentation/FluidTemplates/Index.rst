@@ -68,6 +68,7 @@ listed below.
    site_package/
    site_package/Resources/
    site_package/Resources/Private/
+   site_package/Resources/Private/Languages/
    site_package/Resources/Private/Layouts/
    site_package/Resources/Private/Layouts/Page/
    site_package/Resources/Private/Partials/
@@ -85,8 +86,9 @@ will be delivered to the user (website visitors) *as they are*. These are
 **static** files which are not modified by TYPO3 at all before they are sent to
 the user.
 
-The :file:`Private/` directory with its three sub-folders :file:`Layouts/`,
-:file:`Partials/` and :file:`Templates/` in contrast, require some explanation.
+The :file:`Private/` directory with its four sub-folders :file:`Languages/`,
+:file:`Layouts/`, :file:`Partials/` and :file:`Templates/` in contrast, require
+some explanation.
 
 Folders under 'Private/'
 ------------------------
@@ -112,7 +114,7 @@ columns), the :file:`Templates/` directory may contain one or multiple HTML file
 
 Partials
 ~~~~~~~~
-Finally, we have a directory called :file:`Partials/`, which may contain small
+The directory called :file:`Partials/` may contain small
 snippets of HTML template files. "Partials" are similar to templates, but their
 purpose is to represent small units, which are perfect to fulfil recurring
 tasks. A good example of a partial is a specially styled box with content that
@@ -131,6 +133,14 @@ The site package extension described in this tutorial focuses on the
 implementation of pages, rather than specific content elements. Therefore,
 folders :file:`Layouts/`, :file:`Templates/` and :file:`Partials/` all show a sub-
 directory :file:`Page/`.
+
+Language
+~~~~~~~~
+The directory :file:`Languages/` may contain :file:`.xlf` files that are used for
+the localization of labels and text strings (frontend as well as backend) by
+TYPO3. This topic is not strictly related to the Fluid template engine and is
+documented in section
+:ref:`Internationalization and Localization <t3coreapi:internationalization-and-localization>`.
 
 
 .. implement-templates-files:
