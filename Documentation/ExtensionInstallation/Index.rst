@@ -41,8 +41,8 @@ Extension Manager
 First of all, login at the backend of TYPO3 as a user with administrator
 privileges. At the left side you find a section **ADMIN TOOLS** with a module
 named "Extensions" (marker 1). Open this module and make sure, the drop down
-box on the right hand side shows "Installed Extensions" (marker 2). If you
-uploaded the site package extension via SSH/FTP already, search for "Site
+box on the right hand side shows "Installed Extensions" (marker 2). If you have already
+uploaded the site package extension via SSH/FTP, search for "Site
 Package". If you created a ZIP file, upload the ZIP'ed extension by clicking
 the upload icon (marker 3).
 
