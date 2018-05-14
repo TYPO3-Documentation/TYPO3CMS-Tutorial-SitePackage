@@ -295,7 +295,7 @@ The first section creates a mobile responsive navigation menu (``<nav> ...
 class="jumbotron"> ... </div>``) and a simple container with three columns.
 
 The code above misses a few lines at the end, which include some JavaScript
-files such as jQuery and Bootstrap. You are adviced to remove these line from
+files such as jQuery and Bootstrap. You are advised to remove these line from
 the :file:`Resources/Private/Template/Page/Default.html` file, too.
 
 Due to the fact that the "jumbotron" elements could be used on several pages
