@@ -132,7 +132,7 @@ to "Info/Modify". Click button "Edit the whole template record", which opens an
 editor for Constants and Setup. The latter contains a few example lines ("HELLO
 WORLD!"). Remove these lines, so that the box is completely empty.
 
-Change to tab "Includes" and look for section "Include static (from
+Change to tab "Includes" and look for the section "Include static (from
 extensions)", which shows two boxes: "Selected Items" (left hand side) and
 "Available Items" (right hand side). Under "Available Items", click "Site
 Package (site_package)", which moves the entry to the left box.
@@ -158,7 +158,7 @@ minimize the function menu at the left.
 
 The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile
 view (narrow screen width), a button provides access to a toggle menu. However,
-only one link is shown the in menu: "Home". The other pages we have created in
+only one link is shown in the menu: "Home". The other pages we have created in
 the backend are still missing. Besides the menu, a large "Hello, world!" greets
 the visitors of the website. This is the "Jumbotron"-partial. Below that, three
 columns are shown, each of them with a "Heading". In a mobile view, these
