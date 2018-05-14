@@ -7,10 +7,10 @@
 Extension Installation
 ======================
 
-This tutorial assumes, that the TYPO3 instance is a brand new installation,
-without any themes, templates, pages or content yet. Ssee the :ref:`TYPO3
+This tutorial assumes that your TYPO3 instance is a brand new installation,
+without any themes, templates, pages or content. See the :ref:`TYPO3
 Installation Guide <t3install:start>` for a detailed explanation how to set up
-a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed,
+a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed
 that TYPO3 has been installed the *traditional way*, by extracting the source
 package into the web directory **without** using PHP *composer*.
 
