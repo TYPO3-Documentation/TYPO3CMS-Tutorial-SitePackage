@@ -7,10 +7,10 @@
 Extension Installation
 ======================
 
-This tutorial assumes, that the TYPO3 instance is a brand new installation,
-without any themes, templates, pages or content yet. See the :ref:`TYPO3
+This tutorial assumes that your TYPO3 instance is a brand new installation,
+without any themes, templates, pages or content. See the :ref:`TYPO3
 Installation Guide <t3install:start>` for a detailed explanation how to set up
-a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed,
+a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed
 that TYPO3 has been installed the *traditional way*, by extracting the source
 package into the web directory **without** using PHP *composer*.
 
@@ -41,8 +41,8 @@ Extension Manager
 First of all, login at the backend of TYPO3 as a user with administrator
 privileges. At the left side you find a section **ADMIN TOOLS** with a module
 named "Extensions" (marker 1). Open this module and make sure, the drop down
-box on the right hand side shows "Installed Extensions" (marker 2). If you
-uploaded the site package extension via SSH/FTP already, search for "Site
+box on the right hand side shows "Installed Extensions" (marker 2). If you have already
+uploaded the site package extension via SSH/FTP, search for "Site
 Package". If you created a ZIP file, upload the ZIP'ed extension by clicking
 the upload icon (marker 3).
 
@@ -132,7 +132,7 @@ to "Info/Modify". Click button "Edit the whole template record", which opens an
 editor for Constants and Setup. The latter contains a few example lines ("HELLO
 WORLD!"). Remove these lines, so that the box is completely empty.
 
-Change to tab "Includes" and look for section "Include static (from
+Change to tab "Includes" and look for the section "Include static (from
 extensions)", which shows two boxes: "Selected Items" (left hand side) and
 "Available Items" (right hand side). Under "Available Items", click "Site
 Package (site_package)", which moves the entry to the left box.

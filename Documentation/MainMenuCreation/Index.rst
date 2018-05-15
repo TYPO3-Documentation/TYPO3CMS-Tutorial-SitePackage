@@ -7,9 +7,9 @@
 Main Menu Creation
 ==================
 
-At this point, we have a working *frontend* of a website, but an important part
+At this point, we have a working *frontend* for our website, but an important part
 is missing: there is no easy way to navigate through the pages, which is a
-crucial part of every website. The following section explains how to implement
+crucial part of any website. The following section explains how to implement
 a simple one-level menu by using TYPO3's Frontend Data Processor
 `MenuProcessor`. Other options are available (e.g. the :ts:`HMENU cObject` as
 described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
@@ -60,7 +60,7 @@ Update Fluid and Implement Main Menu
 ====================================
 
 To make the output of the :ts:`MenuProcessor` visible at the frontend, we have to
-adjust the Fluid template slightly. You possibly remember, that we moved the
+adjust the Fluid template slightly. You may remember that we moved the
 main menu to the Fluid layout file, which is located under
 :file:`Resources/Private/Layouts/Default.html` (see section
 :ref:`the-website-layout-file`). Open this file and adjust it as shown here:
@@ -120,10 +120,10 @@ the inline notation is used to output :html:`active` as the CSS class name.
 Preview Page
 ============
 
-When previewing the site as it stande now, we can verify if everything is
+When previewing the site as it stands now, we can verify if everything is
 working as expected and if the menu is generated. Go to **WEB → View** and
 check, if the menu reflects the pages you created in the backend. Add one or
-two further pages to the page tree and check, if they appear in the preview. If
+two additional pages to the page tree and check to see if they appear in the preview. If
 the menu does not change, you possibly need to clear the frontend cache (marker
 1), then reload the preview (marker 2).
 
