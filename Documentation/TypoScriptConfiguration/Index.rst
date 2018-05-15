@@ -202,7 +202,7 @@ Part 4: Global Site Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finally, extend :ts:`// Part 4: global site configuration` by adding the following
-lines. There is not need to understand what these lines exactly do. Feel free
+lines. There is no need to understand what these lines exactly do. Feel free
 to simply copy them from this tutorial. Explaining each line of the code would
 go beyond the scope of this tutorial. A detailed documentation of all
 configuration options can be found in the :ref:`TypoScript Reference

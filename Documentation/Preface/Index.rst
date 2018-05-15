@@ -39,7 +39,7 @@ Credits
 
 Inspired by some initial discussions between Christian Kuhn, Benni Mack, Xavier
 Perseguers, Michael Schams and Mathias Schreiber in mid 2016, this tutorial was
-written by Michael Schams between 2017 and 2018. It is loosley based on the
+written by Michael Schams between 2017 and 2018. It is loosely based on the
 concepts by Benjamin Kott, which he presented in a video with Mathias Schreiber
 in November 2017 (see :ref:`youtube-videos`). The final version of this document
 was published by the TYPO3 Documentation Team in April 2018.
