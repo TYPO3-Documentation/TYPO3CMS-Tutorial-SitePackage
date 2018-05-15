@@ -161,7 +161,7 @@ site from scratch by building a Site Package extension.
 Tutorial - Site Packages - Part 1 of 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Youtube: Part 1 of 3 <https://www.youtube.com/watch?v=HtBmim7pc0o>`__
+`YouTube: Part 1 of 3 <https://www.youtube.com/watch?v=HtBmim7pc0o>`__
 
 .. only:: html, singlehtml
 
@@ -171,7 +171,7 @@ Tutorial - Site Packages - Part 1 of 3
 Tutorial - Site Packages - Part 2 of 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Youtube: Part 2 of 3 <https://www.youtube.com/watch?v=deSMVfCSCXY>`__
+`YouTube: Part 2 of 3 <https://www.youtube.com/watch?v=deSMVfCSCXY>`__
 
 .. only:: html, singlehtml
 
@@ -181,7 +181,7 @@ Tutorial - Site Packages - Part 2 of 3
 Tutorial - Site Packages - Part 3 of 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Youtube: Part 3 of 3 <https://www.youtube.com/watch?v=SEoWOBT0rQE>`__
+`YouTube: Part 3 of 3 <https://www.youtube.com/watch?v=SEoWOBT0rQE>`__
 
 .. only:: html, singlehtml
 

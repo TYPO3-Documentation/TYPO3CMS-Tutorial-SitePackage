@@ -27,7 +27,7 @@ can be installed, deinstalled, replaced, etc. and extend the core system with
 functions and features not shipped with the core system. An extension typically
 consists of PHP files, but can also (or only) contain design templates (HTML,
 CSS, JavaScript files, etc.) and global configuration. The visual appearance of
-a website does not require any PHP code necessarily. However, the site package
+a website does not necessarily require any PHP code. However, the site package
 extension described in this tutorial contains exactly two PHP files (plus a
 handful of HTML/CSS and configuration files) to work as an *extension* in
 TYPO3. The PHP code can be copied from this tutorial if the reader does not
@@ -43,7 +43,7 @@ At the same time the process is not overly complicated.
 
 Dependency Management
 ---------------------
-Another important benefit or a TYPO3 extension is the fact that dependencies to
+Another important benefit of a TYPO3 extension is the fact that dependencies to
 other extensions and/or the TYPO3 version can be defined. This makes
 deployments easier and more fail-safe. This feature is called "Dependency
 Management". Most TYPO3 sites require a number of extensions. This could be
