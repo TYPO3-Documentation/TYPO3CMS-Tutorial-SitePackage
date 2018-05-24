@@ -15,7 +15,7 @@ that TYPO3 has been installed the *traditional way*, by extracting the source
 package into the web directory **without** using PHP *composer*.
 
 By using this method, extensions (e.g. the site package extension) can be
-installed using the Extension Manager, which is a so-called *module* of the
+installed using the Extension Manager, which is a *module* found in the
 backend of TYPO3. Before we can install the site package extension, we have to
 transfer the files from our local machine to the TYPO3 server (if all files and
 directories have been created on the local machine though).
@@ -124,7 +124,7 @@ TypoScript Template
 Now we will add a TypoScript template to the site and include the TypoScript
 configuration we have created during the development of our site package. Do
 not be confused about the terminology "template". In this context, we are
-referring to a so-called TypoScript template, not a HTML/CSS/JS template.
+referring to TypoScript templates, not HTML/CSS/JS templates.
 
 Go to **WEB → Template** and select the page named "example.com". Then, click
 button "Create template for a new site" and change the dropdown box at the top

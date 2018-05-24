@@ -8,7 +8,7 @@ Content Mapping
 ===============
 
 Having a perfect visual appearance of a website is pointless, if the content
-editors enter in the backend is not shown at the frontend. In the last step, we
+entered into the backend is not visible in the frontend. In the last step, we
 map some of the backend columns, which hold content elements such as text,
 images, etc. to areas in the frontend. This can be achieved easily by using
 custom TypoScript.

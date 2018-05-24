@@ -20,7 +20,7 @@ repository at GitHub <https://github.com/TYPO3Fluid/Fluid>`__ for example.
 Quick Introduction to Fluid
 ===========================
 
-Like many other templating engines, Fluid reads so-called *template files*,
+Like many other templating engines, Fluid reads *template files*,
 processes them and replaces certain variables and specific tags with dynamic
 content. The result is a fully working website with a clean and valid HTML
 output. Dynamic elements are automatically updated as required. Navigation
@@ -28,7 +28,7 @@ menus are a typical example for this type of content. A menu exists on all
 pages across the entire website. Whenever pages are added, deleted or renamed,
 the menu items change.
 
-Fluid takes modern templating a step further. By using so-called *ViewHelpers*,
+Fluid takes modern templating a step further. By using *ViewHelpers*,
 developers can implement complex functionality and therefore extend the
 original functionality of Fluid to their heart's content. ViewHelpers are built
 in the programming language PHP. Having said that, website integrators or
@@ -314,7 +314,7 @@ following single line::
 
 Congratulations -- you just applied your first ViewHelper! HTML tags starting
 with :html:`<f:...>` are typically core ViewHelpers in Fluid. The tag
-:html:`<f:render>` is the so-called Render-ViewHelper, which (as the name suggests)
+:html:`<f:render>` is the Render-ViewHelper, which (as the name suggests)
 renders the content of a section or partial. In our case it is the latter,
 because of the :html:`partial="..."` argument. Note: do not append :file:`.html` here.
 HTML is the default format and as a convention, the ViewHelper automatically

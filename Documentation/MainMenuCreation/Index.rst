@@ -99,7 +99,7 @@ main menu to the Fluid layout file, which is located under
    <f:render section="Main" />
 
 The changes are inside the :html:`<ul> ... </ul>` tags. The new code extends the
-list by a so-called "For-ViewHelper", which builds a loop and iterates variable
+list by using a "For-ViewHelper", which builds a loop and iterates variable
 `mainnavigation` as single items named :ts:`mainnavigationItem`. Each item
 represents one link to a page in the menu. The attributes we are using are:
 
@@ -112,7 +112,7 @@ represents one link to a page in the menu. The attributes we are using are:
 * :ts:`mainnavigationItem.title`: the page or link title
 
 The construct :html:`{f:if(condition: mainnavigationItem.active, then: 'active')}`
-is a special case. This is a so-called *inline notation*, that outputs the word
+is a special case. This is called an *inline notation*, that outputs the word
 `active`, if variable :ts:`mainnavigationItem.active` is set. In this example,
 the inline notation is used to output :html:`active` as the CSS class name.
 
