@@ -85,8 +85,7 @@ the page name allows you to rename it).
 
 
 By default, all new pages are disabled (marked as a red icon at the bottom
-right). Enable all pages by clicking the "Enable" link in the context menu
-(marker 1).
+right). Enable all pages by clicking the "Enable" link in the context menu.
 
 .. figure:: EnablePagesInContextMenu.png
    :alt: Enable Pages in Context Menu

@@ -157,8 +157,8 @@ Element" content element.
    :alt: Create New Content Element
    :class: with-shadow
 
-Enter a headline (marker 1) some arbitrary text in the Rich Text Editor (RTE)
-and save your changes by cliking button "Save and close" at the top (marker 2).
+Enter a headline (marker 1), some arbitrary text in the Rich Text Editor (RTE)
+and save your changes by clicking button "Save and close" at the top (marker 2).
 
 .. figure:: SaveAndClose.png
    :alt: Save and Close
