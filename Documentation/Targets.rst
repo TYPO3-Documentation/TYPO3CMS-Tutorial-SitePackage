@@ -5,7 +5,7 @@
 Linktargets
 ===========
 
-.. _linktarget-explanation:
+.. _linktargets-explanation:
 
 Explanation
 ===========
