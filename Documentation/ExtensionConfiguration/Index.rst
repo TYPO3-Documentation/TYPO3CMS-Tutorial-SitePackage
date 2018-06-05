@@ -21,6 +21,7 @@ display it in the *Extension Manager*.
 This file is named :file:`ext_emconf.php` and is expected in the root level of the
 extension. The content should look as follows::
 
+   <?php
    $EM_CONF[$_EXTKEY] = [
       'title' => 'TYPO3 Site Package',
       'description' => 'TYPO3 Site Package',
@@ -81,6 +82,7 @@ previous step, a new PHP file :file:`sys_template.php` needs to be created and
 stored in directory :file:`Configuration/TCA/Overrides/`. The content of this file
 should look like the following code::
 
+   <?php
    defined('TYPO3_MODE') || die();
 
    call_user_func(function()
