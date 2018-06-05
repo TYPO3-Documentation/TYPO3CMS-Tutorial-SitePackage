@@ -31,6 +31,8 @@ Site Package Tutorial
 
 :Rendered:
       |today|
+      
+*  `Code <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code>`__      
 
 The content of this document is related to TYPO3 CMS, a GNU/GPL CMS/Framework
 available from https://typo3.org/.
