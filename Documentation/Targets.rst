@@ -5,6 +5,8 @@
 Linktargets
 ===========
 
+.. _linktarget-explanation:
+
 Explanation
 ===========
 :code:`t3sitepackage` is the usual alias for :code:`https://docs.typo3.org/typo3cms/SitePackageTutorial`
