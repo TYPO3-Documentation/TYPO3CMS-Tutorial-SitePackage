@@ -29,10 +29,18 @@ Site Package Tutorial
       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
       (CC BY-NC-SA 4.0), https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+:Shortcut:
+      `t3sitepackage` is the usual alias for https://docs.typo3.org/typo3cms/SitePackageTutorial/
+      when creating Sphinx cross-references to this manual.
+      
+
 :Rendered:
       |today|
-      
+
+.. rst-class:: horizbuttons-note-xxl
+
 *  `Code <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code>`__      
+
 
 The content of this document is related to TYPO3 CMS, a GNU/GPL CMS/Framework
 available from https://typo3.org/.
