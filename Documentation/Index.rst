@@ -30,9 +30,8 @@ Site Package Tutorial
       (CC BY-NC-SA 4.0), https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 :Shortcut:
-      `t3sitepackage` is the usual alias for https://docs.typo3.org/typo3cms/SitePackageTutorial/
-      when creating Sphinx cross-references to this manual.
-      
+      `t3sitepackage` is the usual alias for 
+      :ref:`cross-referencing <linktargets-explanation>`.
 
 :Rendered:
       |today|
