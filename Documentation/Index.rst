@@ -69,7 +69,10 @@ this approach is a very flexible and professional way. At the same time, the
 process is not overly complicated and does not require any programming
 knowledge.
 
-:ref:`Sitemap`
+
+.. rst-class:: horizbuttons-primary-xxl
+
+-  :ref:`Sitemap`
 
 .. toctree::
    :hidden:
