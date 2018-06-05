@@ -37,7 +37,7 @@ Site Package Tutorial
 :Rendered:
       |today|
 
-.. rst-class:: horizbuttons-note-xxl
+.. rst-class:: horizbuttons-primary-xxl
 
 *  `Code <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code>`__      
 
