@@ -131,9 +131,7 @@ also download the extension built in this tutorial below.
 Download Site Package Extension
 -------------------------------
 
-`GitHub <https://github.com>`_
-
-*TODO: update link, once extension has been committed to GitHub.*
+`GitHub <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code>`_
 
 
 .. _site-package-builder:
