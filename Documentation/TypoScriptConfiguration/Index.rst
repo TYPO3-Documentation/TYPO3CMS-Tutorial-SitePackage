@@ -73,7 +73,7 @@ Add the following lines to file :file:`constants.typoscript`::
 TypoScript Setup
 ----------------
 
-File :file:`setup.typoscript` is a little it more complex, so we explain it
+File :file:`setup.typoscript` is a little bit more complex, so we explain it
 section by section. First, add the following lines to that file::
 
    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
