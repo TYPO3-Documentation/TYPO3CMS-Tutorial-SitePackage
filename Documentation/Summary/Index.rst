@@ -66,7 +66,7 @@ these.
 
    By using `Backend Layouts
    <https://www.google.com/search?q=TYPO3+Backend+Layouts>`__, you can implement
-   are layout structure in the backend of TYPO3, that reflects the layout used
+   a layout structure in the backend of TYPO3, that reflects the layout used
    in the frontend. This makes it very easy for editors to understand where the
    content will appear on the website.
 
