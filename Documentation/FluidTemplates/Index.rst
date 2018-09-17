@@ -185,23 +185,24 @@ As a result, we end up with the following structure.
 
 .. code-block:: none
 
-   site_package/
-   site_package/Resources/
-   site_package/Resources/Private/
-   site_package/Resources/Private/Layouts/
-   site_package/Resources/Private/Layouts/Page/
-   site_package/Resources/Private/Partials/
-   site_package/Resources/Private/Partials/Page/
-   site_package/Resources/Private/Templates/
-   site_package/Resources/Private/Templates/Page/
-   site_package/Resources/Private/Templates/Page/Default.html
-   site_package/Resources/Public/
-   site_package/Resources/Public/Css/
-   site_package/Resources/Public/Css/website.css
-   site_package/Resources/Public/Images/
-   site_package/Resources/Public/Images/logo.png
-   site_package/Resources/Public/JavaScript/
-   site_package/Resources/Public/JavaScript/website.js
+   site_package
+   └── Resources
+       ├── Private
+       │   ├── Languages
+       │   ├── Layouts
+       │   │   └── Page
+       │   ├── Partials
+       │   │   └── Page
+       │   └── Templates
+       │       └── Page
+       │           └── Default.html
+       └── Public
+           ├── Css
+           │   └── website.css
+           ├── Images
+           │   └── logo.png
+           └── JavaScript
+               └── website.js
 
 It is important to note that at this point in time the site package extension
 contains four files only: :file:`Default.html`, :file:`website.css`, :file:`logo.png` and
