@@ -55,7 +55,7 @@ TypoScript Constants
 
 Add the following lines to file :file:`constants.typoscript`::
 
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
+   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
 
    page {
       fluidtemplate {
@@ -76,7 +76,7 @@ TypoScript Setup
 File :file:`setup.typoscript` is a little bit more complex, so we explain it
 section by section. First, add the following lines to that file::
 
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
 
    page = PAGE
    page {
