@@ -21,7 +21,7 @@ wide range of web browsers.
 
 The project discussed in this tutorial uses the well-known and popular
 `Bootstrap framework <https://getbootstrap.com>`_ version 4 and `jQuery
-<https://jquery.com>`__ version 3. Both are not mandatory for a site package in
+<https://jquery.com>`__ version 3. Both are not mandatory for a sitepackage in
 TYPO3 as such and can be replaced with similar frameworks or JavaScript
 libraries as required by the individual project.
 

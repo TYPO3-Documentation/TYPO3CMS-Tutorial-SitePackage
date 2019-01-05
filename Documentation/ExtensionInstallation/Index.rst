@@ -14,9 +14,9 @@ a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed
 that TYPO3 has been installed the *traditional way*, by extracting the source
 package into the web directory **without** using PHP *composer*.
 
-By using this method, extensions (e.g. the site package extension) can be
+By using this method, extensions (e.g. the sitepackage extension) can be
 installed using the Extension Manager, which is a *module* found in the
-backend of TYPO3. Before we can install the site package extension, we have to
+backend of TYPO3. Before we can install the sitepackage extension, we have to
 transfer the files from our local machine to the TYPO3 server (if all files and
 directories have been created on the local machine though).
 
@@ -42,7 +42,7 @@ First of all, login at the backend of TYPO3 as a user with administrator
 privileges. At the left side you find a section **ADMIN TOOLS** with a module
 named "Extensions" (marker 1). Open this module and make sure, the drop down
 box on the right hand side shows "Installed Extensions" (marker 2). If you have already
-uploaded the site package extension via SSH/FTP, search for "Site
+uploaded the sitepackage extension via SSH/FTP, search for "Site
 Package". If you created a ZIP file, upload the ZIP'ed extension by clicking
 the upload icon (marker 3).
 
@@ -53,7 +53,7 @@ the upload icon (marker 3).
    TYPO3 Extension Manager
 
 
-Once the site package extension appears in the list, you can activate it by
+Once the sitepackage extension appears in the list, you can activate it by
 clicking the "plus" icon (marker 4), if not already done.
 
 
@@ -121,7 +121,7 @@ TypoScript Template
 ===================
 
 Now we will add a TypoScript template to the site and include the TypoScript
-configuration we have created during the development of our site package. Do
+configuration we have created during the development of our sitepackage. Do
 not be confused about the terminology "template". In this context, we are
 referring to TypoScript templates, not HTML/CSS/JS templates.
 

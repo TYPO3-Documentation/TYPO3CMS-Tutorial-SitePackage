@@ -54,7 +54,7 @@ Directory Structure
 
 Fluid requires a specific directory structure to store the template files. If
 you are working through this tutorial now, this is a perfect time to create the
-first set of folders of the site package extension. The initial directory can
+first set of folders of the sitepackage extension. The initial directory can
 be named :file:`site_package/`, which we assume is located on your local
 machine. You can also choose a different name such as "site_example" or
 "site_clientname", but this tutorial uses "site_package".
@@ -127,9 +127,9 @@ directory, we can include this snippet at several places. An adjustment only
 requires an update of the partial and therefore in one file only.
 
 The use of partials is optional, whereas files in the :file:`Layouts/` and
-:file:`Templates/` directories are mandatory for a typical site package extension.
+:file:`Templates/` directories are mandatory for a typical sitepackage extension.
 
-The site package extension described in this tutorial focuses on the
+The sitepackage extension described in this tutorial focuses on the
 implementation of pages, rather than specific content elements. Therefore,
 folders :file:`Layouts/`, :file:`Templates/` and :file:`Partials/` all show a sub-
 directory :file:`Page/`.
@@ -204,7 +204,7 @@ As a result, we end up with the following structure.
            └── JavaScript
                └── website.js
 
-It is important to note that at this point in time the site package extension
+It is important to note that at this point in time the sitepackage extension
 contains four files only: :file:`Default.html`, :file:`website.css`, :file:`logo.png` and
 :file:`website.js`. The rest are empty directories for now.
 
@@ -213,7 +213,7 @@ This is a software design paradigm to decrease the number of decisions that a
 web developer is required to make. Simply learn and follow the conventions
 (e.g. that the path should be :file:`Resources/Private/Templates/Page/`) and the
 development will be smooth, easy and straight forward. In addition, if another
-web developer (e.g. one of your colleagues) looks at your site package
+web developer (e.g. one of your colleagues) looks at your sitepackage
 extension, he/she knows the locations and naming of files. This reduces
 development time significantly, e.g. if an issue needs to be investigated or a
 change should be implemented.
