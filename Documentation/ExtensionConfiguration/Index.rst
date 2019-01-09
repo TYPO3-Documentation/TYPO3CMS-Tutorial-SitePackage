@@ -108,7 +108,7 @@ should look like the following code::
 Directory and File Structure
 ============================
 
-Let's review the directory and file structure of the site package extension as
+Let's review the directory and file structure of the sitepackage extension as
 it stands now.
 
 .. code-block:: none
@@ -142,5 +142,5 @@ it stands now.
     site_package/Resources/Public/JavaScript
     site_package/Resources/Public/JavaScript/website.js
 
-At this point we can install the site package extension in a TYPO3 instance,
+At this point we can install the sitepackage extension in a TYPO3 instance,
 which we will do in the next step.

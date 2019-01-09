@@ -27,7 +27,7 @@ and functions can be found in the :ref:`TypoScript Reference <t3tsref:start>`.
 Files and Directories
 =====================
 
-First of all, we create two new files in the site package directory structure,
+First of all, we create two new files in the sitepackage directory structure,
 which will contain all TypoScript configurations. By following the official
 conventions of their file and directory naming, TYPO3 knows how to include them
 automatically.
@@ -188,7 +188,7 @@ lines::
 
 Section :ts:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
 Bootstrap library from an external source. It also includes file
-:file:`website.css` from the site package extension. We have copied this file
+:file:`website.css` from the sitepackage extension. We have copied this file
 into the appropriate folder before.
 
 Section :ts:`includeJSFooter { ... }` includes four JavaScript files in total.

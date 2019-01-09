@@ -27,7 +27,7 @@ can be installed, deinstalled, replaced, etc. and extend the core system with
 functions and features not shipped with the core system. An extension typically
 consists of PHP files, but can also (or only) contain design templates (HTML,
 CSS, JavaScript files, etc.) and global configuration. The visual appearance of
-a website does not necessarily require any PHP code. However, the site package
+a website does not necessarily require any PHP code. However, the sitepackage
 extension described in this tutorial contains exactly two PHP files (plus a
 handful of HTML/CSS and configuration files) to work as an *extension* in
 TYPO3. The PHP code can be copied from this tutorial if the reader does not
@@ -35,7 +35,7 @@ have any programming knowledge as such.
 
 Version Control
 ---------------
-By building the site package as an extension, all relevant files are stored at
+By building the sitepackage as an extension, all relevant files are stored at
 a central point and changes can easily be tracked in a version control system
 such as Git. Despite the fact that TYPO3 supports several methods of
 implementing websites, this approach is a very flexible and professional way.
@@ -47,9 +47,9 @@ Another important benefit of a TYPO3 extension is the fact that dependencies to
 other extensions and/or the TYPO3 version can be defined. This makes
 deployments easier and more fail-safe. This feature is called "Dependency
 Management". Most TYPO3 sites require a number of extensions. This could be
-"News", "Powermail" or "RealURL" for example. By building a site package
+"News", "Powermail" or "RealURL" for example. By building a sitepackage
 extension, which may contain global configuration for these add-ons, the
-dependencies can be defined. When the site package extension is installed in an
+dependencies can be defined. When the sitepackage extension is installed in an
 empty TYPO3 instance, all dependent extensions are downloaded from the `TYPO3
 Extension Repository <https://extensions.typo3.org>`__ and installed
 automatically.
@@ -75,21 +75,21 @@ configuration files should not be stored in :file:`fileadmin/`.
 Deployment
 ----------
 Modern versions of TYPO3 CMS follow the *convention over configuration*
-paradigm. As a consequence, if files and directories of the site package
+paradigm. As a consequence, if files and directories of the sitepackage
 extension use a specific naming convention, they are loaded automatically as
 soon as the extension is installed/activated in the system. This leads to
-another important advantage of the site package extension. The extension can be
+another important advantage of the sitepackage extension. The extension can be
 deployed easily by using the Extension Manager and/or the PHP composer method.
 This also enables system administrators to automate the deployment for example.
 
 Distributable
 -------------
-In virtue of the motto "TYPO3 inspires people to share!", the site package
+In virtue of the motto "TYPO3 inspires people to share!", the sitepackage
 extension can also be shared with the community via the official `TYPO3
 Extension Repository <https://extensions.typo3.org>`__ and/or in a publicly
 accessible version control system such as `GitHub <https://github.com>`__.
 
-Last, but not least, configuration implemented in the site package can be
+Last, but not least, configuration implemented in the sitepackage can be
 overwritten in the TypoScript setup and constants as required.
 
 
@@ -109,7 +109,7 @@ the *frontend*, *backend* and *Extension Manager* is and how to access the
 *Install Tool*. Missing knowledge can be acquired by working through the TYPO3
 documentation, for example the :ref:`Getting Started Tutorial <t3start:start>`.
 
-Due to the fact that the site package discussed in the next chapters implements
+Due to the fact that the sitepackage discussed in the next chapters implements
 a new, fresh, clean website skin from scratch, an empty TYPO3 instance is a
 prerequisite, too. This means, we assume we have a TYPO3 site without any
 pages, any design templates, any configuration, etc. However, a valid TYPO3

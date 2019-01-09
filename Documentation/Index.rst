@@ -14,7 +14,7 @@ Site Package Tutorial
       en
 
 :Description:
-      The official tutorial how to create a site package in TYPO3 from scratch
+      The official tutorial how to create a sitepackage in TYPO3 from scratch
 
 :Keywords:
       forDevelopers, forAdmins
@@ -69,7 +69,7 @@ be remembered for future reference.
 
 This tutorial describes the steps required to turn a basic design template
 (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive
-website powered by TYPO3. By creating a site package extension, all relevant 
+website powered by TYPO3. By creating a sitepackage extension, all relevant 
 files are stored at a central point and
 changes can easily be tracked in version control.
 
