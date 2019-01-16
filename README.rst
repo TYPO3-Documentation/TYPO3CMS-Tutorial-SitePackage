@@ -7,7 +7,7 @@
 TYPO3CMS-Tutorial-SitePackage
 =============================
 
-Tutorial how to create a TYPO3 site package extension from scratch
+Tutorial how to create a TYPO3 sitepackage extension from scratch
 
 :Repository:    https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage/
 :Read online:   https://docs.typo3.org/typo3cms/SitePackageTutorial/

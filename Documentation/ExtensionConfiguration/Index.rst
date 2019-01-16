@@ -23,8 +23,8 @@ extension. The content should look as follows::
 
    <?php
    $EM_CONF[$_EXTKEY] = [
-      'title' => 'TYPO3 Site Package',
-      'description' => 'TYPO3 Site Package',
+      'title' => 'TYPO3 Sitepackage',
+      'description' => 'TYPO3 Sitepackage',
       'category' => 'templates',
       'author' => '...',
       'author_email' => '...',
@@ -98,7 +98,7 @@ should look like the following code::
       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
          $extensionKey,
          'Configuration/TypoScript',
-         'Site Package'
+         'Sitepackage'
       );
    });
 
