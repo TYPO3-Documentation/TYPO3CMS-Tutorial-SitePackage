@@ -10,8 +10,8 @@ Introduction
 
 .. _site-package-benefits:
 
-Site Package Benefits
-=====================
+Sitepackage Benefits
+====================
 
 The development of a website can be approached in several ways. Standard
 websites usually consist of HTML documents, which contain texts and have image

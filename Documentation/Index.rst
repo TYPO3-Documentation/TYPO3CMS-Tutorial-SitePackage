@@ -3,9 +3,9 @@
 
 .. _start:
 
-=====================
-Site Package Tutorial
-=====================
+====================
+Sitepackage Tutorial
+====================
 
 :Version:
       8.7

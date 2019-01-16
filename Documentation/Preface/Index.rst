@@ -15,7 +15,7 @@ About this Document
 
 This tutorial details the steps required to turn a set of front end
 templates (HTML, CSS, JavaScript files, etc.) into a standalone
-*Site Package extension*.
+*sitepackage extension*.
 
 .. _target-audience:
 

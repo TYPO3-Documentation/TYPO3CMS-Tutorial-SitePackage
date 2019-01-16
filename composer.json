@@ -1,6 +1,6 @@
 {
     "name": "typo3/tutorial-sitepackage",
     "type": "typo3-cms-documentation",
-    "description": "The official tutorial how to create a site package in TYPO3 from scratch.",
+    "description": "The official tutorial how to create a sitepackage in TYPO3 from scratch.",
     "license": "CC-BY-NC-SA-4.0"
 }
