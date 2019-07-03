@@ -122,7 +122,8 @@ First, extend :ts:`// Part 1: Fluid template section` by the following lines::
       templateName = TEXT
       templateName.stdWrap.cObject = CASE
       templateName.stdWrap.cObject {
-         key.data = pagelayout
+         key.data = levelfield:-1, backend_layout_next_level, slide
+         key.override.field = backend_layout
 
          pagets__site_package_default = TEXT
          pagets__site_package_default.value = Default
