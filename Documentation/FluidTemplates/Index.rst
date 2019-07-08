@@ -233,11 +233,12 @@ As described before, a typical static :file:`index.html` file contains a :html:`
 and a :html:`<body>` section, but we only need to focus on the :html:`<body>`. Open
 file :file:`site_package/Resources/Private/Templates/Page/Default.html` in your
 favorite text editor and remove all lines before the starting :html:`<body>` tag
-and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a
-result, file :file:`Default.html` only contains the HTML code *inside* the body.
+and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a 
+result, your :file:`Default.html` may now be empty. In that case, you can use the 
+following example based on the Bootstrap Jumbotron. If using your own layout template, 
+your :file:`Default.html` now contains only the HTML code inside the body.
 
-Your file may look different, but let's assume it contains something like the
-following HTML code::
+So, let's assume it contains something like the following HTML code::
 
    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
