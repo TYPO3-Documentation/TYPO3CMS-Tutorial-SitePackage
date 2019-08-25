@@ -29,6 +29,10 @@ Sitepackage Tutorial
       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
       (CC BY-NC-SA 4.0), https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+:Status:
+      The information in this tutorial has not been fully revised and updated for
+      TYPO3 |release| yet.
+
 :Shortcut:
       `t3sitepackage` is the usual alias for 
       :ref:`cross-referencing <linktargets-explanation>`.
