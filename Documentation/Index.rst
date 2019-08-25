@@ -8,7 +8,7 @@ Sitepackage Tutorial
 ====================
 
 :Version:
-      8.7
+      |release|
 
 :Language:
       en
@@ -30,7 +30,7 @@ Sitepackage Tutorial
       (CC BY-NC-SA 4.0), https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 :Status:
-      The information in this tutorial has not been fully revised and updated for
+      **outdated** The information in this tutorial has not been fully revised and updated for
       TYPO3 |release| yet.
 
 :Shortcut:
