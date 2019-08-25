@@ -4,6 +4,6 @@
     "description": "The official tutorial how to create a sitepackage in TYPO3 from scratch.",
     "license": "CC-BY-NC-SA-4.0",
     "require": {
-      "typo3/cms-core": "^9.5"
+      "typo3/cms-core": "^8.7"
     }
 }
