@@ -8,7 +8,7 @@ Sitepackage Tutorial
 ====================
 
 :Version:
-      8.7
+      |release|
 
 :Language:
       en
@@ -28,6 +28,10 @@ Sitepackage Tutorial
 :License:
       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
       (CC BY-NC-SA 4.0), https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+:Status:
+      **outdated** The information in this tutorial has not been fully revised and updated for
+      TYPO3 |release| yet.
 
 :Shortcut:
       `t3sitepackage` is the usual alias for 
@@ -86,7 +90,6 @@ knowledge.
 .. toctree::
    :hidden:
 
-   Sitemap/Index
    Preface/Index
    Introduction/Index
    DesignTemplate/Index
@@ -97,4 +100,5 @@ knowledge.
    MainMenuCreation/Index
    ContentMapping/Index
    Summary/Index
+   Sitemap/Index
    Targets
