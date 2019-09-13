@@ -30,8 +30,8 @@ Sitepackage Tutorial
       (CC BY-NC-SA 4.0), https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 :Status:
-      **outdated** The information in this tutorial has not been fully revised and updated for
-      TYPO3 |release| yet.
+      needs review (The information in this tutorial has not been fully updated for
+      TYPO3 |release| yet.)
 
 :Shortcut:
       `t3sitepackage` is the usual alias for 
