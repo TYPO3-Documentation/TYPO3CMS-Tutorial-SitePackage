@@ -88,8 +88,8 @@ To use the TypoScript, it needs to be loaded (*included*), so open file
 `Configuration/TypoScript/setup.typoscript` and add line
 `<INCLUDE_TYPOSCRIPT: ... >` as shown here in the second line::
 
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:site_package/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+   @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+   @import 'EXT:site_package/Configuration/TypoScript/Helper/DynamicContent.typoscript'
 
    page = PAGE
    page {
