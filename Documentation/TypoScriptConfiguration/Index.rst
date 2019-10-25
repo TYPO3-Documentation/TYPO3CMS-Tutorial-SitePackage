@@ -55,7 +55,7 @@ TypoScript Constants
 
 Add the following lines to file :file:`constants.typoscript`::
 
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
+   @import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
 
    page {
       fluidtemplate {
@@ -65,6 +65,8 @@ Add the following lines to file :file:`constants.typoscript`::
       }
    }
 
+The first line (:ts:`@import '...'`) includes the default constants
+from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
 .. @TODO: describe main purpose of the file.
 
 
@@ -76,7 +78,7 @@ TypoScript Setup
 File :file:`setup.typoscript` is a little bit more complex, so we explain it
 section by section. First, add the following lines to that file::
 
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+   @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
 
    page = PAGE
    page {
@@ -104,7 +106,7 @@ section by section. First, add the following lines to that file::
       // ...
    }
 
-The first line (:ts:`<INCLUDE_TYPOSCRIPT ...>`) includes the default constants
+The first line (:ts:`@import '...'`) includes the default setup
 from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
 The :ts:`page` section defines the so-called PAGE object and the :ts:`config`
 section the global site configuration. We will replace the four "Parts" (which
