@@ -69,7 +69,7 @@ Security
 --------
 Files in :file:`fileadmin/` are typically meant to be publicly accessible per
 convention. To avoid disclosing sensitive system information (see the
-:ref:`TYPO3 Security Guide <t3security:start>` for further details),
+:ref:`TYPO3 Security Guide <t3coreapi:security>` for further details),
 configuration files should not be stored in :file:`fileadmin/`.
 
 Deployment
