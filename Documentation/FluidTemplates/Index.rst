@@ -140,7 +140,7 @@ The directory :file:`Languages/` may contain :file:`.xlf` files that are used fo
 the localization of labels and text strings (frontend as well as backend) by
 TYPO3. This topic is not strictly related to the Fluid template engine and is
 documented in section
-:ref:`Internationalization and Localization <t3coreapi:internationalization-and-localization>`.
+:ref:`Internationalization and Localization <t3coreapi:internationalization>`.
 
 
 .. implement-templates-files:
