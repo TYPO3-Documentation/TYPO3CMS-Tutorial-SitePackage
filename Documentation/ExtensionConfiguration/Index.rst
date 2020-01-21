@@ -136,7 +136,7 @@ it stands now.
     site_package/Resources/Private/Templates/Page/Default.html
     site_package/Resources/Public
     site_package/Resources/Public/Css
-    site_package/Resources/Public/Css/website.js
+    site_package/Resources/Public/Css/website.css
     site_package/Resources/Public/Images/
     site_package/Resources/Public/Images/logo.png
     site_package/Resources/Public/JavaScript
