@@ -33,8 +33,8 @@ extension. The content should look as follows::
       'state' => 'stable',
       'constraints' => [
          'depends' => [
-            'typo3' => '8.7.0-9.5.99',
-            'fluid_styled_content' => '8.7.0-9.5.99'
+            'typo3' => '10.4.0-10.4.99',
+            'fluid_styled_content' => '10.4.0-10.4.99'
          ],
          'conflicts' => [
          ],
