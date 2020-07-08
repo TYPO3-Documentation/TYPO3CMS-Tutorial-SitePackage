@@ -34,7 +34,7 @@ original functionality of Fluid to their heart's content. ViewHelpers are built
 in the programming language PHP. Having said that, website integrators or
 editors are not required to learn or understand these (this is the
 responsibility of a software developer). Integrators only need to **apply**
-them -- and this is as easy as adding a HTML tag such as :html:`<image.../>` to a
+them -- and this is as easy as adding an HTML tag such as :html:`<image.../>` to an
 HTML file.
 
 More than 80 ViewHelpers are shipped with the TYPO3 core already. They enable
@@ -42,7 +42,7 @@ integrators and web developers to use translations of variables, generate forms
 and dynamic links, resize images, embed other HTML files and even implement
 logical functions such as :html:`if ... then ... else ...`. An overview of the
 available ViewHelpers and how to apply them can be found at `Fluid Powered
-TYPO3 <https://fluidtypo3.org/viewhelpers/>`__ and at the `TYPO3 Wiki
+TYPO3 <https:/fluidtypo3.org/viewhelpers/>`__ and at the `TYPO3 Wiki
 <https://wiki.typo3.org/Fluid>`__. Note that both sites are community-driven and
 not maintained by the TYPO3 Documentation Team.
 
@@ -164,7 +164,7 @@ folder as follows.
 * :file:`site_package/Resources/Public/Images/logo.png`
 
 As discussed before, the Bootstrap and jQuery files should be ignored for the
-time being. This leave us with the :file:`index.html` file, more precisly with
+time being. This leaves us with the :file:`index.html` file, more precisely with
 the :html:`<body>`-part of that file.
 
 Due to the fact that this file needs to be rendered and enriched with dynamic
@@ -178,7 +178,7 @@ In our case, directory :file:`Resources/Private/Templates/Page/` is the correct
 folder, because this is the entry point for all page templates, despite the
 fact that our :file:`index.html` file in fact implements the layout of the entire
 site. Therefore, the :file:`index.html` file gets copied into
-:file:`Resources/Private/Template/Page/` and renamed to :file:`Default.html` (in order
+:file:`Resources/Private/Templates/Page/` and renamed to :file:`Default.html` (in order
 to visualize that this file represents the layout of a default page).
 
 As a result, we end up with the following structure.
@@ -214,7 +214,7 @@ web developer is required to make. Simply learn and follow the conventions
 (e.g. that the path should be :file:`Resources/Private/Templates/Page/`) and the
 development will be smooth, easy and straight forward. In addition, if another
 web developer (e.g. one of your colleagues) looks at your sitepackage
-extension, he/she knows the locations and naming of files. This reduces
+extension, they know the locations and naming of files. This reduces
 development time significantly, e.g. if an issue needs to be investigated or a
 change should be implemented.
 
@@ -304,7 +304,7 @@ Due to the fact that the "jumbotron" elements could be used on several pages
 (page layouts) across the entire website, we should move this part to a
 partial. Create a new file named :file:`Jumbotron.html` inside directory
 :file:`site_package/Resources/Private/Partials/Page/` and copy the approriate six
-lines (starting from :file:`<div class="jumbotron">`) into it. Make sure the file
+lines (starting from :html:`<div class="jumbotron">`) into it. Make sure the file
 name reads **exactly** as stated above with upper case "J" as the first
 character.
 
@@ -323,7 +323,7 @@ HTML is the default format and as a convention, the ViewHelper automatically
 knows the file name and its location: :file:`Partials/Page/Jumbotron.html`.
 
 At this point, we have implemented an (optional) partial and a page layout
-template. Keep the file :file:`Resources/Private/Template/Page/Default.html` open
+template. Keep the file :file:`Resources/Private/Templates/Page/Default.html` open
 in your text editor, because we need to make one more small adjustment.
 
 As described above, files inside the :file:`Templates/` directory are page-specific
@@ -381,9 +381,9 @@ use::
       </main>
    </f:section>
 
-The updated template file shows two additional lines at the top (`<f:layout>`
-and `<f:section>`) and an additional line at the bottom (the closing
-`</f:section>` tag). The Layout-ViewHelper refers to the "Default" template
+The updated template file shows two additional lines at the top (:html:`<f:layout>`
+and :html:`<f:section>`) and an additional line at the bottom (the closing
+:html:`</f:section>` tag). The Layout-ViewHelper refers to the "Default" template
 file, which we will create in the next step. The Section-ViewHelper simply
 wraps the page template code we created before and therefore defines a section
 named "Main".
@@ -395,25 +395,25 @@ The Website Layout File
 =======================
 
 Now, let's implement the website layout file. First, we create a new file
-`Default.html` inside directory
-`site_package/Resources/Private/Layouts/Page/` and add the following line::
+:file:`Default.html` inside the directory
+:file:`site_package/Resources/Private/Layouts/Page/` and add the following line::
 
    <f:render section="Main" />
 
-Surprisingly, that is all. This line instructs Fluid to render section
+Surprisingly, that is all. This line instructs Fluid to render the section
 "Main", which we have implemented in the page layout template file
 :file:`Resources/Private/Templates/Page/Default.html`.
 
 However, we will do an additional step. The navigation menu will be shown on
 all pages across the entire website. Similar to the "Jumbotron" partial, it
-makes perfect sense to move the `<nav> ... </nav>` section from the page
+makes perfect sense to move the :html:`<nav> ... </nav>` section from the page
 layout template to a central place. Due to the fact that a menu is required on
 all pages, it can be part of the global website layout. Therefore, file
 :file:`Resources/Private/Layouts/Page/Default.html` is a suitable destination.
 
-Move the `<nav> ... </nav>` part from file
+Move the :html:`<nav> ... </nav>` part from file
 :file:`Resources/Private/Templates/Page/Default.html` to
-`Resources/Private/Layouts/Page/Default.html` as shown here::
+:file:`Resources/Private/Layouts/Page/Default.html` as shown here::
 
    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
