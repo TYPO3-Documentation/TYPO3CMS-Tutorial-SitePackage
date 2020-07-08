@@ -34,7 +34,7 @@ original functionality of Fluid to their heart's content. ViewHelpers are built
 in the programming language PHP. Having said that, website integrators or
 editors are not required to learn or understand these (this is the
 responsibility of a software developer). Integrators only need to **apply**
-them -- and this is as easy as adding a HTML tag such as :html:`<image.../>` to a
+them -- and this is as easy as adding an HTML tag such as :html:`<image.../>` to an
 HTML file.
 
 More than 80 ViewHelpers are shipped with the TYPO3 core already. They enable
@@ -164,7 +164,7 @@ folder as follows.
 * :file:`site_package/Resources/Public/Images/logo.png`
 
 As discussed before, the Bootstrap and jQuery files should be ignored for the
-time being. This leave us with the :file:`index.html` file, more precisly with
+time being. This leaves us with the :file:`index.html` file, more precisely with
 the :html:`<body>`-part of that file.
 
 Due to the fact that this file needs to be rendered and enriched with dynamic
@@ -178,7 +178,7 @@ In our case, directory :file:`Resources/Private/Templates/Page/` is the correct
 folder, because this is the entry point for all page templates, despite the
 fact that our :file:`index.html` file in fact implements the layout of the entire
 site. Therefore, the :file:`index.html` file gets copied into
-:file:`Resources/Private/Template/Page/` and renamed to :file:`Default.html` (in order
+:file:`Resources/Private/Templates/Page/` and renamed to :file:`Default.html` (in order
 to visualize that this file represents the layout of a default page).
 
 As a result, we end up with the following structure.
@@ -214,7 +214,7 @@ web developer is required to make. Simply learn and follow the conventions
 (e.g. that the path should be :file:`Resources/Private/Templates/Page/`) and the
 development will be smooth, easy and straight forward. In addition, if another
 web developer (e.g. one of your colleagues) looks at your sitepackage
-extension, he/she knows the locations and naming of files. This reduces
+extension, they know the locations and naming of files. This reduces
 development time significantly, e.g. if an issue needs to be investigated or a
 change should be implemented.
 
@@ -323,7 +323,7 @@ HTML is the default format and as a convention, the ViewHelper automatically
 knows the file name and its location: :file:`Partials/Page/Jumbotron.html`.
 
 At this point, we have implemented an (optional) partial and a page layout
-template. Keep the file :file:`Resources/Private/Template/Page/Default.html` open
+template. Keep the file :file:`Resources/Private/Templates/Page/Default.html` open
 in your text editor, because we need to make one more small adjustment.
 
 As described above, files inside the :file:`Templates/` directory are page-specific
@@ -395,12 +395,12 @@ The Website Layout File
 =======================
 
 Now, let's implement the website layout file. First, we create a new file
-`Default.html` inside directory
+`Default.html` inside the directory
 `site_package/Resources/Private/Layouts/Page/` and add the following line::
 
    <f:render section="Main" />
 
-Surprisingly, that is all. This line instructs Fluid to render section
+Surprisingly, that is all. This line instructs Fluid to render the section
 "Main", which we have implemented in the page layout template file
 :file:`Resources/Private/Templates/Page/Default.html`.
 
@@ -413,7 +413,7 @@ all pages, it can be part of the global website layout. Therefore, file
 
 Move the `<nav> ... </nav>` part from file
 :file:`Resources/Private/Templates/Page/Default.html` to
-`Resources/Private/Layouts/Page/Default.html` as shown here::
+:file:`Resources/Private/Layouts/Page/Default.html` as shown here::
 
    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
