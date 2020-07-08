@@ -42,7 +42,7 @@ integrators and web developers to use translations of variables, generate forms
 and dynamic links, resize images, embed other HTML files and even implement
 logical functions such as :html:`if ... then ... else ...`. An overview of the
 available ViewHelpers and how to apply them can be found at `Fluid Powered
-TYPO3 <https://fluidtypo3.org/viewhelpers/>`__ and at the `TYPO3 Wiki
+TYPO3 <https:/fluidtypo3.org/viewhelpers/>`__ and at the `TYPO3 Wiki
 <https://wiki.typo3.org/Fluid>`__. Note that both sites are community-driven and
 not maintained by the TYPO3 Documentation Team.
 
@@ -304,7 +304,7 @@ Due to the fact that the "jumbotron" elements could be used on several pages
 (page layouts) across the entire website, we should move this part to a
 partial. Create a new file named :file:`Jumbotron.html` inside directory
 :file:`site_package/Resources/Private/Partials/Page/` and copy the approriate six
-lines (starting from :file:`<div class="jumbotron">`) into it. Make sure the file
+lines (starting from :html:`<div class="jumbotron">`) into it. Make sure the file
 name reads **exactly** as stated above with upper case "J" as the first
 character.
 
@@ -381,9 +381,9 @@ use::
       </main>
    </f:section>
 
-The updated template file shows two additional lines at the top (`<f:layout>`
-and `<f:section>`) and an additional line at the bottom (the closing
-`</f:section>` tag). The Layout-ViewHelper refers to the "Default" template
+The updated template file shows two additional lines at the top (:html:`<f:layout>`
+and :html:`<f:section>`) and an additional line at the bottom (the closing
+:html:`</f:section>` tag). The Layout-ViewHelper refers to the "Default" template
 file, which we will create in the next step. The Section-ViewHelper simply
 wraps the page template code we created before and therefore defines a section
 named "Main".
@@ -395,8 +395,8 @@ The Website Layout File
 =======================
 
 Now, let's implement the website layout file. First, we create a new file
-`Default.html` inside the directory
-`site_package/Resources/Private/Layouts/Page/` and add the following line::
+:file:`Default.html` inside the directory
+:file:`site_package/Resources/Private/Layouts/Page/` and add the following line::
 
    <f:render section="Main" />
 
@@ -406,12 +406,12 @@ Surprisingly, that is all. This line instructs Fluid to render the section
 
 However, we will do an additional step. The navigation menu will be shown on
 all pages across the entire website. Similar to the "Jumbotron" partial, it
-makes perfect sense to move the `<nav> ... </nav>` section from the page
+makes perfect sense to move the :html:`<nav> ... </nav>` section from the page
 layout template to a central place. Due to the fact that a menu is required on
 all pages, it can be part of the global website layout. Therefore, file
 :file:`Resources/Private/Layouts/Page/Default.html` is a suitable destination.
 
-Move the `<nav> ... </nav>` part from file
+Move the :html:`<nav> ... </nav>` part from file
 :file:`Resources/Private/Templates/Page/Default.html` to
 :file:`Resources/Private/Layouts/Page/Default.html` as shown here::
 
