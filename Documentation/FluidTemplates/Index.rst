@@ -331,7 +331,7 @@ layouts. An additional component allows web developers to build the overall
 *layout* (the skeleton) of the website: this is an HTML file in the
 :file:`Resources/Private/Layouts/Page/` folder that we name :file:`Default.html`, too.
 Before we create this file, we need to tell our page layout template
-(:file:`Resource/Templates/Page/Default.html`) which website template it should
+(:file:`Resource/Private/Templates/Page/Default.html`) which website template it should
 use::
 
    <f:layout name="Default" />
