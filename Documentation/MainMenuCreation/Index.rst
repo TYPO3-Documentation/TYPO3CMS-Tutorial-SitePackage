@@ -62,7 +62,7 @@ Update Fluid and Implement Main Menu
 To make the output of the :ts:`MenuProcessor` visible at the frontend, we have to
 adjust the Fluid template slightly. You may remember that we moved the
 main menu to the Fluid layout file, which is located under
-:file:`Resources/Private/Layouts/Default.html` (see section
+:file:`Resources/Private/Layouts/Page/Default.html` (see section
 :ref:`the-website-layout-file`). Open this file and adjust it as shown here:
 
 .. code-block:: html
