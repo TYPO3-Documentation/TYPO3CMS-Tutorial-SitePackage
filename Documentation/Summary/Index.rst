@@ -61,7 +61,7 @@ these.
    standard homepage. However, this layout is the only layout and used across
    all pages. By extending the TypoScript template and creating variations of
    the :file:`Default.html` Fluid template file, you could create a number of
-   differnet templates. For example, one for the homepage and a different one
+   different templates. For example, one for the homepage and a different one
    for normal content pages.
 
    By using `Backend Layouts
