@@ -83,7 +83,7 @@ stored in directory :file:`Configuration/TCA/Overrides/`. The content of this fi
 should look like the following code::
 
    <?php
-   defined('TYPO3_MODE') || die();
+   defined('TYPO3') or die();
 
    call_user_func(function()
    {
