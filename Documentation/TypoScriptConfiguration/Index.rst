@@ -199,6 +199,9 @@ Therefore, :ts:`.external = 1` forces TYPO3, not to check for their local
 existence. The fourth JavaScript file is the file we added before to the site
 package extension itself.
 
+You can also include CSS or JavaScript per-component in your Fluid template or 
+by PHP. See :ref:`Assets <t3coreapi:assets>`.
+
 
 Part 4: Global Site Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
