@@ -64,7 +64,7 @@ these.
    different templates. For example, one for the homepage and a different one
    for normal content pages.
 
-   By using :ref:`Backend Layouts <t3coreapi:be-layout>`, you can implement
+   By using :ref:`Backend Layouts <t3coreapi:be-layout>` you can implement
    a layout structure in the backend of TYPO3, that reflects the layout used
    in the frontend. This makes it very easy for editors to understand where the
    content will appear on the website.
