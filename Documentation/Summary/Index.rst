@@ -64,8 +64,7 @@ these.
    differnet templates. For example, one for the homepage and a different one
    for normal content pages.
 
-   By using `Backend Layouts
-   <https://www.google.com/search?q=TYPO3+Backend+Layouts>`__, you can implement
+   By using :ref:`Backend Layouts <t3coreapi:be-layout>` you can implement
    a layout structure in the backend of TYPO3, that reflects the layout used
    in the frontend. This makes it very easy for editors to understand where the
    content will appear on the website.
@@ -95,10 +94,9 @@ these.
 
    :ts:`TCEFORM.tt_content.colPos.removeItems = 3`
 
-   However, the aforementioned `Backend Layouts
-   <https://www.google.com/search?q=TYPO3+Backend+Layouts>`__ give you much more
-   control about columns, labels, positions, etc. and are the recommended way
-   to implement layouts in the backend.
+   However, the aforementioned :ref:`Backend Layouts <t3coreapi:be-layout>`
+   give you much more control about columns, labels, positions, etc. and are
+   the recommended way to implement layouts in the backend.
 
 4. Jumbotron not editable
 
