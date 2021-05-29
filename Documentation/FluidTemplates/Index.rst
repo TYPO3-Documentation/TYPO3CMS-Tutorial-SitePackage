@@ -41,10 +41,8 @@ More than 80 ViewHelpers are shipped with the TYPO3 core already. They enable
 integrators and web developers to use translations of variables, generate forms
 and dynamic links, resize images, embed other HTML files and even implement
 logical functions such as :html:`if ... then ... else ...`. An overview of the
-available ViewHelpers and how to apply them can be found at `Fluid Powered
-TYPO3 <https:/fluidtypo3.org/viewhelpers/>`__ and at the `TYPO3 Wiki
-<https://wiki.typo3.org/Fluid>`__. Note that both sites are community-driven and
-not maintained by the TYPO3 Documentation Team.
+available ViewHelpers and how to apply them can be found in the `Fluid ViewHelper Documentation 
+<https://docs.typo3.org/other/typo3/view-helper-reference/master/en-us/Index.html>`__.
 
 
 .. directory-structure:
