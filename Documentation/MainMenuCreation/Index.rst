@@ -127,7 +127,7 @@ two additional pages to the page tree and check to see if they appear in the pre
 the menu does not change, you possibly need to clear the frontend cache (marker
 1), then reload the preview (marker 2).
 
-.. figure:: PreviewPage.png
+.. figure::  /Images/ManualScreenshots/MainMenuCreationPreviewPage.png
    :alt: Preview Page
    :class: with-shadow
 

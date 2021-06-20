@@ -46,7 +46,7 @@ uploaded the sitepackage extension via SSH/FTP, search for "Site
 Package". If you created a ZIP file, upload the ZIP'ed extension by clicking
 the upload icon (marker 3).
 
-.. figure:: ExtensionManager.png
+.. figure::  /Images/ManualScreenshots/ExtensionManager.png
    :alt: Extension Manager
    :class: with-shadow
 
@@ -77,7 +77,7 @@ By clicking the page icon with the "plus" at the top, and then dragging the
 build the following page tree. Enter the page names as shown (a double-click on
 the page name allows you to rename it).
 
-.. figure:: CreateInitialPages.png
+.. figure::  /Images/ManualScreenshots/CreateInitialPages.png
    :alt: Create Initial Pages
    :class: with-shadow
 
@@ -87,7 +87,7 @@ the page name allows you to rename it).
 By default, all new pages are disabled (marked as a red icon at the bottom
 right). Enable all pages by clicking the "Enable" link in the context menu.
 
-.. figure:: EnablePagesInContextMenu.png
+.. figure::  /Images/ManualScreenshots/EnablePagesInContextMenu.png
    :alt: Enable Pages in Context Menu
    :class: with-shadow
 
@@ -97,7 +97,7 @@ right). Enable all pages by clicking the "Enable" link in the context menu.
 Once all pages have been created, you should end up with the following page
 tree.
 
-.. figure:: FinalPageTree.png
+.. figure::  /Images/ManualScreenshots/FinalPageTree.png
    :alt: Final Page Tree
    :class: with-shadow
 
@@ -136,7 +136,7 @@ extensions)", which shows two boxes: "Selected Items" (left hand side) and
 "Available Items" (right hand side). Under "Available Items", click "Site
 Package (site_package)", which moves the entry to the left box.
 
-.. figure:: IncludeTypoScriptTemplate.png
+.. figure::  /Images/ManualScreenshots/IncludeTypoScriptTemplate.png
    :alt: Include TypoScript Template
    :class: with-shadow
 
@@ -151,7 +151,7 @@ At this point, it is a good time to preview what we have achieved so far. Go to
 top left of the screen (marker 1) allow you to show/hide the page tree and to
 minimize the function menu at the left.
 
-.. figure:: PreviewPage.png
+.. figure::  /Images/ManualScreenshots/ExtensionInstallationPreviewPage.png
    :alt: Preview Page
    :class: with-shadow
 

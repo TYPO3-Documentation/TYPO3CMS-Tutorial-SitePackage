@@ -141,7 +141,7 @@ Another option to create a sitepackage extension quickly is an online tool
 developed by Benjamin Kott: the `sitepackage builder
 <http://sitepackagebuilder.com/>`__.
 
-.. figure:: SitePackageBuilder.png
+.. figure::  /Images/ManualScreenshots/SitePackageBuilder.png
    :alt: Sitepackage Builder
    :class: with-shadow
 
