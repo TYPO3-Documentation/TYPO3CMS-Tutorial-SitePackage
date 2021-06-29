@@ -13,6 +13,8 @@ map some of the backend columns, which hold content elements such as text,
 images, etc. to areas in the frontend. This can be achieved easily by using
 custom TypoScript.
 
+See :ref:`Backend layouts <t3coreapi:be-layout>` for more information about setting up various columns and rows.
+
 
 .. _cm-dynamic-content-rendering-in-typoscript:
 
