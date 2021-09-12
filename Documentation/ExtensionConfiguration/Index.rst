@@ -97,8 +97,9 @@ advise) the extension needs to contain its own :file:`composer.json`.
    }
 
 For historic reasons TYPO3 extension names have to be written in lower case
-separated by underscores. The path name and the extension name have to be
-the same. So the extension in the path :file:`site_package` has to have the
+separated by underscores. We suggest to use the extension key for the directory 
+of the extension as well to minimize confusion. So the extension in the path 
+:file:`site_package` has to have the
 same "extension-key" to be defined in the "extra" section of the composer.json.
 
 The Composer name defined as "name" however has to consist of a vendor name
