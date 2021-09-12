@@ -1,20 +1,38 @@
 .. include:: ../Includes.txt
 
-
 .. _content-mapping:
 
 ===============
-Content Mapping
+Content mapping
 ===============
 
 Having a perfect visual appearance of a website is pointless, if the content
 entered into the backend is not visible in the frontend. In the last step, we
-map some of the backend columns, which hold content elements such as text,
-images, etc. to areas in the frontend. This can be achieved easily by using
-custom TypoScript.
+create a backend layout with several rows and columns, which hold content
+elements such as text, images, etc. to be displayed in areas in the frontend.
+
+The backend layouts can be defined as database records or a TsConfig
+configuration. We use page TsConfig as it can be kept in the site-package and
+under version control.
+
+The output of content into the front end is defined via TypoScript.
 
 See :ref:`Backend layouts <t3coreapi:be-layout>` for more information about setting up various columns and rows.
 
+
+Define the backend layouts
+==========================
+
+Many websites nowadays require different layouts for different types of pages.
+
+We define two distinct backend layouts here to demonstrate using multiple
+backend (and frontend) page layouts.
+
+We assume by default pages consists of the menu, a jumbotron and the main
+content area. Meanwhile some subpages will additionally have need sidebar
+displayed to the right of the main content.
+
+Create a new directory :file:`Configuration/TypoScript/Helper/`
 
 .. _cm-dynamic-content-rendering-in-typoscript:
 
@@ -23,85 +41,156 @@ Dynamic Content Rendering in TypoScript
 
 .. highlight:: typoscript
 
-Create a new directory :file:`Configuration/TypoScript/Helper/` and inside this
-directory, a new file called :file:`DynamicContent.typoscript` with the following
+Create a new directory :file:`Configuration/TsConfig/Page/` and inside this
+directory, a new file called :file:`Page.tsconfig` with the following
 content::
 
-   lib.dynamicContent = COA
-   lib.dynamicContent {
-      10 = LOAD_REGISTER
-      10 {
-         colPos.cObject = TEXT
-         colPos.cObject {
-            field = colPos
-            ifEmpty.cObject = TEXT
-            ifEmpty.cObject {
-               value.current = 1
-               ifEmpty = 0
-            }
-         }
-         pageUid.cObject = TEXT
-         pageUid.cObject {
-            field = pageUid
-            ifEmpty.data = TSFE:id
-         }
-         contentFromPid.cObject = TEXT
-         contentFromPid.cObject {
-            data = DB:pages:{register:pageUid}:content_from_pid
-            data.insertData = 1
-         }
-         wrap.cObject = TEXT
-         wrap.cObject {
-            field = wrap
-         }
-      }
-      20 = CONTENT
-      20 {
-         table = tt_content
-         select {
-            includeRecordsWithoutDefaultTranslation = 1
-            orderBy = sorting
-            where = {#colPos}={register:colPos}
-            where.insertData = 1
-            pidInList.data = register:pageUid
-            pidInList.override.data = register:contentFromPid
-         }
-         stdWrap {
-            dataWrap = {register:wrap}
-            required = 1
-         }
-      }
-      30 = RESTORE_REGISTER
-    }
+   @import 'EXT:site_package/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
 
-Once again, describing what exactly this TypoScript does is not part of this
-tutorial. The only fact that is important is, that the variable
-`lib.dynamicContent` contains the content in subject to the column and
-language in the backend. More details about the TypoScript can be found in the
-:ref:`TypoScript Reference <t3tsref:menu-objects>`.
+This file imports all files ending on `.tsconfig` from the specified folder.
+The file :file:`Page.tsconfig` could for example handle other page TsConfig
+configurations or their imports.
 
+Then create a file
+:file:`Configuration/TsConfig/Page/PageLayout/Default.tsconfig` with the
+following content::
+
+   mod.web_layout.BackendLayouts {
+       Default {
+           title = Default Layout
+           config {
+               backend_layout {
+                   colCount = 1
+                   rowCount = 2
+                   rows {
+                       1 {
+                           columns {
+                               1 {
+                                   name = Jumbotron
+                                   colPos = 1
+                               }
+                           }
+                       }
+                       2 {
+                           columns {
+                               1 {
+                                   name = Main Content
+                                   colPos = 0
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
+
+After clearing the all caches the new backend layout is available in the page
+properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
+
+.. todo: screenshot of backend layout in page properties
+
+Switch to the new backend layout and save the page properties. In the
+:guilabel:`Page` module you will see two columns called "Jumbotron" and
+"Main Content" now.
+
+.. todo: screenshot of backend layout in page module
+
+Insert some example content into the two rows. In the database each content
+element (stored in the table :sql:`tt_content`) has the value defined in
+`colPos` stored in a field of corresponding name. The numbers of the columns
+are arbitary. It is best practise, however to store the main content in colPos
+0 and to use the same column numbers for the same positions throughout all
+backend layouts of a site. This facilitates switching between different
+layouts or looking up content up the page tree.
+
+For the second layout we create a second file at
+:file:`Configuration/TsConfig/Page/PageLayout/TwoColumns.tsconfig` with the
+following content::
+
+   mod.web_layout.BackendLayouts {
+       TwoColumns {
+           title = Two Columns
+           config {
+               backend_layout {
+                   colCount = 2
+                   rowCount = 2
+                   rows {
+                       1 {
+                           columns {
+                               1 {
+                                   name = Jumbotron
+                                   colspan = 2
+                                   colPos = 1
+                               }
+                           }
+                       }
+                       2 {
+                           columns {
+                               1 {
+                                   name = Main Content
+                                   colPos = 0
+                               }
+                               2 {
+                                   name = Sidebar
+                                   colPos = 2
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
+
+Internally the backend layouts are grids. A row can span multiple columns by
+setting a `colspan`. It is also possible for a column to span multiple rows.
+
+See :ref:`Backend layouts <t3coreapi:be-layout>` for more information about
+setting up various columns and rows.
 
 .. _cm-typo3-backend-create-pages:
 
-Include Dynamic Content Rendering
-=================================
+Content rendering via data processing
+=====================================
 
-To use the TypoScript, it needs to be loaded (*included*), so open file
-`Configuration/TypoScript/setup.typoscript` and add line
-`@import '...'` as shown here in the second line::
+Just like displaying the menu, the content can also be displayed by using
+a data processor, the :php:`DatabaseQueryProcessor`.
 
-   @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
-   @import 'EXT:site_package/Configuration/TypoScript/Helper/DynamicContent.typoscript'
+Define the data processors in :typoscript:`page.10.dataProcessing` beside the
+data processors of the menu. We need one data processor for each column
+position::
 
-   page = PAGE
    page {
-      // ...
+     10 {
+       dataProcessing {
+         //10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+         20 {
+           table = tt_content
+           orderBy = sorting
+           where = colPos = 0
+           as = mainContent
+         }
+         30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+         30 {
+           table = tt_content
+           orderBy = sorting
+           where = colPos = 1
+           as = jumbotronContent
+         }
+         40 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+         40 {
+           table = tt_content
+           orderBy = sorting
+           where = colPos = 2
+           as = sidebarContent
+         }
+       }
+     }
    }
 
-   config {
-      // ...
-   }
-
+To keep different configurations separate in the example extension you can finde
 
 .. _cm-fluid-typoscript-mapping:
 
