@@ -13,7 +13,8 @@ Extension Declaration File
 ==========================
 
 Every TYPO3 extension requires a configuration file (also known as the
-*extension declaration file*) to tell the TYPO3 instance some basic details of
+:ref:`extension declaration file <t3coreapi:extension-declaration>`) to
+tell the TYPO3 instance some basic details of
 the extension, possible dependencies, etc. Without this file, TYPO3 would not
 know that the extension exists and as a consequence could not load it, nor
 display it in the *Extension Manager*.
@@ -33,8 +34,8 @@ extension. The content should look as follows::
       'state' => 'stable',
       'constraints' => [
          'depends' => [
-            'typo3' => '10.4.0-10.4.99',
-            'fluid_styled_content' => '10.4.0-10.4.99'
+            'typo3' => '11.4.0-11.5.99',
+            'fluid_styled_content' => '11.4.0-11.5.99'
          ],
          'conflicts' => [
          ],
@@ -47,12 +48,66 @@ extension. The content should look as follows::
 The values can and should be customized of course. A more meaningful and longer
 description is recommended and defining some details about the author
 (`author`, :code:`author_email` and :code:`author_company`) make also perfect sense. A
-detailed description of all configuration options can be found in the
-:ref:`Core API Reference <t3coreapi:extension-declaration>`.
+detailed description of all configuration options can be found in
+:ref:`TYPO3 Explained: Declaration file <t3coreapi:extension-declaration>`.
 
 Create and customize this file and store it as :file:`site_package/ext_emconf.php`.
-The configration shown above will do the job, if you do not want to customize
+The configuration shown above will do the job, if you do not want to customize
 the declaration file at the moment.
+
+Composer configuration
+======================
+
+If you are planning to work with a Composer-based installation (as we would
+advise) the extension needs to contain its own :file:`composer.json`.
+
+.. code-block:: json
+
+   {
+      "name": "t3docs/site-package",
+      "type": "typo3-cms-extension",
+      "description": "Example site package from the site package tutorial",
+      "authors": [
+         {
+            "name": "TYPO3 CMS Documentation Team",
+            "role": "Developer",
+            "homepage": "https://typo3.org/community/teams/documentation"
+         },
+         {
+            "name": "The TYPO3 Community",
+            "role": "Contributor",
+            "homepage": "https://typo3.org/community/"
+         }
+      ],
+      "homepage": "https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code",
+      "license": "MIT",
+      "keywords": [
+         "typo3",
+         "site package",
+         "documentation"
+      ],
+      "support": {
+         "issues": "https://github.com/TYPO3-Documentation/t3docs-screenshots/issues"
+      },
+      "extra": {
+         "typo3/cms": {
+            "extension-key": "site_package"
+         }
+      }
+   }
+
+For historic reasons TYPO3 extension names have to be written in lower case
+separated by underscores. We suggest to use the extension key for the directory 
+of the extension as well to minimize confusion. So the extension in the path 
+:file:`site_package` has to have the
+same "extension-key" to be defined in the "extra" section of the composer.json.
+
+The Composer name defined as "name" however has to consist of a vendor name
+followed by a forward slash and the lowercase extension name with minus scores.
+
+.. hint::
+   If composer does not find your site-package extension check if you are
+   using the correct separation chars in the correct places.
 
 
 .. _extension-icon:

@@ -1,61 +1,85 @@
 .. include:: ../Includes.txt
 
-
 .. _extension-installation:
 
 ======================
-Extension Installation
+Extension installation
 ======================
 
 This tutorial assumes that your TYPO3 instance is a brand new installation,
 without any themes, templates, pages or content. See the :ref:`TYPO3
 Installation Guide <t3install:start>` for a detailed explanation how to set up
-a TYPO3 instance from scratch. For the sake of simplicity, it is also assumed
-that TYPO3 has been installed the *traditional way*, by extracting the source
-package into the web directory **without** using PHP *composer*.
+a TYPO3 instance from scratch.
 
-By using this method, extensions (e.g. the sitepackage extension) can be
-installed using the Extension Manager, which is a *module* found in the
-backend of TYPO3. Before we can install the sitepackage extension, we have to
-transfer the files from our local machine to the TYPO3 server (if all files and
-directories have been created on the local machine though).
+We highly recommend to use :ref:`the Composer -based installation process
+<t3install:composer-working-with>`. During development you should work locally
+on your machine for example by running TYPO3 on ddev.
 
-In case you have SSH/FTP access to the server, copy the directory
-:file:`site_package` (including all files and sub-directories) to the
-following directory in your TYPO3 instance: :file:`typo3conf/ext/`.
-
-If you do not have SSH/FTP access, create a ZIP file of the **content** of your
-:file:`site_package` folder. It is important that the ZIP archive does not
-contain the directory :file:`site_package` and its files and directories inside
-this folder. The files and folders must be directly located on the first level
-of ZIP archive.
-
-.. @TODO clarify, if the file name of the ZIP is relevant.
+If you need to follow the legacy way of installation, see :ref:`Site package
+installation without Composer <extension-installation_without_composer>`.
 
 
-.. _typo3-backend-extension-manager:
+.. _extension-installation_with_composer:
 
-Extension Manager
-=================
+Extension installation in Composer mode
+=======================================
 
-First of all, login at the backend of TYPO3 as a user with administrator
-privileges. At the left side you find a section **ADMIN TOOLS** with a module
-named "Extensions" (marker 1). Open this module and make sure, the drop down
-box on the right hand side shows "Installed Extensions" (marker 2). If you have already
-uploaded the sitepackage extension via SSH/FTP, search for "Site
-Package". If you created a ZIP file, upload the ZIP'ed extension by clicking
-the upload icon (marker 3).
+Starting with TYPO3 11.4 if composer is used, all extensions, including the 
+site package extension must be installed via Composer.
 
-.. figure::  /Images/ManualScreenshots/ExtensionManager.png
-   :alt: Extension Manager
-   :class: with-shadow
+As a site package is usually developed together with the site-specific files it
+is usually desirable to keep them together in a version control system like
+Git.
 
-   TYPO3 Extension Manager
+Therefore create a directory for all locally version-controlled extension at
+root-level of your Composer -based installation. The name is arbitrary, we use
+:file:`local_packages` here.
 
+Then edit your :file:`composer.json` in the root of your installation directory
+to add the path as a local repository.
 
-Once the sitepackage extension appears in the list, you can activate it by
-clicking the "plus" icon (marker 4), if not already done.
+Add the following lines:
 
+.. code-block:: json
+
+   {
+      "name": "myvendor/my-project",
+      "repositories": [
+         {
+            "type": "path",
+            "url": "./local_packages/*"
+         }
+      ],
+      "require": {
+         "typo3/cms-core": "11.4",
+         "..." : "..."
+      },
+      "..." : "..."
+   }
+
+Move your the extension folder :file:`site_package` directly into the folder
+:file:`local_packages`. Then *require* the extension via Composer  using the
+`name` defined in the site package extensions :file:`composer.json` now located
+at :file:`local_packages/site_package/`. For example if you defined the name as
+
+.. code-block:: json
+
+   {
+      "name": "myvendor/site-package-myproject"
+   }
+
+require it by:
+
+.. code-block:: bash
+
+    composer require myvendor/site-package-myproject:@dev
+
+.. hint::
+
+   Starting with TYPO3 11.4 all extensions required via Composer are
+   automatically considered active. In previous versions it is still necessary
+   to activate the extension after the Composer-based installation via the
+   :guilabel:`Extension Manager`.
 
 .. _typo3-backend-create-initial-pages:
 
