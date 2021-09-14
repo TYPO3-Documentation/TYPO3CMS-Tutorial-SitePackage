@@ -29,10 +29,9 @@ We define two distinct backend layouts here to demonstrate using multiple
 backend (and frontend) page layouts.
 
 We assume by default pages consists of the menu, a jumbotron and the main
-content area. Meanwhile some subpages will additionally have need sidebar
-displayed to the right of the main content.
+content area. Meanwhile some subpages will additionally need a sidebar
+to be displayed to the right of the main content.
 
-Create a new directory :file:`Configuration/TypoScript/Helper/`
 
 .. _cm-dynamic-content-rendering-in-typoscript:
 
@@ -154,12 +153,11 @@ setting up various columns and rows.
 Content rendering via data processing
 =====================================
 
-Just like displaying the menu, the content can also be displayed by using
+Just like with the menu, the content can also be displayed by using
 a data processor, the :php:`DatabaseQueryProcessor`.
 
-Define the data processors in :typoscript:`page.10.dataProcessing` beside the
-data processors of the menu. We need one data processor for each column
-position::
+Define the data processor in :typoscript:`page.10.dataProcessing` beside the
+data processors of the menu::
 
    page {
      10 {
@@ -172,6 +170,20 @@ position::
            where = colPos = 0
            as = mainContent
          }
+       }
+     }
+   }
+
+In the Fluid template there will be a variable called "mainContent" available,
+containing an array of all contents of this column on the current page.
+
+We need one data processor for each column so lets add the other two::
+
+   page {
+     10 {
+       dataProcessing {
+         //10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+         //20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
          30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
          30 {
            table = tt_content
@@ -190,78 +202,163 @@ position::
      }
    }
 
-To keep different configurations separate in the example extension you can finde
-
 .. _cm-fluid-typoscript-mapping:
 
-Typoscript Mapping in Fluid Template
+TypoScript mapping in Fluid template
 ====================================
 
 .. highlight:: html
 
-Open file :file:`Resources/Private/Templates/Page/Default.html` and locate the
-three columns. They all show a "Headline" (look for the :code:`<h2>`-tags) and some
-dummy content (look for the :code:`<p>`-tags).
+Open the file :file:`Resources/Private/Templates/Page/Default.html` and locate the
+main content area. It contains a headline (look for the :code:`<h2>`-tags) and
+some dummy content (look for the :code:`<p>`-tags).
 
 Simply replace these lines with the cObject-ViewHelper (`<f:cObject ... >`),
-so that file :file:`Default.html` shows the following HTML code. Make sure, you
-specify the column positions correctly (:code:`1`, :code:`0` and :code:`2`) and
-in exactly this order::
+so that file :file:`Default.html` shows the following HTML code.
+
+.. code-block:: html
 
    <f:layout name="Default" />
    <f:section name="Main">
 
-      <main role="main">
+     <main role="main">
 
-         <f:render partial="Jumbotron" />
+       <f:render partial="Jumbotron" arguments="{jumbotronContent: jumbotronContent}"/>
 
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
-               </div>
-               <div class="col-md-4">
-                  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
-               </div>
-               <div class="col-md-4">
-                  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
-               </div>
-            </div>
+       <div class="container">
+         <div class="row">
+           <div class="col-md-12">
+               <f:for each="{mainContent}" as="contentElement">
+                   <f:cObject
+                       typoscriptObjectPath="tt_content.{contentElement.data.CType}"
+                       data="{contentElement.data}"
+                       table="tt_content"
+                   />
+               </f:for>
+           </div>
          </div>
+       </div>
 
-      </main>
+     </main>
 
    </f:section>
+
+The TypoScript object :typoscript:`tt_content.[CType]` comes from the TypoScript
+of the system extension :file:`fluid_styled_content`. It internally uses
+Fluid templates and TypoScript with data processors just like the ones we were
+defining above. If you desire to change the output of these content elements
+you could override the Fluid templates of the extension
+:file:`fluid_styled_content`.
+
+Edit the file :file:`TwoColumns.html` in the same directory. Exchange the
+main content area just as we have done before with the default template. Now
+replace the content area of the sidebar with the content elements in the Fluid
+variable :html:`{sidebarContent}`.
+
+You can compare your result to the example in our site extension:
+`TwoColumns.html <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/master/Resources/Private/Templates/Page/TwoColumns.html>`_.
+
+The jumbotron: Customize output of content elements
+===================================================
+
+As you can see in the static html template, the jumbotron consist of a headline
+and a text:
+
+.. code-block:: html
+
+   <div class="jumbotron">
+       <div class="container">
+           <h1 class="display-3">Hello, world!</h1>
+           <p> ... </p>
+       </div>
+   </div>
+
+We could use a content element of type :guilabel:`Text` to store the needed
+information. However the output of the Standard content element "Text" look
+like this:
+
+.. code-block:: html
+
+   <div id="c215" class="frame frame-default frame-type-text frame-layout-0">
+      <header>
+         <h2 class="">
+            Hello World!
+         </h2>
+      </header>
+      <p>Lorem ipsum dolor sit amet, ...</p>
+   </div>
+
+Also we do not want to output other types of content like images or forms.
+
+Open the partial displaying the jumbotron:
+:file:`Resources/Private/Partials/Page/Jumbotron.html`. We already have the
+data of content elements in the column "jumbotron" in a Fluid variable called
+"jumbotronContent".
+
+Now instead of letting extension :file:`fluid_styled_content` render the
+content we will render it ourselves in this partial. Add the debug view helper
+to the partial to see what the data of the jumbotronContent looks like:
+
+.. code-block:: html
+
+   <div class="jumbotron">
+      <f:debug>{jumbotronContent}</f:debug>
+      <!-- ... -->
+   </div>
+
+As you can see the data of the actually :sql:`tt_content` record can be found in
+:typoscript:`data`. Now let us traverse the array and output the content
+elements:
+
+.. code-block:: html
+
+   <div class="jumbotron">
+       <f:for each="{jumbotronContent}" as="contentElement">
+           <div class="container">
+               <h1 class="display-3">{contentElement.data.header}</h1>
+               <f:format.html>{contentElement.data.bodytext}</f:format.html>
+           </div>
+       </f:for>
+   </div>
 
 
 .. _cm-typo3-backend-add-content:
 
-Add Content in the TYPO3 Backend
+Add content in the TYPO3 Backend
 ================================
 
-Now it's a great time to add some content in the backend. Go to **WEB → Page**
-and select any of the pages you created before (e.g. "Page 1"). Click the
-"plus" icon in the column labelled "*normal*" and choose the "Regular Text
-Element" content element.
+Now it's a great time to add some content in the backend. Go to
+:guilabel:`WEB > Page` and select any of the pages you created before (for
+example "Page 1"). Click the "plus" icon in the column labelled "*Main*"
+and choose the "Regular Text Element" content element.
 
-.. figure::  /Images/ManualScreenshots/CreateNewContentElement.png
-   :alt: Create New Content Element
-   :class: with-shadow
+.. todo: add new screenshots
 
 Enter a headline (marker 1), some arbitrary text in the Rich Text Editor (RTE)
 and save your changes by clicking button "Save and close" at the top (marker 2).
 
-.. figure::  /Images/ManualScreenshots/SaveAndClose.png
-   :alt: Save and Close
-   :class: with-shadow
+.. todo: add new screenshots
 
 The new content element appears in the appropriate column. Repeat this process
-and enter some further content in columns "*left*" and "*right*", but leave
-column "*border*" empty.
+and enter some further content in column "*jumbotron*".
 
-.. figure::  /Images/ManualScreenshots/FillColumnsLeftAndRight.png
-   :alt: Further Content Elements in Left and Right Columns
-   :class: with-shadow
+.. todo: add new screenshots
+
+Switch to the two column layout with a sidebar
+==============================================
+
+You can switch the used page backend layout in the page properties at
+:guilabel:` Appearance >  Page Layout > Backend Layout`. Edit the page
+properties of your page to use the backend layout "Two Columns".
+
+.. todo: add screenshot
+
+After saving you will see that the content of the columns "main" and
+"jumbotron" remains unchanged while there is a third column "sidebar".
+This is due to the fact that the backend layout "Default" and "TwoColumns"
+use the same colPos number for these columns.
+
+Enter some content to the sidebar.
 
 
 .. _cm-Preview-page:
@@ -269,7 +366,7 @@ column "*border*" empty.
 Preview Page
 ============
 
-Finally, clear the frontend cache and preview the page.
+Finally preview the page.
 
 .. figure::  /Images/ManualScreenshots/ContentMappingPreviewPage.png
    :alt: Preview Page

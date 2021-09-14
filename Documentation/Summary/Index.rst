@@ -8,7 +8,7 @@ Summary
 =======
 
 First and foremost: **congratulations!** You reached a point where you have
-successfully implemented a custom sitepackage for TYPO3. In fact, you have not
+successfully implemented a custom site package for TYPO3. In fact, you have not
 only developed a "theme" for your website, you also built a fully working
 extension for TYPO3, which can be installed, uninstalled, copied to another
 TYPO3 instance and put under version control. You could also share your Site
@@ -35,8 +35,7 @@ this tutorial.
 
 - Developed a navigation menu using TypoScript and Fluid.
 
-- Applied TypoScript to render the content (file
-  :file:`DynamicContent.typoscript`).
+- Applied data processors to render the content via Fluid.
 
 This all sounds very sophisticated and complicated, but keep in mind, the
 extension (as it stands at this point in time) contains approximately six files
@@ -48,28 +47,13 @@ only, plus the HTML/CSS files. Only two files contain PHP code.
 Next Steps
 ==========
 
-The sitepackage extension, as it stands now, still has some shortfalls. Let's
+The site package extension, as it stands now, still has some shortfalls. Let us
 have a closer look what you could or should do as the next steps to address
 these.
 
 .. rst-class:: bignums
 
-1. One page layout only
-
-   At the moment, the sitepackage supports **one page layout** only (the
-   Jumbotron area and three columns below), which is a typical layout for a
-   standard homepage. However, this layout is the only layout and used across
-   all pages. By extending the TypoScript template and creating variations of
-   the :file:`Default.html` Fluid template file, you could create a number of
-   different templates. For example, one for the homepage and a different one
-   for normal content pages.
-
-   By using :ref:`Backend Layouts <t3coreapi:be-layout>` you can implement
-   a layout structure in the backend of TYPO3, that reflects the layout used
-   in the frontend. This makes it very easy for editors to understand where the
-   content will appear on the website.
-
-2. Navigation menu features one level only
+#. Navigation menu features one level only
 
    The bigger the website becomes, the more likely is a multi-level page
    structure required. This means, editors will likely create sub-pages of the
@@ -81,43 +65,33 @@ these.
    outputs the menu (:file:`Resources/Private/Layouts/Page/Default.html`) need
    to be updated.
 
-3. Unused, but visible column "border"
+#. Jumbotron has no background image
 
-   Backend users (e.g. editors) might be confused about the "*border*" column
-   when working in the backend and entering/maintaining content. Only three of
-   the four page columns shown in the backend are used and the far right column
-   has no mapping. This results in the fact that even if editors add content
-   elements to the "*border*" column, the content never appears anywhere.
-
-   To simply *disable* the column, enter the following line in the "Page
-   TSConfig" box of page "example.com" (**Page Properties → Resources**):
-
-   :ts:`TCEFORM.tt_content.colPos.removeItems = 3`
-
-   However, the aforementioned :ref:`Backend Layouts <t3coreapi:be-layout>`
-   give you much more control about columns, labels, positions, etc. and are
-   the recommended way to implement layouts in the backend.
-
-4. Jumbotron not editable
-
-   The content of the Jumbotron area is currently not editable by editors or
-   any other backend users of the system. We kept the Jumbotron area simple and
-   hard-coded as a Partial in file
-   :file:`Resources/Private/Partials/Page/Jumbotron.html` intentionally. The
-   Jumbotron stands as a place holder for various options in our example. Some
-   readers may like to implement a banner with rotating images, some prefer a
+   The Jumbotron stands as a place holder for various options in our example.
+   Some readers may like to implement a banner with rotating images, some prefer a
    text content element or a video player instead. All this and much more is
    possible with TYPO3, but beyond the scope of this tutorial.
+
+#. There are no icons for pages in the menu
+
+   It would be possible to define an additional field in the :sql:`pages`
+   table to store an icon for each page and then output them in the menu for
+   example.
+
+#. There is not footer
+
+   The page could receive a footer with content taken from a special page or
+   column of the root page.
 
 
 In general, the nature of a tutorial, such as this document, is to provide
 detailed instructions to walk a beginner through a particular task. By building
-your own sitepackage extension from scratch, you have learned each step that
+your own site package extension from scratch, you have learned each step that
 is required to turn a basic web design template into a fully working website in
 TYPO3.
 
-When you create sitepackages in the future, you probably do not want to create
-every file over and over again, but use a pre-built version of the sitepackage
+When you create site packages in the future, you probably do not want to create
+every file over and over again, but use a pre-built version of the site package
 extension. Therefore, it make sense to store and maintain the current state in
 a central place, such as a Git repository. Despite the fact that for a learning
 experience it is always beneficial to develop the extension yourself, you can
@@ -134,7 +108,7 @@ Download sitepackage Extension
 
 .. _site-package-builder:
 
-sitepackage Builder
+site package Builder
 --------------------
 
 Another option to create a sitepackage extension quickly is an online tool
