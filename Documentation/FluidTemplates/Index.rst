@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 .. highlight:: html
 
-.. fluid-templates:
+.. _fluid-templates:
 
 ===============
 Fluid Templates
@@ -15,7 +15,7 @@ introduction. Further details about Fluid can be found at the `project
 repository at GitHub <https://github.com/TYPO3Fluid/Fluid>`__ for example.
 
 
-.. quick-introduction-to-fluid:
+.. _quick-introduction-to-fluid:
 
 Quick Introduction to Fluid
 ===========================
@@ -45,7 +45,7 @@ available ViewHelpers and how to apply them can be found in the `Fluid ViewHelpe
 <https://docs.typo3.org/other/typo3/view-helper-reference/master/en-us/Index.html>`__.
 
 
-.. directory-structure:
+.. _directory-structure:
 
 Directory Structure
 ===================
@@ -141,7 +141,7 @@ documented in section
 :ref:`Internationalization and Localization <t3coreapi:internationalization-and-localization>`.
 
 
-.. implement-templates-files:
+.. _implement-templates-files:
 
 Implement Template Files
 ========================
@@ -222,7 +222,7 @@ and JavaScript code. For the sake of simplicity, this tutorial uses the basic
 implementation of Cascading Style Sheets (CSS) and JavaScript files.
 
 
-.. the-page-layout-file:
+.. _the-page-layout-file:
 
 The Page Layout File
 ====================
