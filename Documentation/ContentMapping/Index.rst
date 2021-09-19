@@ -84,21 +84,21 @@ following content::
        }
    }
 
-When you make changes to the files of an extension it is usually nessesary
+When you make changes to the files of an extension it is usually necessary
 to flush all caches by hitting the button.
 
-.. todo: screenshot of flushing all caches
+.. include:: /Images/AutomaticScreenshots/FlushAllCaches.rst.txt
 
 After flushing the all caches the new backend layout is available in the page
 properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 
-.. todo: screenshot of backend layout in page properties
+.. include:: /Images/AutomaticScreenshots/ChooseBackendLayout.rst.txt
 
 Switch to the new backend layout and save the page properties. In the
 :guilabel:`Page` module you will see two columns called "Jumbotron" and
 "Main Content" now.
 
-.. todo: screenshot of backend layout in page module
+.. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
 
 Insert some example content into the two rows. In the database each content
 element (stored in the table :sql:`tt_content`) has the value defined in
@@ -347,24 +347,10 @@ You can return to the previous view by clicking :guilabel:`Close`.
 .. include:: /Images/AutomaticScreenshots/FillNewContentElement.rst.txt
 
 The new content element appears in the appropriate column. Repeat this process
-and enter some further content in the column "Jumbotron".
+and enter some further content in the column "Jumbotron". The page module should
+now look like this:
 
-Switch to the two column layout with a sidebar
-==============================================
-
-You can switch the used page backend layout in the page properties at
-:guilabel:` Appearance >  Page Layout > Backend Layout`. Edit the page
-properties of your page to use the backend layout "Two Columns".
-
-.. todo: add screenshot
-
-After saving you will see that the content of the columns "main" and
-"jumbotron" remains unchanged while there is a third column "sidebar".
-This is due to the fact that the backend layout "Default" and "TwoColumns"
-use the same colPos number for these columns.
-
-Enter some content to the sidebar.
-
+.. include:: /Images/AutomaticScreenshots/ContentMappingPreviewPage.rst.txt
 
 .. _cm-Preview-page:
 
@@ -375,12 +361,41 @@ We have made changes to the Fluid templates of the extension above. It is
 therefore necessary to :guibuilder:`Flush the content caches` in the Menu in the
 top bar before you can preview the page properly:
 
-.. figure::  /Images/ManualScreenshots/ContentMappingPreviewPage.png
-   :alt: Preview Page
-   :class: with-shadow
+.. include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
+
+You can now preview your page:
+
+.. include:: /Images/AutomaticScreenshots/ContentMappingPreviewPage.rst.txt
 
 
-Each of the three columns shows the headline and content.
+
+.. _cm-switch_backend_layout:
+
+Switch to the two column layout with a sidebar
+==============================================
+
+You can switch the used page backend layout in the page properties at
+:guilabel:` Appearance >  Page Layout > Backend Layout`. Edit the page
+properties of your page to use the backend layout "Two Columns".
+
+.. include:: /Images/AutomaticScreenshots/SwitchBackendLayout.rst.txt
+
+After saving you will see that the content of the columns "main" and
+"jumbotron" remains unchanged while there is a third column "sidebar".
+This is due to the fact that the backend layout "Default" and "TwoColumns"
+use the same colPos number for these columns.
+
+.. include:: /Images/AutomaticScreenshots/BackendLayoutTwoColumns.rst.txt
+
+Enter some content to the sidebar. You could for example use the content element
+"Menu of subpages" to display a menu in the sidebar.
+
+Preview the page once more. A sidebar will appear in the frontend:
+
+.. include:: /Images/AutomaticScreenshots/TwoColumnsPreviewPage.rst.txt
+
+Next steps
+==========
 
 The last section of this tutorial summarises the achievements, discusses some
 shortfalls of the extension as it stands now and provides some suggestions what
