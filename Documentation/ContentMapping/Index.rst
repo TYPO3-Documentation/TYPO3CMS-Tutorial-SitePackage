@@ -329,25 +329,25 @@ elements:
 
 .. _cm-typo3-backend-add-content:
 
-Add content in the TYPO3 Backend
+Add content in the TYPO3 backend
 ================================
 
 Now it's a great time to add some content in the backend. Go to
-:guilabel:`WEB > Page` and select any of the pages you created before (for
-example "Page 1"). Click the "plus" icon in the column labelled "*Main*"
-and choose the "Regular Text Element" content element.
+:guilabel:`Web > Page` and select any of the pages you created before,
+(for example "Page 1"). Click the :guilabel:`+ Content` button
+in the column labelled "*Main*" and choose the "Regular Text
+Element" content element.
 
-.. todo: add new screenshots
+.. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
 
-Enter a headline (marker 1), some arbitrary text in the Rich Text Editor (RTE)
-and save your changes by clicking button "Save and close" at the top (marker 2).
+Enter a headline and some arbitrary text in the Rich Text Editor (RTE)
+and save your changes by clicking button :guilabel:`Save` at the top.
+You can return to the previous view by clicking :guilabel:`Close`.
 
-.. todo: add new screenshots
+.. include:: /Images/AutomaticScreenshots/FillNewContentElement.rst.txt
 
 The new content element appears in the appropriate column. Repeat this process
-and enter some further content in column "*jumbotron*".
-
-.. todo: add new screenshots
+and enter some further content in the column "Jumbotron".
 
 Switch to the two column layout with a sidebar
 ==============================================
@@ -368,10 +368,12 @@ Enter some content to the sidebar.
 
 .. _cm-Preview-page:
 
-Preview Page
+Preview page
 ============
 
-Finally preview the page.
+We have made changes to the Fluid templates of the extension above. It is
+therefore necessary to :guibuilder:`Flush the content caches` in the Menu in the
+top bar before you can preview the page properly:
 
 .. figure::  /Images/ManualScreenshots/ContentMappingPreviewPage.png
    :alt: Preview Page
