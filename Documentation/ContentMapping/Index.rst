@@ -84,7 +84,12 @@ following content::
        }
    }
 
-After clearing the all caches the new backend layout is available in the page
+When you make changes to the files of an extension it is usually nessesary
+to flush all caches by hitting the button.
+
+.. todo: screenshot of flushing all caches
+
+After flushing the all caches the new backend layout is available in the page
 properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 
 .. todo: screenshot of backend layout in page properties
