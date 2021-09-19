@@ -361,8 +361,6 @@ We have made changes to the Fluid templates of the extension above. It is
 therefore necessary to :guibuilder:`Flush the content caches` in the Menu in the
 top bar before you can preview the page properly:
 
-.. include:: /Images/AutomaticScreenshots/BackendLayoutTwoColumns.rst.txt
-
 Enter some content to the sidebar. You could for example use the content element
 "Menu of subpages" to display a menu in the sidebar.
 
