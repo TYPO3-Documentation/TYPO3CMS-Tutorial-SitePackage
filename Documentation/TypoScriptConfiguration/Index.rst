@@ -67,7 +67,7 @@ Add the following lines to file :file:`constants.typoscript`::
 
 The first line (:ts:`@import '...'`) includes the default constants
 from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
-.. @TODO: describe main purpose of the file.
+.. todo: describe main purpose of the file.
 
 
 .. _file-setup-typoscript:
@@ -199,7 +199,7 @@ Therefore, :ts:`.external = 1` forces TYPO3, not to check for their local
 existence. The fourth JavaScript file is the file we added before to the site
 package extension itself.
 
-You can also include CSS or JavaScript per-component in your Fluid template or 
+You can also include CSS or JavaScript per-component in your Fluid template or
 by PHP. See :ref:`t3coreapi:assets`.
 
 

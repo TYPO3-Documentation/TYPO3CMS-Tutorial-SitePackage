@@ -24,7 +24,7 @@ installation without Composer <extension-installation_without_composer>`.
 Extension installation in Composer mode
 =======================================
 
-Starting with TYPO3 11.4 if composer is used, all extensions, including the 
+Starting with TYPO3 11.4 if composer is used, all extensions, including the
 site package extension must be installed via Composer.
 
 As a site package is usually developed together with the site-specific files it
@@ -101,29 +101,18 @@ By clicking the page icon with the "plus" at the top, and then dragging the
 build the following page tree. Enter the page names as shown (a double-click on
 the page name allows you to rename it).
 
-.. figure::  /Images/ManualScreenshots/CreateInitialPages.png
-   :alt: Create Initial Pages
-   :class: with-shadow
-
-   Create initial pages
-
+.. include:: /Images/AutomaticScreenshots/CreateInitialPages.rst.txt
 
 By default, all new pages are disabled (marked as a red icon at the bottom
 right). Enable all pages by clicking the "Enable" link in the context menu.
 
-.. figure::  /Images/ManualScreenshots/EnablePagesInContextMenu.png
-   :alt: Enable Pages in Context Menu
-   :class: with-shadow
-
-   Enable Pages in Context Menu
+.. include:: /Images/AutomaticScreenshots/EnablePagesInContextMenu.rst.txt
 
 
 Once all pages have been created, you should end up with the following page
 tree.
 
-.. figure::  /Images/ManualScreenshots/FinalPageTree.png
-   :alt: Final Page Tree
-   :class: with-shadow
+.. include:: /Images/AutomaticScreenshots/FinalPageTree.rst.txt
 
 
 .. .. code-block: : none
@@ -149,9 +138,13 @@ configuration we have created during the development of our sitepackage. Do
 not be confused about the terminology "template". In this context, we are
 referring to TypoScript templates, not HTML/CSS/JS templates.
 
-Go to **WEB → Template** and select the page named "example.com". Then, click
+Go to :guilabel:`WEB > Template` and select the page named "example.com". Then, click
 button "Create template for a new site" and change the dropdown box at the top
-to "Info/Modify". Click button "Edit the whole template record", which opens an
+to "Info/Modify". Click button "Edit the whole template record".
+
+.. include:: /Images/AutomaticScreenshots/EditTemplateRecord.rst.txt
+
+This opens an
 editor for Constants and Setup. The latter contains a few example lines ("HELLO
 WORLD!"). Remove these lines, so that the box is completely empty.
 
@@ -160,9 +153,7 @@ extensions)", which shows two boxes: "Selected Items" (left hand side) and
 "Available Items" (right hand side). Under "Available Items", click "Site
 Package (site_package)", which moves the entry to the left box.
 
-.. figure::  /Images/ManualScreenshots/IncludeTypoScriptTemplate.png
-   :alt: Include TypoScript Template
-   :class: with-shadow
+.. include:: /Images/AutomaticScreenshots/IncludeTypoScriptTemplate.rst.txt
 
 Now save your changes by clicking the "save" icon at the top.
 
@@ -175,9 +166,7 @@ At this point, it is a good time to preview what we have achieved so far. Go to
 top left of the screen (marker 1) allow you to show/hide the page tree and to
 minimize the function menu at the left.
 
-.. figure::  /Images/ManualScreenshots/ExtensionInstallationPreviewPage.png
-   :alt: Preview Page
-   :class: with-shadow
+.. include:: /Images/AutomaticScreenshots/ExtensionInstallationPreviewPage.rst.txt
 
 The preview shows the frontend with a menu (*NavBar*) at the top. In a mobile
 view (narrow screen width), a button provides access to a toggle menu. However,
