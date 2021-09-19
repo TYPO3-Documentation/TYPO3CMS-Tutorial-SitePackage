@@ -1,0 +1,6 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. figure:: /Images/AutomaticScreenshots/IncludeTypoScriptTemplate.png
+   :class: with-shadow
+
+   Include the site package TypoScript template

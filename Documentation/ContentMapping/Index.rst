@@ -147,40 +147,37 @@ in exactly this order::
 
 .. _cm-typo3-backend-add-content:
 
-Add Content in the TYPO3 Backend
+Add content in the TYPO3 backend
 ================================
 
-Now it's a great time to add some content in the backend. Go to **WEB → Page**
-and select any of the pages you created before (e.g. "Page 1"). Click the
-"plus" icon in the column labelled "*normal*" and choose the "Regular Text
+Now it's a great time to add some content in the backend. Go to
+:guilabel:`Web > Page` and select any of the pages you created before,
+(for example "Page 1"). Click the :guilabel:`+ Content` button
+in the column labelled "*Main*" and choose the "Regular Text
 Element" content element.
 
-.. figure::  /Images/ManualScreenshots/CreateNewContentElement.png
-   :alt: Create New Content Element
-   :class: with-shadow
+.. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
 
-Enter a headline (marker 1), some arbitrary text in the Rich Text Editor (RTE)
-and save your changes by clicking button "Save and close" at the top (marker 2).
+Enter a headline and some arbitrary text in the Rich Text Editor (RTE)
+and save your changes by clicking button :guilabel:`Save` at the top.
+You can return to the previous view by clicking :guilabel:`Close`.
 
-.. figure::  /Images/ManualScreenshots/SaveAndClose.png
-   :alt: Save and Close
-   :class: with-shadow
+.. include:: /Images/AutomaticScreenshots/FillNewContentElement.rst.txt
 
 The new content element appears in the appropriate column. Repeat this process
-and enter some further content in columns "*left*" and "*right*", but leave
-column "*border*" empty.
+and enter some further content in the column "Jumbotron".
 
-.. figure::  /Images/ManualScreenshots/FillColumnsLeftAndRight.png
-   :alt: Further Content Elements in Left and Right Columns
-   :class: with-shadow
+.. include:: /Images/AutomaticScreenshots/FilledColumns.rst.txt
 
 
 .. _cm-Preview-page:
 
-Preview Page
+Preview page
 ============
 
-Finally, clear the frontend cache and preview the page.
+We have made changes to the Fluid templates of the extension above. It is
+therefore necessary to :guibuilder:`Flush the content caches` in the Menu in the
+top bar before you can preview the page properly:
 
 .. figure::  /Images/ManualScreenshots/ContentMappingPreviewPage.png
    :alt: Preview Page
