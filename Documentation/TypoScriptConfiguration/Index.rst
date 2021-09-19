@@ -61,13 +61,9 @@ Add the following lines to file :file:`constants.typoscript`:
 Line 1 includes the default constants from the "Fluid Styled Content" extension
 (which is part of the TYPO3 Core).
 
-TypoScript constants are used to set values that can be used in TypoScript
-through out the project.  It is best practise to use them for values that might
-want to be changed later on like paths, ids of important pages (contact,
-imprint, a system folder that contains certain records, ...).
-
-You can read more about :ref:`TypoScript constants in the TypoScript reference
-<t3tsref:typoscript-syntax-constants>`.
+The first line (:ts:`@import '...'`) includes the default constants
+from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
+.. todo: describe main purpose of the file.
 
 
 .. _file-setup-typoscript:
