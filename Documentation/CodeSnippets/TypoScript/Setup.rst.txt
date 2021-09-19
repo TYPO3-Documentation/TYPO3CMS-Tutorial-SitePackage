@@ -1,0 +1,11 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :linenos:
+
+   @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+   @import 'EXT:site_package/Configuration/TypoScript/Setup/*.typoscript'
+   
+   
+   

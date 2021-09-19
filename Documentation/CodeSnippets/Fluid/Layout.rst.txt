@@ -1,0 +1,10 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Layouts/Page/Default.html
+   :linenos:
+
+   
+   <f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>
+   <f:render section="Main" />
+   

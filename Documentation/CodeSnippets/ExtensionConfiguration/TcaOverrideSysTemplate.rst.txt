@@ -1,0 +1,25 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. code-block:: php
+   :caption: EXT:site_package/Configuration/TCA/Overrides/sys_template.php
+   :linenos:
+
+   <?php
+   defined('TYPO3') || die();
+   
+   call_user_func(function () {
+       /**
+        * Extension key
+        */
+       $extensionKey = 'site_package';
+   
+       /**
+        * Add default TypoScript (constants and setup)
+        */
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+           $extensionKey,
+           'Configuration/TypoScript',
+           'Site Package'
+       );
+   });
+   

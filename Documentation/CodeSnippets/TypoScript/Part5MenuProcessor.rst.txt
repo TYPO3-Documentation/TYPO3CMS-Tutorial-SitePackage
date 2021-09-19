@@ -1,0 +1,30 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/Setup/Part5MenuProcessor.typoscript
+   :linenos:
+
+   page {
+     10 = FLUIDTEMPLATE
+     10 {
+       templateRootPaths {
+         // ...
+       }
+       partialRootPaths {
+         // ...
+       }
+       layoutRootPaths {
+         // ...
+       }
+   
+       dataProcessing {
+         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+         10 {
+           levels = 1
+           includeSpacer = 1
+           as = mainNavigation
+         }
+       }
+     }
+   }
+   

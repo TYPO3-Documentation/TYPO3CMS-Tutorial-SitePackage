@@ -1,0 +1,15 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html
+   :linenos:
+
+   <div class="jumbotron">
+       <f:for each="{jumbotronContent}" as="contentElement">
+           <div class="container">
+               <h1 class="display-3">{contentElement.data.header}</h1>
+               <f:format.html>{contentElement.data.bodytext}</f:format.html>
+           </div>
+       </f:for>
+   </div>
+   

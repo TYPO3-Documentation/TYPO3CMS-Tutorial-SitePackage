@@ -7,7 +7,7 @@
 Fluid Templates
 ===============
 
-Before we describe how the static files discussed in the previous section 
+Before we describe how the static files discussed in the previous section
 :ref:`design-template` can be converted into Fluid templates, we should understand
 what *Fluid* is and what the main ideas behind this powerful rendering engine
 are. It is important to point out that the following section is just a quick
@@ -41,7 +41,7 @@ More than 80 ViewHelpers are shipped with the TYPO3 core already. They enable
 integrators and web developers to use translations of variables, generate forms
 and dynamic links, resize images, embed other HTML files and even implement
 logical functions such as :html:`if ... then ... else ...`. An overview of the
-available ViewHelpers and how to apply them can be found in the `Fluid ViewHelper Documentation 
+available ViewHelpers and how to apply them can be found in the `Fluid ViewHelper Documentation
 <https://docs.typo3.org/other/typo3/view-helper-reference/master/en-us/Index.html>`__.
 
 
@@ -143,7 +143,7 @@ documented in section
 
 .. _implement-templates-files:
 
-Implement Template Files
+Implement template files
 ========================
 
 Based on the facts explained above, it should be easy to copy the *static
@@ -217,74 +217,28 @@ development time significantly, e.g. if an issue needs to be investigated or a
 change should be implemented.
 
 Furthermore, you might want to consider technologies such as Sass, SCSS and
-TypeScript for improved productivity and mainainability of your style sheets
+TypeScript for improved productivity and maintainability of your style sheets
 and JavaScript code. For the sake of simplicity, this tutorial uses the basic
 implementation of Cascading Style Sheets (CSS) and JavaScript files.
 
 
 .. _the-page-layout-file:
 
-The Page Layout File
+The page layout file
 ====================
 
 As described before, a typical static :file:`index.html` file contains a :html:`<head>`
 and a :html:`<body>` section, but we only need to focus on the :html:`<body>`. Open
 file :file:`site_package/Resources/Private/Templates/Page/Default.html` in your
 favorite text editor and remove all lines before the starting :html:`<body>` tag
-and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a 
-result, your :file:`Default.html` may now be empty. In that case, you can use the 
-following example based on the Bootstrap Jumbotron. If using your own layout template, 
+and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a
+result, your :file:`Default.html` may now be empty. In that case, you can use the
+following example based on the Bootstrap Jumbotron. If using your own layout template,
 your :file:`Default.html` now contains only the HTML code inside the body.
 
-So, let's assume it contains something like the following HTML code::
+So, let's assume it contains something like the following HTML code:
 
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button  class="navbar-toggler"
-               type="button"
-               data-toggle="collapse"
-               data-target="#navbarsExampleDefault"
-               aria-controls="navbarsExampleDefault"
-               aria-expanded="false"
-               aria-label="Toggle navigation"
-               >
-         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-               <a class="nav-link" href="#">
-                  Home
-               </a>
-            </li>
-         </ul>
-      </div>
-   </nav>
-
-   <main role="main">
-      <div class="jumbotron">
-         <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p> ... </p>
-         </div>
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="col-md-4">
-               <h2>Heading 1</h2>
-               <p> ... </p>
-            </div>
-            <div class="col-md-4">
-               <h2>Heading 2</h2>
-               <p> ... </p>
-            </div>
-            <div class="col-md-4">
-               <h2>Heading 3</h2>
-               <p> ... </p>
-            </div>
-         </div>
-      </div>
-   </main>
+.. include:: /CodeSnippets/Fluid/Step1Default.rst.txt
 
 In case you have worked with the Bootstrap library before, you will quickly
 realize that this is a simplified version of the well-known template called
@@ -292,7 +246,7 @@ realize that this is a simplified version of the well-known template called
 The first section creates a mobile responsive navigation menu (:html:`<nav> ...
 </nav>`) and the second section a container for the content (:html:`<main> ...
 </main>`). Inside the content area we see a full-width section (:html:`<div
-class="jumbotron"> ... </div>`) and a simple container with three columns.
+class="jumbotron"> ... </div>`) and a simple container with two columns.
 
 The code above misses a few lines at the end, which include some JavaScript
 files such as jQuery and Bootstrap. You are advised to remove these line from
@@ -320,6 +274,16 @@ because of the :html:`partial="..."` argument. Note: do not append :file:`.html`
 HTML is the default format and as a convention, the ViewHelper automatically
 knows the file name and its location: :file:`Partials/Page/Jumbotron.html`.
 
+Let us also move the navigation part into the file
+:file:`Partials/Page/Navigation/MainNavigation.html`. As the navigation will
+contain dynamic parts we forward all variables as arguments::
+
+   <f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>
+
+The file :file:`Default.html` should now look like this:
+
+.. include:: /CodeSnippets/Fluid/Step2Default.rst.txt
+
 At this point, we have implemented an (optional) partial and a page layout
 template. Keep the file :file:`Resources/Private/Templates/Page/Default.html` open
 in your text editor, because we need to make one more small adjustment.
@@ -329,55 +293,10 @@ layouts. An additional component allows web developers to build the overall
 *layout* (the skeleton) of the website: this is an HTML file in the
 :file:`Resources/Private/Layouts/Page/` folder that we name :file:`Default.html`, too.
 Before we create this file, we need to tell our page layout template
-(:file:`Resources/Private/Templates/Page/Default.html`) which website template it should
-use::
+(:file:`Resources/Private/Templates/Page/Default.html`) which website template
+it should use:
 
-   <f:layout name="Default" />
-   <f:section name="Main">
-
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-         <a class="navbar-brand" href="#">Navbar</a>
-         <button  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarsExampleDefault"
-                  aria-controls="navbarsExampleDefault"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                  >
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-               <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                     Home
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </nav>
-
-      <main role="main">
-         <f:render partial="Jumbotron" />
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <h2>Heading 1</h2>
-                  <p> ... </p>
-               </div>
-               <div class="col-md-4">
-                  <h2>Heading 2</h2>
-                  <p> ... </p>
-               </div>
-               <div class="col-md-4">
-                  <h2>Heading 3</h2>
-                  <p> ... </p>
-               </div>
-            </div>
-         </div>
-      </main>
-   </f:section>
+.. include:: /CodeSnippets/Fluid/Step3Default.rst.txt
 
 The updated template file shows two additional lines at the top (:html:`<f:layout>`
 and :html:`<f:section>`) and an additional line at the bottom (the closing
@@ -389,7 +308,7 @@ named "Main".
 
 .. _the-website-layout-file:
 
-The Website Layout File
+The Website layout file
 =======================
 
 Now, let's implement the website layout file. First, we create a new file
@@ -403,41 +322,17 @@ Surprisingly, that is all. This line instructs Fluid to render the section
 :file:`Resources/Private/Templates/Page/Default.html`.
 
 However, we will do an additional step. The navigation menu will be shown on
-all pages across the entire website. Similar to the "Jumbotron" partial, it
-makes perfect sense to move the :html:`<nav> ... </nav>` section from the page
-layout template to a central place. Due to the fact that a menu is required on
-all pages, it can be part of the global website layout. Therefore, file
+all pages across the entire website. Therefore, it can be part of the global
+website layout. Therefore, file
 :file:`Resources/Private/Layouts/Page/Default.html` is a suitable destination.
 
-Move the :html:`<nav> ... </nav>` part from file
+Move the :html:`<f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>`
+part from file
 :file:`Resources/Private/Templates/Page/Default.html` to
-:file:`Resources/Private/Layouts/Page/Default.html` as shown here::
+:file:`Resources/Private/Layouts/Page/Default.html` as shown here:
 
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button  class="navbar-toggler"
-               type="button"
-               data-toggle="collapse"
-               data-target="#navbarsExampleDefault"
-               aria-controls="navbarsExampleDefault"
-               aria-expanded="false"
-               aria-label="Toggle navigation"
-               >
-         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-               <a class="nav-link" href="#">
-                  Home
-               </a>
-            </li>
-         </ul>
-      </div>
-   </nav>
+.. include:: /CodeSnippets/Fluid/Layout.rst.txt
 
-   <f:render section="Main" />
-
-Do not forget to remove the lines from the
+Do not forget to remove the line from the
 :file:`Resources/Private/Templates/Page/Default.html` file. If you do not
 remove them, the menu would appear twice in the frontend.
