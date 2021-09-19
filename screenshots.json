@@ -42,7 +42,7 @@
                     },
                     {"action": "click", "link": "Save"},
                     {"action": "waitForText", "text": "Edit Page"},
-                    {"action":  "reloadBackend"},
+                    {"action": "reloadBackend"},
                     {"action": "switchToMainFrame"},
                     {"action": "see", "text": "Page"},
                     {"action": "click", "link": "Page"},
@@ -156,7 +156,7 @@
                     {"action": "wait", "timeout": "1"},
                     {"action": "click", "link": "Appearance"},
                     {"action": "selectOption", "select": "select[name*=\"backend_layout\"]", "option": "pagets__Default"},
-                    {"action": "selectOption", "select": "select[name*=\"backend_layout_next_level\"]", "option": "pagets__TwoColumns"},
+                    {"action": "selectOption", "select": "select[name*=\"backend_layout_next_level\"]", "option": "pagets__Default"},
                     {
                         "action": "makeScreenshotOfElement",
                         "fileName": "ChooseBackendLayout",
@@ -200,7 +200,7 @@
                     {
                         "action": "fillField",
                         "field": "input[data-formengine-input-name*=\"base\"]",
-                        "value": "https://web/"
+                        "value": "http://web/"
                     },
                     {"action": "click", "link": "Save"},
                     {"action": "wait", "timeout": "1"},
@@ -274,14 +274,59 @@
                         "fileName": "FlushAllCaches",
                         "captionText": "Flush all caches"
                     },
+                    {"action": "clearDrawings"},
                     {"action": "resizeWindow", "width": 1024, "height": 640},
                     {"action": "switchToMainFrame"},
                     {"action": "see", "text": "Sites"},
                     {"action": "click", "link": "Sites"},
+                    {"action": "switchToContentFrame"},
+                    {"action": "waitForText", "text": "Site"},
+                    {"action": "amOnPage", "page": "/?id=1"},
                     {
                         "action": "makeScreenshotOfElement",
                         "fileName": "ContentMappingPreviewPage",
                         "captionText": "Preview the page"
+                    },
+                    {"action": "reloadBackend"},
+                    {"action": "see", "text": "Page"},
+                    {"action": "click", "link": "Page"},
+                    {"action": "click", "link": "button.scaffold-content-navigation-switcher-close"},
+                    {"action": "switchToContentFrame"},
+                    {"action": "click", "link": "Edit page properties"},
+                    {"action": "click", "link": "Appearance"},
+                    {"action": "selectOption", "select": "select[name*=\"backend_layout\"]", "option": "pagets__TwoColumns"},
+                    {
+                        "action": "makeScreenshotOfElement",
+                        "fileName": "SwitchBackendLayout",
+                        "captionText": "Switch to the Backend Layout \"Two Columns\""
+                    },
+                    {"action": "click", "link": "Save"},
+                    {"action": "wait", "timeout": "1"},
+                    {"action": "click", "link": "Close"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[tt_content][1]=new&defVals[tt_content][colPos]=2&defVals[tt_content][sys_language_uid]=0&defVals[tt_content][CType]=menu_subpages"},
+                    {"action": "switchToContentFrame"},
+                    {"action": "waitForText", "text": "Create new"},
+                    {
+                        "action": "fillField",
+                        "field": "input[data-formengine-input-name*=\"header\"]",
+                        "value": "My Sidebar menu"
+                    },
+                    {"action": "click", "link": "Save"},
+                    {"action": "waitForText", "text": "Edit"},
+                    {"action": "switchToMainFrame"},
+                    {"action": "click", "link": "Page"},
+                    {"action": "switchToContentFrame"},
+                    {"action": "waitForText", "text": "Sidebar"},
+                    {
+                        "action": "makeScreenshotOfElement",
+                        "fileName": "BackendLayoutTwoColumns",
+                        "captionText": "A new column \"Sidebar\" appears"
+                    },
+                    {"action": "amOnPage", "page": "/?id=1"},
+                    {
+                        "action": "makeScreenshotOfElement",
+                        "fileName": "TwoColumnsPreviewPage",
+                        "captionText": "The sidebar appears in the frontend"
                     }
                 ]
             }
