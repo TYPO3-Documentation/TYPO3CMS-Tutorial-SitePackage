@@ -13,7 +13,152 @@
                     },
                     {"action": "resizeWindow", "width": 1024, "height": 768}
                 ],
-                "actionsIdentifierSitePackageBackend": [
+                "codeSnippetsSetup": [
+                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets/TypoScript"},
+                    {"action": "setCodeSnippetsSourcePath", "path": "typo3conf/ext/site_package"},
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/constants.typoscript",
+                        "targetFileName": "Constants",
+                        "caption": "EXT:site_package/Configuration/TypoScript/constants.typoscript",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/setup.typoscript",
+                        "targetFileName": "Setup",
+                        "caption": "EXT:site_package/Configuration/TypoScript/setup.typoscript",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/Setup/Page.typoscript",
+                        "targetFileName": "Page",
+                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Page.typoscript",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/Setup/Part1FluidTemplateSection.typoscript",
+                        "targetFileName": "Part1FluidTemplateSection",
+                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Part1FluidTemplateSection.typoscript",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/Setup/Part2CssFileInclusion.typoscript",
+                        "targetFileName": "Part2CssFileInclusion",
+                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Part2CssFileInclusion.typoscript",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/Setup/Part4GlobalConfiguration.typoscript",
+                        "targetFileName": "Part4GlobalConfiguration",
+                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Part4GlobalConfiguration.typoscript",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/Setup/Part5MenuProcessor.typoscript",
+                        "targetFileName": "Part5MenuProcessor",
+                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Part5MenuProcessor.typoscript",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TypoScript/Setup/Part6ProcessedContent.typoscript",
+                        "targetFileName": "Part1FluidTemplateSection",
+                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Part6ProcessedContent",
+                        "showLineNumbers": true
+                    }
+                ],
+                "codeSnippetsExtensionConfiguration": [
+                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets/ExtensionConfiguration"},
+                    {"action": "setCodeSnippetsSourcePath", "path": "typo3conf/ext/site_package"},
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "ext_emconf.php",
+                        "targetFileName": "ExtEmconf",
+                        "caption": "EXT:site_package/ext_emconf.php",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "composer.json",
+                        "targetFileName": "ComposerJson",
+                        "caption": "EXT:site_package/composer.json",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TCA/Overrides/pages.php",
+                        "targetFileName": "TcaOverridePages",
+                        "caption": "EXT:site_package/Configuration/TCA/Overrides/pages.php",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Configuration/TCA/Overrides/sys_template.php",
+                        "targetFileName": "TcaOverrideSysTemplate",
+                        "caption": "EXT:site_package/Configuration/TCA/Overrides/sys_template.php",
+                        "showLineNumbers": true
+                    }
+                ],
+                "codeSnippetsFluid": [
+                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets/Fluid"},
+                    {"action": "setCodeSnippetsSourcePath", "path": "typo3conf/ext/site_package"},
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Resources/Public/StaticTemplate/Step1Default.html",
+                        "targetFileName": "Step1Default",
+                        "caption": "EXT:site_package/Resources/Public/StaticTemplate/Step1Default.html",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Resources/Public/StaticTemplate/Step2Default.html",
+                        "targetFileName": "Step2Default",
+                        "caption": "EXT:site_package/Resources/Public/StaticTemplate/Step2Default.html",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Resources/Public/StaticTemplate/Step3Default.html",
+                        "targetFileName": "Step3Default",
+                        "caption": "EXT:site_package/Resources/Public/StaticTemplate/Step3Default.html",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Resources/Private/Templates/Page/Default.html",
+                        "targetFileName": "TemplateDefault",
+                        "caption": "EXT:site_package/Resources/Private/Templates/Page/Default.html",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Resources/Private/Templates/Page/TwoColumns.html",
+                        "targetFileName": "TemplateTwoColumns",
+                        "caption": "EXT:site_package/Resources/Private/Templates/Page/TwoColumns.html",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Resources/Private/Partials/Page/Jumbotron.html",
+                        "targetFileName": "PartialJumbotron",
+                        "caption": "EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html",
+                        "showLineNumbers": true
+                    },
+                    {
+                        "action": "createCodeSnippet",
+                        "sourceFile": "Resources/Private/Layouts/Page/Default.html",
+                        "targetFileName": "Layout",
+                        "caption": "EXT:site_package/Resources/Private/Layouts/Page/Default.html",
+                        "showLineNumbers": true
+                    }
+                ],
+                "pageScreenshots": [
                     {"include": "_default"},
                     {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][0]=new&id=0&table=&pointer=1"},
                     {"action": "switchToContentFrame"},

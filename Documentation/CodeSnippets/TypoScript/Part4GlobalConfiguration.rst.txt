@@ -1,0 +1,16 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/Setup/Part4GlobalConfiguration.typoscript
+   :linenos:
+
+   // Part 4: global site configuration
+   config {
+     # Adjust the title tag to be displayed as “website - page title”
+     pageTitleSeparator = -
+     pageTitleSeparator.noTrimWrap = | | |
+     
+     # Display the Admin Panel at the bottom of pages to logged in backend users
+     admPanel = 1
+   }
+   

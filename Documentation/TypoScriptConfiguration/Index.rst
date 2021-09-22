@@ -5,7 +5,7 @@
 .. _typoscript-configuration:
 
 ========================
-TypoScript Configuration
+TypoScript configuration
 ========================
 
 TYPO3 uses "TypoScript" as a specific *language* to configure a website.
@@ -24,10 +24,10 @@ and functions can be found in the :ref:`TypoScript Reference <t3tsref:start>`.
 
 .. _files-and-directories:
 
-Files and Directories
+Files and directories
 =====================
 
-First of all, we create two new files in the sitepackage directory structure,
+First of all, we create two new files in the site package directory structure,
 which will contain all TypoScript configurations. By following the official
 conventions of their file and directory naming, TYPO3 knows how to include them
 automatically.
@@ -37,6 +37,7 @@ automatically.
    site_package/
    site_package/Configuration/
    site_package/Configuration/TypoScript/
+   site_package/Configuration/TypoScript/Setup/
    site_package/Configuration/TypoScript/constants.typoscript
    site_package/Configuration/TypoScript/setup.typoscript
    site_package/Resources/
@@ -53,144 +54,98 @@ the :file:`Resources/` directory, but not listed above for clarity reasons.
 TypoScript Constants
 --------------------
 
-Add the following lines to file :file:`constants.typoscript`::
+Add the following lines to file :file:`constants.typoscript`:
 
-   @import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+.. include:: /CodeSnippets/TypoScript/Constants.rst.txt
 
-   page {
-      fluidtemplate {
-         layoutRootPath = EXT:site_package/Resources/Private/Layouts/Page/
-         partialRootPath = EXT:site_package/Resources/Private/Partials/Page/
-         templateRootPath = EXT:site_package/Resources/Private/Templates/Page/
-      }
-   }
+Line 1 includes the default constants from the "Fluid Styled Content" extension
+(which is part of the TYPO3 Core).
 
-The first line (:ts:`@import '...'`) includes the default constants
-from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
-.. todo: describe main purpose of the file.
+TypoScript constants are used to set values that can be used in TypoScript
+through out the project.  It is best practise to use them for values that might
+want to be changed later on like paths, ids of important pages (contact,
+imprint, a system folder that contains certain records, ...).
+
+You can read more about :ref:`TypoScript constants in the TypoScript reference
+<t3tsref:typoscript-syntax-constants>`.
 
 
 .. _file-setup-typoscript:
 
-TypoScript Setup
+TypoScript setup
 ----------------
 
-File :file:`setup.typoscript` is a little bit more complex, so we explain it
-section by section. First, add the following lines to that file::
+The :file:`setup.typoscript` will only contain imports in our example. It is
+considered best practice to split up large TypoScript files into logical parts.
+This improves maintainability and collaboration. In the example below we split
+up the TypoScript setup file into sections by didactic reasons.
 
-   @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+.. include:: /CodeSnippets/TypoScript/Setup.rst.txt
 
-   page = PAGE
-   page {
-      typeNum = 0
+Line 1 imports the default setup
+from the "Fluid Styled Content" extension (which is part of the TYPO3 Core).
 
-      // Part 1: Fluid template section
-      10 = FLUIDTEMPLATE
-      10 {
-         // ...
-      }
+Line 2 imports all files ending on :file:`.typoscript` from the specified
+folder. It does however not import files from sub folders. Those would have to
+be imported separately.
 
-      // Part 2: CSS file inclusion
-      includeCSS {
-         // ...
-      }
+Hello World: The PAGE object
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      // Part 3: JavaScript file inclusion
-      includeJSFooter {
-         // ...
-      }
-   }
+In order to create any output at all we first need to define a PAGE. The
+example below would output an empty page:
 
-   // Part 4: global site configuration
-   config {
-      // ...
-   }
+.. include:: /CodeSnippets/TypoScript/Page.rst.txt
 
-The first line (:ts:`@import '...'`) includes the default setup
-from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
-The :ts:`page` section defines the so-called PAGE object and the :ts:`config`
-section the global site configuration. We will replace the four "Parts" (which
-are shown as comments in the example above) in the following steps.
+If you remove the comments :typoscript:`//` before line 4 and 5 there would be
+an output of "Hello World!". But of course we want to output our Fluid template.
 
+You can read more about :ref:`the top-level PAGE object in the TypoScript
+reference <t3tsref:page>`.
+
+The parameter :typoscript:`typeNum` is mandatory. Setting it to null enables the
+page to be called without adding an additional parameter `&type=12345` to the
+url.
 
 Part 1: Fluid Template Section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, extend :ts:`// Part 1: Fluid template section` by the following lines::
+First, create a file called :file:`Part1FluidTemplateSection.typoscript` in the
+folder :file:`Configuration/Typoscript/Setup/` with the following content:
 
-   // Part 1: Fluid template section
-   10 = FLUIDTEMPLATE
-   10 {
-      templateName = TEXT
-      templateName.stdWrap.cObject = CASE
-      templateName.stdWrap.cObject {
-         key.data = pagelayout
+.. include:: /CodeSnippets/TypoScript/Part1FluidTemplateSection.rst.txt
 
-         pagets__site_package_default = TEXT
-         pagets__site_package_default.value = Default
+Line 2 configures that the template rendering engine Fluid should be used to
+generate the page output.
 
-         default = TEXT
-         default.value = Default
-      }
-      templateRootPaths {
-         0 = EXT:site_package/Resources/Private/Templates/Page/
-         1 = {$page.fluidtemplate.templateRootPath}
-      }
-      partialRootPaths {
-         0 = EXT:site_package/Resources/Private/Partials/Page/
-         1 = {$page.fluidtemplate.partialRootPath}
-      }
-      layoutRootPaths {
-         0 = EXT:site_package/Resources/Private/Layouts/Page/
-         1 = {$page.fluidtemplate.layoutRootPath}
-      }
-   }
+The name of the template to be used is determined in line 4 ff. The current
+backend layout is stored in the
+:ref:`gettext function pagelayout <t3tsref:data-type-gettext-pagelayout>`.
+By default these start with `pagets__`
+followed by a lowercase keyword. By :ref:`stdwrap
+<t3tsref:stdwrap>` we replace the first part and change the case such that the
+backend type `pagets__twoColumns` will call the template of name
+:file:`TwoColumns`.
 
-We do not want to go into too much detail, but what this configuration
-basically does is, it uses Fluid (the template rendering engine) to generate
-the page layout and some output. Template files are stored in the
+Line 21 ff define the storage paths for the templates.
+Template files are stored here in the
 aforementioned folders :file:`Templates/Page/`, :file:`Partials/Page/` and
-:file:`Layouts/Page/` (if not overwritten by constants).
+:file:`Layouts/Page/`.
 
 
-Part 2 and 3: CSS and JavaScript File Inclusion
+Part 2 and 3: CSS and JavaScript file inclusion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We have combined part 2 and 3, because the inclusion of CSS and JavaScript
-files in TypoScript is pretty straight forward. Extend :ts:`// Part 2: add CSS
-file inclusion` and :ts:`// Part 3: JavaScript file inclusion` by the following
-lines::
+files in TypoScript is pretty straight forward. Create a file called
+:file:`Part2CssFileInclusion.typoscript` in the
+folder :file:`Configuration/Typoscript/Setup/` with the following content:
 
-   // Part 2: CSS file inclusion
-   includeCSS {
-      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
-      bootstrap.external = 1
-      website = EXT:site_package/Resources/Public/Css/website.css
-   }
-
-   // Part 3: JavaScript file inclusion
-   includeJSFooter {
-      jquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
-      jquery.external = 1
-      popper = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js
-      popper.external = 1
-      bootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
-      bootstrap.external = 1
-      website = EXT:site_package/Resources/Public/JavaScript/website.js
-   }
-
-.. https://code.jquery.com/jquery-3.2.1.slim.min.js
-.. integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-..
-.. https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js
-.. integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-..
-.. https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
-.. integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+.. include:: /CodeSnippets/TypoScript/Part2CssFileInclusion.rst.txt
 
 Section :ts:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
 Bootstrap library from an external source. It also includes file
-:file:`website.css` from the sitepackage extension. We have copied this file
+:file:`website.css` from the site package extension. We have copied this file
 into the appropriate folder before.
 
 Section :ts:`includeJSFooter { ... }` includes four JavaScript files in total.
@@ -203,43 +158,15 @@ You can also include CSS or JavaScript per-component in your Fluid template or
 by PHP. See :ref:`t3coreapi:assets`.
 
 
-Part 4: Global Site Configuration
+Part 4: Global site configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, extend :ts:`// Part 4: global site configuration` by adding the following
-lines. There is no need to understand what these lines exactly do. Feel free
-to simply copy them from this tutorial. Explaining each line of the code would
-go beyond the scope of this tutorial. A detailed documentation of all
-configuration options can be found in the :ref:`TypoScript Reference
-<t3tsref:config>`. ::
+It is possible to configure multiple options globally in the section Typoscript
+object :typoscript:`config`. None of them is necessary to make the example here
+run. So we just included two configuration values as an example.
+Read more about them here: :ref:`TypoScript Reference <t3tsref:config>`.
 
-   // Part 4: global site configuration
-   config {
-      absRefPrefix = auto
-      cache_period = 86400
-      debug = 0
-      disablePrefixComment = 1
-      doctype = html5
-      extTarget =
-      index_enable = 1
-      index_externals = 1
-      index_metatags = 1
-      inlineStyle2TempFile = 1
-      intTarget =
-      linkVars = L
-      metaCharset = utf-8
-      no_cache = 0
-      pageTitleFirst = 1
-      prefixLocalAnchors = all
-      removeDefaultJS = 0
-      sendCacheHeaders = 1
-
-      // Compression and concatenation of CSS and JS Files
-      compressCss = 0
-      compressJs = 0
-      concatenateCss = 0
-      concatenateJs = 0
-   }
+.. include:: /CodeSnippets/TypoScript/Part4GlobalConfiguration.rst.txt
 
 This is all required for the "TypoScript Configuration" part at this point. The
 next step deals with the extension configuration and adds a couple of PHP

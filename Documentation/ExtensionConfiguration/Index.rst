@@ -20,35 +20,14 @@ know that the extension exists and as a consequence could not load it, nor
 display it in the *Extension Manager*.
 
 This file is named :file:`ext_emconf.php` and is expected in the root level of the
-extension. The content should look as follows::
+extension. The content should look as follows:
 
-   <?php
-   $EM_CONF[$_EXTKEY] = [
-      'title' => 'TYPO3 Sitepackage',
-      'description' => 'TYPO3 Sitepackage',
-      'category' => 'templates',
-      'author' => '...',
-      'author_email' => '...',
-      'author_company' => '...',
-      'version' => '1.0.0',
-      'state' => 'stable',
-      'constraints' => [
-         'depends' => [
-            'typo3' => '11.4.0-11.5.99',
-            'fluid_styled_content' => '11.4.0-11.5.99'
-         ],
-         'conflicts' => [
-         ],
-      ],
-      'uploadfolder' => 0,
-      'createDirs' => '',
-      'clearCacheOnLoad' => 1
-   ];
+.. include:: /CodeSnippets/ExtensionConfiguration/ExtEmconf.rst.txt
 
 The values can and should be customized of course. A more meaningful and longer
 description is recommended and defining some details about the author
-(`author`, :code:`author_email` and :code:`author_company`) make also perfect sense. A
-detailed description of all configuration options can be found in
+(`author`, :code:`author_email` and :code:`author_company`) make also perfect
+sense. A detailed description of all configuration options can be found in
 :ref:`TYPO3 Explained: Declaration file <t3coreapi:extension-declaration>`.
 
 Create and customize this file and store it as :file:`site_package/ext_emconf.php`.
@@ -61,44 +40,11 @@ Composer configuration
 If you are planning to work with a Composer-based installation (as we would
 advise) the extension needs to contain its own :file:`composer.json`.
 
-.. code-block:: json
-
-   {
-      "name": "t3docs/site-package",
-      "type": "typo3-cms-extension",
-      "description": "Example site package from the site package tutorial",
-      "authors": [
-         {
-            "name": "TYPO3 CMS Documentation Team",
-            "role": "Developer",
-            "homepage": "https://typo3.org/community/teams/documentation"
-         },
-         {
-            "name": "The TYPO3 Community",
-            "role": "Contributor",
-            "homepage": "https://typo3.org/community/"
-         }
-      ],
-      "homepage": "https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code",
-      "license": "MIT",
-      "keywords": [
-         "typo3",
-         "site package",
-         "documentation"
-      ],
-      "support": {
-         "issues": "https://github.com/TYPO3-Documentation/t3docs-screenshots/issues"
-      },
-      "extra": {
-         "typo3/cms": {
-            "extension-key": "site_package"
-         }
-      }
-   }
+.. include:: /CodeSnippets/ExtensionConfiguration/ComposerJson.rst.txt
 
 For historic reasons TYPO3 extension names have to be written in lower case
-separated by underscores. We suggest to use the extension key for the directory 
-of the extension as well to minimize confusion. So the extension in the path 
+separated by underscores. We suggest to use the extension key for the directory
+of the extension as well to minimize confusion. So the extension in the path
 :file:`site_package` has to have the
 same "extension-key" to be defined in the "extra" section of the composer.json.
 
@@ -112,7 +58,7 @@ followed by a forward slash and the lowercase extension name with minus scores.
 
 .. _extension-icon:
 
-Extension Icon
+Extension icon
 ==============
 
 Not as important as the extension declaration file above, but every extension can
@@ -129,38 +75,20 @@ Choose or create an image of 64px width by 64px height.
 
 .. _make-typoscript-available:
 
-Make TypoScript Available
+Make TypoScript available
 =========================
 
 In order to automatically load the TypoScript files we have created in the
 previous step, a new PHP file :file:`sys_template.php` needs to be created and
 stored in directory :file:`Configuration/TCA/Overrides/`. The content of this file
-should look like the following code::
+should look like the following code:
 
-   <?php
-   defined('TYPO3') or die();
-
-   call_user_func(function()
-   {
-      /**
-       * Extension key
-       */
-      $extensionKey = 'site_package';
-
-      /**
-       * Default TypoScript
-       */
-      \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-         $extensionKey,
-         'Configuration/TypoScript',
-         'Sitepackage'
-      );
-   });
+.. include:: /CodeSnippets/ExtensionConfiguration/TcaOverrideSysTemplate.rst.txt
 
 
 .. _directory-structure:
 
-Directory and File Structure
+Directory and file structure
 ============================
 
 Let's review the directory and file structure of the sitepackage extension as
