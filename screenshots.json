@@ -68,8 +68,8 @@
                     {
                         "action": "createCodeSnippet",
                         "sourceFile": "Configuration/TypoScript/Setup/Part6ProcessedContent.typoscript",
-                        "targetFileName": "Part1FluidTemplateSection",
-                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Part6ProcessedContent",
+                        "targetFileName": "Part6ProcessedContent",
+                        "caption": "EXT:site_package/Configuration/TypoScript/Setup/Part6ProcessedContent.typoscript",
                         "showLineNumbers": true
                     }
                 ],
