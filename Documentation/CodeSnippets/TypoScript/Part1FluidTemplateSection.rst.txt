@@ -1,36 +1,42 @@
 .. Automatic screenshot: Remove this line if you want to manually change this file
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/Setup/Part6ProcessedContent
+   :caption: EXT:site_package/Configuration/TypoScript/Setup/Part1FluidTemplateSection.typoscript
    :linenos:
 
-   
-   page {
-     10 {
-       dataProcessing {
-         //10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         20 {
-           table = tt_content
-           orderBy = sorting
-           where = colPos = 0
-           as = mainContent
-         }
-         30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         30 {
-           table = tt_content
-           orderBy = sorting
-           where = colPos = 1
-           as = jumbotronContent
-         }
-         40 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         40 {
-           table = tt_content
-           orderBy = sorting
-           where = colPos = 2
-           as = sidebarContent
+   // Part 1: Fluid template section
+   page.10 = FLUIDTEMPLATE
+   page.10 {
+     templateName = TEXT
+     templateName {
+       cObject = TEXT
+       cObject {
+         data = pagelayout
+         required = 1
+         case = ucfirst
+         split {
+           token = pagets__
+           cObjNum = 1
+           1.current = 1
          }
        }
+   
+       ifEmpty = Default
+     }
+   
+     templateRootPaths {
+       0 = EXT:site_package/Resources/Private/Templates/Page/
+       1 = {$page.fluidtemplate.templateRootPath}
+     }
+   
+     partialRootPaths {
+       0 = EXT:site_package/Resources/Private/Partials/Page/
+       1 = {$page.fluidtemplate.partialRootPath}
+     }
+   
+     layoutRootPaths {
+       0 = EXT:site_package/Resources/Private/Layouts/Page/
+       1 = {$page.fluidtemplate.layoutRootPath}
      }
    }
    
