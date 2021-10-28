@@ -72,7 +72,7 @@ You could for example define the title of your page in a TypoScript constant::
 And later on use it somewhere in your TypoScript setup to output it on your page::
 
    lib.footer = TEXT
-   lib.footer.value = {$mysitepackage.page}
+   lib.footer.value = {$mysitepackage.page.title}
    lib.footer.wrap = <footer> &copy | </footer>
 
 Add the following lines to file :file:`constants.typoscript`:
