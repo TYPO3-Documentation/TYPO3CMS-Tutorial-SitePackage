@@ -8,7 +8,7 @@
 TypoScript configuration
 ========================
 
-TYPO3 uses "TypoScript" as a specific *language* to configure a website.
+TYPO3 uses **TypoScript** as a specific *language* to configure a website.
 TypoScript is a very powerful tool in the TYPO3 universe, because it allows
 integrators to configure and manipulate almost every aspect of the system and
 customize a TYPO3 instance to very specific needs of their customers. It is
@@ -18,9 +18,8 @@ complexity of TYPO3 and its configuration options, quite comprehensive
 documentation about TypoScript exists, which can be overwhelming sometimes.
 
 As part of this tutorial, we focus on the basics only and how to apply them. A
-comprehensive documentation about TypoScript and all its objects, properties
+documentation about TypoScript and all its objects, properties
 and functions can be found in the :ref:`TypoScript Reference <t3tsref:start>`.
-
 
 .. _files-and-directories:
 
@@ -51,19 +50,47 @@ the :file:`Resources/` directory, but not listed above for clarity reasons.
 
 .. _file-constants-typoscript:
 
-TypoScript Constants
+TypoScript constants
 --------------------
+
+TypoScript constants are used to set values that can be used in the TypoScript
+setup through out the project.
+
+.. note::
+   TypoScript constants are only interpreted as such, when they are added to
+   the correct location. They need to be added to the file
+   file:`constants.typoscript` or a file or path included from this file.
+
+It is best practise to use them for values that might
+want to be changed later on like paths, ids of important pages (contact,
+imprint, a system folder that contains certain records, ...).
+
+You could for example define the title of your page in a TypoScript constant::
+
+   mysitepackage.page.title = My cool project
+
+And later on use it somewhere in your TypoScript setup to output it on your page::
+
+   lib.footer = TEXT
+   lib.footer.value = {$mysitepackage.page.title}
+   lib.footer.wrap = <footer> &copy | </footer>
 
 Add the following lines to file :file:`constants.typoscript`:
 
 .. include:: /CodeSnippets/TypoScript/Constants.rst.txt
 
-Line 1 includes the default constants from the "Fluid Styled Content" extension
-(which is part of the TYPO3 Core).
+Line 1 includes the default constants from the system extension
+:code:`fluid_styled_content` (which is part of the TYPO3 Core).
 
-The first line (:ts:`@import '...'`) includes the default constants
-from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
-.. todo: describe main purpose of the file.
+The following lines define some constants with paths to the template directories
+that we defined in the previous chapter.
+
+The part :typoscript:`EXT:` of the paths will be automatically replaced by the
+path to your extensions location, usually something like :file:`/typo3conf/ext/`.
+
+You can read more about :ref:`TypoScript constants in the TypoScript reference
+<t3tsref:typoscript-syntax-constants>`.
+
 
 
 .. _file-setup-typoscript:
@@ -79,7 +106,8 @@ up the TypoScript setup file into sections by didactic reasons.
 .. include:: /CodeSnippets/TypoScript/Setup.rst.txt
 
 Line 1 imports the default setup
-from the "Fluid Styled Content" extension (which is part of the TYPO3 Core).
+from the system extension :code:`fluid_styled_content` (which is part of the
+TYPO3 Core).
 
 Line 2 imports all files ending on :file:`.typoscript` from the specified
 folder. It does however not import files from sub folders. Those would have to
@@ -88,28 +116,33 @@ be imported separately.
 Hello World: The PAGE object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to create any output at all we first need to define a PAGE. The
-example below would output an empty page:
+In order to create any output at all we first need to define a
+:typoscript:`PAGE`. The example below would output an empty page:
 
 .. include:: /CodeSnippets/TypoScript/Page.rst.txt
 
 If you remove the comments :typoscript:`//` before line 4 and 5 there would be
-an output of "Hello World!". But of course we want to output our Fluid template.
+an output of "Hello World!".
 
 You can read more about :ref:`the top-level PAGE object in the TypoScript
 reference <t3tsref:page>`.
 
-The parameter :typoscript:`typeNum` is mandatory. Setting it to null enables the
-page to be called without adding an additional parameter `&type=12345` to the
-url.
+The parameter :typoscript:`typeNum` is mandatory. Setting it to :typoscript:`0`
+enables the page to be called. If you would set it to any value above there
+the page would need to be called with an additional parameter like `&type=12345`
+to the url.
 
-Part 1: Fluid Template Section
+Part 1: Fluid template section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, create a file called :file:`Part1FluidTemplateSection.typoscript` in the
 folder :file:`Configuration/Typoscript/Setup/` with the following content:
 
 .. include:: /CodeSnippets/TypoScript/Part1FluidTemplateSection.rst.txt
+
+Line 1 is a comment. All lines starting with :typoscript:`//` or :typoscript:`#`
+will be ignored by the parser. In TypoScript it is however not possible to have
+a comment after code in a line as you might be used from PHP of Java.
 
 Line 2 configures that the template rendering engine Fluid should be used to
 generate the page output.
