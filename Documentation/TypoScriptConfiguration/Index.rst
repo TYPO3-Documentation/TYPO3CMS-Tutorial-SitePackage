@@ -80,7 +80,7 @@ Add the following lines to file :file:`constants.typoscript`:
 .. include:: /CodeSnippets/TypoScript/Constants.rst.txt
 
 Line 1 includes the default constants from the system extension
-:file:`fluid_styled_content` (which is part of the TYPO3 Core).
+:code:`fluid_styled_content` (which is part of the TYPO3 Core).
 
 The following lines define some constants with paths to the template directories
 that we defined in the previous chapter.
@@ -106,7 +106,7 @@ up the TypoScript setup file into sections by didactic reasons.
 .. include:: /CodeSnippets/TypoScript/Setup.rst.txt
 
 Line 1 imports the default setup
-from the system extension :file:`fluid_styled_content` (which is part of the
+from the system extension :code:`fluid_styled_content` (which is part of the
 TYPO3 Core).
 
 Line 2 imports all files ending on :file:`.typoscript` from the specified
