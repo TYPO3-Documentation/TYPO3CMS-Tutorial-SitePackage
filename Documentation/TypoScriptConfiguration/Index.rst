@@ -141,8 +141,8 @@ folder :file:`Configuration/Typoscript/Setup/` with the following content:
 .. include:: /CodeSnippets/TypoScript/Part1FluidTemplateSection.rst.txt
 
 Line 1 is a comment. All lines starting with :typoscript:`//` or :typoscript:`#`
-will be ignored by the parser. In TypoScript it is however not possible to start
-a comment in the middle of a line (as you might be used from PHP of Java).
+will be ignored by the parser. In TypoScript it is however not possible to have
+a comment after code in a line as you might be used from PHP of Java.
 
 Line 2 configures that the template rendering engine Fluid should be used to
 generate the page output.
