@@ -160,8 +160,7 @@
                 ],
                 "pageScreenshots": [
                     {"include": "_default"},
-                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][0]=new&id=0&table=&pointer=1"},
-                    {"action": "switchToContentFrame"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][0]=new&id=0&table=&pointer=1&token=x"},
                     {
                         "action": "fillField",
                         "field": "input[data-formengine-input-name*=\"title\"]",
@@ -169,8 +168,7 @@
                     },
                     { "action": "click", "link": "Save"},
                     {"action": "waitForText", "text": "Edit Page"},
-                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][1]=new&returnNewPageId=1&id=0&table=&pointer=1"},
-                    {"action": "switchToContentFrame"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][1]=new&returnNewPageId=1&id=0&table=&pointer=1&token=x"},
                     {
                         "action": "fillField",
                         "field": "input[data-formengine-input-name*=\"title\"]",
@@ -178,8 +176,7 @@
                     },
                     { "action": "click", "link": "Save"},
                     {"action": "waitForText", "text": "Edit Page"},
-                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][-2]=new&returnNewPageId=1&id=0&table=&pointer=1"},
-                    {"action": "switchToContentFrame"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][-2]=new&returnNewPageId=1&id=0&table=&pointer=1&token=x"},
                     {
                         "action": "fillField",
                         "field": "input[data-formengine-input-name*=\"title\"]",
@@ -199,8 +196,7 @@
                         "captionText": "Create initial pages"
                     },
                     {"action": "resizeWindow", "width": 1024, "height": 640},
-                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][-3]=new&returnNewPageId=1&id=0&table=&pointer=1"},
-                    {"action": "switchToContentFrame"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][-3]=new&returnNewPageId=1&id=0&table=&pointer=1&token=x"},
                     {
                         "action": "fillField",
                         "field": "input[data-formengine-input-name*=\"title\"]",
@@ -349,6 +345,7 @@
                     },
                     {"action": "click", "link": "Save"},
                     {"action": "wait", "timeout": "1"},
+                    {"action": "reloadBackend"},
                     {"action": "switchToMainFrame"},
                     {"action": "see", "text": "View"},
                     {"action": "click", "link": "View"},
@@ -367,8 +364,7 @@
                         "fileName": "CreateNewContentElement",
                         "captionText": "Create new content element"
                     },
-                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[tt_content][1]=new&defVals[tt_content][colPos]=0&defVals[tt_content][sys_language_uid]=0&defVals[tt_content][CType]=text"},
-                    {"action": "switchToContentFrame"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[tt_content][1]=new&defVals[tt_content][colPos]=0&defVals[tt_content][sys_language_uid]=0&defVals[tt_content][CType]=text&token=x"},
                     {"action": "waitForText", "text": "Create new"},
                     {
                         "action": "fillField",
@@ -384,8 +380,7 @@
                     },
                     {"action": "click", "link": "Save"},
                     {"action": "waitForText", "text": "Edit"},
-                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[tt_content][1]=new&defVals[tt_content][colPos]=1&defVals[tt_content][sys_language_uid]=0&defVals[tt_content][CType]=text"},
-                    {"action": "switchToContentFrame"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[tt_content][1]=new&defVals[tt_content][colPos]=1&defVals[tt_content][sys_language_uid]=0&defVals[tt_content][CType]=text&token=x"},
                     {"action": "waitForText", "text": "Create new"},
                     {
                         "action": "fillField",
@@ -404,6 +399,7 @@
                         "captionText": "The columns with their Content"
                     },
                     {"action": "resizeWindow", "width": 1024, "height": 340},
+                    {"action": "reloadBackend"},
                     {"action": "switchToMainFrame"},
                     {"action": "click", "link": "#typo3-cms-backend-backend-toolbaritems-clearcachetoolbaritem a"},
                     {"action": "drawBox", "selector":  ".dropdown-table-row:first-child"},
@@ -448,8 +444,7 @@
                     {"action": "click", "link": "Save"},
                     {"action": "wait", "timeout": "1"},
                     {"action": "click", "link": "Close"},
-                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[tt_content][1]=new&defVals[tt_content][colPos]=2&defVals[tt_content][sys_language_uid]=0&defVals[tt_content][CType]=menu_subpages"},
-                    {"action": "switchToContentFrame"},
+                    {"action": "amOnPage", "page": "/typo3/record/edit?edit[tt_content][1]=new&defVals[tt_content][colPos]=2&defVals[tt_content][sys_language_uid]=0&defVals[tt_content][CType]=menu_subpages&token=x"},
                     {"action": "waitForText", "text": "Create new"},
                     {
                         "action": "fillField",
@@ -458,6 +453,7 @@
                     },
                     {"action": "click", "link": "Save"},
                     {"action": "waitForText", "text": "Edit"},
+                    {"action":  "reloadBackend"},
                     {"action": "switchToMainFrame"},
                     {"action": "click", "link": "Page"},
                     {"action": "switchToContentFrame"},
