@@ -62,15 +62,14 @@ Extension icon
 ==============
 
 Not as important as the extension declaration file above, but every extension can
-feature an icon using a PNG file. This image should be located in the root
-directory of the extension as well, and must be named :file:`ext_icon.png`.
-Choose or create an image of 64px width by 64px height.
+feature an icon using a svg file. This image should be located at
+:file:`Resources/Public/Icons/Extension.svg`.
 
 .. note::
 
-   Newer versions of TYPO3 support alternative formats and file locations.
-   However, for the sake of simplicity we will stick to the specification outlined
-   above.
+   PNG and GIF files are also allowed as Extensions icon. They are stored in
+   :file:`Resources/Public/Icons/Extension.png` or
+   :file:`Resources/Public/Icons/Extension.gif`
 
 
 .. _make-typoscript-available:
