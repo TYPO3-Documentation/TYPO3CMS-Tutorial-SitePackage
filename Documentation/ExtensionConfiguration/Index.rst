@@ -7,35 +7,8 @@
 Extension Configuration
 =======================
 
-.. _extension-manager-configuration:
-
-Extension Declaration File
-==========================
-
-Every TYPO3 extension requires a configuration file (also known as the
-:ref:`extension declaration file <t3coreapi:extension-declaration>`) to
-tell the TYPO3 instance some basic details of
-the extension, possible dependencies, etc. Without this file, TYPO3 would not
-know that the extension exists and as a consequence could not load it, nor
-display it in the *Extension Manager*.
-
-This file is named :file:`ext_emconf.php` and is expected in the root level of the
-extension. The content should look as follows:
-
-.. include:: /CodeSnippets/ExtensionConfiguration/ExtEmconf.rst.txt
-
-The values can and should be customized of course. A more meaningful and longer
-description is recommended and defining some details about the author
-(`author`, :code:`author_email` and :code:`author_company`) make also perfect
-sense. A detailed description of all configuration options can be found in
-:ref:`TYPO3 Explained: Declaration file <t3coreapi:extension-declaration>`.
-
-Create and customize this file and store it as :file:`site_package/ext_emconf.php`.
-The configuration shown above will do the job, if you do not want to customize
-the declaration file at the moment.
-
-Composer configuration
-======================
+Composer configuration :file:`composer.json`
+============================================
 
 If you are planning to work with a Composer-based installation (as we would
 advise) the extension needs to contain its own :file:`composer.json`.
@@ -55,6 +28,26 @@ followed by a forward slash and the lowercase extension name with minus scores.
    If composer does not find your site-package extension check if you are
    using the correct separation chars in the correct places.
 
+.. _extension-manager-configuration:
+
+Extension declaration file :file:`ext_emconf.php`
+=================================================
+
+Since version 11 this file is only mandatory if you are not using Composer.
+If you are using Composer you can omit this file as it is ignored by TYPO3
+anyway.
+
+If you are using a TYPO3 version below 11 or need to refrain from using
+Composer for some reason create a file called :file:`ext_emconf.php` in
+the root level of the extension. The content should look as follows:
+
+.. include:: /CodeSnippets/ExtensionConfiguration/ExtEmconf.rst.txt
+
+The values can and should be customized of course. A more meaningful and longer
+description is recommended.
+
+A detailed description of all configuration options can be found in
+:ref:`TYPO3 Explained: Declaration file <t3coreapi:extension-declaration>`.
 
 .. _extension-icon:
 
