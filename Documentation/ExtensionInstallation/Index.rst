@@ -12,7 +12,7 @@ Installation Guide <t3install:start>` for a detailed explanation how to set up
 a TYPO3 instance from scratch.
 
 We highly recommend to use :ref:`the Composer -based installation process
-<t3install:composer-working-with>`. During development you should work locally
+<t3start:install-extension-with-composer>`. During development you should work locally
 on your machine for example by running TYPO3 on ddev.
 
 If you need to follow the legacy way of installation, see :ref:`Site package

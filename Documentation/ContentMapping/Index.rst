@@ -358,7 +358,7 @@ Preview page
 ============
 
 We have made changes to the Fluid templates of the extension above. It is
-therefore necessary to :guibuilder:`Flush the content caches` in the Menu in the
+therefore necessary to :guilabel:`Flush the content caches` in the Menu in the
 top bar before you can preview the page properly:
 
 .. include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
