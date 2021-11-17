@@ -34,7 +34,7 @@ Sitepackage Tutorial
       TYPO3 |release| yet.)
 
 :Shortcut:
-      `t3sitepackage` is the usual alias for 
+      `t3sitepackage` is the usual alias for
       :ref:`cross-referencing <linktargets-explanation>`.
 
 :Rendered:
@@ -42,7 +42,7 @@ Sitepackage Tutorial
 
 .. rst-class:: horizbuttons-primary-xxl
 
-*  `Code <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code>`__      
+*  `Code <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code>`__
 
 
 The content of this document is related to TYPO3 CMS, a GNU/GPL CMS/Framework
@@ -73,7 +73,7 @@ be remembered for future reference.
 
 This tutorial describes the steps required to turn a basic design template
 (HTML, CSS, JavaScript files, etc.) into a fully working, mobile-responsive
-website powered by TYPO3. By creating a sitepackage extension, all relevant 
+website powered by TYPO3. By creating a sitepackage extension, all relevant
 files are stored at a central point and
 changes can easily be tracked in version control.
 
@@ -97,6 +97,7 @@ knowledge.
    TypoScriptConfiguration/Index
    ExtensionConfiguration/Index
    ExtensionInstallation/Index
+   CreatePages/Index
    MainMenuCreation/Index
    ContentMapping/Index
    Summary/Index
