@@ -64,7 +64,7 @@ Extension icon
 Every extension can feature an icon using an SVG, PNG or GIF file. 
 The image should be stored in :file:`Resources/Public/Icons/`.
 
-It is recommended that you use an SVG file.
+It is recommended that you use an SVG file called :file:`Extension.svg`.
 
 .. _make-typoscript-available:
 
