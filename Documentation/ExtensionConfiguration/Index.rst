@@ -61,16 +61,10 @@ followed by a forward slash and the lowercase extension name with minus scores.
 Extension icon
 ==============
 
-Not as important as the extension declaration file above, but every extension can
-feature an icon using a svg file. This image should be located at
-:file:`Resources/Public/Icons/Extension.svg`.
+Every extension can feature an icon using an SVG, PNG or GIF file. 
+The image should be stored in :file:`Resources/Public/Icons/`.
 
-.. note::
-
-   PNG and GIF files are also allowed as Extensions icon. They are stored in
-   :file:`Resources/Public/Icons/Extension.png` or
-   :file:`Resources/Public/Icons/Extension.gif`
-
+It is recommended that you use an SVG file.
 
 .. _make-typoscript-available:
 
