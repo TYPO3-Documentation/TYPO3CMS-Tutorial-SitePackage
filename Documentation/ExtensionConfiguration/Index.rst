@@ -91,7 +91,6 @@ it stands now.
     site_package/Configuration/TypoScript/constants.typoscript
     site_package/Configuration/TypoScript/setup.typoscript
     site_package/ext_emconf.php
-    site_package/ext_icon.png
     site_package/Resources
     site_package/Resources/Private
     site_package/Resources/Private/Layouts
@@ -106,6 +105,7 @@ it stands now.
     site_package/Resources/Public
     site_package/Resources/Public/Css
     site_package/Resources/Public/Css/website.css
+    site_package/Resources/Public/Icons/Extension.svg
     site_package/Resources/Public/Images/
     site_package/Resources/Public/Images/logo.png
     site_package/Resources/Public/JavaScript
