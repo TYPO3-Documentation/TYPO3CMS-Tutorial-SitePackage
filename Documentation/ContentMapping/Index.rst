@@ -261,7 +261,7 @@ replace the content area of the sidebar with the content elements in the Fluid
 variable :html:`{sidebarContent}`.
 
 You can compare your result to the example in our site extension:
-`TwoColumns.html <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/master/Resources/Private/Templates/Page/TwoColumns.html>`_.
+`TwoColumns.html <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Resources/Private/Templates/Page/TwoColumns.html>`_.
 
 The jumbotron: Customize output of content elements
 ===================================================
