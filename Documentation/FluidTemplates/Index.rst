@@ -42,7 +42,7 @@ integrators and web developers to use translations of variables, generate forms
 and dynamic links, resize images, embed other HTML files and even implement
 logical functions such as :html:`if ... then ... else ...`. An overview of the
 available ViewHelpers and how to apply them can be found in the `Fluid ViewHelper Documentation
-<https://docs.typo3.org/other/typo3/view-helper-reference/master/en-us/Index.html>`__.
+<https://docs.typo3.org/other/typo3/view-helper-reference/main/en-us/Index.html>`__.
 
 
 .. _directory-structure:
