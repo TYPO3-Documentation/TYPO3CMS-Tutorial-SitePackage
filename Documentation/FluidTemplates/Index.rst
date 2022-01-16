@@ -300,7 +300,7 @@ it should use:
 
 The updated template file shows two additional lines at the top (:html:`<f:layout>`
 and :html:`<f:section>`) and an additional line at the bottom (the closing
-:html:`</f:section>` tag). The Layout-ViewHelper refers to the "Default" template
+:html:`</f:section>` tag). The Layout-ViewHelper refers to the "Default" website layout
 file, which we will create in the next step. The Section-ViewHelper simply
 wraps the page template code we created before and therefore defines a section
 named "Main".
@@ -308,7 +308,7 @@ named "Main".
 
 .. _the-website-layout-file:
 
-The Website layout file
+The website layout file
 =======================
 
 Now, let's implement the website layout file. First, we create a new file
