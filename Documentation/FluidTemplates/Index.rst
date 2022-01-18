@@ -298,7 +298,7 @@ class="jumbotron"> ... </div>`) and a simple container with three columns.
 
 The code above misses a few lines at the end, which include some JavaScript
 files such as jQuery and Bootstrap. You are advised to remove these line from
-the :file:`Resources/Private/Template/Page/Default.html` file, too.
+the :file:`Resources/Private/Templates/Page/Default.html` file, too.
 
 Due to the fact that the "jumbotron" elements could be used on several pages
 (page layouts) across the entire website, we should move this part to a
@@ -309,7 +309,7 @@ name reads **exactly** as stated above with upper case "J" as the first
 character.
 
 Now, remove the lines from file
-:file:`Resources/Private/Template/Page/Default.html` and replace them with the
+:file:`Resources/Private/Templates/Page/Default.html` and replace them with the
 following single line::
 
    <f:render partial="Jumbotron" />
