@@ -7,7 +7,7 @@
 Fluid Templates
 ===============
 
-Before we describe how the static files discussed in the previous section 
+Before we describe how the static files discussed in the previous section
 :ref:`design-template` can be converted into Fluid templates, we should understand
 what *Fluid* is and what the main ideas behind this powerful rendering engine
 are. It is important to point out that the following section is just a quick
@@ -42,9 +42,7 @@ integrators and web developers to use translations of variables, generate forms
 and dynamic links, resize images, embed other HTML files and even implement
 logical functions such as :html:`if ... then ... else ...`. An overview of the
 available ViewHelpers and how to apply them can be found at `Fluid Powered
-TYPO3 <https://fluidtypo3.org/viewhelpers/>`__ and at the `TYPO3 Wiki
-<https://wiki.typo3.org/Fluid>`__. Note that both sites are community-driven and
-not maintained by the TYPO3 Documentation Team.
+TYPO3 <https://fluidtypo3.org/viewhelpers/>`__.
 
 
 .. _directory-structure:
@@ -233,9 +231,9 @@ As described before, a typical static :file:`index.html` file contains a :html:`
 and a :html:`<body>` section, but we only need to focus on the :html:`<body>`. Open
 file :file:`site_package/Resources/Private/Templates/Page/Default.html` in your
 favorite text editor and remove all lines before the starting :html:`<body>` tag
-and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a 
-result, your :file:`Default.html` may now be empty. In that case, you can use the 
-following example based on the Bootstrap Jumbotron. If using your own layout template, 
+and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a
+result, your :file:`Default.html` may now be empty. In that case, you can use the
+following example based on the Bootstrap Jumbotron. If using your own layout template,
 your :file:`Default.html` now contains only the HTML code inside the body.
 
 So, let's assume it contains something like the following HTML code::
