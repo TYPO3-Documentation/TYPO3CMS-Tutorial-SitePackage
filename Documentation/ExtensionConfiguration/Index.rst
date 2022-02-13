@@ -103,7 +103,7 @@ should look like the following code::
    });
 
 
-.. _directory-structure:
+.. _ec-directory-structure:
 
 Directory and File Structure
 ============================

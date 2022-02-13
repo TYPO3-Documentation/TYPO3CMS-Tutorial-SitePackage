@@ -7,7 +7,7 @@
 Fluid Templates
 ===============
 
-Before we describe how the static files discussed in the previous section 
+Before we describe how the static files discussed in the previous section
 :ref:`design-template` can be converted into Fluid templates, we should understand
 what *Fluid* is and what the main ideas behind this powerful rendering engine
 are. It is important to point out that the following section is just a quick
@@ -47,7 +47,7 @@ TYPO3 <https://fluidtypo3.org/viewhelpers/>`__ and at the `TYPO3 Wiki
 not maintained by the TYPO3 Documentation Team.
 
 
-.. _directory-structure:
+.. _ft-directory-structure:
 
 Directory Structure
 ===================
@@ -140,7 +140,7 @@ The directory :file:`Languages/` may contain :file:`.xlf` files that are used fo
 the localization of labels and text strings (frontend as well as backend) by
 TYPO3. This topic is not strictly related to the Fluid template engine and is
 documented in section
-:ref:`Internationalization and Localization <t3coreapi:internationalization-and-localization>`.
+:ref:`Internationalization and Localization <t3coreapi:internationalization>`.
 
 
 .. _implement-templates-files:
@@ -233,9 +233,9 @@ As described before, a typical static :file:`index.html` file contains a :html:`
 and a :html:`<body>` section, but we only need to focus on the :html:`<body>`. Open
 file :file:`site_package/Resources/Private/Templates/Page/Default.html` in your
 favorite text editor and remove all lines before the starting :html:`<body>` tag
-and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a 
-result, your :file:`Default.html` may now be empty. In that case, you can use the 
-following example based on the Bootstrap Jumbotron. If using your own layout template, 
+and after the closing :html:`</body>` tag. Then, remove these two lines, too. As a
+result, your :file:`Default.html` may now be empty. In that case, you can use the
+following example based on the Bootstrap Jumbotron. If using your own layout template,
 your :file:`Default.html` now contains only the HTML code inside the body.
 
 So, let's assume it contains something like the following HTML code::
