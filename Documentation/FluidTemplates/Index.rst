@@ -45,7 +45,7 @@ available ViewHelpers and how to apply them can be found in the `Fluid ViewHelpe
 <https://docs.typo3.org/other/typo3/view-helper-reference/main/en-us/Index.html>`__.
 
 
-.. _directory-structure:
+.. _ft-directory-structure:
 
 Directory Structure
 ===================
