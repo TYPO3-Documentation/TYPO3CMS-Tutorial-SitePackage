@@ -45,7 +45,7 @@ available ViewHelpers and how to apply them can be found at `Fluid Powered
 TYPO3 <https://fluidtypo3.org/viewhelpers/>`__.
 
 
-.. _directory-structure:
+.. _ft-directory-structure:
 
 Directory Structure
 ===================
