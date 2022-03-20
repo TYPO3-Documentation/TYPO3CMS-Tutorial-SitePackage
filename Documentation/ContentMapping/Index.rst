@@ -44,7 +44,7 @@ Create a file at :file:`Configuration/page.tsconfig` the following
 content:
 
 .. code-block:: typoscript
-   :caption: EXT:my-sitepackage/Configuration/page.tsconfig
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
    @import 'EXT:site_package/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
 
@@ -55,6 +55,11 @@ This syntax imports all files ending on `.tsconfig` from the specified folder.
    automatically loaded during build time. See
    :ref:`t3tsconfig:setting-page-tsconfig` on how to load the file in older
    TYPO3 versions.
+   
+When there is only one site in your installation or all sites share the same 
+configurations we suggest to include this file globally as decribed here. 
+See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig 
+certain page tree.
 
 Then create a file
 :file:`Configuration/TsConfig/Page/PageLayout/Default.tsconfig` with the
