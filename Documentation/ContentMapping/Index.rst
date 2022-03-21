@@ -61,9 +61,9 @@ configurations we suggest to include this file globally:
 
    use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-   ExtensionManagementUtility::addPageTSConfig("
-       @import 'EXT:site_package/Configuration/page.tsconfig'
-   ");
+   ExtensionManagementUtility::addPageTSConfig('
+       @import "EXT:site_package/Configuration/page.tsconfig"
+   ');
 
 See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig
 certain page tree.
