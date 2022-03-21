@@ -40,19 +40,40 @@ Dynamic Content Rendering in TypoScript
 
 .. highlight:: typoscript
 
-Create a new directory :file:`Configuration/TsConfig/Page/` and inside this
-directory, a new file called :file:`Page.tsconfig` with the following
-content::
+Create a file at :file:`Configuration/page.tsconfig` the following
+content:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
    @import 'EXT:site_package/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
 
-This file imports all files ending on `.tsconfig` from the specified folder.
-The file :file:`Page.tsconfig` could for example handle other page TsConfig
-configurations or their imports.
+This syntax imports all files ending on `.tsconfig` from the specified folder.
+
+The file :file:`Configuration/page.tsconfig` has to be loaded with an API
+function.
+
+When there is only one site in your installation or all sites share the same
+configurations we suggest to include this file globally:
+
+.. code-block:: php
+   :caption: EXT:site_package/ext_localconf.php
+
+   use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+   ExtensionManagementUtility::addPageTSConfig('
+       @import "EXT:site_package/Configuration/page.tsconfig"
+   ');
+
+See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig
+certain page tree.
 
 Then create a file
 :file:`Configuration/TsConfig/Page/PageLayout/Default.tsconfig` with the
-following content::
+following content:
+
+.. code-block:: typoscript
+   :caption: EXT:my-sitepackage/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
 
    mod.web_layout.BackendLayouts {
        Default {
