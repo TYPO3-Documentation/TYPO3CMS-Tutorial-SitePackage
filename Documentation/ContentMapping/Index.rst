@@ -40,7 +40,7 @@ Dynamic Content Rendering in TypoScript
 
 .. highlight:: typoscript
 
-Create a file at :file:`Configuration/page.tsconfig` the following
+Create a file at :file:`Configuration/page.tsconfig` with the following
 content:
 
 .. code-block:: typoscript
