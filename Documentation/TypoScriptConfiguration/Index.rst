@@ -19,7 +19,7 @@ documentation about TypoScript exists, which can be overwhelming sometimes.
 
 As part of this tutorial, we focus on the basics only and how to apply them. A
 comprehensive documentation about TypoScript and all its objects, properties
-and functions can be found in the :ref:`TypoScript Reference <t3tsref:start>`.
+and functions can be found in the :doc:`TypoScript Reference <t3tsref:Index>`.
 
 
 .. _files-and-directories:
