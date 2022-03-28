@@ -172,14 +172,14 @@ folder :file:`Configuration/Typoscript/Setup/` with the following content:
 
 .. include:: /CodeSnippets/TypoScript/Part2CssFileInclusion.rst.txt
 
-Section :ts:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
+Section :typoscript:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
 Bootstrap library from an external source. It also includes file
 :file:`website.css` from the site package extension. We have copied this file
 into the appropriate folder before.
 
-Section :ts:`includeJSFooter { ... }` includes four JavaScript files in total.
+Section :typoscript:`includeJSFooter { ... }` includes four JavaScript files in total.
 The first three are externally hosted files (jQuery, Popper and Bootstrap).
-Therefore, :ts:`.external = 1` forces TYPO3, not to check for their local
+Therefore, :typoscript:`.external = 1` forces TYPO3, not to check for their local
 existence. The fourth JavaScript file is the file we added before to the site
 package extension itself.
 
