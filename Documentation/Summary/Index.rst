@@ -92,7 +92,7 @@ these.
    To simply *disable* the column, enter the following line in the "Page
    TSConfig" box of page "example.com" (**Page Properties → Resources**):
 
-   :ts:`TCEFORM.tt_content.colPos.removeItems = 3`
+   :typoscript:`TCEFORM.tt_content.colPos.removeItems = 3`
 
    However, the aforementioned :ref:`Backend Layouts <t3coreapi:be-layout>`
    give you much more control about columns, labels, positions, etc. and are
