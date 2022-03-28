@@ -107,7 +107,7 @@ following areas:
 It is also recommended that the reader has worked with TYPO3 before, knows what
 the *frontend*, *backend* and *Extension Manager* is and how to access the
 *Install Tool*. Missing knowledge can be acquired by working through the TYPO3
-documentation, for example the :ref:`Getting Started Tutorial <t3start:start>`.
+documentation, for example the :doc:`Getting Started Tutorial <t3start:Index>`.
 
 Due to the fact that the sitepackage discussed in the next chapters implements
 a new, fresh, clean website skin from scratch, an empty TYPO3 instance is a
