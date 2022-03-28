@@ -1,15 +1,15 @@
-\|
-`Contributing <CONTRIBUTING.md>`__  \|
-`Help & Support <https://typo3.org/help>`__ \|
-`Settings <Documentation/Settings.cfg>`__ \|
+==========================
+TYPO3 Sitepackage Tutorial
+==========================
 
-=============================
-TYPO3CMS-Tutorial-SitePackage
-=============================
+This tutorial describes the steps required to create a fully functional TYPO3
+website from a design template (HTML, CSS, JavaScript, etc.) - with the support
+of a *sitepackage extension*.
 
-Tutorial how to create a TYPO3 sitepackage extension from scratch
+The final code of the sitepackage extension can be retrieved from the
+`TYPO3CMS-Tutorial-SitePackage-Code`_ repository.
 
-:Repository:    https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage/
-:Read online:   https://docs.typo3.org/typo3cms/SitePackageTutorial/
-:Code:          https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code
+.. _TYPO3CMS-Tutorial-SitePackage-Code: https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/8.7
 
+:Repository:  https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage
+:Read online: https://docs.typo3.org/m/typo3/tutorial-sitepackage/8.7/en-us/
