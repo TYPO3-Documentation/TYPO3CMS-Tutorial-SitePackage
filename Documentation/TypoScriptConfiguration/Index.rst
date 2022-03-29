@@ -104,9 +104,9 @@ section by section. First, add the following lines to that file::
       // ...
    }
 
-The first line (:ts:`<INCLUDE_TYPOSCRIPT ...>`) includes the default constants
+The first line (:typoscript:`<INCLUDE_TYPOSCRIPT ...>`) includes the default constants
 from the "Fluid Styled Content" extension (which is part of the TYPO3 core).
-The :ts:`page` section defines the so-called PAGE object and the :ts:`config`
+The :typoscript:`page` section defines the so-called PAGE object and the :typoscript:`config`
 section the global site configuration. We will replace the four "Parts" (which
 are shown as comments in the example above) in the following steps.
 
@@ -114,7 +114,7 @@ are shown as comments in the example above) in the following steps.
 Part 1: Fluid Template Section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, extend :ts:`// Part 1: Fluid template section` by the following lines::
+First, extend :typoscript:`// Part 1: Fluid template section` by the following lines::
 
    // Part 1: Fluid template section
    10 = FLUIDTEMPLATE
@@ -155,8 +155,8 @@ Part 2 and 3: CSS and JavaScript File Inclusion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We have combined part 2 and 3, because the inclusion of CSS and JavaScript
-files in TypoScript is pretty straight forward. Extend :ts:`// Part 2: add CSS
-file inclusion` and :ts:`// Part 3: JavaScript file inclusion` by the following
+files in TypoScript is pretty straight forward. Extend :typoscript:`// Part 2: add CSS
+file inclusion` and :typoscript:`// Part 3: JavaScript file inclusion` by the following
 lines::
 
    // Part 2: CSS file inclusion
@@ -186,14 +186,14 @@ lines::
 .. https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
 .. integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 
-Section :ts:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
+Section :typoscript:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
 Bootstrap library from an external source. It also includes file
 :file:`website.css` from the sitepackage extension. We have copied this file
 into the appropriate folder before.
 
-Section :ts:`includeJSFooter { ... }` includes four JavaScript files in total.
+Section :typoscript:`includeJSFooter { ... }` includes four JavaScript files in total.
 The first three are externally hosted files (jQuery, Popper and Bootstrap).
-Therefore, :ts:`.external = 1` forces TYPO3, not to check for their local
+Therefore, :typoscript:`.external = 1` forces TYPO3, not to check for their local
 existence. The fourth JavaScript file is the file we added before to the site
 package extension itself.
 
@@ -201,7 +201,7 @@ package extension itself.
 Part 4: Global Site Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, extend :ts:`// Part 4: global site configuration` by adding the following
+Finally, extend :typoscript:`// Part 4: global site configuration` by adding the following
 lines. There is no need to understand what these lines exactly do. Feel free
 to simply copy them from this tutorial. Explaining each line of the code would
 go beyond the scope of this tutorial. A detailed documentation of all
