@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _extension-installation:
 
@@ -7,8 +7,8 @@ Extension installation
 ======================
 
 This tutorial assumes that your TYPO3 instance is a brand new installation,
-without any themes, templates, pages or content. See the :ref:`TYPO3
-Installation Guide <t3install:start>` for a detailed explanation how to set up
+without any themes, templates, pages or content. See the :doc:`TYPO3
+Installation Guide <t3install:Index>` for a detailed explanation how to set up
 a TYPO3 instance from scratch.
 
 We highly recommend to use :ref:`the Composer -based installation process

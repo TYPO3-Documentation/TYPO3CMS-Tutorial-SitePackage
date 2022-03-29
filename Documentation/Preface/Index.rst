@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _preface:
@@ -22,7 +22,7 @@ templates (HTML, CSS, JavaScript files, etc.) into a standalone
 Target Audience
 ===============
 
-This tutorial is written for TYPO3 integrators and developers. 
+This tutorial is written for TYPO3 integrators and developers.
 It requires a basic understanding of HTML, CSS and JavaScript.
 Readers should have some exposure to TYPO3 and its administrative interface (the
 *backend*) prior to following this documentation. This tutorial does not require any

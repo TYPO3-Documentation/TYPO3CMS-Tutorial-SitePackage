@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _design-template:
@@ -53,7 +53,7 @@ fact, these files can be ignored (we will include the Bootstrap framework using
 TypoScript as shown in section :ref:`file-setup-typoscript`). The CSS file
 :file:`website.css` implements the custom styles used for the website. Same as
 the JavaScript file :file:`website.js`, which contains custom JavaScript code.
-The only file inside the :file:`images/` directory is a simple logo. Let's 
+The only file inside the :file:`images/` directory is a simple logo. Let's
 assume this is a square image of 100px width by 100px height.
 
 Another file we can ignore is the jQuery library :file:`jquery-3.2.1.min.js` in
