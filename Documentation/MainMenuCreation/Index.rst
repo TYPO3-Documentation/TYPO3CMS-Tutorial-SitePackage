@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _main-menu-creation:
@@ -11,7 +11,7 @@ At this point, we have a working *frontend* for our website, but an important pa
 is missing: there is no easy way to navigate through the pages, which is a
 crucial part of any website. The following section explains how to implement
 a simple one-level menu by using TYPO3's Frontend Data Processor
-`MenuProcessor`. Other options are available (e.g. the :ts:`HMENU cObject` as
+`MenuProcessor`. Other options are available (e.g. the :typoscript:`HMENU cObject` as
 described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
 
 
@@ -21,7 +21,7 @@ Add 'MenuProcessor'
 ===================
 
 Open file :file:`Configuration/TypoScript/setup.typoscript` and locate the part
-which defines the :ts:`FLUIDTEMPLATE`. Add the :ts:`dataProcessing { ... }` section
+which defines the :typoscript:`FLUIDTEMPLATE`. Add the :typoscript:`dataProcessing { ... }` section
 below the paths declarations as follows.
 
 .. code-block:: typoscript
@@ -50,7 +50,7 @@ below the paths declarations as follows.
       }
    }
 
-Note the directive :ts:`as = mainnavigation`: this defines the name of the menu
+Note the directive :typoscript:`as = mainnavigation`: this defines the name of the menu
 which will be used in the next step. It is 'mainnavigation' in this case.
 
 
@@ -59,7 +59,7 @@ which will be used in the next step. It is 'mainnavigation' in this case.
 Update Fluid and Implement Main Menu
 ====================================
 
-To make the output of the :ts:`MenuProcessor` visible at the frontend, we have to
+To make the output of the :typoscript:`MenuProcessor` visible at the frontend, we have to
 adjust the Fluid template slightly. You may remember that we moved the
 main menu to the Fluid layout file, which is located under
 :file:`Resources/Private/Layouts/Page/Default.html` (see section
@@ -100,20 +100,20 @@ main menu to the Fluid layout file, which is located under
 
 The changes are inside the :html:`<ul> ... </ul>` tags. The new code extends the
 list by using a "For-ViewHelper", which builds a loop and iterates variable
-`mainnavigation` as single items named :ts:`mainnavigationItem`. Each item
+`mainnavigation` as single items named :typoscript:`mainnavigationItem`. Each item
 represents one link to a page in the menu. The attributes we are using are:
 
-* :ts:`mainnavigationItem.link`: the actual link to the page or external
+* :typoscript:`mainnavigationItem.link`: the actual link to the page or external
   resource
 
-* :ts:`mainnavigationItem.target`: if the link should be opened in a new window
+* :typoscript:`mainnavigationItem.target`: if the link should be opened in a new window
   for example
 
-* :ts:`mainnavigationItem.title`: the page or link title
+* :typoscript:`mainnavigationItem.title`: the page or link title
 
 The construct :html:`{f:if(condition: mainnavigationItem.active, then: 'active')}`
 is a special case. This is called an *inline notation*, that outputs the word
-`active`, if variable :ts:`mainnavigationItem.active` is set. In this example,
+`active`, if variable :typoscript:`mainnavigationItem.active` is set. In this example,
 the inline notation is used to output :html:`active` as the CSS class name.
 
 
