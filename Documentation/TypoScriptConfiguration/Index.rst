@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. highlight:: typoscript
 
 
@@ -19,7 +19,7 @@ documentation about TypoScript exists, which can be overwhelming sometimes.
 
 As part of this tutorial, we focus on the basics only and how to apply them. A
 documentation about TypoScript and all its objects, properties
-and functions can be found in the :ref:`TypoScript Reference <t3tsref:start>`.
+and functions can be found in the :doc:`TypoScript Reference <t3tsref:Index>`.
 
 .. _files-and-directories:
 
@@ -172,14 +172,14 @@ folder :file:`Configuration/Typoscript/Setup/` with the following content:
 
 .. include:: /CodeSnippets/TypoScript/Part2CssFileInclusion.rst.txt
 
-Section :ts:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
+Section :typoscript:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
 Bootstrap library from an external source. It also includes file
 :file:`website.css` from the site package extension. We have copied this file
 into the appropriate folder before.
 
-Section :ts:`includeJSFooter { ... }` includes four JavaScript files in total.
+Section :typoscript:`includeJSFooter { ... }` includes four JavaScript files in total.
 The first three are externally hosted files (jQuery, Popper and Bootstrap).
-Therefore, :ts:`.external = 1` forces TYPO3, not to check for their local
+Therefore, :typoscript:`.external = 1` forces TYPO3, not to check for their local
 existence. The fourth JavaScript file is the file we added before to the site
 package extension itself.
 
