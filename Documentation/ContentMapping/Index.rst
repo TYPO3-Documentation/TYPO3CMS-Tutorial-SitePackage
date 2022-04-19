@@ -131,7 +131,10 @@ layouts or looking up content up the page tree.
 
 For the second layout we create a second file at
 :file:`Configuration/TsConfig/Page/PageLayout/TwoColumns.tsconfig` with the
-following content::
+following content:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TsConfig/Page/PageLayout/TwoColumns.tsconfig
 
    mod.web_layout.BackendLayouts {
        TwoColumns {
@@ -183,7 +186,10 @@ Just like with the menu, the content can also be displayed by using
 a data processor, the :php:`DatabaseQueryProcessor`.
 
 Define the data processor in :typoscript:`page.10.dataProcessing` beside the
-data processors of the menu::
+data processors of the menu:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page {
      10 {
@@ -203,7 +209,10 @@ data processors of the menu::
 In the Fluid template there will be a variable called "mainContent" available,
 containing an array of all contents of this column on the current page.
 
-We need one data processor for each column so lets add the other two::
+We need one data processor for each column so lets add the other two:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page {
      10 {
@@ -243,6 +252,7 @@ Simply replace these lines with the cObject-ViewHelper (`<f:cObject ... >`),
 so that file :file:`Default.html` shows the following HTML code.
 
 .. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Templates/Page/Default.html
 
    <f:layout name="Default" />
    <f:section name="Main">
@@ -291,6 +301,7 @@ As you can see in the static html template, the jumbotron consist of a headline
 and a text:
 
 .. code-block:: html
+   :caption: theme/index.html
 
    <div class="jumbotron">
        <div class="container">
@@ -304,6 +315,7 @@ information. However the output of the Standard content element "Text" look
 like this:
 
 .. code-block:: html
+   :caption: Example HTML Output
 
    <div id="c215" class="frame frame-default frame-type-text frame-layout-0">
       <header>
@@ -326,6 +338,7 @@ content we will render it ourselves in this partial. Add the debug view helper
 to the partial to see what the data of the jumbotronContent looks like:
 
 .. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html
 
    <div class="jumbotron">
       <f:debug>{jumbotronContent}</f:debug>
@@ -337,6 +350,7 @@ As you can see the data of the actually :sql:`tt_content` record can be found in
 elements:
 
 .. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html
 
    <div class="jumbotron">
        <f:for each="{jumbotronContent}" as="contentElement">

@@ -262,7 +262,10 @@ character.
 
 Now, remove the lines from file
 :file:`Resources/Private/Templates/Page/Default.html` and replace them with the
-following single line::
+following single line:
+
+.. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Templates/Page/Default.html
 
    <f:render partial="Jumbotron" />
 
@@ -276,7 +279,10 @@ knows the file name and its location: :file:`Partials/Page/Jumbotron.html`.
 
 Let us also move the navigation part into the file
 :file:`Partials/Page/Navigation/MainNavigation.html`. As the navigation will
-contain dynamic parts we forward all variables as arguments::
+contain dynamic parts we forward all variables as arguments:
+
+.. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Partials/Page/Navigation/MainNavigation.html
 
    <f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>
 
@@ -313,7 +319,10 @@ The website layout file
 
 Now, let's implement the website layout file. First, we create a new file
 :file:`Default.html` inside the directory
-:file:`site_package/Resources/Private/Layouts/Page/` and add the following line::
+:file:`site_package/Resources/Private/Layouts/Page/` and add the following line:
+
+.. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Layouts/Page/Default.html
 
    <f:render section="Main" />
 

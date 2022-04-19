@@ -35,6 +35,7 @@ Let's assume, we have the following directories and files, which represent a
 typical website theme as we know it from a static website.
 
 .. code-block:: none
+   :caption: An example theme
 
     theme/css/
     theme/css/bootstrap.min.css
@@ -74,6 +75,7 @@ A typical HTML document consists of a *header* and a *body* section. These
 parts are wrapped by the :html:`<html> ... </html>` tags as shown below.
 
 .. code-block:: html
+   :caption: theme/index.html
 
    <html>
       <head>
