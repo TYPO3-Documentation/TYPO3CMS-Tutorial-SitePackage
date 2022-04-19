@@ -73,7 +73,7 @@ at :file:`local_packages/site_package/`. For example if you defined the name as
 require it by:
 
 .. code-block:: bash
-   :caption: Execute in direcory page_root
+   :caption: Execute in directory page_root
 
     composer require myvendor/site-package-myproject:@dev
 
