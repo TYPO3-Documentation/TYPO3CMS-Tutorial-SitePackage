@@ -42,6 +42,7 @@ The final code of the sitepackage extension can be retrieved from the
 
    Preface/Index
    Introduction/Index
+   MinimalExample/Index
    DesignTemplate/Index
    FluidTemplates/Index
    TypoScriptConfiguration/Index
