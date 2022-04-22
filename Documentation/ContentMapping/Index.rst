@@ -59,7 +59,7 @@ This syntax imports all files ending on `.tsconfig` from the specified folder.
 When there is only one site in your installation or all sites share the same 
 configurations we suggest to include this file globally as decribed here. 
 See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig 
-certain page tree.
+for a certain page tree.
 
 Then create a file
 :file:`Configuration/TsConfig/Page/PageLayout/Default.tsconfig` with the
