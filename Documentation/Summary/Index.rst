@@ -151,6 +151,13 @@ developed by Benjamin Kott: the `sitepackage builder
 Videos on YouTube
 -----------------
 
+TYPO3 has an `official YouTube channel <https://www.youtube.com/channel/UCwpl8LY9Tr3PB26Kk2FYW_w>`__.
+
+You can find helpful videos about TYPO3 there, but not very much
+about templating on a beginner level.
+
+A video that may be useful:
+
 In this three-parts series, Mathias Schreiber and Benjamin Kott set up a TYPO3
 site from scratch by building a sitepackage extension.
 
@@ -182,3 +189,28 @@ Tutorial - Sitepackages - Part 3 of 3
 .. only:: html or singlehtml
 
    .. youtube:: SEoWOBT0rQE
+
+Searches
+========
+
+Other than the docs.typo3.org references, you can find additional information by
+searching the Web. For example, try a search phrase such as
+[ :aspect:`typo3 fluid` ] on a popular video website. If you have a specific
+problem, think of key words or concepts to use in a search phrase. While
+writing this tutorial, Web searches led to these specific references.
+
+Questions
+=========
+
+Lastly, after searching to find information already published, you may want
+to ask the TYPO3 community.
+
+You can get information about where to get help on https://typo3.org/help.
+
+Specifically, choose one of these options:
+
+#. Ask **programming related questions** on
+   `Stack Overflow <https://stackoverflow.com/search?q=typo3>`__ using the tag "typo3"
+#. Ask general TYPO3 questions in the Slack channel #typo3-cms in the
+   `TYPO3 Slack workspace <https://typo3.slack.com>`__.
+   `Get your Slack invitation <https://my.typo3.org/slack/invite>`__ first.

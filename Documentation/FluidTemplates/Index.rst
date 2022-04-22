@@ -441,3 +441,9 @@ Move the `<nav> ... </nav>` part from file
 Do not forget to remove the lines from the
 :file:`Resources/Private/Templates/Page/Default.html` file. If you do not
 remove them, the menu would appear twice in the frontend.
+
+
+.. toctree::
+   :titlesonly:
+
+   MoreInformation/Index
