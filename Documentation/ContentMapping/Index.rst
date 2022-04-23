@@ -40,18 +40,26 @@ Dynamic Content Rendering in TypoScript
 
 .. highlight:: typoscript
 
-Create a new directory :file:`Configuration/TsConfig/Page/` and inside this
-directory, a new file called :file:`Page.tsconfig` with the following
+Create a file at :file:`Configuration/page.tsconfig` with the following
 content:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TsConfig/Page/Page.tsconfig
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
    @import 'EXT:site_package/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
 
-This file imports all files ending on `.tsconfig` from the specified folder.
-The file :file:`Page.tsconfig` could for example handle other page TsConfig
-configurations or their imports.
+This syntax imports all files ending on `.tsconfig` from the specified folder.
+
+.. note::
+   Starting with TYPO3 12 the file :file:`Configuration/page.tsconfig` is
+   automatically loaded during build time. See
+   :ref:`t3tsconfig:setting-page-tsconfig` on how to load the file in older
+   TYPO3 versions.
+   
+When there is only one site in your installation or all sites share the same 
+configurations we suggest to include this file globally as decribed here. 
+See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig 
+for a certain page tree.
 
 Then create a file
 :file:`Configuration/TsConfig/Page/PageLayout/Default.tsconfig` with the
