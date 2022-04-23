@@ -65,11 +65,17 @@ It is best practise to use them for values that might
 want to be changed later on like paths, ids of important pages (contact,
 imprint, a system folder that contains certain records, ...).
 
-You could for example define the title of your page in a TypoScript constant::
+You could for example define the title of your page in a TypoScript constant:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    mysitepackage.page.title = My cool project
 
-And later on use it somewhere in your TypoScript setup to output it on your page::
+And later on use it somewhere in your TypoScript setup to output it on your page:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.footer = TEXT
    lib.footer.value = {$mysitepackage.page.title}

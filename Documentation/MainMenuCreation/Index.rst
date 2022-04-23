@@ -25,6 +25,7 @@ which defines the :typoscript:`FLUIDTEMPLATE`. Add the :typoscript:`dataProcessi
 below the paths declarations as follows.
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    // Part 1: Fluid template section
    10 = FLUIDTEMPLATE
@@ -66,6 +67,7 @@ main menu to the Fluid layout file, which is located under
 :ref:`the-website-layout-file`). Open this file and adjust it as shown here:
 
 .. code-block:: html
+   :caption: EXT:site_package/Resources/Private/Layouts/Page/Default.html
 
    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>

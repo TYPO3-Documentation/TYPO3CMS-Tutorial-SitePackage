@@ -41,6 +41,7 @@ to add the path as a local repository.
 Add the following lines:
 
 .. code-block:: json
+   :caption: page_root/composer.json
 
    {
       "name": "myvendor/my-project",
@@ -63,6 +64,7 @@ Move your the extension folder :file:`site_package` directly into the folder
 at :file:`local_packages/site_package/`. For example if you defined the name as
 
 .. code-block:: json
+   :caption: local_packages/site_package/composer.json
 
    {
       "name": "myvendor/site-package-myproject"
@@ -71,6 +73,7 @@ at :file:`local_packages/site_package/`. For example if you defined the name as
 require it by:
 
 .. code-block:: bash
+   :caption: Execute in directory page_root
 
     composer require myvendor/site-package-myproject:@dev
 
