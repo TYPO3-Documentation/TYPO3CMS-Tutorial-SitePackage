@@ -345,3 +345,9 @@ part from file
 Do not forget to remove the line from the
 :file:`Resources/Private/Templates/Page/Default.html` file. If you do not
 remove them, the menu would appear twice in the frontend.
+
+
+.. toctree::
+   :titlesonly:
+
+   MoreInformation/Index
