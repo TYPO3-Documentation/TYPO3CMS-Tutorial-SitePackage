@@ -48,10 +48,10 @@ Fluid in depth
          .. container:: card-body
 
             This is a resource for developing extensions using
-            Extbase and Fluid. The part about Extbase will not be relevant for you when
-            creating a site template, but you might find useful information in the Fluid
-            section :ref:`t3extbasebook:fluid-start`. Do note that this manual has a different scope,
-            as the Fluid here is used for generating output for Plugins.
+            Extbase and Fluid. The Extbase chapter is not required when
+            creating site templates, however the information in the Fluid
+            section :ref:`t3extbasebook:fluid-start` may be of use. Note that 
+            the Fluid examples in this resource are used for generating output in Plugins.
 
    .. container:: col-md-6 pl-0 pr-3 py-3 m-0
 
@@ -64,7 +64,7 @@ Fluid in depth
          .. container:: card-body
 
             This is a resource for developing extensions using
-            Extbase and Fluid. The part about Extbase will not be relevant for you when
-            creating a site template, but you might find useful information in the Fluid
-            section :ref:`t3extbasebook:fluid-start`. Do note that this manual has a different scope,
-            as the Fluid here is used for generating output for Plugins.
+            Extbase and Fluid. The Extbase chapter is not required when
+            creating site templates, however the information in the Fluid
+            section :ref:`t3extbasebook:fluid-start` may be of use. Note that 
+            the Fluid examples in this resource are used for generating output in Plugins.
