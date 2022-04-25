@@ -127,9 +127,6 @@ Videos on YouTube
 
 TYPO3 has an `official YouTube channel <https://www.youtube.com/channel/UCwpl8LY9Tr3PB26Kk2FYW_w>`__.
 
-You can find helpful videos about TYPO3 there, but not very much
-about templating on a beginner level.
-
 A video that may be useful:
 
 In this three-parts series, Mathias Schreiber and Benjamin Kott set up a TYPO3
