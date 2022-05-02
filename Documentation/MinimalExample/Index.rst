@@ -52,7 +52,7 @@ then add the following lines in the field:
 Create a file named :file:`Minimal.html` in a
 :file:`typo3conf/site_package/Resources/Private/Templates` folder.
 
-The site package extension has to be :ref:installed <extension-installation>`
+The site package extension has to be :ref:`installed <extension-installation>`
 for this to work
 
 .. code-block:: html
