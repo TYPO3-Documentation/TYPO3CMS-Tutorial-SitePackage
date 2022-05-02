@@ -142,7 +142,7 @@ Part 1: Fluid template section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, create a file called :file:`Part1FluidTemplateSection.typoscript` in the
-folder :file:`Configuration/Typoscript/Setup/` with the following content:
+folder :file:`Configuration/TypoScript/Setup/` with the following content:
 
 .. include:: /CodeSnippets/TypoScript/Part1FluidTemplateSection.rst.txt
 
@@ -174,7 +174,7 @@ Part 2 and 3: CSS and JavaScript file inclusion
 We have combined part 2 and 3, because the inclusion of CSS and JavaScript
 files in TypoScript is pretty straight forward. Create a file called
 :file:`Part2CssFileInclusion.typoscript` in the
-folder :file:`Configuration/Typoscript/Setup/` with the following content:
+folder :file:`Configuration/TypoScript/Setup/` with the following content:
 
 .. include:: /CodeSnippets/TypoScript/Part2CssFileInclusion.rst.txt
 
