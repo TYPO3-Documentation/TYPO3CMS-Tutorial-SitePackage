@@ -50,9 +50,10 @@ then add the following lines in the field:
    page.1.file = EXT:site_package/Resources/Private/Templates/Minimal.html
 
 Create a file named :file:`Minimal.html` in a
-:file:`typo3conf/site_package/Resources/Private/Templates` folder.
+:file:`typo3conf/ext/site_package/Resources/Private/Templates` folder.
 
 The site package extension has to be :ref:`installed <extension-installation>`
+and requires a :ref:`minimal composer configuration <extension-configuration>` (if composer is used)
 for this to work
 
 .. code-block:: html
