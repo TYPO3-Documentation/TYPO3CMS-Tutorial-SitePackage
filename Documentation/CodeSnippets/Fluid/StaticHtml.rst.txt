@@ -1,4 +1,4 @@
-.. Automatic screenshot: Remove this line if you want to manually change this file
+.. Manual code snippet
 
 .. code-block:: html
    :caption: EXT:site_package/Resources/Public/StaticTemplate/index.html
@@ -31,7 +31,7 @@
                    </ul>
                </div>
            </nav>
-   
+
            <main role="main">
                <div class="jumbotron">
                    <div class="container">
@@ -54,4 +54,3 @@
            </main>
        </body>
    </html>
-   
