@@ -1,5 +1,3 @@
-:orphan:
-
 .. include:: /Includes.rst.txt
 
 .. _extension-installation_without_composer:
