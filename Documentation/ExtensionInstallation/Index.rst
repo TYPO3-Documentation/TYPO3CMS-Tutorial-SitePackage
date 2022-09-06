@@ -83,3 +83,9 @@ require it by:
    automatically considered active. In previous versions it is still necessary
    to activate the extension after the Composer-based installation via the
    :guilabel:`Extension Manager`.
+
+.. toctree::
+   :titlesonly:
+   :glob:
+
+   *
