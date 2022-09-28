@@ -84,7 +84,7 @@ will be delivered to the user (website visitors) *as they are*. These are
 **static** files which are not modified by TYPO3 at all before they are sent to
 the user.
 
-The :file:`Private/` directory with its four sub-folders :file:`Languages/`,
+The :file:`Private/` directory with its four sub-folders :file:`Language/`,
 :file:`Layouts/`, :file:`Partials/` and :file:`Templates/` in contrast, require
 some explanation.
 
@@ -186,7 +186,7 @@ As a result, we end up with the following structure.
    site_package
    └── Resources
        ├── Private
-       │   ├── Languages
+       │   ├── Language
        │   ├── Layouts
        │   │   └── Page
        │   ├── Partials
