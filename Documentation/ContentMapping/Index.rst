@@ -13,6 +13,57 @@ map some of the backend columns, which hold content elements such as text,
 images, etc. to areas in the frontend. This can be achieved easily by using
 custom TypoScript.
 
+Go to **WEB → Page** and select the main "example.com" page. Click the Edit page
+properties icon and then click the **Resources** tab. At the bottom of the page
+under **Page TSconfig** paste the following::
+
+   mod.web_layout.BackendLayouts {
+      simple_3_col {
+         title = Simple 3 Column
+         config {
+            backend_layout {
+               colCount = 4
+               rowCount = 1
+               rows {
+                  1 {
+                     columns {
+                        1 {
+                           name = Left
+                           colPos = 1
+                           colspan = 1
+                        }
+                        2 {
+                           name = Normal
+                           colPos = 0
+                           colspan = 1
+                        }
+                        3 {
+                           name = Right
+                           colPos = 2
+                           colspan = 1
+                        }
+                        4 {
+                           name = Border
+                           colPos = 4
+                           colspan = 1
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+Click the Save button. Now go to the **Appearance tab** and choose "Simple 3 Column"
+under **Backend Layout (this page only)** and **Backend Layout (subpages of this
+page)**. Because this layout is assigned to subpages of "example.com" you do not
+have to assign it to "Page 1", "Page 2", etc.
+
+.. figure:: SetBackendLayouts.png
+   :alt: Set Backend Layouts
+   :class: with-shadow
+
 More information about setting up various columns and rows can be found at the
 page :ref:`Backend layout <t3coreapi:be-layout>`.
 
