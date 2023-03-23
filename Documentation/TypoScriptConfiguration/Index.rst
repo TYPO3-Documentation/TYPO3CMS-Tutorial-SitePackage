@@ -59,7 +59,7 @@ setup through out the project.
 .. note::
    TypoScript constants are only interpreted as such, when they are added to
    the correct location. They need to be added to the file
-   file:`constants.typoscript` or a file or path included from this file.
+   :file:`constants.typoscript` or a file or path included from this file.
 
 It is best practise to use them for values that might
 want to be changed later on like paths, ids of important pages (contact,
