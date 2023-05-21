@@ -47,7 +47,7 @@ Another important benefit of a TYPO3 extension is the fact that dependencies to
 other extensions and/or the TYPO3 version can be defined. This makes
 deployments easier and more fail-safe. This feature is called "Dependency
 Management". Most TYPO3 sites require a number of extensions. This could be
-"News", "Powermail" or "RealURL" for example. By building a sitepackage
+"News" or "Powermail" for example. By building a sitepackage
 extension, which may contain global configuration for these add-ons, the
 dependencies can be defined. When the sitepackage extension is installed in an
 empty TYPO3 instance, all dependent extensions are downloaded from the `TYPO3
