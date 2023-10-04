@@ -33,7 +33,7 @@ Git.
 
 Therefore create a directory for all locally version-controlled extension at
 root-level of your Composer -based installation. The name is arbitrary, we use
-:file:`local_packages` here.
+:file:`packages` here.
 
 Then edit your :file:`composer.json` in the root of your installation directory
 to add the path as a local repository.
@@ -48,7 +48,7 @@ Add the following lines:
       "repositories": [
          {
             "type": "path",
-            "url": "./local_packages/*"
+            "url": "./packages/*"
          }
       ],
       "require": {
@@ -59,12 +59,12 @@ Add the following lines:
    }
 
 Move your the extension folder :file:`site_package` directly into the folder
-:file:`local_packages`. Then *require* the extension via Composer  using the
+:file:`packages`. Then *require* the extension via Composer  using the
 `name` defined in the site package extensions :file:`composer.json` now located
-at :file:`local_packages/site_package/`. For example if you defined the name as
+at :file:`packages/site_package/`. For example if you defined the name as
 
 .. code-block:: json
-   :caption: local_packages/site_package/composer.json
+   :caption: packages/site_package/composer.json
 
    {
       "name": "myvendor/site-package-myproject"
