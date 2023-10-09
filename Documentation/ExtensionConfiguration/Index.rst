@@ -15,35 +15,40 @@ advise) the extension needs to contain its own :file:`composer.json`.
 
 .. include:: /CodeSnippets/ExtensionConfiguration/ComposerJson.rst.txt
 
-For historic reasons TYPO3 extension names have to be written in lower case
-separated by underscores. We suggest to use the extension key for the directory
-of the extension as well to minimize confusion. So the extension in the path
-:file:`site_package` has to have the
-same "extension-key" to be defined in the "extra" section of the composer.json.
+For historic reasons TYPO3 extension names are written in
+lower case words and separated by underscores if there are more than one. This
+is known as the extension key.The directory containing the extension should have
+the same name as the extension key. Composer package names are written in
+lower-case words but are separated with dashes if there is more than one word.
 
-The Composer name defined as "name" however has to consist of a vendor name
-followed by a forward slash and the lowercase extension name with minus scores.
+At the top of the composer.json file we see the composer package name
+:file:`t3docs/site-package` (with a dash) and at the bottom we see the TYPO3
+extension key in the extras section - :file:`site_package` (with an underscore).
+The Composer "name" consists of a vendor name followed by a forward slash and the
+lowercase extension name with dashes.
+
+
 
 .. hint::
-   If composer does not find your site-package extension check if you are
-   using the correct separation chars in the correct places.
+   Make sure you don't mix up your underscores and dashes otherwise composer
+   will not find your site-package extension.
 
 .. _extension-manager-configuration:
 
 Extension declaration file :file:`ext_emconf.php`
 =================================================
 
-Since version 11 this file is only mandatory if you are not using Composer.
+From version 11 this file is only mandatory if you are not using Composer.
 If you are using Composer you can omit this file as it is ignored by TYPO3
 anyway.
 
-If you are using a TYPO3 version below 11 or need to refrain from using
+If you are using a TYPO3 version below 11 or can't use
 Composer for some reason create a file called :file:`ext_emconf.php` in
 the root level of the extension. The content should look as follows:
 
 .. include:: /CodeSnippets/ExtensionConfiguration/ExtEmconf.rst.txt
 
-The values can and should be customized of course. A more meaningful and longer
+The values can and should be customized. A more meaningful and longer
 description is recommended.
 
 A detailed description of all configuration options can be found in
@@ -111,5 +116,5 @@ it stands now.
     site_package/Resources/Public/JavaScript
     site_package/Resources/Public/JavaScript/website.js
 
-At this point we can install the sitepackage extension in a TYPO3 instance,
+At this point we can install the sitepackage extension in an TYPO3 instance,
 which we will do in the next step.
