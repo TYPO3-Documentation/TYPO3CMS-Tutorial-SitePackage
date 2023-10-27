@@ -46,7 +46,7 @@ TYPO3 extensions allow dependencies to other extensions and/or the TYPO3 version
 to be defined. This is called "Dependency Management" and makes deployment easy
 and fail-safe. Most TYPO3 sites are dependent on a number of extensions. Some
 examples are "News" or "Powermail". A sitepackage extension which contains
-global configuration variables for these extensions will define the dependencies
+global configuration settings for these extensions will define the dependencies
 for you. When the sitepackage extension is installed in an
 empty TYPO3 instance, all dependent extensions are automatically downloaded from
 the `TYPO3 Extension Repository <https://extensions.typo3.org>`__ and installed.
