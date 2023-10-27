@@ -66,7 +66,7 @@ Now view the web page.
 
 Here we are putting the page content into a separate HTML file, allowing for
 separate access control and for an editing workflow that does not need much
-TypoScript. The CMS renderer still requires a TypoScript template on the
+TypoScript. The TYPO3 renderer still requires a TypoScript template on the
 :guilabel:`Minimal design` page to know which file to process.
 
 Resulting web page
