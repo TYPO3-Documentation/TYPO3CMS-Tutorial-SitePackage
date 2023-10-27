@@ -73,7 +73,7 @@ Resulting web page
 ==================
 
 Here is the resulting web page HTML source for both the TypoScript-only and
-the Fluid based implementations. Notice how the CMS has added default markup
+the Fluid based implementations. Notice how TYPO3 has added default markup
 around the single line of content:
 
 .. code-block:: html
