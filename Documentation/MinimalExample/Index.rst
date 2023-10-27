@@ -11,7 +11,7 @@ We want to create a site package that outputs a single web page with
 minimal effort. This site package can be used to simply test system output or as
 an example of the fewest possible steps to create a working site package.
 
-To start, in the CMS backend, create a standard page named
+To start, in the TYPO3 backend, create a standard page named
 :guilabel:`Minimal example` just under (inside) the page tree TYPO3 logo
 container. Create a new TypoScript template record on this page.
 Give the TypoScript template a title, and make it a root level template,
