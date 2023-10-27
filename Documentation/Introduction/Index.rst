@@ -26,7 +26,7 @@ Using extensions is a powerful way to get the most out of TYPO3. Extensions
 can be installed, uninstalled and replaced. They can extend the core TYPO3
 system with further functions and features. An extension typically
 consists of PHP files, and can also contain design templates (HTML,
-CSS, JavaScript files, etc.) and global configuration variables. The visual
+CSS, JavaScript files, etc.) and global configuration settings. The visual
 appearance of a website does not necessarily require any PHP code. However, the
 sitepackage extension described in this tutorial contains exactly two PHP files
 (plus a handful of HTML/CSS and configuration files) and is an *extension* to
