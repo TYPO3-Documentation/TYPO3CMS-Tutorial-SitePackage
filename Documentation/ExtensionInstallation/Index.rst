@@ -78,7 +78,7 @@ require it by:
 
 .. hint::
 
-   From TYPO3 11.4 all extensions required via Composer are
+   From TYPO3 v11.4 all extensions required via Composer are
    automatically active. In previous versions it was still necessary
    to activate the extension after the Composer-based installation via the
    :guilabel:`Extension Manager`.
