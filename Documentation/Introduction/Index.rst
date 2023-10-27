@@ -55,7 +55,7 @@ Clean Separation from the Userspace
 -----------------------------------
 In a TYPO3 installation that doesn't use extensions, template files are often
 stored in the :file:`fileadmin/` directory. Files in
-this directory are indexed by TYPO3's File Abstraction Layer (FAL) resulting in
+this directory are indexed by TYPO3's :ref:`File Abstraction Layer (FAL) <t3coreapi:fal>` resulting in
 possibly irrelevant records in the database. To avoid this the :file:`fileadmin/`
 area should be seen as a "userspace" which is only available for editors to
 use. Even if access permissions restrict editors from accessing or manipulating
