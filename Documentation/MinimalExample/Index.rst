@@ -7,14 +7,14 @@
 Minimal example
 ===============
 
-Here, we intend to create a site package that outputs a single web page with the
-minimal effort. This site package can serve to test system output or as an
-example of the fewest required steps to create a working site package.
+We want to create a site package that outputs a single web page with
+minimal effort. This site package can be used to simply test system output or as
+an example of the fewest possible steps to create a working site package.
 
-For this example, in the CMS backend, create a standard page named
+To start, in the TYPO3 backend, create a standard page named
 :guilabel:`Minimal example` just under (inside) the page tree TYPO3 logo
-container. On this standard page, create a new TypoScript template record.
-Give the new TypoScript template a title, and make it a root level template,
+container. Create a new TypoScript template record on this page.
+Give the TypoScript template a title, and make it a root level template,
 but do not include any static templates.
 
 The TypoScript-only version
@@ -32,15 +32,16 @@ In the TypoScript template Setup field, add the following three lines:
 View the web page.
 
 This TypoScript-only design has the least instructions required to output a
-web page from the CMS. This TypoScript template is self contained,
-there are no other files or database records needed. Changing this content
-requires the appropriate access needed to make changes to TypoScript templates. 
+web page from TYPO3. This TypoScript template is self contained and
+no other files or database records needed. Changing this content
+only requires the appropriate access needed to make changes to TypoScript
+templates.
 
 The TYPO3 Fluid version
 =======================
 
 Empty the :guilabel:`Minimal design` page TypoScript template Setup field,
-then add the following lines in the field:
+then add the following lines:
 
 .. code-block:: typoscript
    :caption: TypoScript Setup
@@ -63,16 +64,17 @@ for this to work
 
 Now view the web page.
 
-This approach puts the page content into a HTML file, allowing for separate
-access controls and it also allows for an editing workflow that does not need as much TypoScript.
-The CMS renderer still requires a TypoScript template on the :guilabel:`Minimal design` page to know what file to process for the page content.
+Here we are putting the page content into a separate HTML file, allowing for
+separate access control and for an editing workflow that does not need much
+TypoScript. The TYPO3 renderer still requires a TypoScript template on the
+:guilabel:`Minimal design` page to know which file to process.
 
 Resulting web page
 ==================
 
 Here is the resulting web page HTML source for both the TypoScript-only and
-the Fluid based implementations. Notice how the CMS added default markup
-surrounding the single line of content:
+the Fluid based implementations. Notice how TYPO3 has added default markup
+around the single line of content:
 
 .. code-block:: html
    :caption: Example frontend output
