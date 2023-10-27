@@ -30,7 +30,7 @@ lowercase extension name with dashes.
 
 
 .. hint::
-   Make sure you don't mix up your underscores and dashes otherwise composer
+   Make sure you don't mix up your underscores and dashes otherwise Composer
    will not find your site-package extension.
 
 .. _extension-manager-configuration:
