@@ -21,7 +21,7 @@ is known as the extension key. The directory containing the extension should hav
 the same name as the extension key. Composer package names are written in
 lower-case words but are separated with dashes if there is more than one word.
 
-At the top of the composer.json file we see the composer package name
+At the top of the :file:`composer.json` file we see the composer package name
 :file:`t3docs/site-package` (with a dash) and at the bottom we see the TYPO3
 extension key in the extras section - :file:`site_package` (with an underscore).
 The Composer "name" consists of a vendor name followed by a forward slash and the
