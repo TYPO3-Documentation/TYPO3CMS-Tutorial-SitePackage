@@ -24,7 +24,7 @@ installation without Composer <extension-installation_without_composer>`.
 Extension installation in Composer mode
 =======================================
 
-From TYPO3 11.4 if composer is used, all extensions, including our
+From TYPO3 v11.4 if composer is used, all extensions, including our
 site package extension, must be installed via Composer.
 
 As a site package is created with site-specific files it is usually best to keep
