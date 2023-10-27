@@ -32,7 +32,7 @@ the files together in a version control system such as Git.
 
 Create a directory for local version-controlled extensions at the
 root-level of your Composer-based installation. The name is arbitrary, we use
-:file:`packages` here.
+:file:`packages/` here.
 
 Then edit your :file:`composer.json` in the root of your installation directory
 to add the path as a local repository.
