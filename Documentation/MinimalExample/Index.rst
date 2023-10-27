@@ -32,7 +32,7 @@ In the TypoScript template Setup field, add the following three lines:
 View the web page.
 
 This TypoScript-only design has the least instructions required to output a
-web page from the CMS. This TypoScript template is self contained and
+web page from TYPO3. This TypoScript template is self contained and
 no other files or database records needed. Changing this content
 only requires the appropriate access needed to make changes to TypoScript
 templates.
