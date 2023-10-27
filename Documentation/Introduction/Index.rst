@@ -85,7 +85,7 @@ extension can be shared with the community via the official `TYPO3
 Extension Repository <https://extensions.typo3.org>`__ and/or in a publicly
 accessible version control system such as `GitHub <https://github.com>`__.
 
-Last, but not least, configuration variables in the sitepackage can
+Last, but not least, configuration settings in the sitepackage can
 be overwritten using TypoScript setup and constants.
 
 
