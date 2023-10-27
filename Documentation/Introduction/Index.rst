@@ -71,7 +71,7 @@ configuration files should not be stored in :file:`fileadmin/`.
 
 Deployment
 ----------
-The TYPO3 CMS follows the *convention over configuration*
+TYPO3 follows the *convention over configuration*
 paradigm. If files and directories in the sitepackage
 extension use the naming convention, they are loaded automatically as
 soon as the extension is installed/activated. This means the
