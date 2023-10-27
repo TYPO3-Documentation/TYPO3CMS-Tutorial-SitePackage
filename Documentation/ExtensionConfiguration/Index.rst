@@ -17,7 +17,7 @@ advise) the extension needs to contain its own :file:`composer.json`.
 
 For historic reasons TYPO3 extension names are written in
 lower case words and separated by underscores if there are more than one. This
-is known as the extension key.The directory containing the extension should have
+is known as the extension key. The directory containing the extension should have
 the same name as the extension key. Composer package names are written in
 lower-case words but are separated with dashes if there is more than one word.
 
