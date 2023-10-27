@@ -107,5 +107,5 @@ documentation, for example the :doc:`Getting Started Tutorial <t3start:Index>`.
 
 The sitepackage in this tutorial will build a new, clean website from scratch,
 so it is assumed you have an empty TYPO3 instance with no pages, design
-templates,configuration, etc. You will need a valid TYPO3 backend user login with
+templates, configuration, etc. You will need a valid TYPO3 backend user login with
 administrator privileges and SSH/FTP access to the server is recommended.
