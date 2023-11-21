@@ -137,9 +137,7 @@ Tutorial - Sitepackages - Part 1 of 3
 
 `YouTube: Part 1 of 3 <https://www.youtube.com/watch?v=HtBmim7pc0o>`__
 
-.. only:: html or singlehtml
-
-   .. youtube:: HtBmim7pc0o
+.. youtube:: HtBmim7pc0o
 
 
 Tutorial - Sitepackages - Part 2 of 3
@@ -147,9 +145,7 @@ Tutorial - Sitepackages - Part 2 of 3
 
 `YouTube: Part 2 of 3 <https://www.youtube.com/watch?v=deSMVfCSCXY>`__
 
-.. only:: html or singlehtml
-
-   .. youtube:: deSMVfCSCXY
+.. youtube:: deSMVfCSCXY
 
 
 Tutorial - Sitepackages - Part 3 of 3
@@ -157,9 +153,7 @@ Tutorial - Sitepackages - Part 3 of 3
 
 `YouTube: Part 3 of 3 <https://www.youtube.com/watch?v=SEoWOBT0rQE>`__
 
-.. only:: html or singlehtml
-
-   .. youtube:: SEoWOBT0rQE
+.. youtube:: SEoWOBT0rQE
 
 Searches
 ========
