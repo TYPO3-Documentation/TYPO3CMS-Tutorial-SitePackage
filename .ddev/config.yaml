@@ -16,7 +16,7 @@ hooks:
   post-start:
   - exec: composer install --no-progress
 omit_containers: [dba, ddev-ssh-agent]
-webimage_extra_packages: [parallel]
+webimage_extra_packages: [parallel, build-essential]
 use_dns_when_possible: true
 composer_version: "2.4"
 web_environment:
