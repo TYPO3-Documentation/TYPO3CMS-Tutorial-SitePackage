@@ -60,4 +60,3 @@ The final code of the sitepackage extension can be retrieved from the
    :hidden:
 
    Sitemap
-   genindex
