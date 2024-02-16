@@ -60,4 +60,3 @@ A working copy of the sitepackage extension can be retrieved from the
    :hidden:
 
    Sitemap
-   genindex
