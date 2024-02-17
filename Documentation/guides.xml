@@ -7,6 +7,7 @@
                project-contact="https://typo3.slack.com/archives/C028JEPJL"
                project-repository="https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage"
                project-issues="https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage/issues"
+               interlink-shortcode="t3sitepackage"
                edit-on-github-branch="12.4" edit-on-github="TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage"
                typo3-core-preferred="12.4"/>
     <project title="Sitepackage Tutorial"
