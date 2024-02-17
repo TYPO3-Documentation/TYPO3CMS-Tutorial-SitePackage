@@ -70,7 +70,7 @@ Now save your changes by clicking the :guilabel:`Save` button at the top.
 .. hint::
    The item "Site Package" was created by the file
    :file:`Configuration/TCA/Overrides/sys_template.php` in the step
-   :ref:`Make TypoScript available<make-typoscript-available>`.
+   :ref:`Make TypoScript available <make-typoscript-available>`.
 
 
 Preview the page
