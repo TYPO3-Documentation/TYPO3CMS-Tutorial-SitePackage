@@ -48,17 +48,13 @@ then add the following lines:
 
    page = PAGE
    page.1 = FLUIDTEMPLATE
-   page.1.file = EXT:site_package/Resources/Private/Templates/Minimal.html
+   page.1.file = fileadmin/Minimal.html
 
-Create a file named :file:`Minimal.html` in a
-:file:`typo3conf/ext/site_package/Resources/Private/Templates` folder.
-
-The site package extension has to be :ref:`installed <extension-installation>`
-and requires a :ref:`minimal composer configuration <extension-configuration>` (if composer is used)
-for this to work
+Create a file named :file:`Minimal.html` in the
+:file:`fileadmin` folder.
 
 .. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Templates/Minimal.html
+   :caption: fileadmin/Minimal.html
 
    Hello, world.
 
@@ -68,6 +64,15 @@ Here we are putting the page content into a separate HTML file, allowing for
 separate access control and for an editing workflow that does not need much
 TypoScript. The TYPO3 renderer still requires a TypoScript template on the
 :guilabel:`Minimal design` page to know which file to process.
+
+.. caution::
+   Putting your template files into the `fileadmin` folder is not recommended.
+   It is recommended to use a sitepackage instead. This enables you to set an
+   extension path like `EXT:site_package/Resources/Private/Templates/Minimal.html`
+   in your TypoScript, but needs the extension to be
+   :ref:`installed <extension-installation>` and requires a
+   :ref:`minimal composer configuration <extension-configuration>` (if composer
+   is used) first, which we will look at in the next chapters.
 
 Resulting web page
 ==================
