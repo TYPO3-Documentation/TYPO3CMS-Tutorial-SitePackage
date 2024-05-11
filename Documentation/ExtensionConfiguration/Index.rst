@@ -7,6 +7,9 @@
 Extension Configuration
 =======================
 
+
+.. _extension-configuration-composer:
+
 Composer configuration :file:`composer.json`
 ============================================
 
@@ -42,19 +45,61 @@ Every extension can feature an icon using an SVG, PNG or GIF file.
 The image should be stored in :file:`Resources/Public/Icons/`.
 
 It is recommended that you use an SVG file called :file:`Extension.svg`.
-
 .. _make-typoscript-available:
 
-Make TypoScript available
-=========================
+Set for providing TypoScript
+============================
 
-In order to automatically load the TypoScript files we have created in the
-previous step, a new PHP file :file:`sys_template.php` needs to be created and
-stored in directory :file:`Configuration/TCA/Overrides/`. The content of this file
-should look like the following code:
+..  versionchanged:: 13.1
+    In TYPO3 v13.1 and above the TypoScript files are made available as
+    sets and included in the site. For TYPO3 v12 read the section in
+    the tutorial for TYPO3 v12.4:
+    :ref:`Make TypoScript available (TYPO3 v12.4) <t3sitepackage-12:make-typoscript-available>`.
 
-.. include:: /CodeSnippets/ExtensionConfiguration/TcaOverrideSysTemplate.rst.txt
+In order to make the TypoScript files available, we have created in section
+:ref:`TypoScript configuration <t3sitepackage:typoscript-configuration>` we
+create a site set that can be included by the site configuration later-on.
 
+Create a folder: :path:`Configuration/Sets/MySitePackage/` and put a file
+called :file:`config.yaml` into it:
+
+..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.rst.txt
+
+Line 1 defines the name of the set. As the example site-package extension only
+provides one set, the name of the set should be the same as the
+:ref:`composer name <extension-configuration-composer>`.
+
+In line 4 and 5 dependencies are defined. In this example the site package
+depends on :t3src:`fluid_styled_content`, therefore the sets provided by this
+system extension are included as dependency. By doing so all settings
+and TypoScript definitions provided by the extension are automatically included.
+
+In the same folder we can place a file called :file:`settings.yaml` that we use
+to override some default settings of :t3src:`fluid_styled_content`:
+
+..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-settings.rst.txt
+
+Here we override some values for maximal image width in text-media content
+elements, we enable a lightbox for images and set paths for overriding the
+templates of that extension.
+
+Then we put a file called :file:`setup.typoscript` into this folder. We use
+this file to include all TypoScript needed from the folder
+:path:`Configuration/TypoScript`. It would also be possible to place the
+TypoScript directly into this file. But we want to split our TypoScript into
+different files.
+
+..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-setup.rst.txt
+
+As we only have a few lines of TypoScript constants we define them directly in
+a file called :file:`constants.typoscript` in this folder:
+
+..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-constants.rst.txt
+
+Last we add a file called :file:`page.tsconfig` which includes the backend page
+layouts we create in :ref:`backend-page-layouts`:
+
+..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-page-tsconfig.rst.txt
 
 .. _ec-directory-structure:
 
@@ -70,60 +115,57 @@ it stands now.
 
     *   site_package/
 
-        *   Configuration/
+    *   Configuration
 
-            *   TCA/
+        *   Sets
 
-                *   Overrides/
+            *   MySitePackage
 
-                    *  sys_template.php
+                config.yaml
+                constants.typoscript
+                setup.typoscript
 
-            *   TypoScript/
+        *   TypoScript
 
-                *   constants.typoscript
-                *   setup.typoscript
+    *   Resources
 
-        *   Resources/
+        *   Private
 
-            *   Private/
+            *   Layouts
 
-                *   Layouts/
+                *   Page
 
-                    *   Page/
+                    *   Default.html
 
-                        *   Default.html
+            *   Partials
 
-                *   Partials/
+                *   Page
 
-                    *   Page/
+                    *   Jumbotron.html
 
-                        *   Jumbotron.html
+            *   Templates
 
-                *   Templates/
+                *   Page
 
-                    *   Page/
+                    *   Default.html
 
-                        *   Default.html
-            *   Public/
+        *   Public
 
-                *   Css/
+            *   Css
 
-                    *   website.css
+                *   website.css
 
-                *   Icons
+            *   Icons/Extension.svg
 
-                    *   Extension.svg
+            *   Images/
 
-                *   Images/
+                *   logo.png
 
-                    *   logo.png
+            *   JavaScript
 
-                *   JavaScript/
-
-                    *   website.js
+                *   website.js
 
         *   composer.json
-
 
 At this point we can install the sitepackage extension in an TYPO3 instance,
 which we will do in the next step.

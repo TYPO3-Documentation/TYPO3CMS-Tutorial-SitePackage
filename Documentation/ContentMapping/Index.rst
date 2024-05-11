@@ -55,11 +55,17 @@ This syntax imports all files ending on `.tsconfig` from the specified folder.
    automatically loaded during build time. See
    :ref:`t3tsconfig:setting-page-tsconfig` on how to load the file in older
    TYPO3 versions.
-   
-When there is only one site in your installation or all sites share the same 
-configurations we suggest to include this file globally as decribed here. 
-See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig 
+
+When there is only one site in your installation or all sites share the same
+configurations we suggest to include this file globally as decribed here.
+See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig
 for a certain page tree.
+
+
+.. _backend-page-layouts:
+
+Create the backend page layouts
+-------------------------------
 
 Then create a file
 :file:`Configuration/TsConfig/Page/PageLayout/Default.tsconfig` with the

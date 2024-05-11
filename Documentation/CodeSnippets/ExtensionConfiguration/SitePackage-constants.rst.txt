@@ -3,7 +3,6 @@
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/Sets/SitePackage/constants.typoscript
-   :linenos:
 
    page {
      fluidtemplate {

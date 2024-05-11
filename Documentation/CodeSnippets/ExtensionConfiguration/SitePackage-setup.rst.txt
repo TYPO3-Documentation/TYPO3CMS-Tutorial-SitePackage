@@ -3,7 +3,6 @@
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript
-   :linenos:
 
    @import 'EXT:site_package/Configuration/TypoScript/Setup/*.typoscript'
    
