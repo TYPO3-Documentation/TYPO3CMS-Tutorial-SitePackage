@@ -80,36 +80,67 @@ Directory and file structure
 Let's review the directory and file structure of the sitepackage extension as
 it stands now.
 
-.. code-block:: none
+..  directory-tree::
+    :level: 2
+    :show-file-icons: true
 
-    site_package/
-    site_package/Configuration
-    site_package/Configuration/TCA
-    site_package/Configuration/TCA/Overrides
-    site_package/Configuration/TCA/Overrides/sys_template.php
-    site_package/Configuration/TypoScript
-    site_package/Configuration/TypoScript/constants.typoscript
-    site_package/Configuration/TypoScript/setup.typoscript
-    site_package/ext_emconf.php
-    site_package/Resources
-    site_package/Resources/Private
-    site_package/Resources/Private/Layouts
-    site_package/Resources/Private/Layouts/Page
-    site_package/Resources/Private/Layouts/Page/Default.html
-    site_package/Resources/Private/Partials
-    site_package/Resources/Private/Partials/Page
-    site_package/Resources/Private/Partials/Page/Jumbotron.html
-    site_package/Resources/Private/Templates
-    site_package/Resources/Private/Templates/Page
-    site_package/Resources/Private/Templates/Page/Default.html
-    site_package/Resources/Public
-    site_package/Resources/Public/Css
-    site_package/Resources/Public/Css/website.css
-    site_package/Resources/Public/Icons/Extension.svg
-    site_package/Resources/Public/Images/
-    site_package/Resources/Public/Images/logo.png
-    site_package/Resources/Public/JavaScript
-    site_package/Resources/Public/JavaScript/website.js
+    *   site_package/
+
+        *   Configuration/
+
+            *   TCA/
+
+                *   Overrides/
+
+                    *  sys_template.php
+
+            *   TypoScript/
+
+                *   constants.typoscript
+                *   setup.typoscript
+
+        *   Resources/
+
+            *   Private/
+
+                *   Layouts/
+
+                    *   Page/
+
+                        *   Default.html
+
+                *   Partials/
+
+                    *   Page/
+
+                        *   Jumbotron.html
+
+                *   Templates/
+
+                    *   Page/
+
+                        *   Default.html
+            *   Public/
+
+                *   Css/
+
+                    *   website.css
+
+                *   Icons
+
+                    *   Extension.svg
+
+                *   Images/
+
+                    *   logo.png
+
+                *   JavaScript/
+
+                    *   website.js
+
+        *   composer.json
+        *   ext_emconf.php
+
 
 At this point we can install the sitepackage extension in a TYPO3 instance,
 which we will do in the next step.
