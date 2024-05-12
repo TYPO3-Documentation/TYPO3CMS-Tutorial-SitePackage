@@ -7,31 +7,26 @@ Extension installation
 ======================
 
 This tutorial assumes that your TYPO3 instance is a brand new installation,
-without any themes, templates, pages or content. See the :doc:`TYPO3
-Installation Guide <t3install:Index>` for a detailed explanation on how to set up
-a TYPO3 instance from scratch.
+without any themes, templates, pages or content.
 
-We highly recommend using :ref:`the Composer -based installation process
-<t3start:install-extension-with-composer>`. During development you should work locally
-on your machine, e.g. by running TYPO3 on ddev.
+We assume that you are working on your local machine using DDEV and that you
+followed these steps:
 
-If you need to follow the legacy installation method, see :ref:`Site package
-installation without Composer <extension-installation_without_composer>`.
-
+:ref:`Installing TYPO3 with DDEV <t3start:installation-ddev-tutorial>`
 
 .. _extension-installation_with_composer:
 
-Extension installation in Composer mode
-=======================================
+Install the site package you just created
+=========================================
 
-From TYPO3 v11.4 if Composer is used, all extensions, including our
-site package extension, must be installed via Composer.
+From all extensions, including our site package extension, must be installed
+via Composer.
 
 As a site package is created with site-specific files it is usually best to keep
 the files together in a version control system such as Git.
 
 Create a directory for local version-controlled extensions at the
-root-level of your Composer-based installation. The name is arbitrary, we use
+root-level of your installation. The name is arbitrary, we use
 :file:`packages/` here.
 
 Then edit your :file:`composer.json` in the root of your installation directory
@@ -43,7 +38,7 @@ Add the following lines:
    :caption: page_root/composer.json
 
    {
-      "name": "myvendor/site-package",
+      "name": "myvendor/mysite",
       "repositories": [
          {
             "type": "path",
@@ -51,13 +46,13 @@ Add the following lines:
          }
       ],
       "require": {
-         "typo3/cms-core": "11.4",
+         "typo3/cms-core": "^13.1",
          "..." : "..."
       },
       "..." : "..."
    }
 
-Move your extension folder :file:`site_package/` into the :file:`packages/`
+Move your extension folder :path:`site_package/` into the :path:`packages/`
 folder. Then *require* the extension via Composer using the
 package name defined in the site package extension's :file:`composer.json` now located
 at :file:`packages/site_package/`
@@ -76,15 +71,49 @@ require it by:
 
     composer require myvendor/site-package:@dev
 
-.. hint::
+Project file structure
+======================
 
-   From TYPO3 v11.4 all extensions required via Composer are
-   automatically active. In previous versions it was still necessary
-   to activate the extension after the Composer-based installation via the
-   :guilabel:`Extension Manager`.
+Your project should now have the following structure:
 
-.. toctree::
-   :titlesonly:
-   :glob:
+..  directory-tree::
 
-   *
+    *   .ddev
+
+        :ref:`[Some configuration] <t3start:installation-ddev-tutorial>`
+
+    *   config
+
+        *   sites
+
+            *   [site identifier]
+
+                *   config.yaml
+
+    *   packages
+
+        *   site_package
+
+            *   [All sitepackage files]
+
+            *   composer.json
+
+    *   public
+
+        *   fileadmin
+
+            * [Images for content, PDFs, ...]
+
+        *   [public files needed by TYPO3]
+
+    *   var
+
+        *   log
+        *   [private files needed by TYPO3]
+
+    *   vendor
+
+        *   [All installed packages, including TYPO3 source]
+
+    *   composer.json
+    *   composer.lock
