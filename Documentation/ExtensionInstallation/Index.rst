@@ -46,7 +46,7 @@ Add the following lines:
          }
       ],
       "require": {
-         "typo3/cms-core": "^13.1",
+         "typo3/cms-core": "^12.4",
          "..." : "..."
       },
       "..." : "..."
@@ -77,16 +77,18 @@ Project file structure
 Your project should now have the following structure:
 
 ..  directory-tree::
+    :level: 1
+    :show-file-icons: true
 
     *   .ddev
 
-        :ref:`[Some configuration] <t3start:installation-ddev-tutorial>`
+        *   :ref:`[Some configuration] <t3start:installation-ddev-tutorial>`
 
     *   config
 
         *   sites
 
-            *   [site identifier]
+            *   :ref:`[site identifier] <typo3-backend-site>`
 
                 *   config.yaml
 
@@ -102,7 +104,7 @@ Your project should now have the following structure:
 
         *   fileadmin
 
-            * [Images for content, PDFs, ...]
+            *   [Images for content, PDFs, ...]
 
         *   [public files needed by TYPO3]
 
