@@ -1,1 +1,6 @@
 ﻿..  You can put central messages to display on all pages here
+
+..  warning::
+    This tutorial assumes you are using at least TYPO3 v13.1. If you want to
+    use the current LTS (long time support) version 12.4 of TYPO3, switch
+    to the :ref:`Site package tutorial for TYPO3 12.4 <t3sitepackage-12:start>`.
