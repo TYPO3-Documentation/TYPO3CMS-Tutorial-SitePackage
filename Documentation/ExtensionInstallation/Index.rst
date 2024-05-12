@@ -52,7 +52,7 @@ Add the following lines:
          }
       ],
       "require": {
-         "typo3/cms-core": "11.4",
+         "typo3/cms-core": "^11.4",
          "..." : "..."
       },
       "..." : "..."
@@ -75,7 +75,30 @@ require it by:
 .. code-block:: bash
    :caption: Execute in directory page_root
 
-    composer require myvendor/site-package-myproject:@dev
+    composer require myvendor/site-package:@dev
+
+Project file structure
+======================
+
+Your project should now have the following structure:
+
+..  directory-tree::
+    :level: 1
+    :show-file-icons: true
+
+    *   .ddev
+
+        *   :ref:`[Some configuration] <t3start:installation-ddev-tutorial>`
+
+    *   config
+
+        *   sites
+
+            *   :ref:`[site identifier] <typo3-backend-site>`
+
+                *   config.yaml
+
+    *   packages
 
 .. hint::
 
@@ -83,6 +106,30 @@ require it by:
    automatically considered active. In previous versions it is still necessary
    to activate the extension after the Composer-based installation via the
    :guilabel:`Extension Manager`.
+
+.. toctree::
+   :titlesonly:
+   :glob:
+
+    *   public
+
+        *   fileadmin
+
+            *   [Images for content, PDFs, ...]
+
+        *   [public files needed by TYPO3]
+
+    *   var
+
+        *   log
+        *   [private files needed by TYPO3]
+
+    *   vendor
+
+        *   [All installed packages, including TYPO3 source]
+
+    *   composer.json
+    *   composer.lock
 
 .. toctree::
    :titlesonly:
