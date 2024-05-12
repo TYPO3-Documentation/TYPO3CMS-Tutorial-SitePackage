@@ -62,14 +62,6 @@ return [
     ],
 
     #code Snippets Extension Configuration
-
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'typo3conf/ext/site_package/ext_emconf.php',
-        'targetFileName' => 'ExtensionConfiguration/ExtEmconf.rst.txt',
-        'caption' => 'EXT:site_package/ext_emconf.php',
-        'showLineNumbers' => true
-    ],
     [
         'action' => 'createCodeSnippet',
         'sourceFile' => 'typo3conf/ext/site_package/composer.json',

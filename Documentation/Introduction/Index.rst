@@ -72,10 +72,10 @@ configuration files should not be stored in :file:`fileadmin/`.
 Deployment
 ----------
 TYPO3 follows the *convention over configuration*
-paradigm. If files and directories in the sitepackage
+paradigm. If files and directories in the site-package
 extension use the naming convention, they are loaded automatically as
 soon as the extension is installed/activated. This means the
-extension can be easily deployed using the Extension Manager and/or PHP composer.
+extension can be easily deployed using Composer.
 Deployment can be automated by system administrators.
 
 Distributable
