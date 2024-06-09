@@ -72,12 +72,12 @@ provides one set, the name of the set should be the same as the
 :ref:`composer name <extension-configuration-composer>`.
 
 In line 4 and 5 dependencies are defined. In this example the site package
-depends on :t3src:`fluid_styled_content`, therefore the sets provided by this
+depends on :composer:`typo3/cms-fluid-styled-content`, therefore the sets provided by this
 system extension are included as dependency. By doing so all settings
 and TypoScript definitions provided by the extension are automatically included.
 
 In the same folder we can place a file called :file:`settings.yaml` that we use
-to override some default settings of :t3src:`fluid_styled_content`:
+to override some default settings of :composer:`typo3/cms-fluid-styled-content`:
 
 ..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-settings.rst.txt
 
