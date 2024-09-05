@@ -27,9 +27,9 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Part1FluidTemplateSection.typoscript',
-        'targetFileName' => 'TypoScript/Part1FluidTemplateSection.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Part1FluidTemplateSection.typoscript',
+        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Part1PageviewSection.typoscript',
+        'targetFileName' => 'TypoScript/Part1PageviewSection.rst.txt',
+        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Part1PageviewSection.typoscript',
         'showLineNumbers' => true
     ],
     [
@@ -127,30 +127,30 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Page/Default.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Pages/Default.html',
         'targetFileName' => 'Fluid/TemplateDefault.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Page/Default.html',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Pages/Default.html',
         'showLineNumbers' => true
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Page/TwoColumns.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Pages/TwoColumns.html',
         'targetFileName' => 'Fluid/TemplateTwoColumns.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Page/TwoColumns.html',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Pages/TwoColumns.html',
         'showLineNumbers' => true
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html',
         'targetFileName' => 'Fluid/PartialJumbotron.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html',
         'showLineNumbers' => true
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Layouts/Page/Default.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Layouts/Default.html',
         'targetFileName' => 'Fluid/Layout.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Layouts/Page/Default.html',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Layouts/Default.html',
         'showLineNumbers' => true
     ],
 ];
