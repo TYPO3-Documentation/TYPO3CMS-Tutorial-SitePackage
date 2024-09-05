@@ -138,34 +138,63 @@ enables the page to be called. If you would set it to any value above there
 the page would need to be called with an additional parameter like `&type=12345`
 to the url.
 
-Part 1: Fluid template section
+
+.. _typoscript-configuration-page-view-section:
+
+Part 1: PAGEVIEW template section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, create a file called :file:`Part1FluidTemplateSection.typoscript` in the
+First, create a file called :file:`Part1PageviewSection.typoscript` in the
 folder :file:`Configuration/TypoScript/Setup/` with the following content:
 
-.. include:: /CodeSnippets/TypoScript/Part1FluidTemplateSection.rst.txt
+.. include:: /CodeSnippets/TypoScript/Part1PageviewSection.rst.txt
 
 Line 1 is a comment. All lines starting with :typoscript:`//` or :typoscript:`#`
 will be ignored by the parser. In TypoScript it is however not possible to have
 a comment after code in a line as you might be used from PHP of Java.
 
 Line 2 configures that the template rendering engine Fluid should be used to
-generate the page output.
+generate the page output. As mentioned in the changelog
+:ref:`Feature: #103504 - New ContentObject PAGEVIEW <changelog:feature-103504-1712041725>`
+the new ContentObject `PAGEVIEW` replaces the old ContentObject `FLUIDTEMPLATE`.
+We recommend to use the new ContentObject `PAGEVIEW`, because it needs less
+configurations and therefore reduces the susceptibility to errors. For example
+you do not have to define a TypoScript variable :typoscript:`pageUid`, instead
+use :html:`{page.uid}` directly in your HTML file to use the current page id
+for any use cases. More examples you can find in the changelog mentioned before.
 
-The name of the template to be used is determined in line 4 ff. The current
-backend layout is stored in the
-:ref:`gettext function pagelayout <t3tsref:data-type-gettext-pagelayout>`.
-By default these start with `pagets__`
-followed by a lowercase keyword. By :ref:`stdwrap
-<t3tsref:stdwrap>` we replace the first part and change the case such that the
-backend type `pagets__twoColumns` will call the template of name
-:file:`TwoColumns`.
+Before with the `FLUIDTEMPLATE`, one had to define which page layout and backend
+layout should be rendered in the frontend. Now this is done automatically. All
+files located in the given paths :typoscript:`page.10.paths` will be used as
+default templates. In our case this is :file:`Default` and :file:`TwoColumns`.
+Check our repository `https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/main`__
+to review this statement by your own. The paths for the templates are provided
+in line 5 ff and define the paths where the templates can be find. In line 6
+we added the TypoScript constant defining the same path. It serves as an example
+on how one would add a TypoScript constant from file :file:`constants.typoscript`
+to the :typoscript:`page.10.paths` paths. Remember the highest number will used
+in first place. When the parser does not find a fitting template it jumps to the
+next lower number.
 
-Line 21 ff define the storage paths for the templates.
-Template files are stored here in the
-aforementioned folders :file:`Templates/Page/`, :file:`Partials/Page/` and
-:file:`Layouts/Page/`.
+Template files can be placed in the
+:file:`EXT:my_site_package/Resources/Private/Templates/Pages/` and
+:file:`EXT:my_site_package/Resources/Private/Templates/`. The
+:ref:`directory and file structure <t3sitepackage:ec-directory-structure>` can
+be checked here. If you write a typo into your :file:`Default.html` filename,
+for example :file:`default.html` you get the following error in the frontend:
+
+.. code-block:: plaintext
+    :caption: Frontend Output
+
+    503
+    # Oops, an error occurred!
+    Could not find template source for "pages/default". Configured templateRootPaths: /var/www/html/vendor/my-vendor/my-site-package/Resources/Private/Templates/
+    More information regarding this error might be available online](https://typo3.org/go/exception/CMS/1711797936).
+    Request: 1d0a22b6a400e
+
+The reason for this error is that the system expects a file named :file:`Default.html`
+(with captial D) within :file:`EXT:my_site_package/Resources/Private/Templates/Pages/` or
+:file:`EXT:my_site_package/Resources/Private/Templates/`.
 
 
 Part 2 and 3: CSS and JavaScript file inclusion
