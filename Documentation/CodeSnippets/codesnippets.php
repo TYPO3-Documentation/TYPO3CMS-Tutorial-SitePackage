@@ -20,9 +20,9 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Part1PageviewSection.typoscript',
-        'targetFileName' => 'TypoScript/Part1PageviewSection.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Part1PageviewSection.typoscript',
+        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/pageview.typoscript',
+        'targetFileName' => 'TypoScript/pageview.rst.txt',
+        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/pageview.typoscript',
         'showLineNumbers' => true
     ],
     [

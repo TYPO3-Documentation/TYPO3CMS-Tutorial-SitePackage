@@ -164,16 +164,16 @@ to the url.
 Part 1: PAGEVIEW template section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, create a file called :file:`Part1PageviewSection.typoscript` in the
+First, create a file called :file:`pageview.typoscript` in the
 folder :file:`Configuration/TypoScript/Setup/` with the following content:
 
-.. include:: /CodeSnippets/TypoScript/Part1PageviewSection.rst.txt
+.. include:: /CodeSnippets/TypoScript/pageview.rst.txt
 
 Line 1 is a comment. All lines starting with :typoscript:`//` or :typoscript:`#`
 will be ignored by the parser. In TypoScript it is however not possible to have
 a comment after code in a line as you might be used from PHP of Java.
 
-Line 2 configures that the template rendering engine Fluid should be used to
+Line 3 configures that the template rendering engine Fluid should be used to
 generate the page output. As mentioned in the changelog
 :ref:`Feature: #103504 - New ContentObject PAGEVIEW <changelog:feature-103504-1712041725>`
 the new ContentObject `PAGEVIEW` replaces the old ContentObject `FLUIDTEMPLATE`.
@@ -203,7 +203,7 @@ Template files can be placed in the
 be checked here. If you write a typo into your :file:`Default.html` filename,
 for example :file:`default.html` you get the following error in the frontend:
 
-.. code-block:: plaintext
+..  code-block:: plaintext
     :caption: Frontend Output
 
     503
