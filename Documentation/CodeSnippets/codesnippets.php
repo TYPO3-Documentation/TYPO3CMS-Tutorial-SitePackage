@@ -6,13 +6,6 @@ return [
     # code Snippets Setup
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/constants.typoscript',
-        'targetFileName' => 'TypoScript/Constants.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/Sets/SitePackage/constants.typoscript',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript',
         'targetFileName' => 'TypoScript/Setup.rst.txt',
         'caption' => 'EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript',
@@ -91,9 +84,9 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/constants.typoscript',
-        'targetFileName' => 'ExtensionConfiguration/SitePackage-constants.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/Sets/SitePackage/constants.typoscript',
+        'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/settings.definitions.yaml',
+        'targetFileName' => 'ExtensionConfiguration/SitePackage-settings-definitions-yaml.rst.txt',
+        'caption' => 'EXT:site_package/Configuration/Sets/SitePackage/settings.definitions.yaml',
     ],
     [
         'action' => 'createCodeSnippet',
