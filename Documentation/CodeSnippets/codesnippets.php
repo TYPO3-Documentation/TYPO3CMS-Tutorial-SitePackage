@@ -41,9 +41,8 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Part5MenuProcessor.typoscript',
-        'targetFileName' => 'TypoScript/Part5MenuProcessor.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Part5MenuProcessor.typoscript',
+        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Navigation/menu.typoscript',
+        'targetFileName' => 'TypoScript/Navigation/menu.typoscript',
         'showLineNumbers' => true
     ],
 
@@ -92,27 +91,6 @@ return [
     # code Snippets Fluid
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Public/StaticTemplate/Step1Default.html',
-        'targetFileName' => 'Fluid/Step1Default.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Public/StaticTemplate/Step1Default.html',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Public/StaticTemplate/Step2Default.html',
-        'targetFileName' => 'Fluid/Step2Default.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Public/StaticTemplate/Step2Default.html',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Public/StaticTemplate/Step3Default.html',
-        'targetFileName' => 'Fluid/Step3Default.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Public/StaticTemplate/Step3Default.html',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Pages/Default.html',
         'targetFileName' => 'Fluid/TemplateDefault.rst.txt',
         'caption' => 'EXT:site_package/Resources/Private/Templates/Pages/Default.html',
@@ -137,6 +115,20 @@ return [
         'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Layouts/Default.html',
         'targetFileName' => 'Fluid/Layout.rst.txt',
         'caption' => 'EXT:site_package/Resources/Private/Templates/Layouts/Default.html',
+        'showLineNumbers' => true
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Header.html',
+        'targetFileName' => 'Fluid/Header.rst.txt',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Header.html',
+        'showLineNumbers' => true
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html',
+        'targetFileName' => 'Fluid/Menu.rst.txt',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html',
         'showLineNumbers' => true
     ],
 ];

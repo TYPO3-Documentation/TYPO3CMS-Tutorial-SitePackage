@@ -5,6 +5,6 @@
     :caption: EXT:site_package/Resources/Private/Templates/Layouts/Default.html
     :linenos:
 
-    <f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>
-    <f:render partial="Navigation/Breadcrumb.html" arguments="{_all}"/>
+    <f:render partial="Header" arguments="{_all}"/>
+    <f:render partial="Navigation/Breadcrumb" arguments="{_all}"/>
     <f:render section="Main"/>

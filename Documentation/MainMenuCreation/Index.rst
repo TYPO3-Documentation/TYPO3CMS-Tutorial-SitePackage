@@ -1,126 +1,105 @@
 .. include:: /Includes.rst.txt
-
-
 .. _main-menu-creation:
 
-==================
-Main Menu Creation
-==================
+=========
+Main menu
+=========
 
-At this point, we have a working *frontend* for our website, but an important part
-is missing: there is no easy way to navigate through the pages, which is a
-crucial part of any website. The following section explains how to implement
-a simple one-level menu by using TYPO3's Frontend Data Processor
-`MenuProcessor`. Other options are available (e.g. the :typoscript:`HMENU cObject` as
-described in the :ref:`TypoScript Reference <t3tsref:menu-objects>`).
+To display a main menu in our frontend output we need to provide the according
+data and define the view by providing templates for it.
 
+A data processor (see :ref:`dataProcessing <t3tsref:dataProcessing>`) can be
+used to provide the data for the menu to the template and a Fluid template
+partial do define the view of the menu.
 
 .. _add-menu-processor:
 
-Add 'MenuProcessor'
-===================
+Use the data processor `menu`
+=============================
 
-Open file :file:`Configuration/TypoScript/setup.typoscript` and locate the part
-which defines the :typoscript:`FLUIDTEMPLATE`. Add the :typoscript:`dataProcessing { ... }` section
-below the paths declarations as follows.
+The :ref:`data processor 'menu' <t3tsref:MenuProcessor>` can be configured to
+provide the data of all pages in your current site to your page template.
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+We save the TypoScript configuration for the menu into file
+:file:`Configuration/TypoScript/Navigation/menu.typoscript`:
 
-   // Part 1: Fluid template section
-   10 = FLUIDTEMPLATE
-   10 {
-         // ...
-      }
-      templateRootPaths {
-         // ...
-      }
-      partialRootPaths {
-         // ...
-      }
-      layoutRootPaths {
-         // ...
-      }
-      dataProcessing {
-         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-         10 {
-            levels = 1
-            includeSpacer = 1
-            as = mainnavigation
-         }
-      }
-   }
-
-Note the directive :typoscript:`as = mainnavigation`: this defines the name of the menu
-which will be used in the next step. It is 'mainnavigation' in this case.
-
+..  include:: /CodeSnippets/TypoScript/Navigation/menu.typoscript
 
 .. _fluid-implement-main-menu:
 
-Update Fluid and Implement Main Menu
-====================================
+Update the Fluid partial for the menu
+=====================================
 
-To make the output of the :typoscript:`MenuProcessor` visible at the frontend, we have to
-adjust the Fluid template slightly. You may remember that we moved the
-main menu to the Fluid layout file, which is located under
-:file:`Resources/Private/Layouts/Page/Default.html` (see section
-:ref:`the-website-layout-file`). Open this file and adjust it as shown here:
+Until now we had static HTML in the file
+:file:`Resources/Private/Templates/Partials/Navigation/Menu.html`.
 
-.. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Layouts/Page/Default.html
+We created that file in section :ref:`create_partial_header`.
 
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button  class="navbar-toggler"
-               type="button"
-               data-toggle="collapse"
-               data-target="#navbarsExampleDefault"
-               aria-controls="navbarsExampleDefault"
-               aria-expanded="false"
-               aria-label="Toggle navigation"
-               >
-         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-         <ul class="navbar-nav mr-auto">
-            <f:for each="{mainnavigation}" as="mainnavigationItem">
-               <li class="nav-item {f:if(condition: mainnavigationItem.active, then: 'active')}">
-                  <a class="nav-link"
-                     href="{mainnavigationItem.link}"
-                     target="{mainnavigationItem.target}"
-                     title="{mainnavigationItem.title}"
-                     >
-                     {mainnavigationItem.title}
-                  </a>
-               </li>
-            </f:for>
-         </ul>
-      </div>
-   </nav>
+Replace the static HTMl with Fluid:
 
-   <f:render section="Main" />
+A menu usually contains several menu entries. We use the
+:ref:`t3viewhelper:typo3fluid-fluid-for` to iterate over all menu entries
+and render them in turn:
 
-The changes are inside the :html:`<ul> ... </ul>` tags. The new code extends the
-list by using a "For-ViewHelper", which builds a loop and iterates variable
-`mainnavigation` as single items named :typoscript:`mainnavigationItem`. Each item
-represents one link to a page in the menu. The attributes we are using are:
+..  include:: /CodeSnippets/Fluid/Menu.rst.txt
 
-* :typoscript:`mainnavigationItem.link`: the actual link to the page or external
-  resource
+In each loop the current menu item is stored in variable `{menuItem}`.
 
-* :typoscript:`mainnavigationItem.target`: if the link should be opened in a new window
-  for example
+You can use the :ref:`t3viewhelper:typo3-fluid-debug` to debug what kind of
+data the variable contains like this:
 
-* :typoscript:`mainnavigationItem.title`: the page or link title
+..  code-block:: diff
+    :caption: EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html (changed for debug output)
 
-The construct :html:`{f:if(condition: mainnavigationItem.active, then: 'active')}`
-is a special case. This is called an *inline notation*, that outputs the word
-`active`, if variable :typoscript:`mainnavigationItem.active` is set. In this example,
-the inline notation is used to output :html:`active` as the CSS class name.
+     <ul class="navbar-nav mr-auto">
+         <f:for each="{menu}" as="menuItem">
+     +       <f:debug>{menuItem}</f:debug>
+             <li class="nav-item {f:if(condition: menuItem.active, then:'active')}">
 
+The debug output on your page should now look like this:
 
-Preview Page
-============
+..  code-block:: plaintext
+
+    array(8 items)
+        data => array(78 items)
+        title => 'My page' (22 chars)
+        link => '/my-page' (26 chars)
+        target => '' (0 chars)
+        active => 0 (integer)
+        current => 0 (integer)
+        spacer => 0 (integer)
+        hasSubpages => 1 (integer)
+
+The following data is of interest:
+
+`{menuItem.data}`:
+    Contains the raw data of the :ref:`database record <t3coreapi:database-records>`
+    of the page for the menu item.
+`{menuItem.link}`:
+    The actual link to the page. For external links it contains the URL.
+`{menuItem.target}`:
+    This might contain "_blank" if the menu item represents an external link.
+`{menuItem.title}`:
+    The title to be displayed in the menu. By default the navigation title if set,
+    the title otherwise.
+`{menuItem.active}`
+    Contains 1 if the page of the current menu item is in the rootline of the
+    current page.
+
+The construct `{f:if(condition: menuItem.active, then: 'active')}`
+output the string "active" if `{menuItem.active}` is set. The syntax might look
+confusing at first. It is an :ref:`t3viewhelper:typo3fluid-fluid-if`
+displayed in the :ref:`Fluid inline notation <t3coreapi:fluid-inline-notation>`.
+
+.. _main-menu-creation-preview:
+
+Preview the page and use the menu
+=================================
+
+The menu in the page should now function and allow you to navigate from page to
+page.
+
+Delete the frontend caches and preview the changes:
 
 When previewing the site as it stands now, we can verify if everything is
 working as expected and if the menu is generated. Go to **WEB → View** and

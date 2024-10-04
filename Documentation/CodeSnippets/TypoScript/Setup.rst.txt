@@ -6,3 +6,4 @@
     :linenos:
 
     @import 'EXT:site_package/Configuration/TypoScript/Setup/*.typoscript'
+    @import 'EXT:site_package/Configuration/TypoScript/Setup/Navigation/*.typoscript'

@@ -273,7 +273,8 @@ your :file:`Default.html` now contains only the HTML code inside the body.
 
 So, let's assume it contains something like the following HTML code:
 
-.. include:: /CodeSnippets/Fluid/Step1Default.rst.txt
+..  literalinclude:: _codesnippets/_Step1Default.html
+    :caption: Resources/Private/Templates/Pages/Default.html
 
 In case you have worked with the Bootstrap library before, you will quickly
 realize that this is a simplified version of the well-known template called
@@ -287,6 +288,11 @@ The code above misses a few lines at the end, which include some JavaScript
 files such as jQuery and Bootstrap. You are advised to remove these line from
 the :file:`Resources/Private/Templates/Pages/Default.html` file, too.
 
+.. _create_partial_jumbotron:
+
+Extract the jumbotron to a partial
+----------------------------------
+
 Due to the fact that the "jumbotron" elements could be used on several pages
 (page layouts) across the entire website, we should move this part to a
 partial. Create a new file named :file:`Jumbotron.html` inside directory
@@ -299,10 +305,18 @@ Now, remove the lines from file
 :file:`Resources/Private/Templates/Pages/Default.html` and replace them with the
 following single line:
 
-.. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Templates/Pages/Default.html
+..  code-block:: diff
+    :caption: EXT:site_package/Resources/Private/Templates/Pages/Default.html (Difference)
 
-   <f:render partial="Jumbotron" />
+     <main role="main">
+    +    <f:render partial="Jumbotron" />
+    -    <div class="jumbotron">
+    -        <div class="container">
+    -            <h1 class="display-3">Hello, world!</h1>
+    -            <p> ... </p>
+    -        </div>
+    -    </div>
+         <div class="container">
 
 Congratulations -- you just applied your first ViewHelper! HTML tags starting
 with :html:`<f:...>` are typically core ViewHelpers in Fluid. The tag
@@ -313,18 +327,54 @@ because of the :html:`partial="..."` argument. Note: do not append :file:`.html`
 HTML is the default format and as a convention, the ViewHelper automatically
 knows the file name and its location: :file:`Partials/Jumbotron.html`.
 
-Let us also move the navigation part into the file
-:file:`Partials/Navigation/MainNavigation.html`. As the navigation will
-contain dynamic parts we forward all variables as arguments:
+.. _create_partial_header:
 
-.. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Templates/Partials/Navigation/MainNavigation.html
+Extract the header an menu into partials
+----------------------------------------
 
-   <f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>
+Move the header part HTML and the menu contained there-in into their
+own partials:
+
+..  code-block:: diff
+    :caption: EXT:site_package/Resources/Private/Templates/Pages/Default.html (Difference)
+
+    +<f:render partial="Header.html" arguments="{_all}"/>
+    -<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    -    ...
+    -</nav>
+
+     <main role="main">
+
+Move the static HTML of the header into a file at
+:file:`Resources/Private/Templates/Partials/Header.html`. Replace everything
+between the `<ul>...</ul>` tags by yet another f:render and move the menu,
+including the tags `<ul>...</ul>` into a file called
+:file:`Resources/Private/Templates/Partials/Navigation/Menu.html`.
+
+You should now have the following:
+
+..  include:: /CodeSnippets/Fluid/Header.rst.txt
+
+and
+
+..  code-block:: html
+    :caption: Resources/Private/Templates/Partials/Navigation/Menu.html
+
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">
+                Home
+            </a>
+        </li>
+    </ul>
+
+Chapter :ref:`Main menu <t3sitepackage:main-menu-creation>` will teach you how
+to make the menu work.
 
 The file :file:`Default.html` should now look like this:
 
-.. include:: /CodeSnippets/Fluid/Step2Default.rst.txt
+..  literalinclude:: _codesnippets/_Step2Default.html
+    :caption: Resources/Private/Templates/Pages/Default.html
 
 At this point, we have implemented an (optional) partial and a page layout
 template. Keep the file :file:`Resources/Private/Templates/Pages/Default.html` open
@@ -338,7 +388,8 @@ the overall *layout* (the skeleton) of the website: this is an HTML file in the
 page layout template (:file:`Resources/Private/Templates/Pages/Default.html`)
 which website template it should use:
 
-.. include:: /CodeSnippets/Fluid/Step3Default.rst.txt
+..  literalinclude:: _codesnippets/_Step3Default.html
+    :caption: Resources/Private/Templates/Pages/Default.html
 
 The updated template file shows two additional lines at the top (:html:`<f:layout>`
 and :html:`<f:section>`) and an additional line at the bottom (the closing
