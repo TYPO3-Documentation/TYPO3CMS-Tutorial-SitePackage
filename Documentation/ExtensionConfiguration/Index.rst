@@ -28,7 +28,7 @@ is more than one word.
 
 At the top of the :file:`composer.json` file we see the Composer package name
 `t3docs/site-package` (with a dash) and at the bottom we see the TYPO3
-extension key in the extras section - :file:`site_package` (with an underscore).
+extension key in the extra section - :file:`site_package` (with an underscore).
 The Composer "name" consists of a vendor name followed by a forward slash and the
 lowercase extension name with dashes.
 
@@ -44,7 +44,9 @@ Extension icon
 Every extension can feature an icon using an SVG, PNG or GIF file.
 The image should be stored in :file:`Resources/Public/Icons/`.
 
-It is recommended that you use an SVG file called :file:`Extension.svg`.
+It is recommended that you use an SVG file called :file:`Extension.svg`. The
+icon is displayed in the extension manager
+(:ref:`see Public directory <t3coreapi:extension-Resources-Public>`).
 
 .. _make-typoscript-available:
 .. _site_set:
@@ -96,7 +98,7 @@ different files.
 As we only have a few lines of TypoScript constants we define them directly in
 a file called :file:`constants.typoscript` in this folder:
 
-..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-constants.rst.txt
+
 
 Last we add a file called :file:`page.tsconfig` which includes the backend page
 layouts we create in :ref:`backend-page-layouts`:
@@ -115,57 +117,81 @@ it stands now.
     :level: 2
     :show-file-icons: true
 
-    *   site_package/
+    *   site_package
 
-    *   Configuration
+        *   Configuration
 
-        *   Sets
+            *   Sets
 
-            *   MySitePackage
+                *   SitePackage
 
-                config.yaml
-                constants.typoscript
-                setup.typoscript
+                    *   config.yaml
+                    *   constants.typoscript
+                    *   page.tsconfig
+                    *   settings.yaml
+                    *   setup.typoscript
 
-        *   TypoScript
-
-    *   Resources
-
-        *   Private
-
-            *   Layouts
+            *   TsConfig
 
                 *   Page
+
+                    *   PageLayout
+
+                        *   Default.tsconfig
+                        *   TwoColumns.tsconfig
+
+            *   TypoScript
+
+                *   Setup
+
+                    *   Page.typoscript
+                    *   Part1PageViewSection.typoscript
+                    *   Part2CssFileInclusion.typoscript
+                    *   Part4GlobalConfiguration.typoscript
+                    .. *   Part5MenuProcessor.typoscript
+                    .. *   Part6ProcessedContent.typoscript
+
+        *   Resources
+
+            *   Private
+
+                *   Layouts
 
                     *   Default.html
 
-            *   Partials
-
-                *   Page
+                *   Partials
 
                     *   Jumbotron.html
 
-            *   Templates
+                *   Templates
 
-                *   Page
+                    *   Pages
 
-                    *   Default.html
+                        *   Default.html
+                        *   TwoColumns.html
 
-        *   Public
+            *   Public
 
-            *   Css
+                *   Css
 
-                *   website.css
+                    *   website.css
 
-            *   Icons/Extension.svg
+                *   Icons
 
-            *   Images/
+                    *   BackendLayouts
 
-                *   logo.png
+                        *   default.svg
+                        *   twoColumns.svg
 
-            *   JavaScript
+                    *   Extension.svg
 
-                *   website.js
+                *   Images
+
+                    *   logo.svg
+
+                *   JavaScript
+
+                    *   website.js
 
         *   composer.json
 

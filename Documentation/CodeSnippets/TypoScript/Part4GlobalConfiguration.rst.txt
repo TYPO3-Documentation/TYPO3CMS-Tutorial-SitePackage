@@ -14,4 +14,3 @@
       # Display the Admin Panel at the bottom of pages to logged in backend users
       admPanel = 1
     }
-    

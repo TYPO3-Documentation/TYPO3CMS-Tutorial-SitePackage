@@ -51,9 +51,9 @@ typical website theme as we know it from a static website.
 The two CSS and JavaScript files :file:`bootstrap.min.css` and
 :file:`bootstrap.min.js` belong to the Bootstrap framework. As a matter of
 fact, these files can be ignored (we will include the Bootstrap framework using
-TypoScript as shown in section :ref:`file-setup-typoscript`). The CSS file
-:file:`website.css` implements the custom styles used for the website. Same as
-the JavaScript file :file:`website.js`, which contains custom JavaScript code.
+TypoScript as shown in section :ref:`typoscript-configuration-css-js-inclusion`).
+The CSS file :file:`website.css` implements the custom styles used for the website.
+Same as the JavaScript file :file:`website.js`, which contains custom JavaScript code.
 The only file inside the :file:`images/` directory is a simple logo. Let's
 assume this is a square image of 100px width by 100px height.
 

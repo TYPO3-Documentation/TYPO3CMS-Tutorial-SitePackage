@@ -5,4 +5,3 @@
     :caption: EXT:site_package/Configuration/Sets/SitePackage/page.tsconfig
 
     @import 'EXT:site_package/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
-    

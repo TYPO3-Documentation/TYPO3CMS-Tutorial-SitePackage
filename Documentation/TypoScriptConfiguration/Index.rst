@@ -2,59 +2,66 @@
 .. highlight:: typoscript
 
 
-.. _typoscript-configuration:
+.. _site-sets-configuration:
 
-========================
-TypoScript configuration
-========================
+==========
+Site sets
+==========
 
-TYPO3 uses **TypoScript** as a specific *language* to configure a website.
-TypoScript is a very powerful tool in the TYPO3 universe, because it allows
-integrators to configure and manipulate almost every aspect of the system and
-customize a TYPO3 instance to very specific needs of their customers. It is
-important to highlight, that TypoScript is not a programming language, so you
-do not need to be a software developer to fine tune TYPO3. However, due to the
-complexity of TYPO3 and its configuration options, quite comprehensive
-documentation about TypoScript exists, which can be overwhelming sometimes.
-
-As part of this tutorial, we focus on the basics only and how to apply them. A
-documentation about TypoScript and all its objects, properties
-and functions can be found in the :doc:`TypoScript Reference <t3tsref:Index>`.
-
-.. _files-and-directories:
-
-Files and directories
-=====================
-
-First of all, we create two new files in the site package directory structure,
-which will contain all TypoScript configurations. By following the official
-conventions of their file and directory naming, TYPO3 knows how to include them
-automatically.
+Since TYPO3 v13 we can make use of the
+:ref:`new feature site sets<changelog:feature-103437-1712062105>`. This enables
+the user to separate the individual TypoScript configurations, settings,
+reference and TSconfig more easily than before. Site sets also enable the
+usage of :ref:`Content Blocks <contentblocks/content-blocks:start>`. To use the
+site sets one can create the following file structure
 
 .. code-block:: none
 
    site_package/
    site_package/Configuration/
+   site_package/Configuration/Sets/
+   site_package/Configuration/Sets/SitePackage
+   site_package/Configuration/Sets/SitePackage/config.yaml
+   site_package/Configuration/Sets/SitePackage/page.tsconfig
+   site_package/Configuration/Sets/SitePackage/settings.definitions.yaml
+   site_package/Configuration/Sets/SitePackage/settings.yaml
+   site_package/Configuration/Sets/SitePackage/setup.typoscript
    site_package/Configuration/TypoScript/
    site_package/Configuration/TypoScript/Setup/
-   site_package/Configuration/TypoScript/constants.typoscript
-   site_package/Configuration/TypoScript/setup.typoscript
    site_package/Resources/
    site_package/Resources/...
 
-As shown above, these two files are :file:`constants.typoscript` and
-:file:`setup.typoscript` inside the :file:`Configuration/TypoScript/` folder.
-The Fluid template files we have created in the previous step are located in
-the :file:`Resources/` directory, but not listed above for clarity reasons.
+with the starting point
+
+.. include:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.rst.txt
+
+where the name of the set is defined. In our case this is `site-package` and
+it is placed within the vendor name `t3docs`. The directory containing all files has
+to be called SitePackage since we defined it like such `site-package` in our
+:file:`config.yaml` file. You can give it also a label which will
+be displayed later in the backend. In addition you can add small groups of
+dependencies. Here we added the two dependencies `typo3/fluid-styled-content`
+and `typo3/fluid-styled-content-css`.
 
 
-.. _file-constants-typoscript:
 
-TypoScript constants
---------------------
+As shown above, these files are inside the :file:`Configuration/TypoScript/`
+folder. The Fluid template files we have created in the previous step are
+located in the :file:`Resources/` directory, but not listed above for clarity
+reasons. The :file:`settings.yaml` demonstrates how to override the default
+site settings.
 
-TypoScript constants are used to set values that can be used in the TypoScript
-setup through out the project.
+
+.. _settings-definitions-yaml-constants:
+
+settings.definitions.yaml constants
+-----------------------------------
+
+Settings definitions are used to set values that can be used in the TypoScript
+setup through out the project. Before they were kept in the file
+:file:`constants.typoscript`. Since TYPO v13 they can be stored in the file
+:file:`settings.definitions.yaml`. See
+`settings.definitions.yaml <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Configuration/Sets/SitePackage/settings.definitions.yaml>`__ in Github.
 
 .. note::
    TypoScript constants are only interpreted as such, when they are added to
@@ -68,14 +75,15 @@ imprint, a system folder that contains certain records, ...).
 You could for example define the title of your page in a TypoScript constant:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
+   :caption: EXT:site_package/Configuration/Sets/SitePackage/constants.typoscript
 
+   # path.to.constant.nameOfConstant = default value
    mysitepackage.page.title = My cool project
 
 And later on use it somewhere in your TypoScript setup to output it on your page:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript
 
    lib.footer = TEXT
    lib.footer.value = {$mysitepackage.page.title}
@@ -83,13 +91,11 @@ And later on use it somewhere in your TypoScript setup to output it on your page
 
 Add the following lines to file :file:`constants.typoscript`:
 
-.. include:: /CodeSnippets/TypoScript/Constants.rst.txt
 
-Line 1 includes the default constants from the system extension
-:code:`fluid_styled_content` (which is part of the TYPO3 Core).
 
-The following lines define some constants with paths to the template directories
-that we defined in the previous chapter.
+The lines define one constant :typoscript:`page.template.path`. This constant
+defines the paths to the :file:`Templates/` directory that we referred to in
+the previous chapter.
 
 The part :typoscript:`EXT:` of the paths will be automatically replaced by the
 path to your extensions location, usually something like :file:`/typo3conf/ext/`.
@@ -111,13 +117,27 @@ up the TypoScript setup file into sections by didactic reasons.
 
 .. include:: /CodeSnippets/TypoScript/Setup.rst.txt
 
-Line 1 imports the default setup
-from the system extension :code:`fluid_styled_content` (which is part of the
-TYPO3 Core).
-
-Line 2 imports all files ending on :file:`.typoscript` from the specified
+This line imports all files ending on :file:`.typoscript` from the specified
 folder. It does however not import files from sub folders. Those would have to
 be imported separately.
+
+.. _typoscript-configuration:
+
+TypoScript
+----------
+
+TYPO3 uses **TypoScript** as a specific *language* to configure a website.
+TypoScript is a very powerful tool in the TYPO3 universe, because it allows
+integrators to configure and manipulate almost every aspect of the system and
+customize a TYPO3 instance to very specific needs of their customers. It is
+important to highlight, that TypoScript is not a programming language, so you
+do not need to be a software developer to fine tune TYPO3. However, due to the
+complexity of TYPO3 and its configuration options, quite comprehensive
+documentation about TypoScript exists, which can be overwhelming sometimes.
+
+As part of this tutorial, we focus on the basics only and how to apply them. A
+documentation about TypoScript and all its objects, properties
+and functions can be found in the :doc:`TypoScript Reference <t3tsref:Index>`.
 
 Hello World: The PAGE object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,6 +216,7 @@ The reason for this error is that the system expects a file named :file:`Default
 (with captial D) within :file:`EXT:my_site_package/Resources/Private/Templates/Pages/` or
 :file:`EXT:my_site_package/Resources/Private/Templates/`.
 
+.. _typoscript-configuration-css-js-inclusion:
 
 Part 2 and 3: CSS and JavaScript file inclusion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
