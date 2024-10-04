@@ -46,13 +46,6 @@ return [
         'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Part5MenuProcessor.typoscript',
         'showLineNumbers' => true
     ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Part6ProcessedContent.typoscript',
-        'targetFileName' => 'TypoScript/Part6ProcessedContent.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Part6ProcessedContent.typoscript',
-        'showLineNumbers' => true
-    ],
 
     #code Snippets Extension Configuration
     [

@@ -6,4 +6,5 @@
     :linenos:
 
     <f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>
-    <f:render section="Main" />
+    <f:render partial="Navigation/Breadcrumb.html" arguments="{_all}"/>
+    <f:render section="Main"/>
