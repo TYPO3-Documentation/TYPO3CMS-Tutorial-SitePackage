@@ -1,0 +1,2 @@
+-<img src="../Images/logo.svg" alt="Logo" height="50px" class="pe-3">
++<f:image src="EXT:site_package/Resources/Public/Images/logo.svg" alt="Logo" class="pe-3" />

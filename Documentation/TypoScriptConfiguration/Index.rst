@@ -216,34 +216,7 @@ The reason for this error is that the system expects a file named :file:`Default
 (with captial D) within :file:`EXT:my_site_package/Resources/Private/Templates/Pages/` or
 :file:`EXT:my_site_package/Resources/Private/Templates/`.
 
-.. _typoscript-configuration-css-js-inclusion:
-
-Part 2 and 3: CSS and JavaScript file inclusion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-We have combined part 2 and 3, because the inclusion of CSS and JavaScript
-files in TypoScript is pretty straight forward. Create a file called
-:file:`Part2CssFileInclusion.typoscript` in the
-folder :file:`Configuration/TypoScript/Setup/` with the following content:
-
-.. include:: /CodeSnippets/TypoScript/Part2CssFileInclusion.rst.txt
-
-Section :typoscript:`includeCSS { ... }` instructs TYPO3 to include the CSS from the
-Bootstrap library from an external source. It also includes file
-:file:`website.css` from the site package extension. We have copied this file
-into the appropriate folder before.
-
-Section :typoscript:`includeJSFooter { ... }` includes four JavaScript files in total.
-The first three are externally hosted files (jQuery, Popper and Bootstrap).
-Therefore, :typoscript:`.external = 1` forces TYPO3, not to check for their local
-existence. The fourth JavaScript file is the file we added before to the site
-package extension itself.
-
-You can also include CSS or JavaScript per-component in your Fluid template or
-by PHP. See :ref:`t3coreapi:assets`.
-
-
-Part 4: Global site configuration
+Part 3: Global site configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is possible to configure multiple options globally in the section Typoscript
