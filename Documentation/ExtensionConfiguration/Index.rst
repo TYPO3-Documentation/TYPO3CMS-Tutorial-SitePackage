@@ -113,6 +113,9 @@ Directory and file structure
 Let's review the directory and file structure of the sitepackage extension as
 it stands now.
 
+..  todo: replace TwoColumns with Subpage (tsconfig, html, svg)
+..  todo: replace files in TypoScript/Setup
+
 ..  directory-tree::
     :level: 2
     :show-file-icons: true
@@ -126,8 +129,8 @@ it stands now.
                 *   SitePackage
 
                     *   config.yaml
-                    *   constants.typoscript
                     *   page.tsconfig
+                    *   settings.definitions.yaml
                     *   settings.yaml
                     *   setup.typoscript
 
