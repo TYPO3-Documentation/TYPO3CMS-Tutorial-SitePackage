@@ -484,6 +484,9 @@ Repeat the same for file :file:`Resources/Private/Templates/Pages/Default.html`.
             *   Header.html
             *   Jumbotron.html
 
+You can finde the complete site package extension at this step at branch
+`main-step/fluid <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/main-step/fluid>`__.
+
 .. toctree::
    :titlesonly:
 
