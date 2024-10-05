@@ -9,7 +9,7 @@
 -<body>
  <main>
      ...
--</main>
+ </main>
 -<script src="../Libaries/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 -<script src="../JavaScript/main.js"></script>
 -</body>

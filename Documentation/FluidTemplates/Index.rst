@@ -274,7 +274,7 @@ TYPO3 takes care of creating the outermost HTML structure of the site, including
 the `<html>` and `<head>` tags therefore they need to be removed from the
 template:
 
-..  literalinclude:: _codesnippets/_assets.diff
+..  literalinclude:: _codesnippets/_remove_head.diff
     :caption: Resources/Private/Templates/Pages/Default.html (difference)
 
 The Fluid template :file:`Default.html` now contains only the HTML
