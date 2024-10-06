@@ -24,13 +24,13 @@ A working copy of the site package extension can be retrieved from the
     Preface/Index
     Introduction/Index
     Prerequisites/Index
+    CreatePages/Index
     MinimalExample/Index
     DesignTemplate/Index
     FluidTemplates/Index
     TypoScriptConfiguration/Index
     ExtensionConfiguration/Index
     ExtensionInstallation/Index
-    CreatePages/Index
     MainMenuCreation/Index
     ContentMapping/Index
     Summary/Index
