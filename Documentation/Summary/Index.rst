@@ -104,7 +104,7 @@ also download the extension built in this tutorial below.
 Download sitepackage Extension
 -------------------------------
 
-`GitHub <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code>`_
+`GitHub <https://github.com/TYPO3-Documentation/site_package>`_
 
 
 .. _site-package-builder:

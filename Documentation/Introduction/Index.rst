@@ -87,25 +87,3 @@ accessible version control system such as `GitHub <https://github.com>`__.
 
 Last, but not least, configuration settings in the sitepackage can
 be overwritten using TypoScript setup and constants.
-
-
-.. _prerequisites:
-
-Prerequisites
-=============
-
-This TYPO3 tutorial assumes that the reader has some basic knowledge in the
-following areas:
-
-* HTML, CSS and JavaScript
-* SSH/FTP (copy files and directories to and from the server)
-
-It is also recommended that the reader has worked with TYPO3 before, knows what
-the *frontend*, *backend* and *Extension Manager* are and how to access the
-*Install Tool*. Missing knowledge can be acquired by working through the TYPO3
-documentation, for example the :doc:`Getting Started Tutorial <t3start:Index>`.
-
-The sitepackage in this tutorial will build a new, clean website from scratch,
-so it is assumed you have an empty TYPO3 instance with no pages, design
-templates, configuration, etc. You will need a valid TYPO3 backend user login with
-administrator privileges and SSH/FTP access to the server is recommended.
