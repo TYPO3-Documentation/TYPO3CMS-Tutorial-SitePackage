@@ -1,15 +1,14 @@
 .. include:: /Includes.rst.txt
 ..  _start:
 
-==========================
-TYPO3 Sitepackage Tutorial
-==========================
+===========================
+TYPO3 site package tutorial
+===========================
 
-This tutorial describes how to create a fully functional TYPO3 website from
-design templates (HTML, CSS, JavaScript, etc.) by using a
-*sitepackage extension*.
+This tutorial describes step by step how to come from your first TYPO3
+installation to the first basic site.
 
-A working copy of the sitepackage extension can be retrieved from the
+A working copy of the site package extension can be retrieved from the
 `TYPO3CMS-Tutorial-SitePackage-Code`_ repository.
 
 .. _TYPO3CMS-Tutorial-SitePackage-Code: https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/main
@@ -23,6 +22,7 @@ A working copy of the sitepackage extension can be retrieved from the
     :titlesonly:
 
     Introduction/Index
+    Prerequisites/Index
     MinimalExample/Index
     DesignTemplate/Index
     FluidTemplates/Index
