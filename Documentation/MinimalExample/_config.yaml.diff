@@ -1,0 +1,5 @@
+ base: '/'
++dependencies:
++  - t3docs/site-package
+ languages:
+    # ...
