@@ -22,15 +22,6 @@ A working copy of the site package extension can be retrieved from the
     :class: pb-4
     :card-height: 100
 
-    ..  card:: :ref:`Preface <t3sitepackage:about-this-document>`
-
-        In the preface we describe the goal of this documentation, we specify
-        the target audience, pay attention to the authors and show how you can
-        contribute to this tutorial.
-
-        ..  card-footer:: :ref:`Read more <t3sitepackage:about-this-document>`
-                            :button-style: btn btn-secondary stretched-link
-
     ..  card:: :ref:`Introduction <t3sitepackage:introduction>`
 
         Here we define the benefits of the site package: like the concepts of
