@@ -15,11 +15,121 @@ A working copy of the site package extension can be retrieved from the
 
 ----
 
-**Table of Contents:**
+..  card-grid::
+    :columns: 1
+    :columns-md: 2
+    :gap: 4
+    :class: pb-4
+    :card-height: 100
+
+    ..  card:: :ref:`Introduction <t3sitepackage:introduction>`
+
+        Here we define the benefits of the site package: like the concepts of
+        encapsulation, the concepts of dependency management, the clean
+        separation from the userspace (fileadmin/FAL), some important security
+        benefits, deployment and distributability advantages.
+
+        ..  card-footer:: :ref:`Discover the benefits of a site package <t3sitepackage:introduction>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Prerequisites <t3sitepackage:prerequisites>`
+
+        In this section we mention the prerequisites that you need before
+        you start with this tutorial.
+
+        ..  card-footer:: :ref:`See the prerequisites <t3sitepackage:prerequisites>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Minimal example <t3sitepackage:minimal-design>`
+
+        We explain how you can easily show some text in the frontend. The
+        example explains how to use TypoScript to output text in the
+        frontend.
+
+        ..  card-footer:: :ref:`See the minimal example <t3sitepackage:minimal-design>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Design Template <t3sitepackage:dt-external-resources>`
+
+        We define the starting point to build a site package extension.
+        Normally we start with static html files and a bunch of css and
+        JavaScript files. This is also called "integrate".
+
+        ..  card-footer:: :ref:`See the starting point for a site package <t3sitepackage:dt-external-resources>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Fluid Template <t3sitepackage:fluid-templates>`
+
+        We introduce the templating engine Fluid, that is used to render the
+        html pieces in a logically manner. Then we describe the directory
+        structure that is needed in a site package extension. We also
+        explain the first steps to include the previously static files and
+        html pieces using Fluid.
+
+        ..  card-footer:: :ref:`Learn about Fluid and Templating <t3sitepackage:fluid-templates>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Extension Configuration <t3sitepackage:extension-configuration>`
+
+        We explain the needed composer configurations and we connect it with
+        the site sets configurations that we made in the previous chapter.
+
+        ..  card-footer:: :ref:`Discover the composer configurations <t3sitepackage:extension-configuration>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Extension Installation <t3sitepackage:extension-installation>`
+
+        In this section we go through the process of installing the site
+        package extension with composer.
+
+        ..  card-footer:: :ref:`Add your site package with composer <t3sitepackage:extension-installation>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Create initial pages <t3sitepackage:typo3-backend-create-initial-pages>`
+
+        Here we show enter the first content into the TYPO3 backend. We
+        create pages, add the site configuration from the site package,
+        show the connection of the site configuration and the file
+         :file:`config.yaml` and show case the view module in the TYPO3
+        backend.
+
+        ..  card-footer:: :ref:`Work with your first content <t3sitepackage:typo3-backend-create-initial-pages>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Main menu <t3sitepackage:main-menu-creation>`
+
+        We introduce the main menu, explain how we build up a menu
+        processor with TypoScript and how we can output the menu with Fluid.
+        We introduce the so called "Debug ViewHelper".
+
+        ..  card-footer:: :ref:`Learn to create & output a menu <t3sitepackage:main-menu-creation>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Content mapping <t3sitepackage:content-mapping>`
+
+        Here we explain the purpose of backend layouts. Additionally we
+        introduce the DatabaseQueryProcessor which is used to render content
+        from a special "colPos" previously defined in the backend layout.
+        We use Fluid to output content from a specific colPos. By this we
+        get to know the cObject ViewHelper.
+
+        ..  card-footer:: :ref:`See how to use a backend layout <t3sitepackage:content-mapping>`
+            :button-style: btn btn-secondary stretched-link
+
+    ..  card:: :ref:`Summary <t3sitepackage:summary>`
+
+        In this chapter we sum up the steps that we did after we have gone
+        through this tutorial.
+
+        ..  card-footer:: :ref:`See the summary <t3sitepackage:summary>`
+            :button-style: btn btn-secondary stretched-link
+
+
 
 ..  toctree::
     :maxdepth: 2
     :titlesonly:
+    :hidden:
 
     Introduction/Index
     Prerequisites/Index
