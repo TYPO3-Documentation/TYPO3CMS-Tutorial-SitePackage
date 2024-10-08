@@ -42,7 +42,7 @@ A working copy of the site package extension can be retrieved from the
 
     ..  card:: :ref:`Create initial pages <t3sitepackage:typo3-backend-create-initial-pages>`
 
-        Here we use t3docs/site-package-data to create a basic site
+        Here we use :composer:`t3docs/site-package-data` to create a basic site
         configuration and some pages in the TYPO3 backend with some example
         content records.
 
