@@ -40,6 +40,15 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`See the prerequisites <t3sitepackage:prerequisites>`
             :button-style: btn btn-secondary stretched-link
 
+    ..  card:: :ref:`Create initial pages <t3sitepackage:typo3-backend-create-initial-pages>`
+
+        Here we use :composer:`t3docs/site-package-data` to create a basic site
+        configuration and some pages in the TYPO3 backend with some example
+        content records.
+
+        ..  card-footer:: :ref:`Create some dummy content <t3sitepackage:typo3-backend-create-initial-pages>`
+            :button-style: btn btn-secondary stretched-link
+
     ..  card:: :ref:`Minimal example <t3sitepackage:minimal-design>`
 
         We explain how you can easily show some text in the frontend. The
@@ -93,17 +102,6 @@ A working copy of the site package extension can be retrieved from the
         package extension with composer.
 
         ..  card-footer:: :ref:`Add your site package with composer <t3sitepackage:extension-installation>`
-            :button-style: btn btn-secondary stretched-link
-
-    ..  card:: :ref:`Create initial pages <t3sitepackage:typo3-backend-create-initial-pages>`
-
-        Here we show enter the first content into the TYPO3 backend. We
-        create pages, add the site configuration from the site package,
-        show the connection of the site configuration and the file
-         :file:`config.yaml` and show case the view module in the TYPO3
-        backend.
-
-        ..  card-footer:: :ref:`Work with your first content <t3sitepackage:typo3-backend-create-initial-pages>`
             :button-style: btn btn-secondary stretched-link
 
     ..  card:: :ref:`Main menu <t3sitepackage:main-menu-creation>`
