@@ -21,7 +21,6 @@ A working copy of the site package extension can be retrieved from the
     :maxdepth: 2
     :titlesonly:
 
-    Preface/Index
     Introduction/Index
     Prerequisites/Index
     CreatePages/Index
