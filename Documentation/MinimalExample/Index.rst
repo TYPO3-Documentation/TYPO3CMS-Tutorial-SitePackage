@@ -8,9 +8,9 @@ Minimal site package
 ====================
 
 A site package is a custom TYPO3 extension which contains configuration,
-templates, assets etc that are used for the site it belongs to.
+templates, assets, etc that are used for the site it belongs to.
 
-So we first must create a minimal extension.
+So first we create a minimal extension.
 
 .. _minimal-extension:
 
@@ -63,18 +63,18 @@ Execute the command `ddev typo3 make:extension` and answer the prompt
 
      [OK] Successfully created the extension my_site_package (myvendor/my-site-package).
 
-This script created a new folder called `packages` with a subfolder,
+This script creates a new folder called `packages` with a subfolder,
 `my-site-package`. It mainly contains only a file called `composer.json`.
 
-You could of course also create this file manually. You will learn in step
-:ref:`extension-configuration-composer` what the content of the :file:`composer.json`
-means. For the time being just remember the Composer name you chose
+You could of course also create this file manually. Step
+:ref:`extension-configuration-composer` will explain the content of the :file:`composer.json`.
+For the time being just remember the Composer name you have chosen
 (`t3docs/site-package`) and the extension name (`site_package`).
 
-Before you see any change in the TYPO3 backend or frontend your site package needs
+In order to see a change in the TYPO3 backend or frontend your site package needs
 to be :ref:`installed <extension-installation>`.
 
-After you created your site package extension you can uninstall :composer:`b13/make`:
+After you have created your site package extension you can uninstall :composer:`b13/make`:
 
 ..  code-block:: bash
 
@@ -95,10 +95,10 @@ and add a file called :file:`config.yaml` to it. This file contains the
 ..  literalinclude:: _config.yaml
     :caption: packages/site-package/Configuration/Sets/Minimal/config.yaml
 
-You will learn more about site set in chapter
+You will learn more about site sets in chapter
 :ref:`site_set`.
 
-You find the complete reference in TYPO3 explained:
+You can find the complete reference in TYPO3 explained:
 :ref:`Site sets <t3coreapi:site-sets>`.
 
 Edit the site configuration that was created in step :ref:`typo3-backend-site`
@@ -109,7 +109,7 @@ and add the site set to it. You can do this by using the backend module:
 
     Use module :guilabel:`Site Management > Sites` to add the "Minimal example site package"
 
-On saving the site package is added to your site configuration file, which changed like this:
+On saving, the site package is added to your site configuration file, which changes to this:
 
 ..  literalinclude:: _config.yaml.diff
 
@@ -121,7 +121,7 @@ The TypoScript-only version
 ..  versionadded:: 13.1
     A site set can be used as :ref:`TypoScript provider <t3coreapi:site-sets-typoscript>`.
 
-Put a basic TypoScript configuration in a file called :file:`setup.typoscript`
+Create a file called :file:`setup.typoscript` containing basic TypoScript configuration
 in the folder of the site set you created in step :ref:`minimal-extension-siteset`:
 
 ..  literalinclude:: _minimal.typoscript
@@ -153,7 +153,7 @@ If you preview your page now you would get an error output like:
 
 .. todo: Add information about dealing with errors such as these and link from here.
 
-This is because the template is not found yet.
+This is because the template has not been found.
 
 By searching for the hash `bddd8a816bda3` in the log file you will find such an entry:
 
@@ -169,8 +169,8 @@ By searching for the hash `bddd8a816bda3` in the log file you will find such an 
     (Default/Pages/Default.html).
     The following paths were checked: /var/www/html/vendor/t3docs/site-package/Resources/Private/Templates/
 
-This error message also tells you in which path the file is expected. If no path
-is listed here, the path defined in line 6 of the TypoScript above was not found,
+This error message also tells you the path where TYPO3 expects to find the file. If no path
+is listed here, the path defined in line 6 of the TypoScript above is incorrect,
 for example if you mistyped the extension name or part of the path.
 
 Create a file named :file:`Default.html` in folder
@@ -183,4 +183,4 @@ Create a file named :file:`Default.html` in folder
 
 Clear all caches and preview the web page.
 
-You will learn more about using Fluid Templates in chapter :ref:`fluid-templates`.
+Learn more about using Fluid Templates in chapter :ref:`fluid-templates`.
