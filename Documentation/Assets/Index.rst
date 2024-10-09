@@ -10,7 +10,7 @@ Copy the assets of the theme
 Assets usually include CSS files, JavaScript and images / icons used for design
 purposes.
 
-Within an extension, including a site package assets can only be placed in folder
+Within an extension, including a site package, assets can only be placed in folder
 :path:`Resources/Public` and subfolders of this folder. This folder will be
 symlinked into :path:`public/_assets/<some hash>`.
 
@@ -26,8 +26,8 @@ Read more about assets in :ref:`Getting started, assets <t3start:assets>`.
 The example theme
 =================
 
-For the purpose of demonstration we created a theme based on bootstrap and some
-custom CSS / JavaScript for you.
+For the purpose of demonstration we created a theme based on Bootstrap and some
+custom CSS / JavaScript.
 
 You can download the files of the example theme from
 https://github.com/TYPO3-Documentation/site_package/tree/main/Resources/Public
@@ -64,7 +64,7 @@ yourself by placing them in the :path:`Resources/Public` folder.
 
 In a later step, you can use `npm <https://www.npmjs.com/>`__ (Node Package
 Manager) to manage your JavaScript and CSS dependencies locally. We also
-recommend using `Vite <https://vite.dev/>`__, a modern build tool
+recommend using a JavaScript bundler like `Vite <https://vite.dev/>`__
 that optimizes and bundles your assets efficiently. Vite can handle module
 bundling, minification, and hot module replacement during development.
 Once you have built the final assets, place the minified versions in the
