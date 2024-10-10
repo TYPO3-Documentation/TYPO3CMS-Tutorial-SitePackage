@@ -64,11 +64,11 @@ yourself by placing them in the :path:`Resources/Public` folder.
 
 In a later step, you can use `npm <https://www.npmjs.com/>`__ (Node Package
 Manager) to manage your JavaScript and CSS dependencies locally. We also
-recommend using a JavaScript bundler like `Vite <https://vite.dev/>`__
-that optimizes and bundles your assets efficiently. Vite can handle module
-bundling, minification, and hot module replacement during development.
-Once you have built the final assets, place the minified versions in the
-:path:`Resources/Public` folder for use in TYPO3.
+recommend using a JavaScript bundler like `Vite <https://vite.dev/>`__.
+
+If you decide to use a frontend bundler, make sure that the resulting asset 
+files are placed in a publicly available folder, like :path:`Resources/Public` 
+in your site package.
 
 There are also TYPO3 extensions like :composer:`praetorius/vite-asset-collector`
 to bundle your TYPO3 frontend assets with Vite.
