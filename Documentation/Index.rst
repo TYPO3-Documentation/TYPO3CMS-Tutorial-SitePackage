@@ -58,13 +58,12 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`See the minimal example <t3sitepackage:minimal-design>`
             :button-style: btn btn-secondary stretched-link
 
-    ..  card:: :ref:`Design Template <t3sitepackage:dt-external-resources>`
+    ..  card:: :ref:`Assets <assets-theme>`
 
-        We define the starting point to build a site package extension.
-        Normally we start with static html files and a bunch of css and
-        JavaScript files. This is also called "integrate".
+        Assets usually include CSS files, JavaScript and images / icons used
+        for design purposes.
 
-        ..  card-footer:: :ref:`See the starting point for a site package <t3sitepackage:dt-external-resources>`
+        ..  card-footer:: :ref:`Copy the assets into your site package <assets-theme>`
             :button-style: btn btn-secondary stretched-link
 
     ..  card:: :ref:`Fluid Template <t3sitepackage:fluid-templates>`
@@ -143,7 +142,7 @@ A working copy of the site package extension can be retrieved from the
     Prerequisites/Index
     CreatePages/Index
     MinimalExample/Index
-    DesignTemplate/Index
+    Assets/Index
     FluidTemplates/Index
     TypoScriptConfiguration/Index
     ExtensionConfiguration/Index
