@@ -19,6 +19,23 @@ The output of content into the front end is defined via TypoScript.
 
 See :ref:`Backend layouts <t3coreapi:be-layout>` for more information about setting up various columns and rows.
 
+.. _content-mapping-site-set:
+
+Include the site sets of fluid-styled-content as dependency
+===========================================================
+
+In step :ref:`Minimal site package - Create a basic site
+set <t3sitepackage:minimal-extension-siteset>` we created a basic site set for
+our site package.
+
+Add a dependency to the sets provided by the system extension
+:composer:`typo3/cms-fluid-styled-content`. This step is a prerequisite to
+display the content in the next steps.
+
+Your site set configuration should now look like this:
+
+..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.rst.txt
+
 
 Define the backend layouts
 ==========================

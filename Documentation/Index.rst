@@ -75,6 +75,16 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`Learn about Fluid and Templating <t3sitepackage:fluid-templates>`
             :button-style: btn btn-secondary stretched-link
 
+    ..  card:: :ref:`TypoScript setup <t3sitepackage:typoscript-configuration>`
+
+        Theoretically you could put all TypoScript into one big file and it would work
+        fine. But you have better overview if you split it up in multiple files ordered
+        by purpose. We import all TypoScript files from a folder using wildcards
+        after this step.
+
+        ..  card-footer:: :ref:`Automatically import TypoScript files <t3sitepackage:typoscript-configuration>`
+            :button-style: btn btn-secondary stretched-link
+
     ..  card:: :ref:`Content mapping <t3sitepackage:content-mapping>`
 
         Here we explain the purpose of backend layouts. Additionally we
@@ -85,7 +95,6 @@ A working copy of the site package extension can be retrieved from the
 
         ..  card-footer:: :ref:`See how to use a backend layout <t3sitepackage:content-mapping>`
             :button-style: btn btn-secondary stretched-link
-
 
     ..  card:: :ref:`Main menu <t3sitepackage:main-menu-creation>`
 
@@ -130,8 +139,6 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`See the summary <t3sitepackage:summary>`
             :button-style: btn btn-secondary stretched-link
 
-
-
 ..  toctree::
     :maxdepth: 2
     :titlesonly:
@@ -143,9 +150,10 @@ A working copy of the site package extension can be retrieved from the
     MinimalExample/Index
     Assets/Index
     FluidTemplates/Index
+    TypoScript/Index
     ContentMapping/Index
     MainMenuCreation/Index
-    TypoScriptConfiguration/Index
+    SiteSets/Index
     ExtensionConfiguration/Index
     ExtensionInstallation/Index
     Summary/Index
