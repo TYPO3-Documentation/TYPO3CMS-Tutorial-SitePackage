@@ -93,7 +93,7 @@ and add a file called :file:`config.yaml` to it. This file contains the
 **site set** of your site package:
 
 ..  literalinclude:: _config.yaml
-    :caption: packages/site-package/Configuration/Sets/Minimal/config.yaml
+    :caption: packages/site-package/Configuration/Sets/SitePackage/config.yaml
 
 You will learn more about site sets in chapter
 :ref:`site_set`.
@@ -125,7 +125,7 @@ Create a file called :file:`setup.typoscript` containing basic TypoScript config
 in the folder of the site set you created in step :ref:`minimal-extension-siteset`:
 
 ..  literalinclude:: _minimal.typoscript
-    :caption: packages/site-package/Configuration/Sets/Minimal/setup.typoscript
+    :caption: packages/site-package/Configuration/Sets/SitePackage/setup.typoscript
 
 Clear all caches and preview the web page.
 
