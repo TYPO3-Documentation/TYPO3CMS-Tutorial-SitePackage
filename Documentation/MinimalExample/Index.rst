@@ -67,7 +67,7 @@ This script creates a new folder called `packages` with a subfolder,
 `my-site-package`. It mainly contains only a file called `composer.json`.
 
 You could of course also create this file manually. Step
-:ref:`extension-configuration-composer` will explain the content of the :file:`composer.json`.
+:ref:`extension-configuration` will explain the content of the :file:`composer.json`.
 For the time being just remember the Composer name you have chosen
 (`t3docs/site-package`) and the extension name (`site_package`).
 
