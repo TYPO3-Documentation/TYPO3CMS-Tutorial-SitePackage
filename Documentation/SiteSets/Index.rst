@@ -23,7 +23,7 @@ Setting definition
 
 Settings definitions are used to set values that can be used in the TypoScript
 setup through out the project. Before they were kept in the file
-:file:`constants.typoscript`. Since TYPO v13 they can be stored in the file
+:file:`constants.typoscript`. Since TYPO3 v13 they can be stored in the file
 :file:`settings.definitions.yaml`. See
 `settings.definitions.yaml <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Configuration/Sets/SitePackage/settings.definitions.yaml>`__ in Github.
 
