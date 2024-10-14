@@ -20,7 +20,7 @@ This chapter is based on the following steps:
     :ref:`Copy the assets of the theme <t3sitepackage:assets-theme>`.
 
 After this tutorial you have created Fluid templates and split them into
-manageable peaces.
+manageable pieces.
 
 ..  _implement-templates-files:
 ..  _the-page-layout-file:
