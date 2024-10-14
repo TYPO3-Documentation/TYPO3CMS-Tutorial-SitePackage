@@ -75,6 +75,27 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`Learn about Fluid and Templating <t3sitepackage:fluid-templates>`
             :button-style: btn btn-secondary stretched-link
 
+    ..  card:: :ref:`Content mapping <t3sitepackage:content-mapping>`
+
+        Here we explain the purpose of backend layouts. Additionally we
+        introduce the DatabaseQueryProcessor which is used to render content
+        from a special "colPos" previously defined in the backend layout.
+        We use Fluid to output content from a specific colPos. By this we
+        get to know the cObject ViewHelper.
+
+        ..  card-footer:: :ref:`See how to use a backend layout <t3sitepackage:content-mapping>`
+            :button-style: btn btn-secondary stretched-link
+
+
+    ..  card:: :ref:`Main menu <t3sitepackage:main-menu-creation>`
+
+        We introduce the main menu, explain how we build up a menu
+        processor with TypoScript and how we can output the menu with Fluid.
+        We introduce the so called "Debug ViewHelper".
+
+        ..  card-footer:: :ref:`Learn to create & output a menu <t3sitepackage:main-menu-creation>`
+            :button-style: btn btn-secondary stretched-link
+
     ..  card:: :ref:`Site sets <t3sitepackage:site-sets-configuration>`
 
         In this section we configure the site package using the new
@@ -101,26 +122,6 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`Add your site package with composer <t3sitepackage:extension-installation>`
             :button-style: btn btn-secondary stretched-link
 
-    ..  card:: :ref:`Main menu <t3sitepackage:main-menu-creation>`
-
-        We introduce the main menu, explain how we build up a menu
-        processor with TypoScript and how we can output the menu with Fluid.
-        We introduce the so called "Debug ViewHelper".
-
-        ..  card-footer:: :ref:`Learn to create & output a menu <t3sitepackage:main-menu-creation>`
-            :button-style: btn btn-secondary stretched-link
-
-    ..  card:: :ref:`Content mapping <t3sitepackage:content-mapping>`
-
-        Here we explain the purpose of backend layouts. Additionally we
-        introduce the DatabaseQueryProcessor which is used to render content
-        from a special "colPos" previously defined in the backend layout.
-        We use Fluid to output content from a specific colPos. By this we
-        get to know the cObject ViewHelper.
-
-        ..  card-footer:: :ref:`See how to use a backend layout <t3sitepackage:content-mapping>`
-            :button-style: btn btn-secondary stretched-link
-
     ..  card:: :ref:`Summary <t3sitepackage:summary>`
 
         In this chapter we sum up the steps that we did after we have gone
@@ -142,11 +143,11 @@ A working copy of the site package extension can be retrieved from the
     MinimalExample/Index
     Assets/Index
     FluidTemplates/Index
+    ContentMapping/Index
+    MainMenuCreation/Index
     TypoScriptConfiguration/Index
     ExtensionConfiguration/Index
     ExtensionInstallation/Index
-    MainMenuCreation/Index
-    ContentMapping/Index
     Summary/Index
 
 ..  toctree::
