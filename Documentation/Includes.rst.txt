@@ -4,7 +4,7 @@
     this page to select documentation for a supported version of TYPO3.
 
     Need more time before upgrading?
-    You can purchase Extended Long Term Support (ELTS) for TYPO3 v10 here:
+    You can purchase Extended Long Term Support (ELTS) for TYPO3 v11 here:
     `TYPO3 ELTS <https://typo3.com/services/extended-support-elts>`__.
 
 .. More information about this file:
