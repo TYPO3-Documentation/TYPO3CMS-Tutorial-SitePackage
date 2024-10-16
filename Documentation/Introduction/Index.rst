@@ -1,89 +1,67 @@
-.. include:: /Includes.rst.txt
+:navigation-title: FAQ
+..  include:: /Includes.rst.txt
 
+..  _introduction:
+..  _site-package-benefits:
 
-.. _introduction:
+=====================================
+Introduction into using site packages
+=====================================
 
-============
-Introduction
-============
+A site package is a custom TYPO3 extension that contains files regarding the
+theme and functionality of a site.
 
+For further reading see also:
+:ref:`TYPO3 explained: Introduction into using site packages <t3coreapi:site-package-introduction>`.
 
-.. _site-package-benefits:
+..  _introduction-quickly:
 
-Sitepackage Benefits
-====================
+How to get started quickly
+==========================
 
-Developing a website can be approached in different ways. Standard
-websites usually consist of HTML documents which contain text and reference
-image files, video files, styles, etc. Because it is an enterprise content
-management system, TYPO3 features a clean separation between design, content and
-functionality and allows developers/integrators to add simple or
-sophisticated functionality easily.
+This tutorial guides you step-by-step through the process of creating a site package
+from scratch, introducing you to various TYPO3 concepts along the way.
 
-Encapsulation
--------------
-Using extensions is a powerful way to get the most out of TYPO3. Extensions
-can be installed, uninstalled and replaced. They can extend the core TYPO3
-system with further functions and features. An extension typically
-consists of PHP files, and can also contain design templates (HTML,
-CSS, JavaScript files, etc.) and global configuration settings. The visual
-appearance of a website does not necessarily require any PHP code. However, the
-sitepackage extension described in this tutorial contains exactly two PHP files
-(plus a handful of HTML/CSS and configuration files) and is an *extension* to
-TYPO3. The PHP code can be copied from this tutorial if the reader does not
-have any programming knowledge.
+If you are already familiar with TYPO3 and want to create a site package quickly,
+you may consider using the
+:ref:`Site Package Builder <t3coreapi:extension-sitepackage-builder>`.
 
-Version Control
----------------
-In building the sitepackage as an extension, all relevant files are stored in
-one place and changes can easily be tracked in a version control system
-such as Git. The site package approach is not the only way of creating TYPO3
-websites but it is flexible and professional and not overly complicated.
+..  _introduction-files:
 
-Dependency Management
----------------------
-TYPO3 extensions allow dependencies to other extensions and/or the TYPO3 version
-to be defined. This is called "Dependency Management" and makes deployment easy
-and fail-safe. Most TYPO3 sites are dependent on a number of extensions. Some
-examples are "News" or "Powermail". A sitepackage extension which contains
-global configuration settings for these extensions will define the dependencies
-for you. When the sitepackage extension is installed in an
-empty TYPO3 instance, all dependent extensions are automatically downloaded from
-the `TYPO3 Extension Repository <https://extensions.typo3.org>`__ and installed.
+What files are included in a site package?
+==========================================
 
-Clean Separation from the Userspace
------------------------------------
-In a TYPO3 installation that doesn't use extensions, template files are often
-stored in the :file:`fileadmin/` directory. Files in
-this directory are indexed by TYPO3's :ref:`File Abstraction Layer (FAL) <t3coreapi:fal>` resulting in
-possibly irrelevant records in the database. To avoid this the :file:`fileadmin/`
-area should be seen as a "userspace" which is only available for editors to
-use. Even if access permissions restrict editors from accessing or manipulating
-files in :file:`fileadmin/`, site configuration components should
-still not be stored in the userspace.
+A site package typically includes the following files:
 
-Security
---------
-Files in :file:`fileadmin/` are typically meant to be publicly accessible by
-convention. To avoid disclosing sensitive system information (see the
-:ref:`TYPO3 Security Guide <t3coreapi:security>` for further details),
-configuration files should not be stored in :file:`fileadmin/`.
+*   Configuration files, such as site settings, TypoScript, and RTE
+    (rich-text editor) configurations
+*   Public assets: CSS, JavaScript, fonts, theme related images
+*   Templates: Fluid templates that generate the HTML output
+*   Code extending TYPO3 Core functionality or third-party extensions, such as
+    :ref:`Event listeners <t3coreapi:EventDispatcherImplementation>` and
+    :ref:`Middlewares (Request handling) <t3coreapi:request-handling>`
 
-Deployment
-----------
-TYPO3 follows the *convention over configuration*
-paradigm. If files and directories in the site-package
-extension use the naming convention, they are loaded automatically as
-soon as the extension is installed/activated. This means the
-extension can be easily deployed using Composer.
-Deployment can be automated by system administrators.
+..  _introduction-when-not:
 
-Distributable
--------------
-By virtue of the motto "TYPO3 inspires people to share!", the sitepackage
-extension can be shared with the community via the official `TYPO3
-Extension Repository <https://extensions.typo3.org>`__ and/or in a publicly
-accessible version control system such as `GitHub <https://github.com>`__.
+When not to put files in a site package
+=======================================
 
-Last, but not least, configuration settings in the sitepackage can
-be overwritten using TypoScript setup and constants.
+If you are developing functionality that may need to be shared across multiple sites
+or TYPO3 installations in the future, it is advisable to create a custom extension
+for that functionality instead.
+
+..  todo: Add link to how to create a custom extension once documented in
+    Once https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-GettingStarted/issues/450
+    is resolved
+
+..  _introduction-download:
+
+Where to download the example site package
+==========================================
+
+You can download the example site package use in this tutorial from GitHub:
+https://github.com/TYPO3-Documentation/site_package
+
+..  note::
+    The example site package is structured for educational purposes and is
+    not intended for use in production environments.
