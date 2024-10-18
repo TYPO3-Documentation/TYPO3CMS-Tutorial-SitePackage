@@ -10,7 +10,7 @@
                interlink-shortcode="t3sitepackage"
                edit-on-github-branch="12.4" edit-on-github="TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage"
                typo3-core-preferred="12.4"/>
-    <project title="Sitepackage Tutorial"
+    <project title="Site Package Tutorial"
              release="12.4"
              version="12.4"
              copyright="since 2017 by the TYPO3 contributors"/>
