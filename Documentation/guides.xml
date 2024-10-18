@@ -13,7 +13,7 @@
                project-repository="https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage"
                project-issues="https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage/issues"
     />
-    <project title="Sitepackage Tutorial"
+    <project title="Site Package Tutorial"
              version="13.4"
              release="13.4"
              copyright="since 2017 by the TYPO3 contributors"
