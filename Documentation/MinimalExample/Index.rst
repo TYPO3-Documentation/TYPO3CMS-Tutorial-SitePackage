@@ -142,7 +142,7 @@ Replace file :file:`setup.typoscript` of example
 :file:`minimal-extension-typoscript` with the following lines:
 
 ..  literalinclude:: _pageview.typoscript
-    :caption: packages/site-package/Configuration/Sets/Minimal/setup.typoscript
+    :caption: packages/site-package/Configuration/Sets/SitePackage/setup.typoscript
     :linenos:
 
 If you preview your page now you would get an error output like:
