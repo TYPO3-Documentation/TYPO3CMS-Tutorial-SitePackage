@@ -59,7 +59,7 @@ We now create a default page layout with one column and row for the jumbotron:
 ..  versionchanged:: TYPO3 13
 
 Each area in the page layout becomes an identifier that can be used during
-content mapping. If not content element is added in the backend of that page and
+content mapping. If no content element is added in the backend of that page and
 the slide mode is activated, content from the parent page is displayed. This is
 useful for design elements like side bars, jumbotrons or banners that should be
 the same for a page and its subpage. You can find all details of the
@@ -73,7 +73,7 @@ to flush all caches by hitting the button.
 After flushing the all caches the new backend layout is available in the page
 properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 
-.. include:: /Images/AutomaticScreenshots/ChooseBackendLayout.rst.txt
+..  include:: /Images/AutomaticScreenshots/ChooseBackendLayout.rst.txt
 
 ..  _choose_page_layout:
 
@@ -89,8 +89,8 @@ If you followed step
 the areas "Jumbotron" and "Main" should already contain some example content.
 
 In the database each content element record is stored in the table
-:sql:`tt_content`. This table has a filed called `colPos`. If the value stored
-in field `colPos` is the same as defined in the page layout in page TSconfig
+:sql:`tt_content`. This table has a column called `colPos`. If the value stored
+in column `colPos` is the same as defined in the page layout in page TSconfig
 the content element is displayed in the according area of the page layout.
 
 It is considered best practice to store the main content in an area with
@@ -145,7 +145,7 @@ like this:
     *   Did you override the default variable name using
         :confval:`as <t3tsref:pagecontentfetchingprocessor-as>` in the data processor?
 
-.. _cm-fluid-typoscript-mapping:
+..  _cm-fluid-typoscript-mapping:
 
 TypoScript mapping in Fluid template
 ====================================
@@ -177,7 +177,7 @@ Extract the content element rendering to a partial
 ==================================================
 
 As we want to reuse the Fluid part about rendering content elements in the
-next steps, we extract it into a partial, like we die with the menu in
+next steps, we extract it into a partial, like we did with the menu in
 step :ref:`Extract the menu into a partial <t3sitepackage:create_partial_header>`.
 
 We want to be able to render content elements of **any content area**. Therefore pass
@@ -191,7 +191,7 @@ The partial then looks like this:
 
 ..  include:: /CodeSnippets/Fluid/PartialContent.rst.txt
 
-.. _content-element-next-steps:
+..  _content-element-next-steps:
 
 Next steps
 ==========
