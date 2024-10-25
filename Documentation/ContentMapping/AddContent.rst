@@ -1,7 +1,7 @@
 :navigation-title: Jumbotron
 ..  include:: /Includes.rst.txt
 
-.. _cm-typo3-backend-add-content:
+..  _cm-typo3-backend-add-content:
 
 ================================
 Add content in the TYPO3 backend
