@@ -10,31 +10,31 @@ The jumbotron: Customize output of content elements
 As you can see in the static html template, the jumbotron consist of a headline
 and a text:
 
-.. code-block:: html
-   :caption: theme/index.html
+..  code-block:: html
+    :caption: theme/index.html
 
-   <div class="jumbotron">
-       <div class="container">
-           <h1 class="display-3">Hello, world!</h1>
-           <p> ... </p>
-       </div>
-   </div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Hello, world!</h1>
+            <p> ... </p>
+        </div>
+    </div>
 
 We could use a content element of type :guilabel:`Text` to store the needed
-information. However the output of the Standard content element "Text" look
+information. However the output of the default content element "Text" looks
 like this:
 
-.. code-block:: html
-   :caption: Example HTML Output
+..  code-block:: html
+    :caption: Example HTML Output
 
-   <div id="c215" class="frame frame-default frame-type-text frame-layout-0">
-      <header>
-         <h2 class="">
-            Hello World!
-         </h2>
-      </header>
-      <p>Lorem ipsum dolor sit amet, ...</p>
-   </div>
+    <div id="c215" class="frame frame-default frame-type-text frame-layout-0">
+        <header>
+            <h2 class="">
+                Hello World!
+            </h2>
+        </header>
+        <p>Lorem ipsum dolor sit amet, ...</p>
+    </div>
 
 Also we do not want to output other types of content like images or forms.
 
