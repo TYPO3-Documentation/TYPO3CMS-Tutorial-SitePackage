@@ -91,6 +91,12 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Content.html',
+        'targetFileName' => 'Fluid/PartialContent.rst.txt',
+        'showLineNumbers' => true
+    ],
+    [
+        'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html',
         'targetFileName' => 'Fluid/PartialJumbotron.rst.txt',
         'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html',
@@ -116,5 +122,19 @@ return [
         'targetFileName' => 'Fluid/Menu.rst.txt',
         'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html',
         'showLineNumbers' => true
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig',
+        'targetFileName' => 'PageLayout/Default.rst.txt',
+        'showLineNumbers' => true,
+        'language' => 'typoscript',
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/page.tsconfig',
+        'targetFileName' => 'PageLayout/page.rst.txt',
+        'showLineNumbers' => true,
+        'language' => 'typoscript',
     ],
 ];
