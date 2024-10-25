@@ -3,6 +3,6 @@
      <f:render partial="Jumbotron" arguments="{_all}"/>
      <div class="container">
 -        <f:for each="{content.main.records}" as="record">...</f:for>
-+        <f:render partial="Content"  arguments="{records: content.main.records}"/>
++        <f:render partial="Content" arguments="{records: content.main.records}"/>
      </div>
  </f:section>

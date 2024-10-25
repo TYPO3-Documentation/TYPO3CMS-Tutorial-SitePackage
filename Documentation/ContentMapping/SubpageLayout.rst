@@ -25,18 +25,18 @@ You can switch the used page backend layout in the page properties at
 :guilabel:` Appearance >  Page Layout > Backend Layout`. Edit the page
 properties of your page to use the backend layout "Two Columns".
 
-.. include:: /Images/AutomaticScreenshots/SwitchBackendLayout.rst.txt
+..  include:: /Images/AutomaticScreenshots/SwitchBackendLayout.rst.txt
 
 After saving you will see that the content of the columns "main" and
 "jumbotron" remains unchanged while there is a third column "sidebar".
 This is due to the fact that the backend layout "Default" and "TwoColumns"
 use the same colPos number for these columns.
 
-.. include:: /Images/AutomaticScreenshots/BackendLayoutTwoColumns.rst.txt
+..  include:: /Images/AutomaticScreenshots/BackendLayoutTwoColumns.rst.txt
 
 Enter some content to the sidebar. You could for example use the content element
 "Menu of subpages" to display a menu in the sidebar.
 
 Preview the page once more. A sidebar will appear in the frontend:
 
-.. include:: /Images/AutomaticScreenshots/TwoColumnsPreviewPage.rst.txt
+..  include:: /Images/AutomaticScreenshots/TwoColumnsPreviewPage.rst.txt
