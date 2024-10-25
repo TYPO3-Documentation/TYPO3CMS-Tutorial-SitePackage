@@ -1,0 +1,16 @@
+ <f:layout name="Layout"/>
+ <f:section name="Main">
+     <f:render partial="Jumbotron" arguments="{_all}"/>
+-    <f:debug>{content}</f:debug>
+         <div class="container">
+-            <h2>Start page content</h2>
+-            <p>The content of the start page is displayed here. [...] </p>
++            <f:for each="{content.main.records}" as="record">
++                <f:cObject
++                    typoscriptObjectPath="tt_content.{record.CType}"
++                    data="{record}"
++                    table="tt_content"
++                />
++            </f:for>
+         </div>
+ </f:section>

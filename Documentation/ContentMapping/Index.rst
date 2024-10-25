@@ -1,23 +1,18 @@
-.. include:: /Includes.rst.txt
+:navigation-title: Content mapping
+..  include:: /Includes.rst.txt
 
-.. _content-mapping:
+..  _content-mapping:
 
-===============
-Content mapping
-===============
+=========================================
+Display the content elements on your page
+=========================================
 
-Having a perfect visual appearance of a website is pointless, if the content
-entered into the backend is not visible in the frontend. In the last step, we
-create a backend layout with several rows and columns, which hold content
-elements such as text, images, etc. to be displayed in areas in the frontend.
+In step :ref:`create-section` we moved the part of our template, that will
+contain the content, into its own section. This section is however still filled
+with dummy content:
 
-The backend layouts can be defined as database records or a TsConfig
-configuration. We use page TsConfig as it can be kept in the site-package and
-under version control.
-
-The output of content into the front end is defined via TypoScript.
-
-See :ref:`Backend layouts <t3coreapi:be-layout>` for more information about setting up various columns and rows.
+..  literalinclude:: _codesnippets/_SectionMain.html
+    :caption: Resources/Private/Templates/Pages/Default.html
 
 .. _content-mapping-site-set:
 
@@ -36,90 +31,39 @@ Your site set configuration should now look like this:
 
 ..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.rst.txt
 
+..  _cm-dynamic-content-rendering-in-typoscript:
+..  _backend-page-layouts:
+..  _content-mapping-backend-layout:
 
-Define the backend layouts
-==========================
+Create a default page layout with page TSconfig
+===============================================
 
-Many websites nowadays require different layouts for different types of pages.
+In order to map the content from the backend to the frontend we create a
+new file containing :ref:`page TSconfig <t3tsconfig:setting-page-tsconfig>`.
 
-We define two distinct backend layouts here to demonstrate using multiple
-backend (and frontend) page layouts.
+..  todo: Link to page TSconfig description in getting started once chapter exist.
 
-We assume by default pages consists of the menu, a jumbotron and the main
-content area. Meanwhile some subpages will additionally need a sidebar
-to be displayed to the right of the main content.
+By placing the file within the site set, you created in step
+:ref:`Create a basic site set <t3sitepackage:minimal-extension-siteset>`, the
+newly created file is loaded within the page tree of your site automatically:
 
+..  include:: /CodeSnippets/PageLayout/page.rst.txt
 
-.. _cm-dynamic-content-rendering-in-typoscript:
+This file automatically includes all `.tsconfig` files from the designated folder
+in which we will store the page layouts.
 
-Dynamic Content Rendering in TypoScript
-=======================================
+We now create a default page layout with one column and row for the jumbotron:
 
-.. highlight:: typoscript
+..  include:: /CodeSnippets/PageLayout/Default.rst.txt
 
-Create a file at :file:`Configuration/page.tsconfig` with the following
-content:
+..  versionchanged:: TYPO3 13
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
-
-   @import 'EXT:site_package/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
-
-This syntax imports all files ending on `.tsconfig` from the specified folder.
-
-.. note::
-   Starting with TYPO3 12 the file :file:`Configuration/page.tsconfig` is
-   automatically loaded during build time. See
-   :ref:`t3tsconfig:setting-page-tsconfig` on how to load the file in older
-   TYPO3 versions.
-
-When there is only one site in your installation or all sites share the same
-configurations we suggest to include this file globally as decribed here.
-See :ref:`t3tsconfig:setting-page-tsconfig` on how to load the page TSconfig
-for a certain page tree.
-
-
-.. _backend-page-layouts:
-
-Create the backend page layouts
--------------------------------
-
-Then create a file
-:file:`Configuration/TsConfig/Page/PageLayout/Default.tsconfig` with the
-following content:
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TsConfig/Page/Default.tsconfig
-
-   mod.web_layout.BackendLayouts {
-       Default {
-           title = Default Layout
-           config {
-               backend_layout {
-                   colCount = 1
-                   rowCount = 2
-                   rows {
-                       1 {
-                           columns {
-                               1 {
-                                   name = Jumbotron
-                                   colPos = 1
-                               }
-                           }
-                       }
-                       2 {
-                           columns {
-                               1 {
-                                   name = Main Content
-                                   colPos = 0
-                               }
-                           }
-                       }
-                   }
-               }
-           }
-       }
-   }
+Each area in the page layout becomes an identifier that can be used during
+content mapping. If no content element is added in the backend of that page and
+the slide mode is activated, content from the parent page is displayed. This is
+useful for design elements like side bars, jumbotrons or banners that should be
+the same for a page and its subpage. You can find all details of the
+:ref:`Page / backend layouts in the TSconfig reference <t3tsconfig:backend-layouts>`.
 
 When you make changes to the files of an extension it is usually necessary
 to flush all caches by hitting the button.
@@ -129,325 +73,133 @@ to flush all caches by hitting the button.
 After flushing the all caches the new backend layout is available in the page
 properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 
-.. include:: /Images/AutomaticScreenshots/ChooseBackendLayout.rst.txt
+..  include:: /Images/AutomaticScreenshots/ChooseBackendLayout.rst.txt
+
+..  _choose_page_layout:
+
+Choose the page layout in the page properties
+---------------------------------------------
 
 Switch to the new backend layout and save the page properties. In the
 :guilabel:`Page` module you will see two columns called "Jumbotron" and
 "Main Content" now.
 
-.. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
+If you followed step
+:ref:`Load the example data automatically <t3sitepackage:load-example-data>`
+the areas "Jumbotron" and "Main" should already contain some example content.
 
-Insert some example content into the two rows. In the database each content
-element (stored in the table :sql:`tt_content`) has the value defined in
-`colPos` stored in a field of corresponding name. The numbers of the columns
-are arbitary. It is best practise, however to store the main content in colPos
-0 and to use the same column numbers for the same positions throughout all
-backend layouts of a site. This facilitates switching between different
-layouts or looking up content up the page tree.
+In the database each content element record is stored in the table
+:sql:`tt_content`. This table has a column called `colPos`. If the value stored
+in column `colPos` is the same as defined in the page layout in page TSconfig
+the content element is displayed in the according area of the page layout.
 
-For the second layout we create a second file at
-:file:`Configuration/TsConfig/Page/PageLayout/TwoColumns.tsconfig` with the
-following content:
+It is considered best practice to store the main content in an area with
+`colPos=0`. This makes switching between different layouts easier.
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TsConfig/Page/PageLayout/TwoColumns.tsconfig
+..  _cm-typo3-backend-create-pages:
+..  _page-content-data-processor:
 
-   mod.web_layout.BackendLayouts {
-       TwoColumns {
-           title = Two Columns
-           config {
-               backend_layout {
-                   colCount = 2
-                   rowCount = 2
-                   rows {
-                       1 {
-                           columns {
-                               1 {
-                                   name = Jumbotron
-                                   colspan = 2
-                                   colPos = 1
-                               }
-                           }
-                       }
-                       2 {
-                           columns {
-                               1 {
-                                   name = Main Content
-                                   colPos = 0
-                               }
-                               2 {
-                                   name = Sidebar
-                                   colPos = 2
-                               }
-                           }
-                       }
-                   }
-               }
-           }
-       }
-   }
+Content rendering via page-content data processor
+=================================================
 
-Internally the backend layouts are grids. A row can span multiple columns by
-setting a `colspan`. It is also possible for a column to span multiple rows.
+..  versionadded:: TYPO3 13
+    The TypoScript object `PAGEVIEW` and the data processor `page-content`
+    have been added.
 
-See :ref:`Backend layouts <t3coreapi:be-layout>` for more information about
-setting up various columns and rows.
+    If you are using TYPO3 v12.4 read :ref:`content element mapping in TYPO3
+    v12.4 <t3sitepackage/12:cm-typo3-backend-create-pages>`
 
-.. _cm-typo3-backend-create-pages:
+The TypoScript object :ref:`PAGEVIEW <t3tsref:cobj-pageview>`, that we
+defined in step :ref:`Fluid version of the minimal
+site package <t3sitepackage:minimal-extension-fluid>` enables us to introduce
+a data processor to facilitate content mapping.
 
-Content rendering via data processing
-=====================================
+Edit the TypoScript configuration of the `PAGEVIEW` object to define a
+data processor of type :ref:`page-content <t3tsref:PageContentFetchingProcessor>`:
 
-Just like with the menu, the content can also be displayed by using
-a data processor, the :php:`DatabaseQueryProcessor`.
+..  literalinclude:: _codesnippets/_pageview.diff
+    :caption: Configuration/Sets/SitePackage/setup.typoscript (diff)
 
-Define the data processor in :typoscript:`page.10.dataProcessing` beside the
-data processors of the menu:
+This data processor provides the variable `content` to your Fluid template.
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+You can debug this variable in the main section of your template using the
+:ref:`Debug ViewHelper <f:debug> <t3viewhelper:typo3-fluid-debug>`:
 
-   page {
-     10 {
-       dataProcessing {
-         //10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         20 {
-           table = tt_content
-           orderBy = sorting
-           where = colPos = 0
-           as = mainContent
-         }
-       }
-     }
-   }
+..  literalinclude:: _codesnippets/_SectionMainDebug.diff
 
-In the Fluid template there will be a variable called "mainContent" available,
-containing an array of all contents of this column on the current page.
+The debug output after clearing all caches and previewing the page should look
+like this:
 
-We need one data processor for each column so lets add the other two:
+..  figure:: _images/contents_debug.png
+    :alt: Screenshot of the debug output of {content}
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    The debug output should contain sections "jumbotron" and "main"
 
-   page {
-     10 {
-       dataProcessing {
-         //10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-         //20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         30 {
-           table = tt_content
-           orderBy = sorting
-           where = colPos = 1
-           as = jumbotronContent
-         }
-         40 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         40 {
-           table = tt_content
-           orderBy = sorting
-           where = colPos = 2
-           as = sidebarContent
-         }
-       }
-     }
-   }
+..  tip::
+    Does your debug output show "NULL" instead? Check the following:
 
-.. _cm-fluid-typoscript-mapping:
+    *   Is `{content}` spelled correctly and uses the correct syntax?
+    *   Did you :ref:`define and include the page layout <backend-page-layouts>`?
+    *   Did you :ref:`choose the correct page layout in the page properties <choose_page_layout>`?
+    *   Did you define the correct data processor `page-content` in TypoScript?
+    *   Did you override the default variable name using
+        :confval:`as <t3tsref:pagecontentfetchingprocessor-as>` in the data processor?
+
+..  _cm-fluid-typoscript-mapping:
 
 TypoScript mapping in Fluid template
 ====================================
-
-.. highlight:: html
 
 Open the file :file:`Resources/Private/Templates/Page/Default.html` and locate the
 main content area. It contains a headline (look for the :code:`<h2>`-tags) and
 some dummy content (look for the :code:`<p>`-tags).
 
-Simply replace these lines with the cObject-ViewHelper (`<f:cObject ... >`),
-so that file :file:`Default.html` shows the following HTML code.
+Replace these lines with a :ref:`Fluid for-loop <t3viewhelper:typo3fluid-fluid-for>`,
+rendering each content element using the
+:ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`:
 
-.. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Templates/Page/Default.html
-
-   <f:layout name="Default" />
-   <f:section name="Main">
-
-     <main role="main">
-
-       <f:render partial="Jumbotron" arguments="{jumbotronContent: jumbotronContent}"/>
-
-       <div class="container">
-         <div class="row">
-           <div class="col-md-12">
-               <f:for each="{mainContent}" as="contentElement">
-                   <f:cObject
-                       typoscriptObjectPath="tt_content.{contentElement.data.CType}"
-                       data="{contentElement.data}"
-                       table="tt_content"
-                   />
-               </f:for>
-           </div>
-         </div>
-       </div>
-
-     </main>
-
-   </f:section>
+..  literalinclude:: _codesnippets/_SectionMainRender.diff
+    :caption: Resources/Private/Templates/Pages/Default.html (diff)
 
 The TypoScript object :typoscript:`tt_content.[CType]` comes from the TypoScript
-of the system extension :file:`fluid_styled_content`. It internally uses
+of the system extension :composer:`typo3/cms-fluid-styled-content`. We included
+its site set in step :ref:`content-mapping-site-set`.
+
+`fluid-styled-content` internally uses
 Fluid templates and TypoScript with data processors just like the ones we were
 defining above. If you desire to change the output of these content elements
 you could override the Fluid templates of the extension
-:file:`fluid_styled_content`.
+:composer:`typo3/cms-fluid-styled-content`.
 
-Edit the file :file:`TwoColumns.html` in the same directory. Exchange the
-main content area just as we have done before with the default template. Now
-replace the content area of the sidebar with the content elements in the Fluid
-variable :html:`{sidebarContent}`.
+.. _content-element-partial:
 
-You can compare your result to the example in our site extension:
-`TwoColumns.html <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Resources/Private/Templates/Page/TwoColumns.html>`_.
+Extract the content element rendering to a partial
+==================================================
 
-The jumbotron: Customize output of content elements
-===================================================
+As we want to reuse the Fluid part about rendering content elements in the
+next steps, we extract it into a partial, like we did with the menu in
+step :ref:`Extract the menu into a partial <t3sitepackage:create_partial_header>`.
 
-As you can see in the static html template, the jumbotron consist of a headline
-and a text:
+We want to be able to render content elements of **any content area**. Therefore pass
+the records of the page layout area to be rendered as variable `records` to
+the partial:
 
-.. code-block:: html
-   :caption: theme/index.html
+..  literalinclude:: _codesnippets/_SectionMainRenderPartial.diff
+    :caption: Resources/Private/Templates/Pages/Default.html (diff)
 
-   <div class="jumbotron">
-       <div class="container">
-           <h1 class="display-3">Hello, world!</h1>
-           <p> ... </p>
-       </div>
-   </div>
+The partial then looks like this:
 
-We could use a content element of type :guilabel:`Text` to store the needed
-information. However the output of the Standard content element "Text" look
-like this:
+..  include:: /CodeSnippets/Fluid/PartialContent.rst.txt
 
-.. code-block:: html
-   :caption: Example HTML Output
-
-   <div id="c215" class="frame frame-default frame-type-text frame-layout-0">
-      <header>
-         <h2 class="">
-            Hello World!
-         </h2>
-      </header>
-      <p>Lorem ipsum dolor sit amet, ...</p>
-   </div>
-
-Also we do not want to output other types of content like images or forms.
-
-Open the partial displaying the jumbotron:
-:file:`Resources/Private/Partials/Page/Jumbotron.html`. We already have the
-data of content elements in the column "jumbotron" in a Fluid variable called
-"jumbotronContent".
-
-Now instead of letting extension :file:`fluid_styled_content` render the
-content we will render it ourselves in this partial. Add the debug view helper
-to the partial to see what the data of the jumbotronContent looks like:
-
-.. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html
-
-   <div class="jumbotron">
-      <f:debug>{jumbotronContent}</f:debug>
-      <!-- ... -->
-   </div>
-
-As you can see the data of the actually :sql:`tt_content` record can be found in
-:typoscript:`data`. Now let us traverse the array and output the content
-elements:
-
-.. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html
-
-   <div class="jumbotron">
-       <f:for each="{jumbotronContent}" as="contentElement">
-           <div class="container">
-               <h1 class="display-3">{contentElement.data.header}</h1>
-               <f:format.html>{contentElement.data.bodytext}</f:format.html>
-           </div>
-       </f:for>
-   </div>
-
-
-.. _cm-typo3-backend-add-content:
-
-Add content in the TYPO3 backend
-================================
-
-Now it's a great time to add some content in the backend. Go to
-:guilabel:`Web > Page` and select any of the pages you created before,
-(for example "Page 1"). Click the :guilabel:`+ Content` button
-in the column labelled "*Main*" and choose the "Regular Text
-Element" content element.
-
-.. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
-
-Enter a headline and some arbitrary text in the Rich Text Editor (RTE)
-and save your changes by clicking button :guilabel:`Save` at the top.
-You can return to the previous view by clicking :guilabel:`Close`.
-
-.. include:: /Images/AutomaticScreenshots/FillNewContentElement.rst.txt
-
-The new content element appears in the appropriate column. Repeat this process
-and enter some further content in the column "Jumbotron". The page module should
-now look like this:
-
-.. include:: /Images/AutomaticScreenshots/ContentMappingPreviewPage.rst.txt
-
-.. _cm-Preview-page:
-
-Preview page
-============
-
-We have made changes to the Fluid templates of the extension above. It is
-therefore necessary to :guilabel:`Flush the content caches` in the Menu in the
-top bar before you can preview the page properly:
-
-.. include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
-
-You can now preview your page:
-
-.. include:: /Images/AutomaticScreenshots/ContentMappingPreviewPage.rst.txt
-
-
-
-.. _cm-switch_backend_layout:
-
-Switch to the two column layout with a sidebar
-==============================================
-
-You can switch the used page backend layout in the page properties at
-:guilabel:` Appearance >  Page Layout > Backend Layout`. Edit the page
-properties of your page to use the backend layout "Two Columns".
-
-.. include:: /Images/AutomaticScreenshots/SwitchBackendLayout.rst.txt
-
-After saving you will see that the content of the columns "main" and
-"jumbotron" remains unchanged while there is a third column "sidebar".
-This is due to the fact that the backend layout "Default" and "TwoColumns"
-use the same colPos number for these columns.
-
-.. include:: /Images/AutomaticScreenshots/BackendLayoutTwoColumns.rst.txt
-
-Enter some content to the sidebar. You could for example use the content element
-"Menu of subpages" to display a menu in the sidebar.
-
-Preview the page once more. A sidebar will appear in the frontend:
-
-.. include:: /Images/AutomaticScreenshots/TwoColumnsPreviewPage.rst.txt
+..  _content-element-next-steps:
 
 Next steps
 ==========
 
-The last section of this tutorial summarises the achievements, discusses some
-shortfalls of the extension as it stands now and provides some suggestions what
-to do next.
+..  toctree::
+    :glob:
+
+    Jumbotron
+    SubpageLayout
+    AddContent
+    *
