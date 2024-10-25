@@ -27,7 +27,7 @@ now look like this:
 
 ..  include:: /Images/AutomaticScreenshots/ContentMappingPreviewPage.rst.txt
 
-..  _cm-Preview-page:
+..  _cm-preview-page:
 
 Preview page
 ============
