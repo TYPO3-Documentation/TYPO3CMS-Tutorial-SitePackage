@@ -161,9 +161,14 @@ rendering each content element using the
 ..  literalinclude:: _codesnippets/_SectionMainRender.diff
     :caption: Resources/Private/Templates/Pages/Default.html (diff)
 
-The TypoScript object :typoscript:`tt_content.[CType]` comes from the TypoScript
+For content elements the main type is always `tt_content`. Therefore we include
+the TypoScript object :typoscript:`tt_content` here. It is defined in the TypoScript
 of the system extension :composer:`typo3/cms-fluid-styled-content`. We included
-its site set in step :ref:`content-mapping-site-set`.
+the site set of that extension in step :ref:`content-mapping-site-set`.
+
+The TypoScript object :typoscript:`tt_content` expects the raw database content
+of the row in the table. We therefore pass variable `{record.rawRecord}` to the
+table.
 
 `fluid-styled-content` internally uses
 Fluid templates and TypoScript with data processors just like the ones we were
