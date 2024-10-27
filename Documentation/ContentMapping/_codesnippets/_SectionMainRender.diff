@@ -7,10 +7,10 @@
 -            <p>The content of the start page is displayed here. [...] </p>
 +            <f:for each="{content.main.records}" as="record">
 +                <f:cObject
-+                    typoscriptObjectPath="tt_content.{record.CType}"
-+                    data="{record}"
-+                    table="tt_content"
-+                />
++                     typoscriptObjectPath="{record.mainType}"
++                     data="{record.rawRecord}"
++                     table="{record.mainType}"
++                  />
 +            </f:for>
          </div>
  </f:section>
