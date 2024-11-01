@@ -20,7 +20,7 @@ fine. But you have better overview if you split it up in multiple files ordered
 by purpose.
 
 Familiarize yourself with the TypoScript `@import` syntax first:
-:ref:`TYPO3 Explained, @import syntax <t3coreapi:typoscript-syntax-includes>`.
+:ref:`TYPO3 Explained, @import syntax <t3tsref:typoscript-syntax-includes>`.
 
 .. _typoscript-import:
 
