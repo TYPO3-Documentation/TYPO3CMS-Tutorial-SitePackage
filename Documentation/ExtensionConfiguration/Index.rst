@@ -7,6 +7,7 @@
 Extension Configuration
 =======================
 
+..  contents::
 
 .. _extension-configuration-composer:
 

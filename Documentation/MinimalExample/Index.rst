@@ -12,6 +12,8 @@ templates, assets, etc that are used for the site it belongs to.
 
 So first we create a minimal extension.
 
+..  contents::
+
 .. _minimal-extension:
 
 Create a minimal TYPO3 extension using b13/make

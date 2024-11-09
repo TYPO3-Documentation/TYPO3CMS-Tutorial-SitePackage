@@ -9,6 +9,8 @@ Create initial pages
 To follow this tutorial you need to have a few pages in your page tree and some
 content elements on those pages. You also need a basic site configuration.
 
+..  contents::
+
 ..  _load-example-data:
 
 Load the example data automatically

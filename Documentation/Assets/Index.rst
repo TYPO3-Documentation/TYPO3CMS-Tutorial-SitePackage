@@ -21,6 +21,8 @@ symlinked into :path:`public/_assets/<some hash>`.
 
 Read more about assets in :ref:`Getting started, assets <t3start:assets>`.
 
+..  contents::
+
 ..  _theme-example:
 
 The example theme
@@ -66,8 +68,8 @@ In a later step, you can use `npm <https://www.npmjs.com/>`__ (Node Package
 Manager) to manage your JavaScript and CSS dependencies locally. We also
 recommend using a JavaScript bundler like `Vite <https://vite.dev/>`__.
 
-If you decide to use a frontend bundler, make sure that the resulting asset 
-files are placed in a publicly available folder, like :path:`Resources/Public` 
+If you decide to use a frontend bundler, make sure that the resulting asset
+files are placed in a publicly available folder, like :path:`Resources/Public`
 in your site package.
 
 There are also TYPO3 extensions like :composer:`praetorius/vite-asset-collector`
