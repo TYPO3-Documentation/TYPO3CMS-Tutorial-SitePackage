@@ -14,6 +14,8 @@ followed these steps:
 
 :ref:`Installing TYPO3 with DDEV <t3start:installation-ddev-tutorial>`
 
+..  contents::
+
 .. _extension-installation_with_composer:
 
 Install the site package you just created

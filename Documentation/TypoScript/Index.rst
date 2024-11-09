@@ -22,6 +22,8 @@ by purpose.
 Familiarize yourself with the TypoScript `@import` syntax first:
 :ref:`TYPO3 Explained, @import syntax <t3tsref:typoscript-syntax-includes>`.
 
+..  contents::
+
 .. _typoscript-import:
 
 Import the TypoScript from a different location

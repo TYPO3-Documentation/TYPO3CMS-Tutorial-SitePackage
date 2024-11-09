@@ -22,6 +22,8 @@ This chapter is based on the following steps:
 After this tutorial you have created Fluid templates and split them into
 manageable pieces.
 
+..  contents::
+
 ..  _implement-templates-files:
 ..  _the-page-layout-file:
 ..  _create_template:

@@ -16,10 +16,12 @@ our site package.
 
 In step :ref:`content-mapping-site-set` we added dependencies to our site set.
 
+..  contents::
+
 .. _settings-definitions-yaml-constants:
 
 Setting definition
-------------------
+==================
 
 Settings definitions are used to set values that can be used in the TypoScript
 setup through out the project. Before they were kept in the file
