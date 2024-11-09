@@ -14,6 +14,8 @@ with dummy content:
 ..  literalinclude:: _codesnippets/_SectionMain.html
     :caption: Resources/Private/Templates/Pages/Default.html
 
+..  contents::
+
 .. _content-mapping-site-set:
 
 Include the site sets of fluid-styled-content as dependency
