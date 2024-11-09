@@ -42,6 +42,7 @@ This all sounds very sophisticated and complicated, but keep in mind, the
 extension (as it stands at this point in time) contains approximately six files
 only, plus the HTML/CSS files. Only two files contain PHP code.
 
+..  contents::
 
 .. _next-steps:
 

@@ -12,6 +12,8 @@ A data processor (see :ref:`dataProcessing <t3tsref:dataProcessing>`) can be
 used to provide the data for the menu to the template and a Fluid template
 partial do define the view of the menu.
 
+..  contents::
+
 .. _add-menu-processor:
 
 Use the data processor `menu`

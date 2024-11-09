@@ -15,6 +15,7 @@ variable :html:`{sidebarContent}`.
 You can compare your result to the example in our site extension:
 `TwoColumns.html <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Resources/Private/Templates/Page/TwoColumns.html>`_.
 
+..  contents::
 
 .. _cm-switch_backend_layout:
 

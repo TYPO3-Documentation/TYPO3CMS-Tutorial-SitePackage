@@ -14,6 +14,8 @@ theme and functionality of a site.
 For further reading see also:
 :ref:`TYPO3 explained: Introduction into using site packages <t3coreapi:site-package-introduction>`.
 
+..  contents::
+
 ..  _introduction-quickly:
 
 How to get started quickly
