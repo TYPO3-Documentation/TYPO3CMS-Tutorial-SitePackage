@@ -54,6 +54,23 @@ we are finished with the site package.
     If you want to work with your own theme or received a theme from a frontend
     developer make sure that all paths used within the theme are relative.
 
+..  _theme-example-assets-symlink:
+
+Symlinking Resources/Public into public/_assets
+===============================================
+
+When creating your :ref:`Minimal site package <t3sitepackage:minimal-design>`
+your extension did not yet have a folder :path:`Resources/Public`. The symlink
+from :folder:`public/_assets` gets automatically created during Composer
+installation.
+
+However as you newly created the folder, you must tell Composer to re-perform this initialization-process, which is done in the "dump-autoload" step.
+During that process the symlinks will also be created by Composer.
+
+..  code-block:: bash
+
+    ddev composer dump-autoload
+
 ..  _asset-dependencies:
 
 Managing asset dependencies in real life projects
