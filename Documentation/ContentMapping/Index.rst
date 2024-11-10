@@ -168,10 +168,6 @@ the TypoScript object :typoscript:`tt_content` here. It is defined in the TypoSc
 of the system extension :composer:`typo3/cms-fluid-styled-content`. We included
 the site set of that extension in step :ref:`content-mapping-site-set`.
 
-The TypoScript object :typoscript:`tt_content` expects the raw database content
-of the row in the table. We therefore pass variable `{record.rawRecord}` to the
-table.
-
 `fluid-styled-content` internally uses
 Fluid templates and TypoScript with data processors just like the ones we were
 defining above. If you desire to change the output of these content elements
