@@ -1,18 +1,12 @@
 :navigation-title: FAQ
 ..  include:: /Includes.rst.txt
 
-..  _introduction:
 ..  _site-package-benefits:
+..  _faq:
 
-=====================================
-Introduction into using site packages
-=====================================
-
-A site package is a custom TYPO3 extension that contains files regarding the
-theme and functionality of a site.
-
-For further reading see also:
-:ref:`TYPO3 explained: Introduction into using site packages <t3coreapi:site-package-introduction>`.
+==========================
+Frequently asked questions
+==========================
 
 ..  contents::
 
@@ -49,19 +43,16 @@ When not to put files in a site package
 =======================================
 
 If you are developing functionality that may need to be shared across multiple sites
-or TYPO3 installations in the future, it is advisable to create a custom extension
+or TYPO3 installations in the future, it is advisable to create a
+:ref:`custom extension <t3start:create-own-extension>`
 for that functionality instead.
-
-..  todo: Add link to how to create a custom extension once documented in
-    Once https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-GettingStarted/issues/450
-    is resolved
 
 ..  _introduction-download:
 
 Where to download the example site package
 ==========================================
 
-You can download the example site package use in this tutorial from GitHub:
+You can download the example site package used in this tutorial from GitHub:
 https://github.com/TYPO3-Documentation/site_package
 
 ..  note::
