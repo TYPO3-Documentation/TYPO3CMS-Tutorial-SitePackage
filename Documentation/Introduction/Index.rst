@@ -59,9 +59,4 @@ for that functionality instead.
 Where to download the example site package
 ==========================================
 
-You can download the example site package use in this tutorial from GitHub:
-https://github.com/TYPO3-Documentation/site_package
-
-..  note::
-    The example site package is structured for educational purposes and is
-    not intended for use in production environments.
+..  include:: /_Includes/_DownloadSitePackage.rst.txt

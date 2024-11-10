@@ -140,7 +140,7 @@ A working copy of the site package extension can be retrieved from the
     CreatePages/Index
     MainMenuCreation/Index
     ContentMapping/Index
-    Summary/Index
+    NextSteps/Index
 
 ..  Meta Menu
 
