@@ -161,7 +161,7 @@ https://github.com/TYPO3-Documentation/site_package
     MainMenuCreation/Index
     SiteSets/Index
     Faq/Index
-    Summary/Index
+    NextSteps/Index
 
 ..  toctree::
     :hidden:
