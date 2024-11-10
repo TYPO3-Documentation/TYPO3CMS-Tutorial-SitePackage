@@ -160,7 +160,6 @@ https://github.com/TYPO3-Documentation/site_package
     TypoScript/Index
     MainMenuCreation/Index
     SiteSets/Index
-    ExtensionConfiguration/Index
     Faq/Index
     Summary/Index
 
