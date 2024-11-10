@@ -1,17 +1,23 @@
 .. include:: /Includes.rst.txt
+..  _introduction:
 ..  _start:
 
 ===========================
 TYPO3 site package tutorial
 ===========================
 
+A site package is a custom :ref:`TYPO3 extension <t3start:concepts-extensions>`
+that contains files regarding the theme and functionality of a site.
+
 This tutorial describes step by step how to come from your first TYPO3
 installation to the first basic site.
 
-A working copy of the site package extension can be retrieved from the
-`TYPO3CMS-Tutorial-SitePackage-Code`_ repository.
+You can download the example site package used in this tutorial from GitHub:
+https://github.com/TYPO3-Documentation/site_package
 
-.. _TYPO3CMS-Tutorial-SitePackage-Code: https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/main
+..  note::
+    The example site package is structured for educational purposes and is
+    not intended for use in production environments.
 
 ----
 
@@ -155,7 +161,7 @@ A working copy of the site package extension can be retrieved from the
     MainMenuCreation/Index
     SiteSets/Index
     ExtensionConfiguration/Index
-    Introduction/Index
+    Faq/Index
     Summary/Index
 
 ..  toctree::
