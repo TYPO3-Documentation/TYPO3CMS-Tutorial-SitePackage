@@ -197,6 +197,20 @@ Clear all caches and preview the web page.
 
 Learn more about using Fluid Templates in chapter :ref:`fluid-templates`.
 
+..  _cm-preview-page:
+
+Preview page
+============
+
+Whenever we have made changes to the Fluid templates or TypoScript files. It is
+necessary to :guilabel:`Flush frontend caches` in the menu in the
+top bar before you can preview the page properly:
+
+..  include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
+
+You can then preview your page by clicking on the button :guilabel:`View webpage`
+in the page module.
+
 .. _extension-configuration-composer:
 
 Composer configuration :file:`composer.json`
