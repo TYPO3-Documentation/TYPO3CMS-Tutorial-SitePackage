@@ -1,10 +1,11 @@
+:navigation-title: Prerequisites
 .. include:: /Includes.rst.txt
 
 .. _prerequisites:
 
-=============
-Prerequisites
-=============
+======================================================
+Prerequisites to create a TYPO3 site package extension
+======================================================
 
 Before you start working on this tutorial you should have a working TYPO3
 installation in versions 13.3 or above.
@@ -30,17 +31,18 @@ You should be able to log in into the TYPO3 backend and see the following:
 This TYPO3 tutorial assumes that the reader has some basic knowledge in the
 following areas:
 
-*   HTML, CSS and JavaScript
-*   DDEV
-*   Composer
+*   `HTML, CSS and JavaScript <https://www.w3schools.com/html/default.asp>`__
+*   `DDEV <https://ddev.readthedocs.io/en/stable/>`__
+*   `Composer <https://getcomposer.org/>`__
 
 It is also helpful if you know the following concepts:
 
-*   Backend
-*   Frontend
-*   Page tree
-*   How to create a page
-*   How to create page content
-*   The page module
-*   The list module
-*   The TypoScript module
+*   :ref:`Backend <t3start:backend>`
+*   :ref:`Frontend <t3start:frontend>`
+*   :ref:`Working with pages in the page tree <t3editors:pages-drag-drop>`
+*   :ref:`How to create a page <t3editors:pages-creating>`
+*   :ref:`How to create page contentt <t3editors:content-creating>`
+*   :ref:`Working with content in the page module <t3editors:content-working>`
+*   :ref:`Using the list module <t3editors:using-the-list-module-effectively>`
+*   :ref:`Site Management <t3start:site-management>`
+*   :ref:`How to clear caches in TYPO3? <t3start:how-to-clear-cache>`
