@@ -37,6 +37,11 @@ reloading the backend.
 
     The page tree in the module :guilabel:`Web > Page` now contains a few example pages.
 
+..  note::
+    Ignore the "Unused elements detected" warning for now, it will disappear
+    once we have :ref:`Created a default page layout with page
+    TSconfig <t3sitepackage:content-mapping-backend-layout>`.
+
 .. _typo3-backend-site:
 
 Site configuration
