@@ -202,7 +202,7 @@ Learn more about using Fluid Templates in chapter :ref:`fluid-templates`.
 Preview page
 ============
 
-Whenever we have made changes to the Fluid templates or TypoScript files. It is
+Whenever we have made changes to the Fluid templates or TypoScript files, it is
 necessary to :guilabel:`Flush frontend caches` in the menu in the
 top bar before you can preview the page properly:
 
