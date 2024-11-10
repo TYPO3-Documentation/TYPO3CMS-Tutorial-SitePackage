@@ -56,6 +56,14 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`Create a minimal site package <t3sitepackage:minimal-design>`
             :button-style: btn btn-secondary stretched-link
 
+    ..  card:: :ref:`Extension Installation <t3sitepackage:extension-installation>`
+
+        In this section we go through the process of installing the site
+        package extension with composer.
+
+        ..  card-footer:: :ref:`Add your site package with composer <t3sitepackage:extension-installation>`
+            :button-style: btn btn-secondary stretched-link
+
     ..  card:: :ref:`Assets <assets-theme>`
 
         Assets usually include CSS files, JavaScript and images / icons used
@@ -123,14 +131,6 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`Discover the composer configurations <t3sitepackage:extension-configuration>`
             :button-style: btn btn-secondary stretched-link
 
-    ..  card:: :ref:`Extension Installation <t3sitepackage:extension-installation>`
-
-        In this section we go through the process of installing the site
-        package extension with composer.
-
-        ..  card-footer:: :ref:`Add your site package with composer <t3sitepackage:extension-installation>`
-            :button-style: btn btn-secondary stretched-link
-
     ..  card:: :ref:`Summary <t3sitepackage:summary>`
 
         In this chapter we sum up the steps that we did after we have gone
@@ -144,10 +144,10 @@ A working copy of the site package extension can be retrieved from the
     :titlesonly:
     :hidden:
 
-    Introduction/Index
     Prerequisites/Index
     CreatePages/Index
     MinimalExample/Index
+    ExtensionInstallation/Index
     Assets/Index
     FluidTemplates/Index
     ContentMapping/Index
@@ -155,7 +155,7 @@ A working copy of the site package extension can be retrieved from the
     MainMenuCreation/Index
     SiteSets/Index
     ExtensionConfiguration/Index
-    ExtensionInstallation/Index
+    Introduction/Index
     Summary/Index
 
 ..  toctree::
