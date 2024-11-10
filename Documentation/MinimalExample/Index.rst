@@ -125,6 +125,7 @@ On saving, the site package is added to your site configuration file, which chan
 ..  literalinclude:: _config.yaml.diff
 
 .. _minimal-extension-typoscript:
+.. _make-typoscript-available:
 
 The TypoScript-only version
 ===========================
@@ -195,3 +196,29 @@ Create a file named :file:`Default.html` in folder
 Clear all caches and preview the web page.
 
 Learn more about using Fluid Templates in chapter :ref:`fluid-templates`.
+
+.. _extension-configuration-composer:
+
+Composer configuration :file:`composer.json`
+============================================
+
+In step :ref:`Create a minimal TYPO3 extension <t3sitepackage:minimal-extension>`
+a file called :file:`composer.json` was created for you:
+
+.. include:: /CodeSnippets/ExtensionConfiguration/ComposerJson.rst.txt
+
+At the top of the :file:`composer.json` file we see the Composer package name
+`t3docs/site-package` (with a dash) and at the bottom we see the TYPO3
+extension key in the extra section - :file:`site_package` (with an underscore).
+The Composer "name" consists of a vendor name followed by a forward slash and the
+lowercase extension name with dashes.
+
+When you reference files in your extension, the extension key is used, for
+example when setting your favicon in TypoScript:
+
+..  code-block:: typoscript
+    :caption: package/site_package/Configuration/Sets/SitePackage/setup.typoscript
+
+    page {
+        shortcutIcon = EXT:site_package/Ressources/Public/Icons/favicon.ico
+    }
