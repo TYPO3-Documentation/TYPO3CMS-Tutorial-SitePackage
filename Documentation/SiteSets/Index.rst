@@ -92,6 +92,6 @@ setup through out the project. Before they were kept in the file
 :file:`settings.definitions.yaml`. See
 `settings.definitions.yaml <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Configuration/Sets/SitePackage/settings.definitions.yaml>`__ in Github.
 
-It is best practise to use them for values that might
+It is best practice to use them for values that might
 want to be changed later on like paths, ids of important pages (contact,
 imprint, a system folder that contains certain records, ...).
