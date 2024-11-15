@@ -186,10 +186,10 @@ is listed here, the path defined in line 6 of the TypoScript above is incorrect,
 for example if you mistyped the extension name or part of the path.
 
 Create a file named :file:`Default.html` in folder
-:path:`packages/site-package/Resources/Private/Pages`.
+:path:`packages/site-package/Resources/Private/Templates/Pages`.
 
 .. code-block:: html
-   :caption: packages/site-package/Resources/Private/Pages/Default.html
+   :caption: packages/site-package/Resources/Private/Templates/Pages/Default.html
 
    Hello Fluid World!
 
