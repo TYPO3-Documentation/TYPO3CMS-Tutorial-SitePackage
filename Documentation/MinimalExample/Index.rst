@@ -83,13 +83,17 @@ After you have created your site package extension you can uninstall :composer:`
     ddev composer remove b13/make --dev
 
 Before your brand new site package extension takes effect in your TYPO3
-installation, you have to install it:
+installation, you have to install it. First you have to edit your composer.json in the root of your installation directory to add `packages` as a local repository. 
+
+See also chapter :ref:`Extension installation <t3sitepackage:extension-installation>`.
+
+Then you can install your sitepackage with:
 
 ..  code-block:: bash
 
     ddev composer req t3docs/site-package:"@dev"
 
-See also chapter :ref:`Extension installation <t3sitepackage:extension-installation>`.
+
 
 .. _minimal-extension-siteset:
 
