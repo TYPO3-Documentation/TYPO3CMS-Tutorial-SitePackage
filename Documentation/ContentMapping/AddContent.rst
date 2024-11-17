@@ -7,7 +7,11 @@
 Add content in the TYPO3 backend
 ================================
 
-Now it's a great time to add some content in the backend. Go to
+The pages generated in step
+:ref:`Create initial pages <t3sitepackage:typo3-backend-create-initial-pages>`
+already contain some example content.
+
+You can add additonal content in the backend. Go to
 :guilabel:`Web > Page` and select any of the pages you created before,
 (for example "Page 1"). Click the :guilabel:`+ Content` button
 in the column labelled "*Main*" and choose the "Regular Text
@@ -21,25 +25,12 @@ You can return to the previous view by clicking :guilabel:`Close`.
 
 ..  include:: /Images/AutomaticScreenshots/FillNewContentElement.rst.txt
 
-The new content element appears in the appropriate column. Repeat this process
-and enter some further content in the column "Jumbotron". The page module should
-now look like this:
+:ref:`Preview the page <t3sitepackage:cm-preview-page>` and assert that the
+content is displayed as expected. Whenever you edit the content elements on
+a page the cache of the current page is automatically deleted. If the content
+fails to update you should still delete the TYPO3 caches and force your
+browser to reload.
 
-..  include:: /Images/AutomaticScreenshots/ContentMappingPreviewPage.rst.txt
-
-..  contents::
-
-..  _cm-preview-page:
-
-Preview page
-============
-
-We have made changes to the Fluid templates of the extension above. It is
-therefore necessary to :guilabel:`Flush frontend caches` in the Menu in the
-top bar before you can preview the page properly:
-
-..  include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
-
-You can now preview your page:
-
-..  include:: /Images/AutomaticScreenshots/ContentMappingPreviewPage.rst.txt
+There are many tips and tricks around content editing. The topic is described
+in more depth in chapter
+:ref:`Content Elements of the Editors Tutorial <t3editors:content-elements>`.
