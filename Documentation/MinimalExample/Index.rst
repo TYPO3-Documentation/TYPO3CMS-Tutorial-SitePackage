@@ -66,7 +66,7 @@ Execute the command `ddev typo3 make:extension` and answer the prompt
      [OK] Successfully created the extension my_site_package (myvendor/my-site-package).
 
 This script creates a new folder called `packages` with a subfolder,
-`my-site-package`. It mainly contains only a file called `composer.json`.
+`site-package`. It mainly contains only a file called `composer.json`.
 
 You could of course also create this file manually. Step
 :ref:`extension-configuration-composer` will explain the content of the :file:`composer.json`.
