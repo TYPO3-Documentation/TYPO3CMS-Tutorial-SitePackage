@@ -28,16 +28,6 @@ https://github.com/TYPO3-Documentation/site_package
     :class: pb-4
     :card-height: 100
 
-    ..  card:: :ref:`Introduction <t3sitepackage:introduction>`
-
-        Here we define the benefits of the site package: like the concepts of
-        encapsulation, the concepts of dependency management, the clean
-        separation from the userspace (fileadmin/FAL), some important security
-        benefits, deployment and distributability advantages.
-
-        ..  card-footer:: :ref:`Discover the benefits of a site package <t3sitepackage:introduction>`
-            :button-style: btn btn-secondary stretched-link
-
     ..  card:: :ref:`Prerequisites <t3sitepackage:prerequisites>`
 
         In this section we mention the prerequisites that you need before
