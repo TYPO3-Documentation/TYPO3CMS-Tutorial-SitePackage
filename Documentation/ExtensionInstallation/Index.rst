@@ -48,7 +48,7 @@ Add the following lines:
          }
       ],
       "require": {
-         "typo3/cms-core": "^13.1",
+         "typo3/cms-core": "^13.4",
          "..." : "..."
       },
       "..." : "..."
@@ -63,7 +63,7 @@ at :file:`packages/site_package/`
    :caption: packages/site_package/composer.json
 
    {
-      "name": "myvendor/site-package"
+      "name": "myvendor\my-site-package"
    }
 
 require it by:
@@ -71,7 +71,7 @@ require it by:
 .. code-block:: bash
    :caption: Execute in directory page_root
 
-    composer require myvendor/site-package:@dev
+    composer require myvendor\my-site-package:@dev
 
 Project file structure
 ======================
