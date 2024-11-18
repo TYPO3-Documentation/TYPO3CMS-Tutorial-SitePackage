@@ -127,12 +127,12 @@ https://github.com/TYPO3-Documentation/site_package
         ..  card-footer:: :ref:`Discover the composer configurations <t3sitepackage:extension-configuration>`
             :button-style: btn btn-secondary stretched-link
 
-    ..  card:: :ref:`Summary <t3sitepackage:summary>`
+    ..  card:: :ref:`Next steps <t3sitepackage:next-steps>`
 
-        In this chapter we sum up the steps that we did after we have gone
-        through this tutorial.
+        In this chapter we describe the next steps which you can do with your
+        new site package.
 
-        ..  card-footer:: :ref:`See the summary <t3sitepackage:summary>`
+        ..  card-footer:: :ref:`See the next steps <t3sitepackage:next-steps>`
             :button-style: btn btn-secondary stretched-link
 
 ..  toctree::
