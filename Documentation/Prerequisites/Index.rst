@@ -8,7 +8,7 @@ Prerequisites to create a TYPO3 site package extension
 ======================================================
 
 Before you start working on this tutorial you should have a working TYPO3
-installation in versions 13.3 or above.
+installation in versions 13.4 or above.
 
 We assume you use Composer and work locally with DDEV.
 
