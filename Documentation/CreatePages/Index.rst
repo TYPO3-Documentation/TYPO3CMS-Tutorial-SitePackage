@@ -58,7 +58,7 @@ When the :guilabel:`Sites` module is loaded, a warning will be displayed, which 
 
 ..  figure:: SiteSetDependencieWarning.png
     :class: with-shadow
-    :alt: Screenshot of the backend module "Site Management" with a warning related to missing site set
+    :alt: Screenshot of the backend module "Site" with a warning related to missing site set
 
 Once this package has been created, the screen will look like this:
 
