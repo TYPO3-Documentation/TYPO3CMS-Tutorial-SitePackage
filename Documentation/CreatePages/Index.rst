@@ -54,6 +54,13 @@ The site configuration is stored in a file called
 :file:`config/sites/main/config.yaml`. You can edit this file in the
 backend module :guilabel:`Site Management > Sites`.
 
+When the ‘Sites’ module is loaded, a warning will be displayed, which will disappear when our package site is created during this tutorial.
+
+..  figure:: SiteSetDependencieWarning.png
+    :alt: Screenshot of the backend module "Site Management" with a warning related to missing site set
+
+Once this package has been created, the screen will look like this:
+
 ..  figure:: SiteConfiguration.png
     :alt: Screenshot of the backend module "Site Management"
 
