@@ -128,6 +128,8 @@ followed these steps:
 
 :ref:`Installing TYPO3 with DDEV <t3start:installation-ddev-tutorial>`
 
+.. _extension-installation-site-package:
+
 Install the site package you just created
 -----------------------------------------
 
