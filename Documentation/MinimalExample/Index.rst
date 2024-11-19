@@ -71,7 +71,7 @@ This script creates a new folder called `packages` with a subfolder,
 You could of course also create this file manually. Step
 :ref:`extension-configuration-composer` will explain the content of the :file:`composer.json`.
 For the time being just remember the Composer name you have chosen
-(`myvendor/my-site-package`) and the extension name (`site_package`).
+(`myvendor/my-site-package`) and the extension name (`my_site_package`).
 
 In order to see a change in the TYPO3 backend or frontend your site package needs
 to be :ref:`installed <extension-installation>`.
@@ -100,10 +100,6 @@ We assume that you are working on your local machine using DDEV and that you
 followed these steps:
 
 :ref:`Installing TYPO3 with DDEV <t3start:installation-ddev-tutorial>`
-
-..  contents::
-
-.. _extension-installation_with_composer:
 
 Install the site package you just created
 -----------------------------------------
