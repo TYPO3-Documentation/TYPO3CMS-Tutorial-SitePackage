@@ -42,13 +42,6 @@ return [
     #code Snippets Extension Configuration
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/composer.json',
-        'targetFileName' => 'ExtensionConfiguration/ComposerJson.rst.txt',
-        'caption' => 'EXT:site_package/composer.json',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/config.yaml',
         'targetFileName' => 'ExtensionConfiguration/SitePackage-config.rst.txt',
         'caption' => 'EXT:site_package/Configuration/Sets/SitePackage/config.yaml',
