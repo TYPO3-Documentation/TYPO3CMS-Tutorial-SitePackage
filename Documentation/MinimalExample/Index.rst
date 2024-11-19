@@ -16,6 +16,33 @@ So first we create a minimal extension.
 
 .. _minimal-extension:
 
+Create a minimal TYPO3 extension manually
+=========================================
+
+..  code-block:: json
+    :caption: EXT:my-site-package/composer.json
+    :linenos:
+
+    {
+    	"name": "myvendor/my-site-package",
+    	"type": "typo3-cms-extension",
+    	"description": "My site package",
+    	"require": {
+    		"typo3/cms-core": "^13.4"
+    	},
+        "autoload": {
+            "psr-4": {
+                "Myvendor\\MySitePackage\\": "Classes/"
+            }
+        },
+    	"extra": {
+    		"typo3/cms": {
+    			"extension-key": "my_site_package"
+    		}
+    	}
+    }
+
+
 Create a minimal TYPO3 extension using b13/make
 ===============================================
 
@@ -45,11 +72,11 @@ Execute the command `ddev typo3 make:extension` and answer the prompt
      >
 
      Choose supported TYPO3 versions (comma separate for multiple) [TYPO3 v12 LTS]:
-      [10] TYPO3 v10 LTS
-      [11] TYPO3 v11 LTS
-      [12] TYPO3 v12 LTS
-      [13] TYPO3 v13
-     > 13
+      [10.4] TYPO3 v10 LTS
+      [11.5] TYPO3 v11 LTS
+      [12.4] TYPO3 v12 LTS
+      [13.4] TYPO3 v13 LTS
+     > 13.4
 
      Enter a description of the extension:
      > My site package
@@ -231,9 +258,9 @@ Edit the site configuration that was created in step :ref:`typo3-backend-site`
 and add the site set to it. You can do this by using the backend module:
 
 ..  figure:: AddSiteSet.png
-    :alt: Screenshot demonstrating adding the "Minimal example site package" to the site main
+    :alt: Screenshot demonstrating adding the "Example: My Site package" to the site main
 
-    Use module :guilabel:`Site Management > Sites` to add the "Minimal example site package"
+    Use module :guilabel:`Site Management > Sites` to add the "Example: My Site package"
 
 On saving, the site package is added to your site configuration file, which changes to this:
 
@@ -265,8 +292,7 @@ of the "Getting Started Tutorial".
 The TYPO3 Fluid version
 =======================
 
-Replace file :file:`setup.typoscript` of example
-:file:`minimal-extension-typoscript` with the following lines:
+Replace file :file:`setup.typoscript` of previuous example with the following lines:
 
 ..  literalinclude:: _pageview.typoscript
     :caption: packages/my-site-package/Configuration/Sets/SitePackage/setup.typoscript
