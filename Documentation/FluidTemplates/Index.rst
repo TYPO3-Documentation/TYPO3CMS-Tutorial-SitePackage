@@ -150,18 +150,18 @@ You should now have the following files:
     :level: 3
     :show-file-icons: true
 
-    *   EXT:my_sitepackage/Resources/Private/Templates
+    *   EXT:my_site_package/Resources/Private/Templates
 
-    *   Pages
+        *   Pages
 
-        *   Default.html
-        *   Subpage.html
+            *   Default.html
+            *   Subpage.html
 
-    *   Partials
+        *   Partials
 
-        *   Footer.html
-        *   Header.html
-        *   Jumbotron.html
+            *   Footer.html
+            *   Header.html
+            *   Jumbotron.html
 
 The Fluid template :file:`Resources/Private/Templates/Pages/Default.html`
 should now look like this:
