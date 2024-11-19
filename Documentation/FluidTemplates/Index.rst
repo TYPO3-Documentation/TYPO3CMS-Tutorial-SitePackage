@@ -140,7 +140,7 @@ Remove the header from the template and replace it with a render ViewHelper:
     :caption: Resources/Private/Templates/Pages/Default.html (difference)
 
 Move the Fluid code you just remove to a file called
-:file:`sitepackage/Resources/Private/Templates/Partials/Header.html`.
+:file:`my-site-package/Resources/Private/Templates/Partials/Header.html`.
 
 Do the same with the jumbotron, the breadcrumb, and the footer.
 
