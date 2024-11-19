@@ -36,7 +36,7 @@ Execute the command `ddev typo3 make:extension` and answer the prompt
     ddev typo3 make:extension
 
      Enter the composer package name (e.g. "vendor/awesome"):
-     > t3docs/site-package
+     > myvendor\my-site-package
 
      Enter the extension key [site_package]:
      >
@@ -85,13 +85,13 @@ After you have created your site package extension you can uninstall :composer:`
 Before your brand new site package extension takes effect in your TYPO3
 installation, you have to install it. First you have to edit your composer.json in the root of your installation directory to add `packages` as a local repository. 
 
-See also chapter :ref:`Extension installation <t3sitepackage:extension-installation>`.
+See chapter :ref:`Extension installation <t3sitepackage:extension-installation>`.
 
 Then you can install your sitepackage with:
 
 ..  code-block:: bash
 
-    ddev composer req t3docs/site-package:"@dev"
+    ddev composer req myvendor\my-site-package:"@dev"
 
 
 
