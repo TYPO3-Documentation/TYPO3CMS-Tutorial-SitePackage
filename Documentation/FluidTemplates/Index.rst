@@ -35,7 +35,8 @@ Copy the main :ref:`static HTML file <theme-example-static-html>` from
 :file:`Resources/Public/StaticTemplate/default.html`
 to :file:`Resources/Private/Templates/Pages/Default.html`. You can override
 the file created in step :ref:`Minimal site package - The TYPO3 Fluid
-version <t3sitepackage:minimal-extension-fluid>`.
+version <t3sitepackage:minimal-extension-fluid>`. The file name must begin 
+with a capital letter
 
 The template name `Default.html` is used as a fall back if no other template
 names are defined. Do not change it for now.
