@@ -1,2 +1,2 @@
-name: t3docs/site-package
-label: "Example: Site package"
+name: myvendor/my-site-package
+label: "Example: My Site package"
