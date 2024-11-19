@@ -184,6 +184,8 @@ require it by:
    :caption: Execute in directory page_root
 
     composer require myvendor/my-site-package:@dev
+    
+..  _extension-installation-project-structure:
 
 Project file structure
 ----------------------
