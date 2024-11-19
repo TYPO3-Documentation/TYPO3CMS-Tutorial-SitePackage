@@ -113,7 +113,6 @@ Before your brand new site package extension takes effect in your TYPO3
 installation, you have to install it. First you have to edit your composer.json in the root of your installation directory to add `packages` as a local repository.
 
 
-.. include:: /Includes.rst.txt
 
 .. _extension-installation:
 
