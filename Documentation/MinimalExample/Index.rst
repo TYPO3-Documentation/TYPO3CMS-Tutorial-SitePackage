@@ -206,7 +206,7 @@ Your project should now have the following structure:
 
     *   packages
 
-        *   site_package
+        *   my-site-package
 
             *   [All sitepackage files]
 
