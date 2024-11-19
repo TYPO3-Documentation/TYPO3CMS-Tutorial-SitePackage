@@ -12,7 +12,7 @@ To understand the following section you need basic knowledge about how to use th
 
 This chapter is based on the following steps:
 
-*   A Composer-based TYPO3 installation, at least version 13.3.
+*   A Composer-based TYPO3 installation, at least version 13.4.
 *   You need :ref:`Initial pages and a site
     configuration <t3sitepackage:typo3-backend-create-initial-pages>`.
 *   You need a :ref:`Minimal site package <t3sitepackage:minimal-design>`.
