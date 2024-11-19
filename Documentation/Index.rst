@@ -143,7 +143,6 @@ https://github.com/TYPO3-Documentation/site_package
     Prerequisites/Index
     CreatePages/Index
     MinimalExample/Index
-    ExtensionInstallation/Index
     Assets/Index
     FluidTemplates/Index
     ContentMapping/Index
