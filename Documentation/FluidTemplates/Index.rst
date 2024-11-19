@@ -35,7 +35,7 @@ Copy the main :ref:`static HTML file <theme-example-static-html>` from
 :file:`Resources/Public/StaticTemplate/default.html`
 to :file:`Resources/Private/Templates/Pages/Default.html`. You can override
 the file created in step :ref:`Minimal site package - The TYPO3 Fluid
-version <t3sitepackage:minimal-extension-fluid>`. The file name must begin 
+version <t3sitepackage:minimal-extension-fluid>`. The file name must begin
 with a capital letter
 
 The template name `Default.html` is used as a fall back if no other template
@@ -87,7 +87,7 @@ Replace `<script>` tags in the body by using the
     :caption: Resources/Private/Templates/Pages/Default.html (difference)
 
 The path to the assets will be resolved by TYPO3. `EXT:` tells TYPO3 that this is
-an extension path. `site_package` is the
+an extension path. `my_site_package` is the
 :ref:`Extension name defined in the composer.json <extension-configuration-composer>`.
 
 Flush all caches and preview the page.
