@@ -364,7 +364,7 @@ a file called :file:`composer.json` was created for you:
 
 At the top of the :file:`composer.json` file we see the Composer package name
 `myvendor/my-site-package` (with a dash) and at the bottom we see the TYPO3
-extension key in the extra section - :file:`site_package` (with an underscore).
+extension key in the extra section - :file:`my_site_package` (with an underscore).
 The Composer "name" consists of a vendor name followed by a forward slash and the
 lowercase extension name with dashes.
 
@@ -375,5 +375,5 @@ example when setting your favicon in TypoScript:
     :caption: package/my-site-package/Configuration/Sets/SitePackage/setup.typoscript
 
     page {
-        shortcutIcon = EXT:site_package/Ressources/Public/Icons/favicon.ico
+        shortcutIcon = EXT:my_site_package/Ressources/Public/Icons/favicon.ico
     }
