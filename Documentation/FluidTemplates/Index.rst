@@ -223,6 +223,19 @@ We can repeat the above steps for the subpage and write such a template:
     :linenos:
     :emphasize-lines: 1-9
 
+..  _create_partial_breadcrumb:
+
+Extract the breadcrumb into a partial
+-------------------------------------
+
+The subpage template contain a breadcrumb, between jumbotron and content, that
+you can also move to a partial.
+
+The breadcrum partial looks like this:
+
+..  literalinclude:: _codesnippets/_BreadcrumbPartial.html
+    :caption: Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
+
 ..  _the-website-layout-file:
 
 Extract the repeated part to a layout
