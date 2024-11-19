@@ -189,6 +189,23 @@ the same like from within the template.
 Chapter :ref:`Main menu <t3sitepackage:main-menu-creation>` will teach you how
 to make the menu work.
 
+..  _create_partial_footer_menu:
+
+Extract the footer menu into a partial
+-------------------------------
+
+We can also move the footer menu from
+the partial :file:`Resources/Private/Templates/Partials/Footer.html` to its
+own partial, :file:`Resources/Private/Templates/Partials/Navigation/FooterMenu.html`:
+
+..  literalinclude:: _codesnippets/_remove_menu_from_footer.diff
+    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Footer.html (Difference)
+
+The footer menu partial looks like this:
+
+..  literalinclude:: _codesnippets/_FooterMenuPartial.html
+    :caption: Resources/Private/Templates/Partials/Navigation/FooterMenu.html
+
 ..  _create_section:
 
 Move the content into a section
