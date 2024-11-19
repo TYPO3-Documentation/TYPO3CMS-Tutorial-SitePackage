@@ -181,7 +181,7 @@ the partial :file:`Resources/Private/Templates/Partials/Header.html` to its
 own partial, :file:`Resources/Private/Templates/Partials/Navigation/Menu.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_header.diff
-    :caption: EXT:site_package/Resources/Private/Templates/Partials/Header.html (Difference)
+    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Header.html (Difference)
 
 The :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>` is used
 the same like from within the template.
