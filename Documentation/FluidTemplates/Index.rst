@@ -35,7 +35,7 @@ Copy the main :ref:`static HTML file <theme-example-static-html>` from
 :file:`Resources/Public/StaticTemplate/default.html`
 to :file:`Resources/Private/Templates/Pages/Default.html`. You can override
 the file created in step :ref:`Minimal site package - The TYPO3 Fluid
-version <t3sitepackage:minimal-extension-fluid>`. The file name must begin 
+version <t3sitepackage:minimal-extension-fluid>`. The file name must begin
 with a capital letter
 
 The template name `Default.html` is used as a fall back if no other template
@@ -87,7 +87,7 @@ Replace `<script>` tags in the body by using the
     :caption: Resources/Private/Templates/Pages/Default.html (difference)
 
 The path to the assets will be resolved by TYPO3. `EXT:` tells TYPO3 that this is
-an extension path. `site_package` is the
+an extension path. `my_site_package` is the
 :ref:`Extension name defined in the composer.json <extension-configuration-composer>`.
 
 Flush all caches and preview the page.
@@ -140,7 +140,7 @@ Remove the header from the template and replace it with a render ViewHelper:
     :caption: Resources/Private/Templates/Pages/Default.html (difference)
 
 Move the Fluid code you just remove to a file called
-:file:`sitepackage/Resources/Private/Templates/Partials/Header.html`.
+:file:`my-site-package/Resources/Private/Templates/Partials/Header.html`.
 
 Do the same with the jumbotron, the breadcrumb, and the footer.
 
@@ -150,18 +150,18 @@ You should now have the following files:
     :level: 3
     :show-file-icons: true
 
-    *   EXT:my_sitepackage/Resources/Private/Templates
+    *   EXT:my_site_package/Resources/Private/Templates
 
-    *   Pages
+        *   Pages
 
-        *   Default.html
-        *   Subpage.html
+            *   Default.html
+            *   Subpage.html
 
-    *   Partials
+        *   Partials
 
-        *   Footer.html
-        *   Header.html
-        *   Jumbotron.html
+            *   Footer.html
+            *   Header.html
+            *   Jumbotron.html
 
 The Fluid template :file:`Resources/Private/Templates/Pages/Default.html`
 should now look like this:
@@ -181,13 +181,30 @@ the partial :file:`Resources/Private/Templates/Partials/Header.html` to its
 own partial, :file:`Resources/Private/Templates/Partials/Navigation/Menu.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_header.diff
-    :caption: EXT:site_package/Resources/Private/Templates/Partials/Header.html (Difference)
+    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Header.html (Difference)
 
 The :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>` is used
 the same like from within the template.
 
 Chapter :ref:`Main menu <t3sitepackage:main-menu-creation>` will teach you how
 to make the menu work.
+
+..  _create_partial_footer_menu:
+
+Extract the footer menu into a partial
+-------------------------------
+
+We can also move the footer menu from
+the partial :file:`Resources/Private/Templates/Partials/Footer.html` to its
+own partial, :file:`Resources/Private/Templates/Partials/Navigation/FooterMenu.html`:
+
+..  literalinclude:: _codesnippets/_remove_menu_from_footer.diff
+    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Footer.html (Difference)
+
+The footer menu partial looks like this:
+
+..  literalinclude:: _codesnippets/_FooterMenuPartial.html
+    :caption: Resources/Private/Templates/Partials/Navigation/FooterMenu.html
 
 ..  _create_section:
 
@@ -222,6 +239,19 @@ We can repeat the above steps for the subpage and write such a template:
     :caption: Resources/Private/Templates/Pages/Subpage.html
     :linenos:
     :emphasize-lines: 1-9
+
+..  _create_partial_breadcrumb:
+
+Extract the breadcrumb into a partial
+-------------------------------------
+
+The subpage template contain a breadcrumb, between jumbotron and content, that
+you can also move to a partial.
+
+The breadcrum partial looks like this:
+
+..  literalinclude:: _codesnippets/_BreadcrumbPartial.html
+    :caption: Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
 
 ..  _the-website-layout-file:
 
