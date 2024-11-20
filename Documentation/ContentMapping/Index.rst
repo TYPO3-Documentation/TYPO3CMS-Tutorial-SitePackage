@@ -41,7 +41,7 @@ Create a default page layout with page TSconfig
 ===============================================
 
 In order to map the content from the backend to the frontend we create a
-new file containing :ref:`page TSconfig <t3tsconfig:setting-page-tsconfig>`.
+new file containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`.
 
 ..  todo: Link to page TSconfig description in getting started once chapter exist.
 
@@ -65,7 +65,7 @@ content mapping. If no content element is added in the backend of that page and
 the slide mode is activated, content from the parent page is displayed. This is
 useful for design elements like side bars, jumbotrons or banners that should be
 the same for a page and its subpage. You can find all details of the
-:ref:`Page / backend layouts in the TSconfig reference <t3tsconfig:backend-layouts>`.
+:ref:`Page / backend layouts in the TSconfig reference <t3tsref:backend-layouts>`.
 
 When you make changes to the files of an extension it is usually necessary
 to flush all caches by hitting the button.
