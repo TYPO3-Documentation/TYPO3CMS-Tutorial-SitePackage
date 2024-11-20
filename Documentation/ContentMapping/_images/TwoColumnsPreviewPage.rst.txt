@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/TwoColumnsPreviewPage.png
+    :class: with-shadow
+    :caption: The sidebar appears in the frontend
+
+   The sidebar appears in the frontend

@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/SwitchBackendLayoutForSubpages.png
+    :class: with-shadow
+    :caption: Switch to the Backend Layout "Two Columns" for subpages
+
+   Switch to the Backend Layout "Two Columns" for subpages

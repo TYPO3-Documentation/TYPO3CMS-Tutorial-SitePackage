@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/BackendLayoutTwoColumns.png
+    :class: with-shadow
+    :caption: A new column "Sidebar" appears
+
+   A new column "Sidebar" appears
