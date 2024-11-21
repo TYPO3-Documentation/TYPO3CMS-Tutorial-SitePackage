@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/VerifyPageContent.png
+    :class: with-shadow
+    :caption: Verify if your new content is displayed on the page
+
+   Verify if your new content is displayed on the page

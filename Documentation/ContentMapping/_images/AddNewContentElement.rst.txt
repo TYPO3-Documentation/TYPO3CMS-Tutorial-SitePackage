@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/AddNewContentElement.png
+    :class: with-shadow
+    :caption: Create new content element
+
+   Create new content element
