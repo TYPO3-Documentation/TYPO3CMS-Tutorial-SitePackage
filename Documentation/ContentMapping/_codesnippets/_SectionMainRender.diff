@@ -7,7 +7,7 @@
 -            <p>The content of the start page is displayed here. [...] </p>
 +            <f:for each="{content.main.records}" as="record">
 +                <f:cObject
-+                     typoscriptObjectPath="{record}"
++                     typoscriptObjectPath="{record.mainType}"
 +                     data="{record.rawRecord}"
 +                     table="{record.mainType}"
 +                  />

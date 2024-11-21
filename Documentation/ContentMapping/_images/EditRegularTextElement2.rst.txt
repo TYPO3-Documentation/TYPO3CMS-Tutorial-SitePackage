@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/EditRegularTextElement2.png
+    :class: with-shadow
+    :caption: Enter some arbitrary text in the Rich Text Editor (RTE)
+
+   Enter some arbitrary text in the Rich Text Editor (RTE)
