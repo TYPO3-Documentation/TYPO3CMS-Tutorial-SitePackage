@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/PreviewPageButton.png
+    :class: with-shadow
+    :caption: View webpage button
+
+   View webpage button
