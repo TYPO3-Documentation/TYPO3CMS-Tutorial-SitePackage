@@ -1,0 +1,6 @@
+
+.. figure:: /MainMenuCreation/_images/CheckMainMenu.png
+   :caption: Checking from the backend if the menu is generated as expected.
+   :class: with-shadow
+
+   Checking from the backend if the menu is generated as expected.

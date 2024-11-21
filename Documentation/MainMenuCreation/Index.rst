@@ -23,7 +23,7 @@ The :ref:`data processor 'menu' <t3tsref:MenuProcessor>` can be configured to
 provide the data of all pages in your current site to your page template.
 
 We save the TypoScript configuration for the menu into file
-:file:`Configuration/TypoScript/Navigation/menu.typoscript`:
+:file:`Configuration/TypoScript/Setup/Navigation/menu.typoscript`:
 
 ..  include:: /CodeSnippets/TypoScript/Navigation/menu.typoscript
 
@@ -106,12 +106,14 @@ Delete the frontend caches and preview the changes:
 When previewing the site as it stands now, we can verify if everything is
 working as expected and if the menu is generated. Go to **WEB → View** and
 check, if the menu reflects the pages you created in the backend. Add one or
-two additional pages to the page tree and check to see if they appear in the preview. If
-the menu does not change, you possibly need to flush the frontend caches,
+two additional pages to the page tree and check to see if they appear in the preview.
+
+.. include:: _images/CheckMainMenu.rst.txt
+
+If the menu does not change, you possibly need to flush the frontend caches,
 then reload the preview.
 
 .. include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
 
 The preview in the screenshot above shows the menu with three page links: "Page
-1", "Page 2" and "Page 3". If everything is working as expected, let's
-configure the dynamic content rendering in the next step.
+1", "Page 2" and "Page 3".

@@ -2,7 +2,7 @@
 ..  Extracted from EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html
 
 ..  code-block:: html
-    :caption: EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html
+    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Jumbotron.html
     :linenos:
 
     <f:for each="{content.jumbotron.records}" as="record">
