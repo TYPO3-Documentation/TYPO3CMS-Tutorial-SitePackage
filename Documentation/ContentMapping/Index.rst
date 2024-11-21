@@ -31,7 +31,10 @@ display the content in the next steps.
 
 Your site set configuration should now look like this:
 
-..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.rst.txt
+..  literalinclude:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.yaml
+    :caption: EXT:my_site_package/Configuration/Sets/SitePackage/config.yaml
+    :language: yaml
+    :linenos:
 
 ..  _cm-dynamic-content-rendering-in-typoscript:
 ..  _backend-page-layouts:
