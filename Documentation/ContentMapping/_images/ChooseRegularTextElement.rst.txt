@@ -1,0 +1,5 @@
+..  figure:: /ContentMapping/_images/ChooseRegularTextElement.png
+    :class: with-shadow
+    :caption: Choose "Regular Text Element"
+
+   Choose "Regular Text Element"
