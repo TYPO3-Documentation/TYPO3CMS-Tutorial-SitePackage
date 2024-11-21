@@ -56,7 +56,10 @@ in which we will store the page layouts.
 
 We now create a default page layout with one column and row for the jumbotron:
 
-..  include:: /CodeSnippets/PageLayout/Default.rst.txt
+..  literalinclude:: /CodeSnippets/PageLayout/Default.tsconfig
+    :language: typoscript
+    :caption: EXT:my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
+    :linenos:
 
 ..  versionchanged:: TYPO3 13
 
