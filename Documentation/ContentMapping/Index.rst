@@ -41,7 +41,7 @@ Create a default page layout with page TSconfig
 ===============================================
 
 In order to map the content from the backend to the frontend we create a
-new file containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`.
+new file :file:`Configuration/Sets/SitePackage/page.tsconfig` containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`.
 
 ..  todo: Link to page TSconfig description in getting started once chapter exist.
 
@@ -56,16 +56,19 @@ in which we will store the page layouts.
 
 We now create a default page layout with one column and row for the jumbotron:
 
-..  include:: /CodeSnippets/PageLayout/Default.rst.txt
+..  literalinclude:: /CodeSnippets/PageLayout/_Default.tsconfig
+    :language: typoscript
+    :caption: EXT:my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
+    :linenos:
 
 ..  versionchanged:: TYPO3 13
 
-Each area in the page layout becomes an identifier that can be used during
-content mapping. If no content element is added in the backend of that page and
-the slide mode is activated, content from the parent page is displayed. This is
-useful for design elements like side bars, jumbotrons or banners that should be
-the same for a page and its subpage. You can find all details of the
-:ref:`Page / backend layouts in the TSconfig reference <t3tsref:backend-layouts>`.
+    Each area in the page layout becomes an identifier that can be used during
+    content mapping. If no content element is added in the backend of that page and
+    the slide mode is activated, content from the parent page is displayed. This is
+    useful for design elements like side bars, jumbotrons or banners that should be
+    the same for a page and its subpage. You can find all details of the
+    :ref:`Page / backend layouts in the TSconfig reference <t3tsref:backend-layouts>`.
 
 When you make changes to the files of an extension it is usually necessary
 to flush all caches by hitting the button.
@@ -89,6 +92,8 @@ Switch to the new backend layout and save the page properties. In the
 If you followed step
 :ref:`Load the example data automatically <t3sitepackage:load-example-data>`
 the areas "Jumbotron" and "Main" should already contain some example content.
+
+.. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
 
 In the database each content element record is stored in the table
 :sql:`tt_content`. This table has a column called `colPos`. If the value stored
@@ -128,6 +133,7 @@ You can debug this variable in the main section of your template using the
 :ref:`Debug ViewHelper <f:debug> <t3viewhelper:typo3-fluid-debug>`:
 
 ..  literalinclude:: _codesnippets/_SectionMainDebug.diff
+    :caption: Resources/Private/Templates/Pages/Default.html
 
 The debug output after clearing all caches and previewing the page should look
 like this:
