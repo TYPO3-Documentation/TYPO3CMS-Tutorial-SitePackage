@@ -19,7 +19,7 @@ The partial of the jumbotron that we created in step
 contains static content:
 
 ..  code-block:: html
-    :caption: packages/site_package/Resources/Private/Templates/Partials/Jumbotron.html
+    :caption: packages/my-site-package/Resources/Private/Templates/Partials/Jumbotron.html
 
     <div class="container">
     <div class="p-5 mb-4 bg-body-tertiary">
@@ -35,19 +35,19 @@ contains static content:
 Jumbotron content records
 =========================
 
-In our Fluid template the variable the variable `{content.jumbotron.records}`
+In our Fluid template the variable `{content.jumbotron.records}`
 already contains the content of the content elements entered in columns
 `jumbotron` in the TYPO3 backend. This column was defined in the
 :ref:`Page layout <t3sitepackage:content-mapping-backend-layout>`. It is provided
 by the :ref:`page-content data processor <t3sitepackage:page-content-data-processor>`.
 
 Open the partial displaying the jumbotron:
-:file:`Resources/Private/Partials/Page/Jumbotron.html`. Using the
+:file:`Resources/Private/Templates/Partials/Jumbotron.html`. Using the
 :ref:`Debug ViewHelper <f:debug> <t3viewhelper:typo3-fluid-debug>` have a look
 at what kind of data is passed to your partial template:
 
 ..  code-block:: html
-    :caption: EXT:site_package/Resources/Private/Partials/Page/Jumbotron.html
+    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Jumbotron.html
 
     <f:debug>{content.jumbotron.records}</f:debug>
     <div class="jumbotron">
