@@ -77,20 +77,6 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html',
-        'targetFileName' => 'Fluid/PartialJumbotron.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Jumbotron.html',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Layouts/Layout.html',
-        'targetFileName' => 'Fluid/Layout.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Layouts/Layout.html',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Header.html',
         'targetFileName' => 'Fluid/Header.rst.txt',
         'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Header.html',
