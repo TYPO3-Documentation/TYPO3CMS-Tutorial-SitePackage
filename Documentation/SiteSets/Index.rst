@@ -40,7 +40,10 @@ to the site sets of :composer:`typo3/cms-fluid-styled-content`.
 
 Your site set configuration should now look like this:
 
-..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.rst.txt
+..  literalinclude:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.yaml
+    :caption: EXT:my_site_package/Configuration/Sets/SitePackage/config.yaml
+    :language: yaml
+    :linenos:
 
 Line 1 defines the name of the set. As the example site-package extension only
 provides one set, the name of the set should be the same as the
@@ -57,7 +60,7 @@ Your site set folder now contains the following files:
     :level: 2
     :show-file-icons: true
 
-    *   site_package/Configuration/Sets/SitePackage
+    *   my_site_package/Configuration/Sets/SitePackage
 
         *   config.yaml
         *   page.tsconfig
@@ -75,7 +78,10 @@ We override some default settings of the site set
 :ref:`Site set "Fluid Styled
 Content" <typo3/cms-fluid-styled-content:site-set-fluid-styled-content>`:
 
-..  include:: /CodeSnippets/ExtensionConfiguration/SitePackage-settings.rst.txt
+..  literalinclude:: /CodeSnippets/ExtensionConfiguration/SitePackage-settings.yaml
+    :caption: EXT:my_site_package/Configuration/Sets/SitePackage/settings.yaml
+    :language: yaml
+    :linenos:
 
 Here we override some values for maximal image width in text-media content
 elements, we enable a lightbox for images and set paths for overriding the
