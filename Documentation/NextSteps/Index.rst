@@ -31,7 +31,7 @@ these.
     outputs the menu (:file:`Resources/Private/Layouts/Page/Default.html`) need
     to be updated.
 
-    Learn more about menu data processor :ref:`menu data processor <t3tsref:MenuProcessor>`
+    Learn more about the menu data processor :ref:`menu data processor <t3tsref:MenuProcessor>`
 
 #.  Jumbotron has no background image
 
