@@ -1,9 +1,0 @@
-..  code-block:: yaml
-    :caption: EXT:my_site_package/Configuration/Sets/SitePackage/config.yaml
-    :linenos:
-
-    name: myvendor/my-site-package
-    label: "Example: My Site package"
-    dependencies:
-      - typo3/fluid-styled-content
-      - typo3/fluid-styled-content-css
