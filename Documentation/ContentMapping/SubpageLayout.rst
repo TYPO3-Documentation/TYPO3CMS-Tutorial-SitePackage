@@ -29,7 +29,10 @@ We now create a subpage layout with two columns and row for the jumbotron in a
 new file :file:`packages/my-site-package/Configuration/TsConfig/Page/PageLayout/Subpage.tsconfig`
 containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`. :
 
-..  include:: /CodeSnippets/PageLayout/Subpage.rst.txt
+..  literalinclude:: /CodeSnippets/PageLayout/Subpage.typoscript
+    :language: typoscript
+    :caption: packages/my-site-package/Configuration/TsConfig/Page/PageLayout/Subpage.tsconfig
+    :linenos:
 
 .. _cm-switch_backend_layout:
 
