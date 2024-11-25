@@ -11,9 +11,9 @@ The content elements that are rendered up to this point are rendered by the
 TYPO3 system extension Fluid Styled Content (:composer:`typo3/cms-fluid-styled-content`).
 
 This extensions offers default templates to render content elements. Without
-this such an extension, no content would be rendered at all. The default
+such an extension, no content would be rendered at all. The default
 templates provided by this extension can be overridden with site settings
-provided by the Fluid Styled Content.
+provided by Fluid Styled Content.
 
 ..  contents::
 
@@ -31,7 +31,7 @@ in your site package and override them in your site configuration.
 We will save the settings to the site package but use the settings editor to
 write the YAML for us
 
-Got to module :guilabel:`Site Management > Settings` and edit the settings of
+Go to module :guilabel:`Site Management > Settings` and edit the settings of
 your site. Override the paths to the templates of Fluid Styled Content like this:
 
 ..  figure:: /Images/SiteSettingsFsc.png
@@ -41,13 +41,13 @@ your site. Override the paths to the templates of Fluid Styled Content like this
 
 If you would click :guilabel:`Save` now, the settings would be saved to your
 site configuration at :path:`config/sites/my-site/settings.yaml`. We however
-want to save the settings to the set of our site package extension.
+want to save the settings to the site set of our site package extension.
 
 Click the button :guilabel:`YAML export` to copy the configuration to your
 Clipboard instead, then save it to the following file:
 
 ..  code-block:: yaml
-    :caption: packages/site_package/my_site_package/Configuration/Sets/SitePackage/settings.yaml
+    :caption: packages/site_package/Configuration/Sets/SitePackage/settings.yaml
 
     styles:
       templates:
@@ -78,7 +78,7 @@ extensions are saved by their composer key, here :composer:`typo3/cms-fluid-styl
 into the folder :path:`vendor` during installation via Composer. You can find
 the files belonging to Fluid Styled Content in folder
 :path:`vendor/typo3/cms-fluid-styled-content` therefore. This folder is
-structure similar to your site package extension and you can find the original
+structured similarly to your site package extension and you can find the original
 templates in folder :path:`Resources/Private/Templates` here.
 
 The templates have the name of the `CType` in CamelCase. Copy file
@@ -102,7 +102,7 @@ Override the sitemap template
 
 In a similar fashion we now copy and adjust the template for the sitemap from
 :path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/MenuSitemap.html`
-into folder :path:`packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html`
+into folder :path:`packages/site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html`
 and then adjust it:
 
 ..  include:: /CodeSnippets/Fluid/MenuSitemap.rst.txt
