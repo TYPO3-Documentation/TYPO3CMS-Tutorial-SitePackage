@@ -3,148 +3,98 @@
 
 .. _minimal-design:
 
-====================
-Minimal site package
-====================
+===============
+Minimal example
+===============
 
-A site package is a custom TYPO3 extension which contains configuration,
-templates, assets, etc that are used for the site it belongs to.
+We want to create a site package that outputs a single web page with
+minimal effort. This site package can be used to simply test system output or as
+an example of the fewest possible steps to create a working site package.
 
-So first we create a minimal extension.
-
-.. _minimal-extension:
-
-Create a minimal TYPO3 extension using b13/make
-===============================================
-
-:composer:`b13/make` is a convenient TYPO3 extension which you can use during
-development to create a new TYPO3 extension quickly or add functionality to an
-existing one.
-
-Use Composer to install it for development only:
-
-..  code-block:: bash
-
-    ddev composer req b13/make --dev
-
-Execute the command `ddev typo3 make:extension` and answer the prompt
-
-..  code-block:: bash
-
-    ddev typo3 make:extension
-
-     Enter the composer package name (e.g. "vendor/awesome"):
-     > t3docs/site-package
-
-     Enter the extension key [site_package]:
-     >
-
-     Enter the PSR-4 namespace [T3docs/SitePackage]:
-     >
-
-     Choose supported TYPO3 versions (comma separate for multiple) [TYPO3 v12 LTS]:
-      [10] TYPO3 v10 LTS
-      [11] TYPO3 v11 LTS
-      [12] TYPO3 v12 LTS
-      [13] TYPO3 v13
-     > 12
-
-     Enter a description of the extension:
-     > My site package
-
-     Where should the extension be created? [src/extensions/]:
-     > packages
-
-     May we add a basic service configuration for you? (yes/no) [yes]:
-     > no
-
-     May we create a ext_emconf.php for you? (yes/no) [no]:
-     >
-
-     [OK] Successfully created the extension my_site_package (myvendor/my-site-package).
-
-This script creates a new folder called `packages` with a subfolder,
-`my-site-package`. It mainly contains only a file called `composer.json`.
-
-You could of course also create this file manually. Step
-:ref:`extension-configuration` will explain the content of the :file:`composer.json`.
-For the time being just remember the Composer name you have chosen
-(`t3docs/site-package`) and the extension name (`site_package`).
-
-In order to see a change in the TYPO3 backend or frontend your site package needs
-to be :ref:`installed <extension-installation>`.
-
-After you have created your site package extension you can uninstall :composer:`b13/make`:
-
-..  code-block:: bash
-
-    ddev composer remove b13/make --dev
-
-.. _minimal-extension-typoscript:
+To start, in the TYPO3 backend, create a standard page named
+:guilabel:`Minimal example` just under (inside) the page tree TYPO3 logo
+container. Create a new TypoScript template record on this page.
+Give the TypoScript template a title, and make it a root level template,
+but do not include any static templates.
 
 The TypoScript-only version
 ===========================
 
-Create a file called :file:`setup.typoscript` containing basic TypoScript configuration
-in the folder :path:`Configuration/Setup`:
+In the TypoScript template Setup field, add the following three lines:
 
-..  literalinclude:: _minimal.typoscript
-    :caption: packages/site-package/Configuration/TypoScript/Setup/setup.typoscript
+.. code-block:: typoscript
+   :caption: TypoScript Setup
 
-Clear all caches and preview the web page.
+   page = PAGE
+   page.1 = TEXT
+   page.1.value = Hello, world.
 
-You can learn more about the TypoScript syntax used here in chapter
-:ref:`A minimal page created by pure TypoScript <t3start:typoscript>`
-of the "Getting Started Tutorial".
+View the web page.
 
-.. _minimal-extension-fluid:
+This TypoScript-only design has the least instructions required to output a
+web page from TYPO3. This TypoScript template is self contained and
+no other files or database records needed. Changing this content
+only requires the appropriate access needed to make changes to TypoScript
+templates.
 
 The TYPO3 Fluid version
 =======================
 
-Replace file :file:`setup.typoscript` of example
-:file:`minimal-extension-typoscript` with the following lines:
+Empty the :guilabel:`Minimal design` page TypoScript template Setup field,
+then add the following lines:
 
-..  literalinclude:: _pageview.typoscript
-    :caption: ackages/site-package/Configuration/TypoScript/Setup/setup.typoscript
-    :linenos:
+.. code-block:: typoscript
+   :caption: TypoScript Setup
 
-If you preview your page now you would get an error output like:
+   page = PAGE
+   page.1 = FLUIDTEMPLATE
+   page.1.file = EXT:site_package/Resources/Private/Templates/Minimal.html
 
-..  code-block:: html
+Create a file named :file:`Minimal.html` in a
+:file:`typo3conf/ext/site_package/Resources/Private/Templates` folder.
 
-    Oops, an error occurred! Request: bddd8a816bda3
-
-.. todo: Add information about dealing with errors such as these and link from here.
-
-This is because the template has not been found.
-
-By searching for the hash `bddd8a816bda3` in the log file you will find such an entry:
-
-..  code-block:: plaintext
-    :caption: var/log/typo3_ece44d5005.log
-    :emphasize-lines: 7
-
-    Mon, 07 Oct 2024 04:09:44 +0000 [ALERT] request="bddd8a816bda3"
-    component="TYPO3.CMS.Frontend.ContentObject.Exception.ProductionExceptionHandler":
-    Oops, an error occurred! Request: bddd8a816bda3- InvalidTemplateResourceException:
-    Tried resolving a template file for controller action "Default->Pages/Default"
-    in format ".html", but none of the paths contained the expected template file
-    (Default/Pages/Default.html).
-    The following paths were checked: /var/www/html/vendor/t3docs/site-package/Resources/Private/Templates/
-
-This error message also tells you the path where TYPO3 expects to find the file. If no path
-is listed here, the path defined in line 6 of the TypoScript above is incorrect,
-for example if you mistyped the extension name or part of the path.
-
-Create a file named :file:`Default.html` in folder
-:path:`packages/site-package/Resources/Private/Pages`.
+The site package extension has to be :ref:`installed <extension-installation>`
+and requires a :ref:`minimal composer configuration <extension-configuration>` (if composer is used)
+for this to work
 
 .. code-block:: html
-   :caption: packages/site-package/Resources/Private/Pages/Default.html
+   :caption: EXT:site_package/Resources/Private/Templates/Minimal.html
 
-   Hello Fluid World!
+   Hello, world.
 
-Clear all caches and preview the web page.
+Now view the web page.
 
-Learn more about using Fluid Templates in chapter :ref:`fluid-templates`.
+Here we are putting the page content into a separate HTML file, allowing for
+separate access control and for an editing workflow that does not need much
+TypoScript. The TYPO3 renderer still requires a TypoScript template on the
+:guilabel:`Minimal design` page to know which file to process.
+
+Resulting web page
+==================
+
+Here is the resulting web page HTML source for both the TypoScript-only and
+the Fluid based implementations. Notice how TYPO3 has added default markup
+around the single line of content:
+
+.. code-block:: html
+   :caption: Example frontend output
+
+   <!DOCTYPE html>
+   <html lang="en">
+      <head>
+         <meta charset="utf-8">
+         <!--
+            This website is powered by TYPO3 - inspiring people to share!
+            TYPO3 is a free open source Content Management Framework initially
+            created by Kasper Skaarhoj and licensed under GNU/GPL.
+            TYPO3 is copyright 1998-2018 of Kasper Skaarhoj. Extensions are
+            copyright of their respective owners.
+            Information and contribution at https://typo3.org/
+         -->
+         <title>Minimal design</title>
+         <meta name="generator" content="TYPO3 CMS">
+      </head>
+      <body>
+         Hello, world.
+      </body>
+   </html>

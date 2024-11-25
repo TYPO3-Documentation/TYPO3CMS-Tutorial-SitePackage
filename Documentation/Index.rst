@@ -40,11 +40,13 @@ A working copy of the site package extension can be retrieved from the
         ..  card-footer:: :ref:`See the prerequisites <t3sitepackage:prerequisites>`
             :button-style: btn btn-secondary stretched-link
 
-    ..  card:: :ref:`Minimal site package <t3sitepackage:minimal-design>`
+    ..  card:: :ref:`Minimal example <t3sitepackage:minimal-design>`
 
-        Create a minimal site package that outputs "Hello World".
+        We explain how you can easily show some text in the frontend. The
+        example explains how to use TypoScript to output text in the
+        frontend.
 
-        ..  card-footer:: :ref:`Create a minimal site package <t3sitepackage:minimal-design>`
+        ..  card-footer:: :ref:`See the minimal example <t3sitepackage:minimal-design>`
             :button-style: btn btn-secondary stretched-link
 
     ..  card:: :ref:`Design Template <t3sitepackage:dt-external-resources>`
