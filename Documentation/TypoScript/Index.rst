@@ -29,8 +29,8 @@ Familiarize yourself with the TypoScript `@import` syntax first:
 Import the TypoScript from a different location
 ===============================================
 
-Create a new folder called :path:`Configuration/TypoScript/Setup`. In this
-create a file called :file:`pageview.typoscript` and copy the content from
+Create a new folder called :path:`Configuration/Sets/MySet/TypoScript`. In this
+create a file called :file:`page.typoscript` and copy the content from
 file :file:`Configuration/Sets/SitePackage/setup.typoscript`
 into it.
 
@@ -39,7 +39,7 @@ Then change the latter file to contain the following:
 ..  code-block:: typoscript
     :caption: Configuration/Sets/SitePackage/setup.typoscript
 
-    @import 'EXT:site_package/Configuration/TypoScript/Setup/pageview.typoscript'
+    @import './TypoScript/page.typoscript'
 
 Flush the caches and preview the page. The output should be unchanged.
 
@@ -72,16 +72,14 @@ Your :path:`Configuration` directory should now have the following structure:
 
         *   Sets
 
-            *   SitePackage
+            *   MySitePackage
+
+                *   TypoScript
+
+                        *   page.typoscript
 
                 *   config.yaml
                 *   setup.typoscript
-
-        *   TypoScript
-
-            *   Setup
-
-                *   pageview.typoscript
 
 In the next steps you will create more TypoScript files to configure the
 :ref:`Content mapping <t3sitepackage:content-mapping>` and the
