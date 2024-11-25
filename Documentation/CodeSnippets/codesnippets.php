@@ -11,34 +11,6 @@ return [
         'caption' => 'EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript',
         'showLineNumbers' => true
     ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Page.typoscript',
-        'targetFileName' => 'TypoScript/Page.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Page.typoscript',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/pageview.typoscript',
-        'targetFileName' => 'TypoScript/pageview.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/pageview.typoscript',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Part4GlobalConfiguration.typoscript',
-        'targetFileName' => 'TypoScript/Part4GlobalConfiguration.rst.txt',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Setup/Part4GlobalConfiguration.typoscript',
-        'showLineNumbers' => true
-    ],
-    [
-        'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Setup/Navigation/menu.typoscript',
-        'targetFileName' => 'TypoScript/Navigation/menu.typoscript',
-        'showLineNumbers' => true
-    ],
-
     #code Snippets Extension Configuration
     [
         'action' => 'createCodeSnippet',
@@ -52,6 +24,11 @@ return [
         'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript',
         'targetFileName' => 'ExtensionConfiguration/SitePackage-setup.rst.txt',
         'caption' => 'EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript',
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/menu.typoscript',
+        'targetFileName' => 'TypoScript/menu.rst.txt',
     ],
     [
         'action' => 'createCodeSnippet',

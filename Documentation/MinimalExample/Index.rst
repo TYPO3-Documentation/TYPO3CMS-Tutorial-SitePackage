@@ -371,5 +371,5 @@ example when setting your favicon in TypoScript:
     :caption: package/my-site-package/Configuration/Sets/SitePackage/setup.typoscript
 
     page {
-        shortcutIcon = EXT:my_site_package/Ressources/Public/Icons/favicon.ico
+        shortcutIcon = EXT:my_site_package/Resources/Public/Icons/favicon.ico
     }
