@@ -5,5 +5,5 @@
     :caption: EXT:site_package/Configuration/Sets/SitePackage/setup.typoscript
     :linenos:
 
-    @import 'EXT:site_package/Configuration/TypoScript/Setup/*.typoscript'
-    @import 'EXT:site_package/Configuration/TypoScript/Setup/Navigation/*.typoscript'
+    @import './TypoScript/*.typoscript'
+    @import './TypoScript/Navigation/*.typoscript'
