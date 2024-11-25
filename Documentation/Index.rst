@@ -149,6 +149,7 @@ https://github.com/TYPO3-Documentation/site_package
     TypoScript/Index
     MainMenuCreation/Index
     SiteSets/Index
+    ContentElementRendering/Index
     Faq/Index
     NextSteps/Index
 
