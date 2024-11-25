@@ -25,9 +25,6 @@ Use Settings to override template paths of Fluid Styled Content
 Site settings can be saved both in the site configuration and in the site
 package extension.
 
-If you would share your site package across several sites you could set defaults
-in your site package and override them in your site configuration.
-
 We will save the settings to the site package but use the settings editor to
 write the YAML for us
 
