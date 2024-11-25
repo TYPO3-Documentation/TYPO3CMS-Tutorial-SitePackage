@@ -66,4 +66,25 @@ return [
         'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html',
         'showLineNumbers' => true
     ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html',
+        'targetFileName' => 'Fluid/MenuSubpages.rst.txt',
+        'caption' => 'EXT:site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html',
+        'showLineNumbers' => true
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html',
+        'targetFileName' => 'Fluid/MenuSitemap.rst.txt',
+        'caption' => 'EXT:site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html',
+        'showLineNumbers' => true
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.html',
+        'targetFileName' => 'Fluid/Image.rst.txt',
+        'caption' => 'EXT:site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.html',
+        'showLineNumbers' => true
+    ],
 ];
