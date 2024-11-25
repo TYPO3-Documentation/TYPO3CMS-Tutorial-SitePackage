@@ -183,7 +183,7 @@ require it by:
    :caption: Execute in directory page_root
 
     composer require myvendor/my-site-package:@dev
-    
+
 ..  _extension-installation-project-structure:
 
 Project file structure
@@ -378,5 +378,5 @@ example when setting your favicon in TypoScript:
     :caption: package/my-site-package/Configuration/Sets/SitePackage/setup.typoscript
 
     page {
-        shortcutIcon = EXT:my_site_package/Ressources/Public/Icons/favicon.ico
+        shortcutIcon = EXT:my_site_package/Resources/Public/Icons/favicon.ico
     }
