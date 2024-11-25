@@ -42,6 +42,7 @@ Create a minimal TYPO3 extension manually
     	}
     }
 
+.. _minimal-b13-make-extension:
 
 Create a minimal TYPO3 extension using b13/make
 ===============================================
@@ -112,7 +113,32 @@ After you have created your site package extension you can uninstall :composer:`
 Before your brand new site package extension takes effect in your TYPO3
 installation, you have to install it. First you have to edit your composer.json in the root of your installation directory to add `packages` as a local repository.
 
+.. _minimal-site-package-builder:
 
+Create a minimal TYPO3 extension using the Sitepackage Builder
+==============================================================
+
+To quickly build a site package you can also use the
+`Sitepackage Builder <https://get.typo3.org/sitepackage>`__.
+
+To follow this tutorial you can fill in the form like that :
+
+..  figure:: SitePackageGeneratorForm.png
+    :alt: Form fields to generate the tutorial package site
+    :caption: Form fields to generate the tutorial package site
+
+The summary of your data is then displayed.
+
+..  figure:: SitePackageGeneratorSummary.png
+    :alt: Summary of information provided
+    :caption: Summary of information provided
+
+You have to click on the "Download" link, on the top of the summary
+in order to get your zipped site package.
+
+You can then unzip the zip file, place the resulting folder in your
+‘packages’ folder and replace the ‘_’ with a ‘-’ in the folder name.
+So `my_site_package` become `my-site-package`.
 
 .. _extension-installation:
 
@@ -132,39 +158,6 @@ followed these steps:
 Install the site package you just created
 -----------------------------------------
 
-From all extensions, including our site package extension, must be installed
-via Composer.
-
-As a site package is created with site-specific files it is usually best to keep
-the files together in a version control system such as Git.
-
-Create a directory for local version-controlled extensions at the
-root-level of your installation. The name is arbitrary, we use
-:file:`packages/` here.
-
-Then edit your :file:`composer.json` in the root of your installation directory
-to add the path as a local repository.
-
-Add the following lines:
-
-.. code-block:: json
-   :caption: page_root/composer.json
-
-   {
-      "name": "myvendor/mysite",
-      "repositories": [
-         {
-            "type": "path",
-            "url": "./packages/*"
-         }
-      ],
-      "require": {
-         "typo3/cms-core": "^13.4",
-         "..." : "..."
-      },
-      "..." : "..."
-   }
-
 Move your extension folder :path:`my-site-package/` into the :path:`packages/`
 folder. Then *require* the extension via Composer using the
 package name defined in the site package extension's :file:`composer.json` now located
@@ -183,7 +176,7 @@ require it by:
    :caption: Execute in directory page_root
 
     composer require myvendor/my-site-package:@dev
-    
+
 ..  _extension-installation-project-structure:
 
 Project file structure
