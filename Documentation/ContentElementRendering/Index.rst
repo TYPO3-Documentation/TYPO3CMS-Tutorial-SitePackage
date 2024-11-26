@@ -26,7 +26,7 @@ Site settings can be saved both in the site configuration and in the site
 package extension.
 
 We will save the settings to the site package but use the settings editor to
-write the YAML for us
+write the YAML for us.
 
 Go to module :guilabel:`Site Management > Settings` and edit the settings of
 your site. Override the paths to the templates of Fluid Styled Content like this:
@@ -52,7 +52,7 @@ Clipboard instead, then save it to the following file:
         partialRootPath: 'EXT:site_package/Resources/Private/ContentElements/Partials'
         layoutRootPath: 'EXT:site_package/Resources/Private/ContentElements/Layouts'
 
-Then close the site settings without saving. You can now start overriding the
+Then close the settings editor without saving. You can now start overriding the
 templates:
 
 ..  _content-element-rendering-menu-subpages:
