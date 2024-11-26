@@ -78,7 +78,7 @@ the files belonging to Fluid Styled Content in folder
 structured similarly to your site package extension and you can find the original
 templates in folder :path:`Resources/Private/Templates` here.
 
-The templates have the name of the `CType` in CamelCase. Copy file
+By convention the templates of Fluid Styled Content have the name of the `CType` in CamelCase. Copy file
 :path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/MenuSubpages.html`
 into folder :path:`packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html`
 
