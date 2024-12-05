@@ -19,8 +19,10 @@ So first we create a minimal extension.
 Create a minimal TYPO3 extension manually
 =========================================
 
+Create the following file in the folder `packages` in your TYPO3 installation:
+
 ..  code-block:: json
-    :caption: EXT:my-site-package/composer.json
+    :caption: packages/my-site-package/composer.json
     :linenos:
 
     {
@@ -41,6 +43,22 @@ Create a minimal TYPO3 extension manually
     		}
     	}
     }
+
+In order to see any changes in the TYPO3 backend or frontend your site package
+needs to be :ref:`installed <extension-installation>`:
+
+..  code-block:: bash
+
+    ddev composer req myvendor/my-site-package
+
+..  note::
+    The Composer name in this example is `myvendor/my-site-package`. Use this
+    name for all Composer commands like `ddev composer req myvendor/my-site-package`.
+
+    `my_site_package` is the extension name. For historical reasons all dashes need
+    to be converted to underscores and the vendor name removed. This name is used
+    to reference files, for example `EXT:my_site_package/Resources/Public/Css/my.css`.
+
 
 .. _minimal-b13-make-extension:
 
@@ -101,8 +119,12 @@ You could of course also create this file manually. Step
 For the time being just remember the Composer name you have chosen
 (`myvendor/my-site-package`) and the extension name (`my_site_package`).
 
-In order to see a change in the TYPO3 backend or frontend your site package needs
-to be :ref:`installed <extension-installation>`.
+In order to see any changes in the TYPO3 backend or frontend your site package
+needs to be :ref:`installed <extension-installation>`:
+
+..  code-block:: bash
+
+    ddev composer req myvendor/my-site-package
 
 After you have created your site package extension you can uninstall :composer:`b13/make`:
 
@@ -110,18 +132,15 @@ After you have created your site package extension you can uninstall :composer:`
 
     ddev composer remove b13/make --dev
 
-Before your brand new site package extension takes effect in your TYPO3
-installation, you have to install it. First you have to edit your composer.json in the root of your installation directory to add `packages` as a local repository.
-
 .. _minimal-site-package-builder:
 
-Create a minimal TYPO3 extension using the Sitepackage Builder
-==============================================================
+Create a minimal TYPO3 extension using the Site Package Builder
+===============================================================
 
 To quickly build a site package you can also use the
 `Sitepackage Builder <https://get.typo3.org/sitepackage>`__.
 
-To follow this tutorial you can fill in the form like that :
+To follow this tutorial you can fill in the form like that:
 
 ..  figure:: SitePackageGeneratorForm.png
     :alt: Form fields to generate the tutorial package site
@@ -137,8 +156,7 @@ You have to click on the "Download" link, on the top of the summary
 in order to get your zipped site package.
 
 You can then unzip the zip file, place the resulting folder in your
-‘packages’ folder and replace the ‘_’ with a ‘-’ in the folder name.
-So `my_site_package` become `my-site-package`.
+`packages` folder, and :ref:`install it <extension-installation>`.
 
 .. _extension-installation:
 
@@ -237,7 +255,7 @@ Create a basic site set
 ..  versionadded:: 13.1
     :ref:`Site sets <t3coreapi:site-sets>` have been introduced.
 
-Create a folder called :path:`Configuration/Sets/Minimal/` in the site package
+Create a folder called :path:`Configuration/Sets/SitePackage/` in the site package
 and add a file called :file:`config.yaml` to it. This file contains the
 **site set** of your site package:
 
