@@ -47,23 +47,23 @@ return [
     # code Snippets Fluid
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Pages/Default.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/PageView/Pages/Default.html',
         'targetFileName' => 'Fluid/TemplateDefault.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Pages/Default.html',
+        'caption' => 'EXT:site_package/Resources/Private/PageView/Pages/Default.html',
         'showLineNumbers' => true
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Header.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/PageView/Partials/Header.html',
         'targetFileName' => 'Fluid/Header.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Header.html',
+        'caption' => 'EXT:site_package/Resources/Private/PageView/Partials/Header.html',
         'showLineNumbers' => true
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/PageView/Partials/Navigation/Menu.html',
         'targetFileName' => 'Fluid/Menu.rst.txt',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html',
+        'caption' => 'EXT:site_package/Resources/Private/PageView/Partials/Navigation/Menu.html',
         'showLineNumbers' => true
     ],
     [

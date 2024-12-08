@@ -4,4 +4,5 @@
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/SitePackage/page.tsconfig
 
-    @import './PageTSconfig/PageLayout/*.tsconfig'
+    @import './PageTsConfig/'
+    @import './PageTsConfig/BackendLayouts/'
