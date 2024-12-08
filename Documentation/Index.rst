@@ -90,16 +90,6 @@ https://github.com/TYPO3-Documentation/site_package
         ..  card-footer:: :ref:`See how to use a backend layout <t3sitepackage:content-mapping>`
             :button-style: btn btn-secondary stretched-link
 
-    ..  card:: :ref:`TypoScript setup <t3sitepackage:typoscript-configuration>`
-
-        Theoretically you could put all TypoScript into one big file and it would work
-        fine. But you have better overview if you split it up in multiple files ordered
-        by purpose. We import all TypoScript files from a folder using wildcards
-        after this step.
-
-        ..  card-footer:: :ref:`Automatically import TypoScript files <t3sitepackage:typoscript-configuration>`
-            :button-style: btn btn-secondary stretched-link
-
     ..  card:: :ref:`Main menu <t3sitepackage:main-menu-creation>`
 
         We introduce the main menu, explain how we build up a menu
@@ -146,7 +136,6 @@ https://github.com/TYPO3-Documentation/site_package
     Assets/Index
     FluidTemplates/Index
     ContentMapping/Index
-    TypoScript/Index
     MainMenuCreation/Index
     SiteSets/Index
     ContentElementRendering/Index
