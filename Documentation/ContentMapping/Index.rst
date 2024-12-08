@@ -200,6 +200,24 @@ The partial then looks like this:
 
 ..  include:: /CodeSnippets/Fluid/PartialContent.rst.txt
 
+.. _content-element-typoscript:
+
+Splitting up the TypoScript into files
+======================================
+
+At this point the file `packages/my_site_package/Configuration/Sets/SitePackage/setup.typoscript`
+has started to have several lines. When we start rendering the
+`Menues <https://docs.typo3.org/permalink/t3sitepackage:main-menu-creation>`_,
+make more sophisticated
+`Settings <https://docs.typo3.org/permalink/t3sitepackage:site-sets-configuration>`_
+etc the TypoScript configuration file is going to grow more.
+We therefore suggest, to use TypoScript imports
+and structure your TypoScript in different files that are then combined at this point.
+
+The rest of the Tutorial will assume that your files are in the directory
+:path:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/` and imported
+as described in `TypoScript imports <https://docs.typo3.org/permalink/t3sitepackage:typoscript-configuration>`_.
+
 ..  _content-element-next-steps:
 
 Next steps
@@ -208,6 +226,7 @@ Next steps
 ..  toctree::
     :glob:
 
+    TypoScript
     Jumbotron
     SubpageLayout
     AddContent
