@@ -3,9 +3,9 @@
 .. _file-setup-typoscript:
 .. _typoscript-configuration:
 
-================
-TypoScript setup
-================
+==================
+TypoScript imports
+==================
 
 In step :ref:`Minimal site package - The TYPO3 Fluid
 version <t3sitepackage:minimal-extension-fluid>` we placed all TypoScript into
@@ -72,7 +72,7 @@ Your :path:`Configuration` directory should now have the following structure:
 
         *   Sets
 
-            *   MySitePackage
+            *   SitePackage
 
                 *   TypoScript
 
