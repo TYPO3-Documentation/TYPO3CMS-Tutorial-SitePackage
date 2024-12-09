@@ -23,7 +23,7 @@ The :ref:`data processor 'menu' <t3tsref:MenuProcessor>` can be configured to
 provide the data of all pages in your current site to your page template.
 
 We save the TypoScript configuration for the menu into file
-:file:`Configuration/Set/MySitePackage/TypoScript/Navigation/menu.typoscript`:
+:file:`Configuration/Set/SitePackage/TypoScript/Navigation/menu.typoscript`:
 
 ..  include:: /CodeSnippets/TypoScript/menu.rst.txt
 
