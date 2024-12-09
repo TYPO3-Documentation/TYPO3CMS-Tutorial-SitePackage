@@ -12,7 +12,7 @@ contain the content, into its own section. This section is however still filled
 with dummy content:
 
 ..  literalinclude:: _codesnippets/_SectionMain.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/PageView/Pages/Default.html
 
 ..  contents::
 
@@ -57,9 +57,10 @@ newly created file is loaded within the page tree of your site automatically:
 This file automatically includes all `.tsconfig` files from the designated folder
 in which we will store the page layouts.
 
-We now create a default page layout with one column and row for the jumbotron:
+We now create a default page layout with two areas: One for the main content and
+one for the stage.
 
-..  literalinclude:: /CodeSnippets/PageLayout/_Default.tsconfig
+..  literalinclude:: _codesnippets/_Default.tsconfig
     :language: typoscript
     :caption: EXT:my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
     :linenos:
@@ -89,12 +90,12 @@ Choose the page layout in the page properties
 ---------------------------------------------
 
 Switch to the new backend layout and save the page properties. In the
-:guilabel:`Page` module you will see two columns called "Jumbotron" and
+:guilabel:`Page` module you will see two areas called "Stage" and
 "Main Content" now.
 
 If you followed step
 :ref:`Load the example data automatically <t3sitepackage:load-example-data>`
-the areas "Jumbotron" and "Main" should already contain some example content.
+the areas "Stage" and "Main" should already contain some example content.
 
 .. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
 
@@ -136,7 +137,7 @@ You can debug this variable in the main section of your template using the
 :ref:`Debug ViewHelper <f:debug> <t3viewhelper:typo3-fluid-debug>`:
 
 ..  literalinclude:: _codesnippets/_SectionMainDebug.diff
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/PageView/Pages/Default.html
 
 The debug output after clearing all caches and previewing the page should look
 like this:
@@ -144,7 +145,7 @@ like this:
 ..  figure:: _images/contents_debug.png
     :alt: Screenshot of the debug output of {content}
 
-    The debug output should contain sections "jumbotron" and "main"
+    The debug output should contain sections "stage" and "main"
 
 ..  tip::
     Does your debug output show "NULL" instead? Check the following:
@@ -161,7 +162,7 @@ like this:
 TypoScript mapping in Fluid template
 ====================================
 
-Open the file :file:`Resources/Private/Templates/Page/Default.html` and locate the
+Open the file :file:`Resources/Private/PageView/Page/Default.html` and locate the
 main content area. It contains a headline (look for the :code:`<h2>`-tags) and
 some dummy content (look for the :code:`<p>`-tags).
 
@@ -170,7 +171,7 @@ rendering each content element using the
 :ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`:
 
 ..  literalinclude:: _codesnippets/_SectionMainRender.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (diff)
+    :caption: Resources/Private/PageView/Pages/Default.html (diff)
 
 For content elements the main type is always `tt_content`. Therefore we include
 the TypoScript object :typoscript:`tt_content` here. It is defined in the TypoScript
@@ -197,7 +198,7 @@ the records of the page layout area to be rendered as variable `records` to
 the partial:
 
 ..  literalinclude:: _codesnippets/_SectionMainRenderPartial.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (diff)
+    :caption: Resources/Private/PageView/Pages/Default.html (diff)
 
 The partial then looks like this:
 
@@ -230,7 +231,7 @@ Next steps
     :glob:
 
     TypoScript
-    Jumbotron
+    Stage
     SubpageLayout
     AddContent
     *

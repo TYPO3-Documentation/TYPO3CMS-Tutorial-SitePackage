@@ -2,7 +2,7 @@
  <f:asset.css identifier="main" href="EXT:my_site_package/Resources/Public/Css/main.css" />
  <main>
      <f:render partial="Header" arguments="{_all}"/>
--    <f:render partial="Jumbotron" arguments="{records: content.jumbotron.records}"/>
+-    <f:render partial="Stage" arguments="{records: content.stage.records}"/>
 -    <div class="container">
 -        <h2>Start page content</h2>
 -        <p>The content of the start page is displayed here. This content should be generated from the content element of the startpage </p>
@@ -14,7 +14,7 @@
  <f:asset.script identifier="main" src="EXT:my_site_package/Resources/Public/JavaScript/main.js" />
 
 +<f:section name="Main">
-+    <f:render partial="Jumbotron" arguments="{_all}"/>
++    <f:render partial="Stage" arguments="{_all}"/>
 +    <div class="container">
 +        <h2>Start page content</h2>
 +        <p>The content of the start page is displayed here. This content should be generated from the content element of the startpage </p>
