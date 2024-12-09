@@ -68,6 +68,13 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
+        'sourceFile' => 'EXT:site_package/Resources/Private/PageView/Partials/Stage.html',
+        'targetFileName' => 'Fluid/Stage.rst.txt',
+        'caption' => 'EXT:site_package/Resources/Private/PageView/Partials/Stage.html',
+        'showLineNumbers' => true
+    ],
+    [
+        'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html',
         'targetFileName' => 'Fluid/MenuSubpages.rst.txt',
         'caption' => 'EXT:site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html',

@@ -33,7 +33,7 @@ Update the Fluid partial for the menu
 =====================================
 
 Until now we had static HTML in the file
-:file:`Resources/Private/Templates/Partials/Navigation/Menu.html`.
+:file:`Resources/Private/PageView/Partials/Navigation/Menu.html`.
 
 We created that file in section :ref:`create_partial_header`.
 
@@ -51,7 +51,7 @@ You can use the :ref:`t3viewhelper:typo3-fluid-debug` to debug what kind of
 data the variable contains like this:
 
 ..  code-block:: diff
-    :caption: EXT:site_package/Resources/Private/Templates/Partials/Navigation/Menu.html (changed for debug output)
+    :caption: EXT:site_package/Resources/Private/PageView/Partials/Navigation/Menu.html (changed for debug output)
 
      <ul class="navbar-nav mr-auto">
          <f:for each="{menu}" as="menuItem">

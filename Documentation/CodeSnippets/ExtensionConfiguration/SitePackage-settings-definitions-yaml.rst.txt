@@ -20,7 +20,7 @@
         category: SitePackage.templates
         description: 'Path to the templates of the Site Package.'
         type: string
-        default: 'EXT:site_package/Resources/Private/Templates/'
+        default: 'EXT:site_package/Resources/Private/PageView/'
 
       SitePackage.logo:
         label: 'Logo'

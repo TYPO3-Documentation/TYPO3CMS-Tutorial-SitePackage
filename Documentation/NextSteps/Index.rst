@@ -33,9 +33,9 @@ these.
 
     Learn more about the menu data processor :ref:`menu data processor <t3tsref:MenuProcessor>`
 
-#.  Jumbotron has no background image
+#.  Stage has no background image
 
-    The Jumbotron stands as a place holder for various options in our example.
+    The Stage stands as a place holder for various options in our example.
     Some readers may like to implement a banner with rotating images, some prefer a
     text content element or a video player instead. All this and much more is
     possible with TYPO3, but beyond the scope of this tutorial.

@@ -8,7 +8,7 @@ Additional subpage layout
 =========================
 
 Edit the file
-:file:`packages/my-site-package/Resources/Private/Templates/Pages/Subpage.html`.
+:file:`packages/my-site-package/Resources/Private/PageView/Pages/Subpage.html`.
 
 Exchange the main content area just as we have done before with the default
 template. Now
@@ -16,7 +16,7 @@ replace the content area of the sidebar with the content elements in the Fluid
 variable :html:`{sidebarContent}`.
 
 ..  literalinclude:: _codesnippets/_SubpageWithSection.diff
-    :caption: Resources/Private/Templates/Pages/Subpage.html (diff)
+    :caption: Resources/Private/PageView/Pages/Subpage.html (diff)
 
 ..  contents::
 
@@ -25,7 +25,7 @@ variable :html:`{sidebarContent}`.
 Create a subpage page layout with page TSconfig
 ===============================================
 
-We now create a subpage layout with two columns and row for the jumbotron in a
+We now create a subpage layout with two columns and a row for the stage in a
 new file :file:`packages/my-site-package/Configuration/TsConfig/Page/PageLayout/Subpage.tsconfig`
 containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`. :
 
@@ -47,7 +47,7 @@ Edit the page properties of `Start page` to use the backend layout
 ..  include:: _images/SwitchBackendLayoutForSubpages.rst.txt
 
 After saving you will be able to see on "Page 1" that the content of the columns "main" and
-"jumbotron" remains unchanged while there is a third column "sidebar".
+"stage" remains unchanged while there is a third column "sidebar".
 This is due to the fact that the backend layout "Default" and "TwoColumns"
 use the same colPos number for these columns.
 

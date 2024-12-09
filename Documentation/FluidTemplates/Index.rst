@@ -1,5 +1,6 @@
 ..  include:: /Includes.rst.txt
 
+..  _customize-content-elements:
 ..  _fluid-templates:
 
 ===============
@@ -33,7 +34,7 @@ Create the Fluid templates
 
 Copy the main :ref:`static HTML file <theme-example-static-html>` from
 :file:`Resources/Public/StaticTemplate/default.html`
-to :file:`Resources/Private/Templates/Pages/Default.html`. You can override
+to :file:`Resources/Private/PageView/Pages/Default.html`. You can override
 the file created in step :ref:`Minimal site package - The TYPO3 Fluid
 version <t3sitepackage:minimal-extension-fluid>`. The file name must begin
 with a capital letter
@@ -49,13 +50,13 @@ the `<html>` and `<head>` tags therefore they need to be removed from the
 template:
 
 ..  literalinclude:: _codesnippets/_remove_head.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/PageView/Pages/Default.html (difference)
 
 The Fluid template :file:`Default.html` now contains only the HTML
 code inside the body:
 
 ..  literalinclude:: _codesnippets/_DefaultWithoutHead.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/PageView/Pages/Default.html
 
 Flush the caches and preview the page. You should now see a pure HTML page
 without any styles or images. We will add them in a further step.
@@ -84,7 +85,7 @@ Replace `<script>` tags in the body by using the
 :ref:`Asset.script ViewHelper <f:asset.script> <t3viewhelper:typo3-fluid-asset-script>`.
 
 ..  literalinclude:: _codesnippets/_assets.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/PageView/Pages/Default.html (difference)
 
 The path to the assets will be resolved by TYPO3. `EXT:` tells TYPO3 that this is
 an extension path. `my_site_package` is the
@@ -112,7 +113,7 @@ Replace all `<img>` tags in the template with the
 :ref:`Image ViewHelper <f:image> <t3viewhelper:typo3-fluid-image>`:
 
 ..  literalinclude:: _codesnippets/_replace_images.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/PageView/Pages/Default.html (difference)
 
 Just like happened with the CSS paths in step :ref:`assets` the path to the
 image is now replaced in the output by a path like
@@ -129,7 +130,7 @@ If you compare the two static templates
 and :file:`Resources/Public/StaticTemplate/subpagepage.html` they share many
 parts like the footer or the header with the menu. In order to reuse those parts
 we extract them to their own Fluid files. These are called partials and stored
-in path :path:`Resources/Private/Templates/Partials`.
+in path :path:`Resources/Private/PageView/Partials`.
 
 We can use the :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>`
 to render the partial in the correct place.
@@ -137,12 +138,12 @@ to render the partial in the correct place.
 Remove the header from the template and replace it with a render ViewHelper:
 
 ..  literalinclude:: _codesnippets/_remove_header.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/PageView/Pages/Default.html (difference)
 
 Move the Fluid code you just remove to a file called
-:file:`my-site-package/Resources/Private/Templates/Partials/Header.html`.
+:file:`my-site-package/Resources/Private/PageView/Partials/Header.html`.
 
-Do the same with the jumbotron, the breadcrumb, and the footer.
+Do the same with the stage, the breadcrumb, and the footer.
 
 You should now have the following files:
 
@@ -150,7 +151,7 @@ You should now have the following files:
     :level: 3
     :show-file-icons: true
 
-    *   EXT:my_site_package/Resources/Private/Templates
+    *   EXT:my_site_package/Resources/Private/PageView
 
         *   Pages
 
@@ -161,13 +162,13 @@ You should now have the following files:
 
             *   Footer.html
             *   Header.html
-            *   Jumbotron.html
+            *   Stage.html
 
-The Fluid template :file:`Resources/Private/Templates/Pages/Default.html`
+The Fluid template :file:`Resources/Private/PageView/Pages/Default.html`
 should now look like this:
 
 ..  literalinclude:: _codesnippets/_DefaultWithPartials.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/PageView/Pages/Default.html
 
 You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
 
@@ -177,11 +178,11 @@ Extract the menu into a partial
 -------------------------------
 
 Partials can also be rendered from within another partial. We move the menu in
-the partial :file:`Resources/Private/Templates/Partials/Header.html` to its
-own partial, :file:`Resources/Private/Templates/Partials/Navigation/Menu.html`:
+the partial :file:`Resources/Private/PageView/Partials/Header.html` to its
+own partial, :file:`Resources/Private/PageView/Partials/Navigation/Menu.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_header.diff
-    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Header.html (Difference)
+    :caption: EXT:my_site_package/Resources/Private/PageView/Partials/Header.html (Difference)
 
 The :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>` is used
 the same like from within the template.
@@ -195,16 +196,16 @@ Extract the footer menu into a partial
 -------------------------------
 
 We can also move the footer menu from
-the partial :file:`Resources/Private/Templates/Partials/Footer.html` to its
-own partial, :file:`Resources/Private/Templates/Partials/Navigation/FooterMenu.html`:
+the partial :file:`Resources/Private/PageView/Partials/Footer.html` to its
+own partial, :file:`Resources/Private/PageView/Partials/Navigation/FooterMenu.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_footer.diff
-    :caption: EXT:my_site_package/Resources/Private/Templates/Partials/Footer.html (Difference)
+    :caption: EXT:my_site_package/Resources/Private/PageView/Partials/Footer.html (Difference)
 
 The footer menu partial looks like this:
 
 ..  literalinclude:: _codesnippets/_FooterMenuPartial.html
-    :caption: Resources/Private/Templates/Partials/Navigation/FooterMenu.html
+    :caption: Resources/Private/PageView/Partials/Navigation/FooterMenu.html
 
 ..  _create_section:
 
@@ -216,15 +217,15 @@ You can also move a part of the template into a section, surrounded by a
 and use the :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>`
 with argument `section` to render it.
 
-We move the content, including the Jumbotron into such a section:
+We move the content, including the Stage into such a section:
 
 ..  literalinclude:: _codesnippets/_move_content_to_section.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/PageView/Pages/Default.html (difference)
 
 The result looks like this:
 
 ..  literalinclude:: _codesnippets/_DefaultWithSection.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/PageView/Pages/Default.html
 
 You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
 
@@ -236,7 +237,7 @@ The Fluid template for the subpage
 We can repeat the above steps for the subpage and write such a template:
 
 ..  literalinclude:: _codesnippets/_SubpageWithSection.html
-    :caption: Resources/Private/Templates/Pages/Subpage.html
+    :caption: Resources/Private/PageView/Pages/Subpage.html
     :linenos:
     :emphasize-lines: 1-9
 
@@ -245,13 +246,13 @@ We can repeat the above steps for the subpage and write such a template:
 Extract the breadcrumb into a partial
 -------------------------------------
 
-The subpage template contain a breadcrumb, between jumbotron and content, that
+The subpage template contain a breadcrumb, between stage and content, that
 you can also move to a partial.
 
 The breadcrum partial looks like this:
 
 ..  literalinclude:: _codesnippets/_BreadcrumbPartial.html
-    :caption: Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
+    :caption: Resources/Private/PageView/Partials/Navigation/Breadcrumb.html
 
 ..  _the-website-layout-file:
 
@@ -259,27 +260,27 @@ Extract the repeated part to a layout
 =====================================
 
 Lines 1-9 of file `Subpage.html` in step :ref:`subpage` step are exactly the
-same like in file :file:`Resources/Private/Templates/Pages/Default.html`.
+same like in file :file:`Resources/Private/PageView/Pages/Default.html`.
 
 We can extract these lines into a so called Fluid layout and load them with the
 :ref:`Layout ViewHelper <f:layout> <t3viewhelper:typo3fluid-fluid-layout>`:
 
 ..  literalinclude:: _codesnippets/_include_layout.diff
-    :caption: Resources/Private/Templates/Pages/Subpage.html (difference)
+    :caption: Resources/Private/PageView/Pages/Subpage.html (difference)
 
 Save the extracted layout to a file called
-:file:`Resources/Private/Templates/Layouts/Layout.html`. This file now contains
+:file:`Resources/Private/PageView/Layouts/Layout.html`. This file now contains
 the following:
 
 ..  include:: /CodeSnippets/Fluid/Layout.rst.txt
 
-Repeat the same for file :file:`Resources/Private/Templates/Pages/Default.html`.
+Repeat the same for file :file:`Resources/Private/PageView/Pages/Default.html`.
 
 ..  directory-tree::
     :level: 3
     :show-file-icons: true
 
-    *   EXT:my_sitepackage/Resources/Private/Templates
+    *   EXT:my_sitepackage/Resources/Private/PageView
 
         *   Layouts
 
@@ -300,7 +301,7 @@ Repeat the same for file :file:`Resources/Private/Templates/Pages/Default.html`.
 
             *   Footer.html
             *   Header.html
-            *   Jumbotron.html
+            *   Stage.html
 
 You can finde the complete site package extension at this step at branch
 `main-step/fluid <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/main-step/fluid>`__.
