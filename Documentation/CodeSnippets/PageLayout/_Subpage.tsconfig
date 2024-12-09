@@ -10,10 +10,10 @@ mod.web_layout.BackendLayouts {
           1 {
             columns {
               1 {
-                name = Jumbotron
+                name = Stage
                 colspan = 2
                 colPos = 1
-                identifier = jumbotron
+                identifier = stage
                 slideMode = slide
               }
             }

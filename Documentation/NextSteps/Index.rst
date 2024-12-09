@@ -31,9 +31,11 @@ these.
     outputs the menu (:file:`Resources/Private/Layouts/Page/Default.html`) need
     to be updated.
 
-#.  Jumbotron has no background image
+    Learn more about the menu data processor :ref:`menu data processor <t3tsref:MenuProcessor>`
 
-    The Jumbotron stands as a place holder for various options in our example.
+#.  Stage has no background image
+
+    The Stage stands as a place holder for various options in our example.
     Some readers may like to implement a banner with rotating images, some prefer a
     text content element or a video player instead. All this and much more is
     possible with TYPO3, but beyond the scope of this tutorial.

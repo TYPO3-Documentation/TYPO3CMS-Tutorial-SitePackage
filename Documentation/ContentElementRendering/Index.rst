@@ -76,7 +76,7 @@ into the folder :path:`vendor` during installation via Composer. You can find
 the files belonging to Fluid Styled Content in folder
 :path:`vendor/typo3/cms-fluid-styled-content` therefore. This folder is
 structured similarly to your site package extension and you can find the original
-templates in folder :path:`Resources/Private/Templates` here.
+templates in folder :path:`Resources/Private/PageView` here.
 
 By convention the templates of Fluid Styled Content have the name of the `CType` in CamelCase. Copy file
 :path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/MenuSubpages.html`

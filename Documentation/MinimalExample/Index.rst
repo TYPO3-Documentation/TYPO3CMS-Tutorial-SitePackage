@@ -334,17 +334,17 @@ By searching for the hash `bddd8a816bda3` in the log file you will find such an 
     Tried resolving a template file for controller action "Default->Pages/Default"
     in format ".html", but none of the paths contained the expected template file
     (Default/Pages/Default.html).
-    The following paths were checked: /var/www/html/vendor/myvendor/my-site-package/Resources/Private/Templates/
+    The following paths were checked: /var/www/html/vendor/myvendor/my-site-package/Resources/Private/PageView/
 
 This error message also tells you the path where TYPO3 expects to find the file. If no path
 is listed here, the path defined in line 6 of the TypoScript above is incorrect,
 for example if you mistyped the extension name or part of the path.
 
 Create a file named :file:`Default.html` in folder
-:path:`packages/my-site-package/Resources/Private/Templates/Pages`.
+:path:`packages/my-site-package/Resources/Private/PageView/Pages`.
 
 .. code-block:: html
-   :caption: packages/my-site-package/Resources/Private/Templates/Pages/Default.html
+   :caption: packages/my-site-package/Resources/Private/PageView/Pages/Default.html
 
    Hello Fluid World!
 

@@ -1,5 +1,5 @@
 ..  code-block:: html
-    :caption: Resources/Private/Templates/Partials/Content.html
+    :caption: Resources/Private/PageView/Partials/Content.html
     :linenos:
 
     <f:for each="{records}" as="record">
