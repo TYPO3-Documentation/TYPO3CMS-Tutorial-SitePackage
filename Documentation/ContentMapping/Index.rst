@@ -31,8 +31,8 @@ display the content in the next steps.
 
 Your site set configuration should now look like this:
 
-..  literalinclude:: /CodeSnippets/ExtensionConfiguration/SitePackage-config.yaml
-    :caption: EXT:my_site_package/Configuration/Sets/SitePackage/config.yaml
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/config.yaml
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/config.yaml
     :language: yaml
     :linenos:
 
@@ -52,7 +52,9 @@ By placing the file within the site set, you created in step
 :ref:`Create a basic site set <t3sitepackage:minimal-extension-siteset>`, the
 newly created file is loaded within the page tree of your site automatically:
 
-..  include:: /CodeSnippets/PageLayout/page.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/page.tsconfig
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/page.tsconfig
+    :linenos:
 
 This file automatically includes all `.tsconfig` files from the designated folder
 in which we will store the page layouts.
@@ -62,7 +64,7 @@ one for the stage.
 
 ..  literalinclude:: _codesnippets/_Default.tsconfig
     :language: typoscript
-    :caption: EXT:my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
+    :caption: packages/my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
     :linenos:
 
 ..  versionchanged:: TYPO3 13
@@ -77,12 +79,18 @@ one for the stage.
 When you make changes to the files of an extension it is usually necessary
 to flush all caches by hitting the button.
 
-.. include:: /Images/AutomaticScreenshots/FlushAllCaches.rst.txt
+..  figure:: /Images/AutomaticScreenshots/FlushAllCaches.png
+    :class: with-shadow
+
+    Flush all caches
 
 After flushing the all caches the new backend layout is available in the page
 properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 
-..  include:: /Images/AutomaticScreenshots/ChooseBackendLayout.rst.txt
+..  figure:: /Images/AutomaticScreenshots/ChooseBackendLayout.png
+    :class: with-shadow
+
+    Choose the backend layout
 
 ..  _choose_page_layout:
 
@@ -97,7 +105,10 @@ If you followed step
 :ref:`Load the example data automatically <t3sitepackage:load-example-data>`
 the areas "Stage" and "Main" should already contain some example content.
 
-.. include:: /Images/AutomaticScreenshots/CreateNewContentElement.rst.txt
+.. figure:: /Images/AutomaticScreenshots/CreateNewContentElement.png
+   :class: with-shadow
+
+   Create new content element
 
 In the database each content element record is stored in the table
 :sql:`tt_content`. This table has a column called `colPos`. If the value stored
@@ -202,7 +213,9 @@ the partial:
 
 The partial then looks like this:
 
-..  include:: /CodeSnippets/Fluid/PartialContent.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Content.html
+    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Content.html
+    :linenos:
 
 .. _content-element-typoscript:
 

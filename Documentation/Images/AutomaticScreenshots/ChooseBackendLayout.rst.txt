@@ -1,4 +1,0 @@
-.. figure:: /Images/AutomaticScreenshots/ChooseBackendLayout.png
-   :class: with-shadow
-
-   Choose the backend layout

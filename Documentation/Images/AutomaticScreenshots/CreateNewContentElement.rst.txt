@@ -1,4 +1,0 @@
-.. figure:: /Images/AutomaticScreenshots/CreateNewContentElement.png
-   :class: with-shadow
-
-   Create new content element

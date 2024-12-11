@@ -25,7 +25,8 @@ provide the data of all pages in your current site to your page template.
 We save the TypoScript configuration for the menu into file
 :file:`Configuration/Set/SitePackage/TypoScript/Navigation/menu.typoscript`:
 
-..  include:: /CodeSnippets/TypoScript/menu.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/menu.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/menu.typoscript
 
 .. _fluid-implement-main-menu:
 
@@ -43,7 +44,9 @@ A menu usually contains several menu entries. We use the
 :ref:`t3viewhelper:typo3fluid-fluid-for` to iterate over all menu entries
 and render them in turn:
 
-..  include:: /CodeSnippets/Fluid/Menu.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html
+    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html
+    :linenos:
 
 In each loop the current menu item is stored in variable `{menuItem}`.
 
@@ -51,7 +54,7 @@ You can use the :ref:`t3viewhelper:typo3-fluid-debug` to debug what kind of
 data the variable contains like this:
 
 ..  code-block:: diff
-    :caption: EXT:site_package/Resources/Private/PageView/Partials/Navigation/Menu.html (changed for debug output)
+    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html (changed for debug output)
 
      <ul class="navbar-nav mr-auto">
          <f:for each="{menu}" as="menuItem">
@@ -108,12 +111,19 @@ working as expected and if the menu is generated. Go to **WEB → View** and
 check, if the menu reflects the pages you created in the backend. Add one or
 two additional pages to the page tree and check to see if they appear in the preview.
 
-.. include:: _images/CheckMainMenu.rst.txt
+..  figure:: /Images/MainMenuCreation/CheckMainMenu.png
+    :alt: Checking from the backend if the menu is generated as expected.
+    :class: with-shadow
+
+    Checking from the backend if the menu is generated as expected.
 
 If the menu does not change, you possibly need to flush the frontend caches,
 then reload the preview.
 
-.. include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
+..  figure:: /Images/AutomaticScreenshots/FlushFrontendCaches.png
+    :class: with-shadow
+
+    Flush the frontend cache after changing template files
 
 The preview in the screenshot above shows the menu with three page links: "Page
 1", "Page 2" and "Page 3".
