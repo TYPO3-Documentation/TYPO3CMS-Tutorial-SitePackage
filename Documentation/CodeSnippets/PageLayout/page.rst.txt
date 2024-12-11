@@ -1,5 +1,0 @@
-..  code-block:: typoscript
-    :caption: EXT:my_site_package/Configuration/Sets/SitePackage/page.tsconfig
-    :linenos:
-
-    @import 'EXT:my_site_package/Configuration/TsConfig/Page/PageLayout/*.tsconfig'

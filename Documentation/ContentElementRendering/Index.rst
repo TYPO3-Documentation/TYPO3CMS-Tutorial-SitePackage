@@ -48,9 +48,9 @@ Clipboard instead, then save it to the following file:
 
     styles:
       templates:
-        templateRootPath: 'EXT:site_package/Resources/Private/ContentElements/Templates'
-        partialRootPath: 'EXT:site_package/Resources/Private/ContentElements/Partials'
-        layoutRootPath: 'EXT:site_package/Resources/Private/ContentElements/Layouts'
+        templateRootPath: 'EXT:my_site_package/Resources/Private/ContentElements/Templates'
+        partialRootPath: 'EXT:my_site_package/Resources/Private/ContentElements/Partials'
+        layoutRootPath: 'EXT:my_site_package/Resources/Private/ContentElements/Layouts'
 
 Then close the settings editor without saving. You can now start overriding the
 templates:
@@ -85,7 +85,9 @@ into folder :path:`packages/my_site_package/Resources/Private/ContentElements/Te
 Edit the file to add some classes as used in menus in Bootstrap, for example
 like this:
 
-..  include:: /CodeSnippets/Fluid/MenuSubpages.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html
+    :caption: packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html
+    :linenos:
 
 In most parts the changes we made are pretty straight forward. In line 9
 we use the `Fluid inline notation <https://docs.typo3.org/permalink/t3coreapi:fluid-inline-notation>`_
@@ -102,7 +104,9 @@ In a similar fashion we now copy and adjust the template for the sitemap from
 into folder :path:`packages/site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html`
 and then adjust it:
 
-..  include:: /CodeSnippets/Fluid/MenuSitemap.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html
+    :caption: packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html
+    :linenos:
 
 We want to adjust the HTML output of the sitemap for different levels. The
 original template however gives us no means to output the level.
@@ -154,4 +158,6 @@ By overriding this one partial we can add a class to all images that are
 displayed with the "Image" or "Text with Media" content elements. For example
 we could display all images as circles by adding the class `rounded-circle`:
 
-..  include:: /CodeSnippets/Fluid/Image.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.html
+    :caption: packages/my_site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.html
+    :linenos:

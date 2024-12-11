@@ -29,9 +29,9 @@ We now create a subpage layout with two columns and a row for the stage in a
 new file :file:`packages/my-site-package/Configuration/TsConfig/Page/PageLayout/Subpage.tsconfig`
 containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`. :
 
-..  literalinclude:: /CodeSnippets/PageLayout/_Subpage.tsconfig
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/subpage.tsconfig
     :language: typoscript
-    :caption: packages/my-site-package/Configuration/TsConfig/Page/PageLayout/Subpage.tsconfig
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/subpage.tsconfig
     :linenos:
 
 .. _cm-switch_backend_layout:
@@ -44,7 +44,11 @@ at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 Edit the page properties of `Start page` to use the backend layout
 "Two Columns" for subpages.
 
-..  include:: _images/SwitchBackendLayoutForSubpages.rst.txt
+..  figure:: /Images/ContentMapping/SwitchBackendLayoutForSubpages.png
+    :class: with-shadow
+    :alt: Switch to the Backend Layout "Two Columns" for subpages
+
+    Switch to the Backend Layout "Two Columns" for subpages
 
 After saving you will be able to see on "Page 1" that the content of the columns "main" and
 "stage" remains unchanged while there is a third column "sidebar".
@@ -54,8 +58,18 @@ use the same colPos number for these columns.
 The pages generated in step Create initial pages already contain
 "Menu of subpages" an example content in "sidebar" column.
 
-..  include:: _images/BackendLayoutTwoColumns.rst.txt
+..  figure:: /Images/ContentMapping/BackendLayoutTwoColumns.png
+    :class: with-shadow
+    :alt: A new column "Sidebar" appears
+
+    A new column "Sidebar" appears
+
 
 Preview the page once more. A sidebar will appear in the frontend:
 
-..  include:: _images/TwoColumnsPreviewPage.rst.txt
+..  figure:: /Images/ContentMapping/TwoColumnsPreviewPage.png
+    :class: with-shadow
+    :alt: The sidebar appears in the frontend
+
+    The sidebar appears in the frontend
+

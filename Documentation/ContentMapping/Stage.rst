@@ -50,4 +50,6 @@ The content elements will be automatically found and provided to your template.
 Therefore the template for the area "Stage" looks no different from the one
 for the main area except that is uses the corresponding variable of course:
 
-..  include:: /CodeSnippets/Fluid/Stage.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Stage.html
+    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Stage.html
+    :linenos:

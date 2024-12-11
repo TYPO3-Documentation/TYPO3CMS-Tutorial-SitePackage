@@ -151,7 +151,7 @@ You should now have the following files:
     :level: 3
     :show-file-icons: true
 
-    *   EXT:my_site_package/Resources/Private/PageView
+    *   packages/my_site_package/Resources/Private/PageView
 
     *   Pages
 
@@ -182,7 +182,7 @@ the partial :file:`Resources/Private/PageView/Partials/Header.html` to its
 own partial, :file:`Resources/Private/PageView/Partials/Navigation/Menu.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_header.diff
-    :caption: EXT:my_site_package/Resources/Private/PageView/Partials/Header.html (Difference)
+    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Header.html (Difference)
 
 The :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>` is used
 the same like from within the template.
@@ -200,7 +200,7 @@ the partial :file:`Resources/Private/PageView/Partials/Footer.html` to its
 own partial, :file:`Resources/Private/PageView/Partials/Navigation/FooterMenu.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_footer.diff
-    :caption: EXT:my_site_package/Resources/Private/PageView/Partials/Footer.html (Difference)
+    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Footer.html (Difference)
 
 The footer menu partial looks like this:
 
@@ -272,7 +272,9 @@ Save the extracted layout to a file called
 :file:`Resources/Private/PageView/Layouts/Layout.html`. This file now contains
 the following:
 
-..  include:: /CodeSnippets/Fluid/Layout.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html
+    :caption: packages/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html
+    :linenos:
 
 Repeat the same for file :file:`Resources/Private/PageView/Pages/Default.html`.
 
@@ -280,7 +282,7 @@ Repeat the same for file :file:`Resources/Private/PageView/Pages/Default.html`.
     :level: 3
     :show-file-icons: true
 
-    *   EXT:my_sitepackage/Resources/Private/PageView
+    *   packages/my_site_package/Resources/Private/PageView
 
         *   Layouts
 
