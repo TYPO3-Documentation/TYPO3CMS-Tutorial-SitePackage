@@ -1,11 +1,13 @@
 :navigation-title: Assets
 ..  include:: /Includes.rst.txt
+..  _theme-example-static-html:
+..  _theme-example:
 ..  _design-template:
 ..  _assets-theme:
 
-============================
-Copy the assets of the theme
-============================
+=======================
+Asset handling in TYPO3
+=======================
 
 Assets usually include CSS files, JavaScript and images / icons used for design
 purposes.
@@ -23,48 +25,41 @@ Read more about assets in :ref:`Getting started, assets <t3start:assets>`.
 
 ..  contents::
 
-..  _theme-example:
+..  _referencing-assets:
 
-The example theme
-=================
+Referencing assets
+==================
 
-For the purpose of demonstration we created a theme based on Bootstrap and some
-custom CSS / JavaScript.
+You can reference assets by prefixing the path with `EXT:extension_name`, for
+example `EXT:my_site_package`.
 
-You can download the files of the example theme from
-https://github.com/TYPO3-Documentation/site_package/tree/main/Resources/Public
+For example the path to the favicon can be configured in TypoScript like this:
 
-Now copy these files into folder :path:`Resources/Public` of your site package.
+..  code-block:: typoscript
 
-..  _theme-example-static-html:
+    page {
+        shortcutIcon = EXT:my_site_package/Resources/Public/Icons/favicon.ico
+    }
 
-The static HTML templates
-=========================
+And a CSS asset can be loaded in Fluid using the
+`Asset.css ViewHelper <f:asset.css> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-asset-css>`_
+like this:
 
-In folder :path:`Resources/Public/StaticTemplate` you will now find two HTML
-files. We will use these as example to create the
-:ref:`Fluid templates <fluid-templates>` in the next step. Afterwards they can
-be deleted or kept for reference.
+..  code-block:: html
 
-During local development you can open these directly (using paths from your
-operating system) in your browser to see what the site should look like after
-we are finished with the site package.
-
-..  note::
-    If you want to work with your own theme or received a theme from a frontend
-    developer make sure that all paths used within the theme are relative.
+    <f:asset.css identifier="main" href="EXT:my_site_package/Resources/Public/Css/main.css" />
 
 ..  _theme-example-assets-symlink:
 
-Symlinking Resources/Public into public/_assets
-===============================================
+Repairing the symlinks from packages/my_site_package/Resources/Public into public/_assets
+=========================================================================================
 
-When creating your :ref:`Minimal site package <t3sitepackage:minimal-design>`
-your extension did not yet have a folder :path:`Resources/Public`. The symlink
-from :folder:`public/_assets` gets automatically created during Composer
-installation.
+In case you installed a site package before it had a folder called
+:path:`Resources/Public` the symlinks did not get automatically created
+during Composer installation.
 
-However as you newly created the folder, you must tell Composer to re-perform this initialization-process, which is done in the "dump-autoload" step.
+In that case you can tell Composer to
+re-perform this initialization-process, which is done in the "dump-autoload" step.
 During that process the symlinks will also be created by Composer.
 
 ..  code-block:: bash
@@ -91,4 +86,3 @@ in your site package.
 
 There are also TYPO3 extensions like :composer:`praetorius/vite-asset-collector`
 to bundle your TYPO3 frontend assets with Vite.
-
