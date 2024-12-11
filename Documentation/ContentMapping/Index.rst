@@ -153,7 +153,7 @@ You can debug this variable in the main section of your template using the
 The debug output after clearing all caches and previewing the page should look
 like this:
 
-..  figure:: _images/contents_debug.png
+..  figure:: /Images/ContentMapping/contents_debug.png
     :alt: Screenshot of the debug output of {content}
 
     The debug output should contain sections "stage" and "main"
