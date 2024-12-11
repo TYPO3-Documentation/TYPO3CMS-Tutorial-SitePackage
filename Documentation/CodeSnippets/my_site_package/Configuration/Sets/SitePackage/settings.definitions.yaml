@@ -1,0 +1,38 @@
+categories:
+  MySitePackage:
+    label: 'My Site Package'
+  MySitePackage.templates:
+    label: 'Templates'
+    parent: MySitePackage
+  MySitePackage.layout:
+    label: 'Layout'
+    parent: MySitePackage
+
+settings:
+  MySitePackage.template_path:
+    label: 'Page template path'
+    category: MySitePackage.templates
+    description: 'Path to the templates of the My Site Package.'
+    type: string
+    default: 'EXT:my_site_package/Resources/Private/Templates/'
+
+  MySitePackage.logo:
+    label: 'Logo'
+    category: MySitePackage.layout
+    description: 'Path to the logo of My Site Package.'
+    type: string
+    default: 'EXT:my_site_package/Resources/Public/Images/logo.svg'
+
+  MySitePackage.logo-alt:
+    label: 'Logo Alt text'
+    category: MySitePackage.layout
+    description: 'Alternative text of the logo for the visually impaired'
+    type: string
+    default: 'Logo'
+
+  MySitePackage.favicon:
+    label: 'Favicon'
+    description: 'This icon is displayed in search engine results and in the browser tab'
+    category: MySitePackage.layout
+    type: string
+    default: 'EXT:my_site_package/Resources/Public/Icons/favicon.ico'

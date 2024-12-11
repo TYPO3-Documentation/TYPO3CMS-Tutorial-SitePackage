@@ -57,7 +57,7 @@ needs to be :ref:`installed <extension-installation>`:
 
     `my_site_package` is the extension name. For historical reasons all dashes need
     to be converted to underscores and the vendor name removed. This name is used
-    to reference files, for example `EXT:my_site_package/Resources/Public/Css/my.css`.
+    to reference files, for example `packages/my_site_package/Resources/Public/Css/my.css`.
 
 
 .. _minimal-b13-make-extension:
@@ -361,7 +361,10 @@ Whenever we have made changes to the Fluid templates or TypoScript files, it is
 necessary to :guilabel:`Flush frontend caches` in the menu in the
 top bar before you can preview the page properly:
 
-..  include:: /Images/AutomaticScreenshots/FlushFrontendCaches.rst.txt
+..  figure:: /Images/AutomaticScreenshots/FlushFrontendCaches.png
+    :class: with-shadow
+
+    Flush the frontend cache after changing template files
 
 You can then preview your page by clicking on the button :guilabel:`View webpage`
 in the page module.
@@ -374,7 +377,9 @@ Composer configuration :file:`composer.json`
 In step :ref:`Create a minimal TYPO3 extension <t3sitepackage:minimal-extension>`
 a file called :file:`composer.json` was created for you:
 
-.. include:: /CodeSnippets/ExtensionConfiguration/ComposerJson.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/composer.json
+    :caption: packages/my_site_package/composer.json
+    :linenos:
 
 At the top of the :file:`composer.json` file we see the Composer package name
 `myvendor/my-site-package` (with a dash) and at the bottom we see the TYPO3

@@ -5,7 +5,7 @@ help: ## Displays this list of targets with descriptions
 
 .PHONY: codesnippets
 codesnippets: ## Regenerate automatic code snippets
-	.Build/vendor/bin/typo3 codesnippet:create Documentation/CodeSnippets/
+	./Build/DownloadSitePackage/generate_sitepackage.sh
 
 .PHONY: docs
 docs: ## Generate projects docs (from "Documentation" directory)

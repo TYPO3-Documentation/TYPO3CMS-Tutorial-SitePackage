@@ -1,0 +1,5 @@
+name: my-vendor/my-site-package
+label: 'My Site Package'
+dependencies:
+  - typo3/fluid-styled-content
+  - typo3/fluid-styled-content-css

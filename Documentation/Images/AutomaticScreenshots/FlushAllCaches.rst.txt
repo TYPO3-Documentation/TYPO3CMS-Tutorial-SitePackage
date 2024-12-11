@@ -1,4 +1,0 @@
-.. figure:: /Images/AutomaticScreenshots/FlushAllCaches.png
-   :class: with-shadow
-
-   Flush all caches
