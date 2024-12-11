@@ -17,29 +17,57 @@ You can add additonal content in the backend. Go to
 in the column labelled "*Main*" and choose the "Regular Text
 Element" content element.
 
-..  include:: /ContentMapping/_images/AddNewContentElement.rst.txt
+..  figure:: /Images/ContentMapping/AddNewContentElement.png
+    :class: with-shadow
+    :alt: Create new content element
 
-..  include:: /ContentMapping/_images/ChooseRegularTextElement.rst.txt
+    Create new content element
+
+..  figure:: /Images/ContentMapping/ChooseRegularTextElement.png
+    :class: with-shadow
+    :alt: Choose "Regular Text Element"
+
+    Choose "Regular Text Element"
 
 Enter a headline and some arbitrary text in the Rich Text Editor (RTE).
 
-..  include:: /ContentMapping/_images/EditRegularTextElement1.rst.txt
+..  figure:: /Images/ContentMapping/EditRegularTextElement1.png
+    :class: with-shadow
+    :alt: Enter a headline
 
-..  include:: /ContentMapping/_images/EditRegularTextElement2.rst.txt
+    Enter a headline
+
+..  figure:: /Images/ContentMapping/EditRegularTextElement2.png
+    :class: with-shadow
+    :alt: Enter some arbitrary text in the Rich Text Editor (RTE)
+
+    Enter some arbitrary text in the Rich Text Editor (RTE)
 
 Save your changes by clicking button :guilabel:`Save` at the top.
 You can return to the previous view by clicking :guilabel:`Close`.
 
-..  include:: /ContentMapping/_images/SaveAndCloseRegularTextElement.rst.txt
+..  figure:: /Images/ContentMapping/SaveAndCloseRegularTextElement.png
+    :class: with-shadow
+    :alt: Save and close the new content element
+
+    Save and close the new content element
 
 :ref:`Preview the page <t3sitepackage:cm-preview-page>` by clicking button
 :guilabel:`View webpage`.
 
-..  include:: /ContentMapping/_images/PreviewPageButton.rst.txt
+..  figure:: /Images/ContentMapping/PreviewPageButton.png
+    :class: with-shadow
+    :alt: View webpage button
+
+    View webpage button
 
 Check that the content is displayed as expected.
 
-..  include:: /ContentMapping/_images/VerifyPageContent.rst.txt
+..  figure:: /Images/ContentMapping/VerifyPageContent.png
+    :class: with-shadow
+    :alt: Verify if your new content is displayed on the page
+
+    Verify if your new content is displayed on the page
 
 Whenever you edit the content elements on
 a page the cache of the current page is automatically deleted. If the content

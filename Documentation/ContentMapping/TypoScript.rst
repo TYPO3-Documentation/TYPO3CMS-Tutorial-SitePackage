@@ -29,7 +29,7 @@ Familiarize yourself with the TypoScript `@import` syntax first:
 Import the TypoScript from a different location
 ===============================================
 
-Create a new folder called :path:`Configuration/Sets/MySet/TypoScript`. In this
+Create a new folder called :path:`Configuration/Sets/SitePackage/TypoScript`. In this
 create a file called :file:`page.typoscript` and copy the content from
 file :file:`Configuration/Sets/SitePackage/setup.typoscript`
 into it.
@@ -52,7 +52,9 @@ We will create more TypoScript files in the next steps. We could import them
 file by file. But as the order will not matter we can import all of them via
 wildcard:
 
-.. include:: /CodeSnippets/TypoScript/Setup.rst.txt
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/setup.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/setup.typoscript
+    :linenos:
 
 Only files from the folder directly will be imported. If you create subfolders
 later on you have to import them separately.
@@ -68,7 +70,7 @@ Your :path:`Configuration` directory should now have the following structure:
     :level: 4
     :show-file-icons: true
 
-    *   EXT:my_sitepackage/Configuration
+    *   packages/my_site_package/Configuration
 
         *   Sets
 

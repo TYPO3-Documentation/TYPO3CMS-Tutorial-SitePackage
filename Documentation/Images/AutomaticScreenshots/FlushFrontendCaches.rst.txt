@@ -1,5 +1,0 @@
-
-.. figure:: /Images/AutomaticScreenshots/FlushFrontendCaches.png
-   :class: with-shadow
-
-   Flush the frontend cache after changing template files

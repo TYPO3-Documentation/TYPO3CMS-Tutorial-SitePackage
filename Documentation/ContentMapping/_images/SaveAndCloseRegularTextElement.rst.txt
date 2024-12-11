@@ -1,5 +1,0 @@
-..  figure:: /ContentMapping/_images/SaveAndCloseRegularTextElement.png
-    :class: with-shadow
-    :caption: Save and close the new content element
-
-   Save and close the new content element
