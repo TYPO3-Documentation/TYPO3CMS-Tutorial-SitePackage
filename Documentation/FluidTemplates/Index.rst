@@ -14,300 +14,153 @@ To understand the following section you need basic knowledge about how to use th
 This chapter is based on the following steps:
 
 *   A Composer-based TYPO3 installation, at least version 13.4.
-*   You need :ref:`Initial pages and a site
-    configuration <t3sitepackage:typo3-backend-create-initial-pages>`.
-*   You need a :ref:`Minimal site package <t3sitepackage:minimal-design>`.
-*   The assets should be in the correct locations:
-    :ref:`Copy the assets of the theme <t3sitepackage:assets-theme>`.
+*   You have installed a
+    `Generate a site package of type "Site Package Tutorial" <https://docs.typo3.org/permalink/t3sitepackage:minimal-design>`_,
+    including the example page tree loaded in `Create initial pages <https://docs.typo3.org/permalink/t3sitepackage:typo3-backend-create-initial-pages>`_.
+*   You have familiarized yourself with `Asset handling in TYPO3 <https://docs.typo3.org/permalink/t3sitepackage:assets-theme>`_
+    (CSS, JavaScript, design related images, ...)
 
-After this tutorial you have created Fluid templates and split them into
-manageable pieces.
+After this tutorial you have a better understanding of the example templates and
+how to adjust them to your needs. You should also be able to create some
+templates yourself.
 
-..  contents::
+If you prefer to start with a pure HTML template and build all templates
+step by step, you can alternatively have a look a :ref:`fluid-templates-scratch`.
 
-..  _implement-templates-files:
-..  _the-page-layout-file:
-..  _create_template:
+..  contents:: Topics covered in this chapter
 
-Create the Fluid templates
-==========================
+..  toctree::
+    :hidden: 1
+    :glob:
 
-Copy the main :ref:`static HTML file <theme-example-static-html>` from
-:file:`Resources/Public/StaticTemplate/default.html`
-to :file:`Resources/Private/PageView/Pages/Default.html`. You can override
-the file created in step :ref:`Minimal site package - The TYPO3 Fluid
-version <t3sitepackage:minimal-extension-fluid>`. The file name must begin
-with a capital letter
+    *
 
-The template name `Default.html` is used as a fall back if no other template
-names are defined. Do not change it for now.
+..  _pageview:
 
-Even though this file ends on `.html` it will be interpreted by the templating
-engine Fluid.
+The page view
+=============
 
-TYPO3 takes care of creating the outermost HTML structure of the site, including
-the `<html>` and `<head>` tags therefore they need to be removed from the
-template:
+The Fluid templates for the whole page have to be configured via TypoScript.
 
-..  literalinclude:: _codesnippets/_remove_head.diff
-    :caption: Resources/Private/PageView/Pages/Default.html (difference)
+In the example site package that was `Generated for you <https://docs.typo3.org/permalink/t3sitepackage:minimal-design>`_
+the according TypoScript can be found in file
+:file:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/page.typoscript`:
 
-The Fluid template :file:`Default.html` now contains only the HTML
-code inside the body:
-
-..  literalinclude:: _codesnippets/_DefaultWithoutHead.html
-    :caption: Resources/Private/PageView/Pages/Default.html
-
-Flush the caches and preview the page. You should now see a pure HTML page
-without any styles or images. We will add them in a further step.
-
-..  todo: Link to cache and preview pages in getting started once they exist
-
-..  todo: Add link to trouble shooting page once
-    https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-GettingStarted/issues/441
-    is done.
-
-..  note::
-    Each time you change a Fluid template you must flush the caches. Fluid
-    templates preprocessed into PHP files and stored in the folder
-    :path:`var/cache/code/fluid_template`.
-
-..  _typoscript-configuration-css-js-inclusion:
-..  _assets:
-
-Load assets (CSS, JavaScript)
------------------------------
-
-Load all CSS which had been removed in step :ref:`create_template`
-using the :ref:`Asset.css ViewHelper <f:asset.css> <t3viewhelper:typo3-fluid-asset-css>`.
-
-Replace `<script>` tags in the body by using the
-:ref:`Asset.script ViewHelper <f:asset.script> <t3viewhelper:typo3-fluid-asset-script>`.
-
-..  literalinclude:: _codesnippets/_assets.diff
-    :caption: Resources/Private/PageView/Pages/Default.html (difference)
-
-The path to the assets will be resolved by TYPO3. `EXT:` tells TYPO3 that this is
-an extension path. `site_package` is the
-:ref:`Extension name defined in the composer.json <extension-configuration-composer>`.
-
-Flush all caches and preview the page.
-..  todo: Link to cache and preview pages in getting started once they exist
-
-When you load your page and inspect it with the developer tools of your browser
-you will notice that the assets are loaded from paths like
-`/_assets/99a57ea771f379715c522bf185e9a315/Css/main.css?1728057333`. You must
-never try to use these path directly, for example as absolute paths. They can
-change at any time. Only use the `EXT:` syntax.
-
-When you now preview the page you will notice that the your page is loaded
-with the dummy content from the template and functioning CSS and JavaScript.
-The logo however is not found.
-
-..  _images:
-
-Load images in Fluid
---------------------
-
-Replace all `<img>` tags in the template with the
-:ref:`Image ViewHelper <f:image> <t3viewhelper:typo3-fluid-image>`:
-
-..  literalinclude:: _codesnippets/_replace_images.diff
-    :caption: Resources/Private/PageView/Pages/Default.html (difference)
-
-Just like happened with the CSS paths in step :ref:`assets` the path to the
-image is now replaced in the output by a path like
-`/_assets/99a57ea771f379715c522bf185e9a315/Images/logo.svg?1728057333`.
-
-..  _create_partial_jumbotron:
-..  _partials:
-
-Split up the template into partials
------------------------------------
-
-If you compare the two static templates
-:file:`Resources/Public/StaticTemplate/default.html`
-and :file:`Resources/Public/StaticTemplate/subpagepage.html` they share many
-parts like the footer or the header with the menu. In order to reuse those parts
-we extract them to their own Fluid files. These are called partials and stored
-in path :path:`Resources/Private/PageView/Partials`.
-
-We can use the :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>`
-to render the partial in the correct place.
-
-Remove the header from the template and replace it with a render ViewHelper:
-
-..  literalinclude:: _codesnippets/_remove_header.diff
-    :caption: Resources/Private/PageView/Pages/Default.html (difference)
-
-Move the Fluid code you just remove to a file called
-:file:`my-site-package/Resources/Private/PageView/Partials/Header.html`.
-
-Do the same with the stage, the breadcrumb, and the footer.
-
-You should now have the following files:
-
-..  directory-tree::
-    :level: 3
-    :show-file-icons: true
-
-    *   packages/my_site_package/Resources/Private/PageView
-
-    *   Pages
-
-        *   Default.html
-        *   Subpage.html
-
-    *   Partials
-
-            *   Footer.html
-            *   Header.html
-            *   Stage.html
-
-The Fluid template :file:`Resources/Private/PageView/Pages/Default.html`
-should now look like this:
-
-..  literalinclude:: _codesnippets/_DefaultWithPartials.html
-    :caption: Resources/Private/PageView/Pages/Default.html
-
-You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
-
-..  _create_partial_header:
-
-Extract the menu into a partial
--------------------------------
-
-Partials can also be rendered from within another partial. We move the menu in
-the partial :file:`Resources/Private/PageView/Partials/Header.html` to its
-own partial, :file:`Resources/Private/PageView/Partials/Navigation/Menu.html`:
-
-..  literalinclude:: _codesnippets/_remove_menu_from_header.diff
-    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Header.html (Difference)
-
-The :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>` is used
-the same like from within the template.
-
-Chapter :ref:`Main menu <t3sitepackage:main-menu-creation>` will teach you how
-to make the menu work.
-
-..  _create_partial_footer_menu:
-
-Extract the footer menu into a partial
--------------------------------
-
-We can also move the footer menu from
-the partial :file:`Resources/Private/PageView/Partials/Footer.html` to its
-own partial, :file:`Resources/Private/PageView/Partials/Navigation/FooterMenu.html`:
-
-..  literalinclude:: _codesnippets/_remove_menu_from_footer.diff
-    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Footer.html (Difference)
-
-The footer menu partial looks like this:
-
-..  literalinclude:: _codesnippets/_FooterMenuPartial.html
-    :caption: Resources/Private/PageView/Partials/Navigation/FooterMenu.html
-
-..  _create_section:
-
-Move the content into a section
--------------------------------
-
-You can also move a part of the template into a section, surrounded by a
-:ref:`Section ViewHelper <f:section> <t3viewhelper:typo3fluid-fluid-section>`
-and use the :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>`
-with argument `section` to render it.
-
-We move the content, including the Stage into such a section:
-
-..  literalinclude:: _codesnippets/_move_content_to_section.diff
-    :caption: Resources/Private/PageView/Pages/Default.html (difference)
-
-The result looks like this:
-
-..  literalinclude:: _codesnippets/_DefaultWithSection.html
-    :caption: Resources/Private/PageView/Pages/Default.html
-
-You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
-
-..  _subpage:
-
-The Fluid template for the subpage
-==================================
-
-We can repeat the above steps for the subpage and write such a template:
-
-..  literalinclude:: _codesnippets/_SubpageWithSection.html
-    :caption: Resources/Private/PageView/Pages/Subpage.html
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/TypoScript/page.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/page.typoscript
     :linenos:
-    :emphasize-lines: 1-9
+    :emphasize-lines:  3,6
 
-..  _create_partial_breadcrumb:
+Line 3 defines that Fluid templates should be used for the page by using the
+TypoScript object `PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_.
 
-Extract the breadcrumb into a partial
--------------------------------------
+In line 6 the default path to the page view templates is defined. The definition
+could be extended in line 7 by a setting later own. For now assume all Fluid
+templates for the page can be found in folder
+:path:`packages/my_site_package/Resources/Private/PageView`.
 
-The subpage template contain a breadcrumb, between stage and content, that
-you can also move to a partial.
+..  _default-page-template:
 
-The breadcrum partial looks like this:
+The default page template
+=========================
 
-..  literalinclude:: _codesnippets/_BreadcrumbPartial.html
-    :caption: Resources/Private/PageView/Partials/Navigation/Breadcrumb.html
+Unless a different page layout is chosen, `PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_
+expects the main template of the page in file :file:`PageView/Pages/Default.html` within
+the defined folder (:path:`packages/my_site_package/Resources/Private/PageView`).
 
-..  _the-website-layout-file:
+Let us have a look at this template now:
 
-Extract the repeated part to a layout
-=====================================
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Pages/Default.html
+    :caption: packages/my_site_package/Resources/Private/PageView/Pages/Default.html
+    :linenos:
+    :emphasize-lines:  1,2,4
 
-Lines 1-9 of file `Subpage.html` in step :ref:`subpage` step are exactly the
-same like in file :file:`Resources/Private/PageView/Pages/Default.html`.
+*   In line 1 the `Layout ViewHelper <f:layout> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-layout>`_
+    is defined to load a layout template from folder :path:`PageView/Layouts`. The file
+    must have the same name of the templated, followed by `.html`, therefore
+    file :file:`packages/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html`
+    is loaded as layout.
+*   Line 2 starts a new section with name "Main", using the
+    `Section ViewHelper <f:section> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-section>`_.
+*   In Line 4 and 7 partial templates are loaded from :path:`Partials`. They follow
+    the same naming scheme like the Layout and are therefore located in
+    files :file:`Documentation/CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Content.html`
+    and :file:`Documentation/CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Stage.html`.
+    To do this they use the `Render ViewHelper <f:render> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render>`_.
 
-We can extract these lines into a so called Fluid layout and load them with the
-:ref:`Layout ViewHelper <f:layout> <t3viewhelper:typo3fluid-fluid-layout>`:
+..  _layout-template:
 
-..  literalinclude:: _codesnippets/_include_layout.diff
-    :caption: Resources/Private/PageView/Pages/Subpage.html (difference)
+The Fluid layout template
+=========================
 
-Save the extracted layout to a file called
-:file:`Resources/Private/PageView/Layouts/Layout.html`. This file now contains
-the following:
+The outer most HTML that is needed for all different page layouts is usually
+defined in a layout template:
 
 ..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html
-    :caption: packages/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html
+    :caption: /CodeSnippets/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html
     :linenos:
+    :emphasize-lines:  5
 
-Repeat the same for file :file:`Resources/Private/PageView/Pages/Default.html`.
+The layout template takes care of loading assets like CSS and JavaScript that
+are needed on all pages, using the `Asset collector <https://docs.typo3.org/permalink/t3coreapi:asset-collector>`_.
 
-..  directory-tree::
-    :level: 3
-    :show-file-icons: true
+To configure the asset collector, the `Asset.css ViewHelper <f:asset.css> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-asset-css>`_
+and `Asset.script ViewHelper <f:asset.script> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-asset-script>`_
+are used.
 
-    *   packages/my_site_package/Resources/Private/PageView
+The layout also renders sections that need to be defined with the
+`Section ViewHelper <f:section> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-section>`_
+in the page template. In line 5 the section is rendered, which is defined in line
+2-10 of the "Default" page template. It is possible to define several sections
+and to define optional sections. We do not demonstrate that here.
 
-        *   Layouts
+The layout template also loads some more partials, for example to display
+menu and the footer.
 
-            *   Layout.html
+..  _page-html-structure:
 
-        *   Pages
+Outer most HTML structure (body, head)
+======================================
 
-            *   Default.html
-            *   Subpage.html
+The outer most HTML structure is usually not handled by your custom templates. It
+can be configured via the TypoScript configuration of the
+`PAGE <https://docs.typo3.org/permalink/t3tsref:object-type-page>`_ object.
 
-        *   Partials
+For example you can use option :ref:`shortcutIcon <t3tsref:confval-page-shortcuticon>`
+to load a favicon, :ref:`meta <t3tsref:confval-page-meta>` to define meta tags,
+or add tags to the body tag using :ref:`bodyTagAdd <t3tsref:confval-page-bodytagadd>`.
 
-            *   Navigation
+The page object, including examples is described in detail in the TypoScript
+reference, chapter `Configure the PAGE in TypoScript <https://docs.typo3.org/permalink/t3tsref:guide-page>`_.
 
-                *   Breadcrumb.html
-                *   FooterMenu.html
-                *   Menu.html
+..  _partial-template:
 
-            *   Footer.html
-            *   Header.html
-            *   Stage.html
+The footer: Example for a partial template
+==========================================
 
-You can finde the complete site package extension at this step at branch
-`main-step/fluid <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/main-step/fluid>`__.
+In the :ref:`layout template <layout-template>` the following partial was loaded:
 
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Footer.html
+    :caption: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Footer.html
+    :linenos:
+    :emphasize-lines:  5-7,11
+
+Line 5 uses the `Link.page ViewHelper <f:link.page> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-link-page>`_
+to link to the start page, which is the same like the root page and found in the
+variable `{site.rootPageId}`.
+
+The variable `{site}` is automatically provided by the
+`PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_. All
+available variables are described in the TypoScript Reference, section
+`Default variables in Fluid templates <https://docs.typo3.org/permalink/t3tsref:cobj-pageview-data>`_.
+
+Line 6 uses the `Image ViewHelper <f:image> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-image>`_
+to display a logo in the footer. The path to the logo and its alt tag are
+defined in the settings definition. More about this in chapter
+`Setting definition <https://docs.typo3.org/permalink/t3sitepackage:settings-definitions-yaml-constants>`_.
+
+In line 11 yet another partial is included. This partial displays a menu in the
+footer. More about this topic in chapter :ref:`Configure the menus <main-menu-creation>`.
 
 ..  _fluid-templates-next-steps:
 

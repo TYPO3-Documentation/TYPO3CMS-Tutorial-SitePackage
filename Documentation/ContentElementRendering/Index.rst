@@ -103,7 +103,7 @@ into folder :path:`packages/my_site_package/Resources/Private/ContentElements/Te
 Edit the file to add some classes as used in menus in Bootstrap, for example
 like this:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html
     :caption: packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html
     :linenos:
 
