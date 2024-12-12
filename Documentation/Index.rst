@@ -36,28 +36,20 @@ https://github.com/TYPO3-Documentation/site_package
         ..  card-footer:: :ref:`See the prerequisites <t3sitepackage:prerequisites>`
             :button-style: btn btn-secondary stretched-link
 
+    ..  card:: :ref:`Generate a site package <t3sitepackage:minimal-design>`
+
+        Generate a site package using the official Site Package Builder and
+        install it.
+
+        ..  card-footer:: :ref:`Generate a site package <t3sitepackage:minimal-design>`
+            :button-style: btn btn-secondary stretched-link
+
     ..  card:: :ref:`Create initial pages <t3sitepackage:typo3-backend-create-initial-pages>`
 
-        Here we use :composer:`t3docs/site-package-data` to create a basic site
-        configuration and some pages in the TYPO3 backend with some example
-        content records.
+        Here we use the initialization data provided by your site package
+        to create some initial pages including dummy content.
 
         ..  card-footer:: :ref:`Create some dummy content <t3sitepackage:typo3-backend-create-initial-pages>`
-            :button-style: btn btn-secondary stretched-link
-
-    ..  card:: :ref:`Minimal site package <t3sitepackage:minimal-design>`
-
-        Create a minimal site package that outputs "Hello World".
-
-        ..  card-footer:: :ref:`Create a minimal site package <t3sitepackage:minimal-design>`
-            :button-style: btn btn-secondary stretched-link
-
-    ..  card:: :ref:`Extension Installation <t3sitepackage:extension-installation>`
-
-        In this section we go through the process of installing the site
-        package extension with composer.
-
-        ..  card-footer:: :ref:`Add your site package with composer <t3sitepackage:extension-installation>`
             :button-style: btn btn-secondary stretched-link
 
     ..  card:: :ref:`Assets <assets-theme>`
@@ -65,7 +57,7 @@ https://github.com/TYPO3-Documentation/site_package
         Assets usually include CSS files, JavaScript and images / icons used
         for design purposes.
 
-        ..  card-footer:: :ref:`Copy the assets into your site package <assets-theme>`
+        ..  card-footer:: :ref:`Understand using assets into your site package <assets-theme>`
             :button-style: btn btn-secondary stretched-link
 
     ..  card:: :ref:`Fluid Template <t3sitepackage:fluid-templates>`
@@ -131,8 +123,8 @@ https://github.com/TYPO3-Documentation/site_package
     :hidden:
 
     Prerequisites/Index
-    CreatePages/Index
     MinimalExample/Index
+    CreatePages/Index
     Assets/Index
     FluidTemplates/Index
     ContentMapping/Index
