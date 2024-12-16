@@ -7,64 +7,49 @@
 Display the content elements on your page
 =========================================
 
-In step :ref:`create-section` we moved the part of our template, that will
-contain the content, into its own section. This section is however still filled
-with dummy content:
+In step `The page view <https://docs.typo3.org/permalink/t3sitepackage:pageview>`_
+we had a first look at the TypoScript configuration for the page view.
 
-..  literalinclude:: _codesnippets/_SectionMain.html
-    :caption: Resources/Private/PageView/Pages/Default.html
+Now let us see how the content is mapped to its position in the templates.
 
 ..  contents::
 
 .. _content-mapping-site-set:
 
-Include the site sets of fluid-styled-content as dependency
-===========================================================
+Dependency on Fluid Styled Content
+==================================
 
-In step :ref:`Minimal site package - Create a basic site
-set <t3sitepackage:minimal-extension-siteset>` we created a basic site set for
-our site package.
-
-Add a dependency to the sets provided by the system extension
-:composer:`typo3/cms-fluid-styled-content`. This step is a prerequisite to
-display the content in the next steps.
-
-Your site set configuration should now look like this:
+In step `Look at the a basic site set <https://docs.typo3.org/permalink/t3sitepackage:minimal-extension-siteset>`_
+We inspected site set configuration that was generated for you by the Site
+Package Builder. Now let us have another look:
 
 ..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/config.yaml
     :caption: packages/my_site_package/Configuration/Sets/SitePackage/config.yaml
     :language: yaml
     :linenos:
+    :emphasize-lines: 3-5
+
+In lines 3-5 a dependency to the sets provided by the system extension
+:composer:`typo3/cms-fluid-styled-content` is defined. These sets define
+default Fluid templates and very basic CSS for your site. Without using such
+an extension you would have to define all content elements and their rendering
+yourself.
 
 ..  _cm-dynamic-content-rendering-in-typoscript:
 ..  _backend-page-layouts:
 ..  _content-mapping-backend-layout:
 
-Create a default page layout with page TSconfig
-===============================================
+The page layout / backend layout
+================================
 
-In order to map the content from the backend to the frontend we create a
-new file :file:`Configuration/Sets/SitePackage/page.tsconfig` containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`.
+The :ref:`page TSconfig <t3tsref:setting-page-tsconfig>` definition in :
+file:`Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig`
+contains our default page layout. For historic reasons this setting is also
+called "backend layout", even though it influences the page layouts of both
+the :guilabel:`Web > Page` module as well as the output of a page in the frontend.
 
-..  todo: Link to page TSconfig description in getting started once chapter exist.
-
-By placing the file within the site set, you created in step
-:ref:`Create a basic site set <t3sitepackage:minimal-extension-siteset>`, the
-newly created file is loaded within the page tree of your site automatically:
-
-..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/page.tsconfig
-    :caption: packages/my_site_package/Configuration/Sets/SitePackage/page.tsconfig
-    :linenos:
-
-This file automatically includes all `.tsconfig` files from the designated folder
-in which we will store the page layouts.
-
-We now create a default page layout with two areas: One for the main content and
-one for the stage.
-
-..  literalinclude:: _codesnippets/_Default.tsconfig
-    :language: typoscript
-    :caption: packages/my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig
     :linenos:
 
 ..  versionchanged:: TYPO3 13
@@ -90,16 +75,12 @@ properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 ..  figure:: /Images/AutomaticScreenshots/ChooseBackendLayout.png
     :class: with-shadow
 
-    Choose the backend layout
+    Choose the page / backend layout
 
 ..  _choose_page_layout:
 
 Choose the page layout in the page properties
 ---------------------------------------------
-
-Switch to the new backend layout and save the page properties. In the
-:guilabel:`Page` module you will see two areas called "Stage" and
-"Main Content" now.
 
 If you followed step
 :ref:`Load the example data automatically <t3sitepackage:load-example-data>`
@@ -131,24 +112,25 @@ Content rendering via page-content data processor
     If you are using TYPO3 v12.4 read :ref:`content element mapping in TYPO3
     v12.4 <t3sitepackage/12:cm-typo3-backend-create-pages>`
 
-The TypoScript object :ref:`PAGEVIEW <t3tsref:cobj-pageview>`, that we
-defined in step :ref:`Fluid version of the minimal
-site package <t3sitepackage:minimal-extension-fluid>` enables us to introduce
-a data processor to facilitate content mapping.
+The TypoScript object :ref:`PAGEVIEW <t3tsref:cobj-pageview>`, defined in the
+TypoScript file :file:`Configuration/Sets/SitePackage/TypoScript/page.typoscript`,
+uses a data processor to facilitate content mapping.
 
-Edit the TypoScript configuration of the `PAGEVIEW` object to define a
-data processor of type :ref:`page-content <t3tsref:PageContentFetchingProcessor>`:
+The used data processor is of type :ref:`page-content <t3tsref:PageContentFetchingProcessor>`-
 
-..  literalinclude:: _codesnippets/_pageview.diff
-    :caption: Configuration/Sets/SitePackage/setup.typoscript (diff)
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/TypoScript/page.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/page.typoscript
+    :linenos:
+    :emphasize-lines: 12
 
-This data processor provides the variable `content` to your Fluid template.
+This data processor provides the variable `content` to your Fluid template. It
+needs no further configuration.
 
 You can debug this variable in the main section of your template using the
 :ref:`Debug ViewHelper <f:debug> <t3viewhelper:typo3-fluid-debug>`:
 
 ..  literalinclude:: _codesnippets/_SectionMainDebug.diff
-    :caption: Resources/Private/PageView/Pages/Default.html
+    :caption: Resources/Private/PageView/Pages/Default.html (diff)
 
 The debug output after clearing all caches and previewing the page should look
 like this:
@@ -170,70 +152,48 @@ like this:
 
 ..  _cm-fluid-typoscript-mapping:
 
-TypoScript mapping in Fluid template
-====================================
+Map the content areas to their respective section in the page template
+======================================================================
 
-Open the file :file:`Resources/Private/PageView/Page/Default.html` and locate the
-main content area. It contains a headline (look for the :code:`<h2>`-tags) and
-some dummy content (look for the :code:`<p>`-tags).
+Open the file :file:`packages/my_site_package/Resources/Private/PageView/Pages/Default.html`
+and locate the section called "Main".
 
-Replace these lines with a :ref:`Fluid for-loop <t3viewhelper:typo3fluid-fluid-for>`,
-rendering each content element using the
-:ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`:
+It uses the `Render ViewHelper <f:render> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render>`_
+to delegate rendering of the content elements of one section to the partial
+:file:`packages/my_site_package/Resources/Private/PageView/Partials/Content.html`.
 
-..  literalinclude:: _codesnippets/_SectionMainRender.diff
-    :caption: Resources/Private/PageView/Pages/Default.html (diff)
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Pages/Default.html
+    :caption: packages/my_site_package/Resources/Private/PageView/Pages/Default.html
+    :linenos:
+    :emphasize-lines: 7
 
-For content elements the main type is always `tt_content`. Therefore we include
-the TypoScript object :typoscript:`tt_content` here. It is defined in the TypoScript
-of the system extension :composer:`typo3/cms-fluid-styled-content`. We included
-the site set of that extension in step :ref:`content-mapping-site-set`.
+As the main content area uses the content area defined with identifier `main`
+(compare section :ref:`backend-page-layouts`) variable `{content.main.records}`
+is used to display the content from the main area.
 
-`fluid-styled-content` internally uses
-Fluid templates and TypoScript with data processors just like the ones we were
-defining above. If you desire to change the output of these content elements
-you could override the Fluid templates of the extension
-:composer:`typo3/cms-fluid-styled-content`.
+Similarly the content from the stage is displayed:
 
-.. _content-element-partial:
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Stage.html
+    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Stage.html
 
-Extract the content element rendering to a partial
-==================================================
+..  _content-element-partial:
+..  _content-element-typoscript:
 
-As we want to reuse the Fluid part about rendering content elements in the
-next steps, we extract it into a partial, like we did with the menu in
-step :ref:`Extract the menu into a partial <t3sitepackage:create_partial_header>`.
+Delegate the rendering of the content elements to TypoScript
+============================================================
 
-We want to be able to render content elements of **any content area**. Therefore pass
-the records of the page layout area to be rendered as variable `records` to
-the partial:
-
-..  literalinclude:: _codesnippets/_SectionMainRenderPartial.diff
-    :caption: Resources/Private/PageView/Pages/Default.html (diff)
-
-The partial then looks like this:
+In TYPO3 13 unfortunately there is at time of writing no easy way to render the
+content elements. We therefore have to delegate rendering of the single
+content elements to TypoScript by using the
+`CObject ViewHelper <f:cObject> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-cobject>`_:
 
 ..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Content.html
     :caption: packages/my_site_package/Resources/Private/PageView/Partials/Content.html
     :linenos:
 
-.. _content-element-typoscript:
-
-Splitting up the TypoScript into files
-======================================
-
-At this point the file `packages/my_site_package/Configuration/Sets/SitePackage/setup.typoscript`
-has started to have several lines. When we start rendering the
-`Menues <https://docs.typo3.org/permalink/t3sitepackage:main-menu-creation>`_,
-make more sophisticated
-`Settings <https://docs.typo3.org/permalink/t3sitepackage:site-sets-configuration>`_
-etc the TypoScript configuration file is going to grow more.
-We therefore suggest, to use TypoScript imports
-and structure your TypoScript in different files that are then combined at this point.
-
-The rest of the Tutorial will assume that your files are in the directory
-:path:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/` and imported
-as described in `TypoScript imports <https://docs.typo3.org/permalink/t3sitepackage:typoscript-configuration>`_.
+Wherever we need to render the content elements of a section of the page we
+include this partial and pass the content elements to be rendered to it, just
+like we did in section
 
 ..  _content-element-next-steps:
 

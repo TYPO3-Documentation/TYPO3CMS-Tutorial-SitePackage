@@ -18,7 +18,7 @@ Page Layout with slide mode
 
 The page layout contains a definition for the stage area in lines 10-19:
 
-..  literalinclude:: _codesnippets/_Default.tsconfig
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/config.yaml
     :language: typoscript
     :caption: packages/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig
     :linenos:
