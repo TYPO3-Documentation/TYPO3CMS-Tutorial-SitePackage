@@ -72,4 +72,3 @@ Preview the page once more. A sidebar will appear in the frontend:
     :alt: The sidebar appears in the frontend
 
     The sidebar appears in the frontend
-

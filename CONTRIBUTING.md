@@ -1,10 +1,10 @@
-# Contribute to TYPO3 Documentation  
+# Contribute to TYPO3 Documentation
 
 ## Create Issues
 
-* If you find something missing or something is wrong in this manual, you are welcome to write an issue describing the problem. 
-* If you can, please try to fix the problem yourself. 
-* For minor changes, it is not necessary to create an issue first. 
+* If you find something missing or something is wrong in this manual, you are welcome to write an issue describing the problem.
+* If you can, please try to fix the problem yourself.
+* For minor changes, it is not necessary to create an issue first.
 
 ## Make changes (create pull requests)
 
