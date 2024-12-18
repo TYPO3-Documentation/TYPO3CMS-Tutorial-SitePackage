@@ -1,4 +1,4 @@
-# Contribute to TYPO3 Documentation
+# Contribute to TYPO3 Documentation  
 
 ## Create Issues
 
