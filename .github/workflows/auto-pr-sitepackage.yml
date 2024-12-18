@@ -9,6 +9,7 @@ jobs:
   auto-pr:
     name: Create PR for Site Package Changes
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' # Ensures the job only runs on the main branch
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
