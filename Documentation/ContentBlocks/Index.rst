@@ -55,6 +55,11 @@ comes with two content elements. We look at the more basic content elements firs
 You can now replace the content element in the area "Stage" of start page with
 one of type "Jumbotron".
 
+..  figure:: /Images/ContentBlocks/CreateContentElement.png
+    :alt: Screenshot of the "New Page Content" dialog with the Carousel and Jumbotron as additional features
+
+    The new Content Blocks "Jumbotron" and "Carousel"
+
 You can now create a jumbotron with a button and a link.
 
 Directory :path:`packages/my_site_package/ContentBlocks/ContentElements` contains
