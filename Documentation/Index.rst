@@ -100,13 +100,13 @@ https://github.com/TYPO3-Documentation/site_package
         ..  card-footer:: :ref:`Learn about the configuration of a site package <t3sitepackage:site-sets-configuration>`
             :button-style: btn btn-secondary stretched-link
 
-    ..  card:: :ref:`Content Blocks <t3sitepackage:content-blocks>`
+    ..  card:: :ref:`Content Blocks <content-blocks>`
 
         We explain how the TYPO3 Extension :composer:`friendsoftypo3/content-blocks`
         can be used to create custom Content Elements, for example for a jumbotron
         or slider.
 
-        ..  card-footer:: :ref:`Learn to create custom Content Elements <t3sitepackage:content-blocks>`
+        ..  card-footer:: :ref:`Learn to create custom Content Elements <content-blocks>`
             :button-style: btn btn-secondary stretched-link
 
     ..  card:: :ref:`Extension Configuration <t3sitepackage:extension-configuration>`
