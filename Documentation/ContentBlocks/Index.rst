@@ -67,7 +67,7 @@ one directory for each Content Block that can be used as normal Content Elements
 
 ..  _content-blocks-jumbotron-directory:
 
-Directory structure of a content block
+Directory structure of a Content Block
 --------------------------------------
 
 A content block consists of a configuration (:file:`config.yaml`), a template and
