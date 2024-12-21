@@ -128,7 +128,7 @@ The jumbotron template
 The frontend template for the Content Block "Jumbotron" is a normal Fluid
 template. You already used Fluid for the
 `Page templates <https://docs.typo3.org/permalink/t3sitepackage:fluid-templates>`_
-and to adjust the templates of Fluid-Styles Content elements in chapter
+and to adjust the templates of Fluid-Styled Content elements in chapter
 `Overriding the default templates of content elements <https://docs.typo3.org/permalink/t3sitepackage:content-element-rendering>`_.
 
 ..  literalinclude:: /CodeSnippets/my_site_package/ContentBlocks/ContentElements/jumbotron/templates/frontend.html
