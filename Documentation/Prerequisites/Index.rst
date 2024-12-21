@@ -41,7 +41,7 @@ It is also helpful if you know the following concepts:
 *   :ref:`Frontend <t3start:frontend>`
 *   :ref:`Working with pages in the page tree <t3editors:pages-drag-drop>`
 *   :ref:`How to create a page <t3editors:pages-creating>`
-*   :ref:`How to create page contentt <t3editors:content-creating>`
+*   :ref:`How to create page content <t3editors:content-creating>`
 *   :ref:`Working with content in the page module <t3editors:content-working>`
 *   :ref:`Using the list module <t3editors:using-the-list-module-effectively>`
 *   :ref:`Site Management <t3start:site-management>`
