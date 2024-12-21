@@ -78,7 +78,7 @@ Your :path:`Configuration` directory should now have the following structure:
 
                 *   TypoScript
 
-                     *   page.typoscript
+                    *   page.typoscript
 
                 *   config.yaml
                 *   setup.typoscript
