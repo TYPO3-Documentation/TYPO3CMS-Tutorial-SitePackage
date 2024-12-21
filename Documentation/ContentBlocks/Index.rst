@@ -45,7 +45,7 @@ Set up the extension and delete all caches:
 
 ..  _content-blocks-jumbotron:
 
-The jumbotron content block
+The jumbotron Content Block
 ===========================
 
 The site package you generated in step
@@ -70,7 +70,7 @@ one directory for each Content Block that can be used as normal Content Elements
 Directory structure of a Content Block
 --------------------------------------
 
-A content block consists of a configuration (:file:`config.yaml`), a template and
+A Content Block consists of a configuration (:file:`config.yaml`), a template and
 optionally assets and or language files:
 
 The jumbotron consists of the following files:
@@ -155,4 +155,4 @@ Next steps
 *   The generated site package contains a second, more elaborate example in
     directory :path:`packages/my_site_package/ContentBlocks/ContentElements/carousel`.
 *   Learn how to use the `Kickstart command <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:cb-skeleton>`_
-    to create your own content blocks.
+    to create your own Content Blocks.
