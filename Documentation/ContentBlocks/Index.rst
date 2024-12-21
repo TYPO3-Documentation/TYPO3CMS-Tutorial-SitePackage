@@ -107,7 +107,7 @@ defines what fields should be available for the Content Block in the backend:
     :caption: packages/my_site_package/ContentBlocks/ContentElements/jumbotron/config.yaml
     :linenos:
 
-Each content block must have a unique name with a prefix of your choice that
+Each Content Block must have a unique name with a prefix of your choice that
 should be unique within your project. (Line 1)
 
 It is possible to use fields that are already pre-defined in the TYPO3 Core like
