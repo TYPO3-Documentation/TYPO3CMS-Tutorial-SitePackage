@@ -19,6 +19,12 @@ Fluid-Styled Content, but a Jumbotron element or a slider.
     part of the TYPO3 Core yet. It is also possible to
     `Create a custom content element with TYPO3 Core only <https://docs.typo3.org/permalink/t3coreapi:adding-your-own-content-elements>`_.
 
+..  toctree::
+    :glob:
+    :hidden:
+
+    *
+
 ..  _content-blocks-installation:
 
 Install extension Content Blocks
@@ -152,7 +158,7 @@ to render a link to the target that was defined in our custom field `button_link
 Next steps
 ==========
 
-*   The generated site package contains a second, more elaborate example in
-    directory :path:`packages/my_site_package/ContentBlocks/ContentElements/carousel`.
+*   The generated site package contains a second, more elaborate example, the
+    :ref:`Carousel <carousel>`.
 *   Learn how to use the `Kickstart command <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:cb-skeleton>`_
     to create your own Content Blocks.
