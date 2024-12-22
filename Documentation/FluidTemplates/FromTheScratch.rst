@@ -290,5 +290,6 @@ Repeat the same for file :file:`Resources/Private/PageView/Pages/Default.html`.
             *   Header.html
             *   Stage.html
 
-You can find the complete site package extension at this step at branch
-`main-step/fluid <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/tree/main-step/fluid>`__.
+You can use the `Site Package Builder <https://get.typo3.org/sitepackage>`_ to
+create a customized site package. If you want to follow this tutorial, choose
+"Site Package Tutorial" as base package.

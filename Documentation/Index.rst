@@ -12,8 +12,9 @@ that contains files regarding the theme and functionality of a site.
 This tutorial describes step by step how to come from your first TYPO3
 installation to the first basic site.
 
-You can download the example site package used in this tutorial from GitHub:
-https://github.com/TYPO3-Documentation/site_package
+You can use the `Site Package Builder <https://get.typo3.org/sitepackage>`_ to
+create a customized site package. If you want to follow this tutorial, choose
+"Site Package Tutorial" as base package.
 
 ..  note::
     The example site package is structured for educational purposes and is
