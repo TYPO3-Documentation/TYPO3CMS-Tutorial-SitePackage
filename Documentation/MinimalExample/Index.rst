@@ -2,6 +2,7 @@
 ..  highlight:: typoscript
 
 ..  _minimal-design:
+..  _site-package-builder:
 
 =======================
 Generate a site package
