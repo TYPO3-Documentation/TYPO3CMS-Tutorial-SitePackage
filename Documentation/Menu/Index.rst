@@ -12,6 +12,12 @@ breadcrumbs and sitemaps in TYPO3.
 
 ..  contents::
 
+..  toctree::
+    :glob:
+    :hidden:
+
+    *
+
 ..  _menu-content-element:
 
 Menus as content elements
