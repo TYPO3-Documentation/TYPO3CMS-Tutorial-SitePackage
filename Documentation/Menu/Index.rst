@@ -1,44 +1,76 @@
+:navigation-title: Menus
 .. include:: /Includes.rst.txt
-.. _main-menu-creation:
 
-=========
-Main menu
-=========
+..  _menu:
 
-To display a main menu in our frontend output we need to provide the according
-data and define the view by providing templates for it.
+========================
+Rendering menus in TYPO3
+========================
 
-A data processor (see :ref:`dataProcessing <t3tsref:dataProcessing>`) can be
-used to provide the data for the menu to the template and a Fluid template
-partial do define the view of the menu.
+There are several strategies to display menus or other navigation elements like
+breadcrumbs and sitemaps in TYPO3.
 
 ..  contents::
 
+..  toctree::
+    :glob:
+    :hidden:
+
+    *
+
+..  _menu-content-element:
+
+Menus as content elements
+=========================
+
+You can use a content element to display a menu. In the example data "Page 1"
+contains a menu of subpages and page "Sitemap" a sitemap content element.
+
+To adjust the templates of these content elements refer to chapter
+`Overriding the default templates of content elements <https://docs.typo3.org/permalink/t3sitepackage:content-element-rendering>`_.
+
+..  _menu-page-view:
+
+Menus within the page view
+==========================
+
+A data processor (see also :ref:`dataProcessing <t3tsref:dataProcessing>`) can be
+used to provide the data for one or several menus.
+
+For menus usually the `menu data processor <https://docs.typo3.org/permalink/t3tsref:menuprocessor>`_,
+which is provided by the TYPO3 Core, is used.
+
+..  tip::
+    Some extensions like :composer:`b13/menus` offer performant menus for
+    large sites or like :composer:`georgringer/news` menus for special purposes.
+
+.. _main-menu-creation:
 .. _add-menu-processor:
 
-Use the data processor `menu`
-=============================
+TypoScrip configuration of the main menu
+========================================
 
-The :ref:`data processor 'menu' <t3tsref:MenuProcessor>` can be configured to
-provide the data of all pages in your current site to your page template.
-
-We save the TypoScript configuration for the menu into file
-:file:`Configuration/Set/SitePackage/TypoScript/Navigation/menu.typoscript`:
+We use TypoScript to configure these menus. The main menu is configured like this:
 
 ..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/menu.typoscript
     :caption: packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/menu.typoscript
 
+This menu defines that the variable with the default name `menu` should contain
+the information about the complete page tree of the current page.
+
+System folders like the "Footer menu" from your example data, special page types
+and pages excluded from the navigation are excluded.
+
+A complete reference of this menu can be found in the TypoScript Reference:
+`menu data processor <https://docs.typo3.org/permalink/t3tsref:menuprocessor>`_.
+
 .. _fluid-implement-main-menu:
 
-Update the Fluid partial for the menu
-=====================================
+Fluid partial of the main menu
+==============================
 
-Until now we had static HTML in the file
-:file:`Resources/Private/PageView/Partials/Navigation/Menu.html`.
-
-We created that file in section :ref:`create_partial_header`.
-
-Replace the static HTMl with Fluid:
+In :path:`packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html`
+you can find the partial that renders the main menu.
 
 A menu usually contains several menu entries. We use the
 :ref:`t3viewhelper:typo3fluid-fluid-for` to iterate over all menu entries
@@ -101,15 +133,11 @@ displayed in the :ref:`Fluid inline notation <t3coreapi:fluid-inline-notation>`.
 Preview the page and use the menu
 =================================
 
-The menu in the page should now function and allow you to navigate from page to
-page.
+Whenever you change TypoScript files or Fluid templates, flush all caches:
 
-Delete the frontend caches and preview the changes:
+..  code-block:: bash
 
-When previewing the site as it stands now, we can verify if everything is
-working as expected and if the menu is generated. Go to **WEB → View** and
-check, if the menu reflects the pages you created in the backend. Add one or
-two additional pages to the page tree and check to see if they appear in the preview.
+    ddev typo3 cache:flush
 
 ..  figure:: /Images/MainMenuCreation/CheckMainMenu.png
     :alt: Checking from the backend if the menu is generated as expected.
@@ -117,13 +145,15 @@ two additional pages to the page tree and check to see if they appear in the pre
 
     Checking from the backend if the menu is generated as expected.
 
-If the menu does not change, you possibly need to flush the frontend caches,
-then reload the preview.
+.. _menu-types:
 
-..  figure:: /Images/AutomaticScreenshots/FlushFrontendCaches.png
-    :class: with-shadow
+Different menu types
+====================
 
-    Flush the frontend cache after changing template files
+We use the `menu data processor <https://docs.typo3.org/permalink/t3tsref:menuprocessor>`_
+to demonstrate different menu types:
 
-The preview in the screenshot above shows the menu with three page links: "Page
-1", "Page 2" and "Page 3".
+*   A breadcrumb configured in
+    :file:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/breadcrumb.typoscript`
+    and rendered in :file:`packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html`.
+*   A footer menu (example is still missing).

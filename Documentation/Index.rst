@@ -136,7 +136,7 @@ https://github.com/TYPO3-Documentation/site_package
     Assets/Index
     FluidTemplates/Index
     ContentMapping/Index
-    MainMenuCreation/Index
+    Menu/Index
     SiteSets/Index
     ContentElementRendering/Index
     ContentBlocks/Index
