@@ -15,12 +15,9 @@ Frequently asked questions
 How to get started quickly
 ==========================
 
-This tutorial guides you step-by-step through the process of creating a site package
-from scratch, introducing you to various TYPO3 concepts along the way.
-
-If you are already familiar with TYPO3 and want to create a site package quickly,
-you may consider using the
-:ref:`Site Package Builder <t3coreapi:extension-sitepackage-builder>`.
+You can use the `Site Package Builder <https://get.typo3.org/sitepackage>`_ to
+create a customized site package. If you want to follow this tutorial, choose
+"Site Package Tutorial" as base package.
 
 ..  _introduction-files:
 
@@ -47,9 +44,11 @@ or TYPO3 installations in the future, it is advisable to create a
 :ref:`custom extension <t3start:create-own-extension>`
 for that functionality instead.
 
+..  _download-site-package-extension:
 ..  _introduction-download:
 
 Where to download the example site package
 ==========================================
 
-..  include:: /_Includes/_DownloadSitePackage.rst.txt
+Use `Site Package Builder <https://get.typo3.org/sitepackage>`_ with
+"Site Package Tutorial" as base package.

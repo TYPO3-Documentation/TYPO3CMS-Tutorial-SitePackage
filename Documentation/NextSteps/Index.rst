@@ -64,27 +64,10 @@ a central place, such as a Git repository. Despite the fact that for a learning
 experience it is always beneficial to develop the extension yourself, you can
 also download the extension built in this tutorial below.
 
-..  _download-site-package-extension:
-
-Download the example site package extension
-===========================================
-
-..  include:: /_Includes/_DownloadSitePackage.rst.txt
-
-
 ..  _next-steps-further-readings:
 
 Further readings
 ================
-
-..  _site-package-builder:
-
-Site package builder
---------------------
-
-Another option to create a sitepackage extension quickly is an online tool
-developed by Benjamin Kott: the `sitepackage builder
-<http://sitepackagebuilder.com/>`__.
 
 ..  _youtube-videos:
 
