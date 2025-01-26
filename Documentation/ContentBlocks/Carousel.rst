@@ -12,6 +12,8 @@ This content block demonstrates some additional features of
 familiar with the concepts described in chapter
 `Custom Content Blocks <https://docs.typo3.org/permalink/t3sitepackage:content-blocks>`_.
 
+..  contents:: Table of contents
+
 ..  _carousel-directory:
 
 Directory structure of the carousel content element
@@ -63,16 +65,17 @@ Line 8: We use a field of type
 to contain the items to be displayed in the carousel. This field type expects
 an array of fields (line 10ff).
 
-Line 12: We use the type
+Line 15: We use the type
 `File <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-file>`_
-to reference the image for the carousel item.
+to reference the image for the carousel item. We allow images only (line 16)
+and require exactly one image (lines 17 and 18).
 
-Line 14: The title should be one line of text. We use the type
+Line 20: The title should be one line of text. We use the type
 `Text <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-text>`_.
 
-Line 16: The description may contain rich text. Therefore, we use the type
+Line 22: The description may contain rich text. Therefore, we use the type
 `Textarea <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-textarea>`_
-and enable the Rich-Text Editor (line 17).
+and enable the Rich-Text Editor (line 23).
 
 ..  _carousel-fluid:
 

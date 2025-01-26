@@ -14,6 +14,8 @@ HTMl layout.
 This is because the stage does not contain normal content, as provided by
 Fluid-Styled Content, but a Jumbotron element or a slider.
 
+..  contents:: Table of contents
+
 ..  note::
     The extension :composer:`friendsoftypo3/content-blocks` is not an official
     part of the TYPO3 Core yet. It is also possible to
@@ -152,6 +154,17 @@ to format and sanitize the output.
 
 Line 5: We use the `Link.typolink ViewHelper <f:link.typolink> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-link-typolink>`_
 to render a link to the target that was defined in our custom field `button_link`.
+
+..  _content-blocks-carousel:
+
+The carousel Content Block
+==========================
+
+The carousel Content block is provided in the generated site package as an
+example on how to create a content block that contains on repeated items, here a
+carousel with multiple slides.
+
+It is described in chapter `Carousel Content Block example <https://docs.typo3.org/permalink/t3sitepackage:carousel>`_.
 
 ..  _content-blocks-next:
 
