@@ -29,7 +29,7 @@ Additionally it supplies a template for its display in the backend.
     :level: 2
     :show-file-icons: true
 
-    *   packages/my_site_package/ContentBlocks/ContentElements/jumbotron
+    *   packages/my_site_package/ContentBlocks/ContentElements/carousel
 
         *   assets
 
