@@ -171,7 +171,5 @@ It is described in chapter `Carousel Content Block example <https://docs.typo3.o
 Next steps
 ==========
 
-*   The generated site package contains a second, more elaborate example, the
-    :ref:`Carousel <carousel>`.
 *   Learn how to use the `Kickstart command <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:cb-skeleton>`_
     to create your own Content Blocks.
