@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'My Site Package',
-    'description' => 'Site package to follow the tutorial.',
+    'description' => '',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
@@ -22,8 +22,8 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
-    'author' => 'J. Doe',
-    'author_email' => 'j.doe@example.org',
+    'author' => 'John Doe',
+    'author_email' => 'j.doe@example.com',
     'author_company' => 'My Vendor',
     'version' => '1.0.0',
 ];

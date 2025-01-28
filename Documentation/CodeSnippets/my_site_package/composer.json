@@ -1,8 +1,8 @@
 {
     "name": "my-vendor/my-site-package",
     "type": "typo3-cms-extension",
-    "description": "Site package to follow the tutorial.",
-    "homepage": "https://docs.typo3.org/permalink/t3sitepackage:start",
+    "description": "",
+    "homepage": "https://example.com",
     "license": ["GPL-2.0-or-later"],
     "keywords": ["TYPO3 CMS"],
     "require": {
