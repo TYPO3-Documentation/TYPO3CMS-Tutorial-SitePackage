@@ -19,8 +19,8 @@ familiar with the concepts described in chapter
 Directory structure of the carousel content element
 ===================================================
 
-Additionally to the files that the jumbotron (compare
-:ref:`content-blocks-jumbotron-directory`) the carousel comes with special CSS
+Additionally to the files that the jumbotron provides (compare
+:ref:`content-blocks-jumbotron-directory`), the carousel comes with special CSS
 and JavaScript needed for this element only.
 
 Additionally it supplies a template for its display in the backend.
