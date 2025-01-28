@@ -108,4 +108,4 @@ and then list all pages that should be displayed in the meta menu. For example:
     +    - 3
 
 We are using the type :ref:`stringlist <t3coreapi:confval-site-setting-type-stringlist>`
-as - as of writing these lines - there is no integer list type in the settings yet.
+- as of writing these lines - there is no integer list type in the settings yet.
