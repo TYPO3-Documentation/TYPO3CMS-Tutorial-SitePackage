@@ -1,5 +1,6 @@
 :navigation-title: Menus
-.. include:: /Includes.rst.txt
+
+..  include:: /Includes.rst.txt
 
 ..  _menu:
 
@@ -156,4 +157,6 @@ to demonstrate different menu types:
 *   A breadcrumb configured in
     :file:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/breadcrumb.typoscript`
     and rendered in :file:`packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html`.
-*   A footer menu (example is still missing).
+*   A footer menu consisting of pages within a selected folder configured in
+    :file:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/footerMenu.typoscript`
+    and rendered in :file:`packages/my_site_package/Resources/Private/PageView/Partials/Navigation/FooterMenu.html`.
