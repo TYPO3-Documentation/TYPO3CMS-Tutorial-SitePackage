@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2025-01-26UTC08:22:400">
+    <file source-language="en" datatype="plaintext" original="messages" date="2025-02-01UTC02:28:280">
         <header>
-            <authorName>John Doe</authorName>
-            <authorEmail>j.doe@example.com</authorEmail>
+            <authorName>J. Doe</authorName>
+            <authorEmail>j.doe@example.org</authorEmail>
         </header>
         <body>
         </body>
