@@ -18,7 +18,13 @@ our site package.
 
 In step :ref:`content-mapping-site-set` we added dependencies to our site set.
 
-..  contents::
+..  contents:: Table of Contents
+
+..  toctree::
+    :titlesonly:
+    :glob:
+
+    */Index
 
 .. _site_set:
 
@@ -87,17 +93,5 @@ Here we override some values for maximal image width in text-media content
 elements, we enable a lightbox for images and set paths for overriding the
 templates of that extension.
 
-.. _settings-definitions-yaml-constants:
-
-Setting definition
-==================
-
-Settings definitions are used to set values that can be used in the TypoScript
-setup through out the project. Before they were kept in the file
-:file:`constants.typoscript`. Since TYPO3 v13 they can be stored in the file
-:file:`settings.definitions.yaml`. See
-`settings.definitions.yaml <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Configuration/Sets/SitePackage/settings.definitions.yaml>`__ in Github.
-
-It is best practice to use them for values that might
-want to be changed later on like paths, ids of important pages (contact,
-imprint, a system folder that contains certain records, ...).
+Settings can also be used in conditions:
+`Check if a setting/constant is set to a certain value <https://docs.typo3.org/permalink/t3tsref:condition-examples-constant>`_.
