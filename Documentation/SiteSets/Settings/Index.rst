@@ -20,7 +20,7 @@ Setting definition
 ==================
 
 Settings definitions are used to set values that can be used in the TypoScript
-setup through out the project.
+setup throughout the project.
 
 They are stored in the file :file:`settings.definitions.yaml` in your site set.
 
