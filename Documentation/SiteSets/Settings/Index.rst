@@ -1,7 +1,7 @@
 :navigation-title: Usage in Fluid
 
-.. include:: /Includes.rst.txt
-.. _settings-fluid:
+..  include:: /Includes.rst.txt
+..  _settings-fluid:
 
 =============================================
 How to use settings as variables in templates
@@ -14,7 +14,7 @@ You can keep central information in settings. They can then be adjusted as
 needed in the :guilabel:`Site Management > Settings` module in the backend
 by administrators.
 
-.. _settings-definitions-yaml-constants:
+..  _settings-definitions-yaml-constants:
 
 Setting definition
 ==================
