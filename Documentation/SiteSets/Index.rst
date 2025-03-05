@@ -1,9 +1,9 @@
 :navigation-title: Settings
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. _extension-configuration:
-.. _ec-directory-structure:
-.. _site-sets-configuration:
+..  _extension-configuration:
+..  _ec-directory-structure:
+..  _site-sets-configuration:
 
 ============================================
 Site settings: Further configuration options
@@ -16,11 +16,16 @@ In step :ref:`Minimal site package - Create a basic site
 set <t3sitepackage:minimal-extension-siteset>` we created a basic site set for
 our site package.
 
-In step :ref:`content-mapping-site-set` we added dependencies to our site set.
 
-..  contents::
+..  contents:: Table of Contents
 
-.. _site_set:
+..  toctree::
+    :titlesonly:
+    :glob:
+
+    */Index
+
+..  _site_set:
 
 The site set
 ============
@@ -35,8 +40,8 @@ In step :ref:`Create a basic site set <t3sitepackage:minimal-extension-siteset>`
 we already created a basic site set for your site package.
 
 In step :ref:`Include the site sets of fluid-styled-content as
-dependency <t3sitepackage:content-mapping-site-set>` we included the dependencies
-to the site sets of :composer:`typo3/cms-fluid-styled-content`.
+dependency <t3sitepackage:content-mapping-site-set>` we included the
+dependencies to the site sets of :composer:`typo3/cms-fluid-styled-content`.
 
 Your site set configuration should now look like this:
 
@@ -50,9 +55,10 @@ provides one set, the name of the set should be the same as the
 :ref:`composer name <extension-configuration-composer>`.
 
 In line 4 and 5 dependencies are defined. In this example the site package
-depends on :composer:`typo3/cms-fluid-styled-content`, therefore the sets provided by this
-system extension are included as dependency. By doing so all settings
-and TypoScript definitions provided by the extension are automatically included.
+depends on :composer:`typo3/cms-fluid-styled-content`, therefore the sets
+provided by this system extension are included as dependency. By doing so all
+settings and TypoScript definitions provided by the extension are automatically
+included.
 
 Your site set folder now contains the following files:
 
@@ -66,7 +72,7 @@ Your site set folder now contains the following files:
         *   page.tsconfig
         *   setup.typoscript
 
-.. _site_settings:
+..  _site_settings:
 
 Introduce site settings to configure fluid-styled-content
 =========================================================
@@ -87,17 +93,5 @@ Here we override some values for maximal image width in text-media content
 elements, we enable a lightbox for images and set paths for overriding the
 templates of that extension.
 
-.. _settings-definitions-yaml-constants:
-
-Setting definition
-==================
-
-Settings definitions are used to set values that can be used in the TypoScript
-setup through out the project. Before they were kept in the file
-:file:`constants.typoscript`. Since TYPO3 v13 they can be stored in the file
-:file:`settings.definitions.yaml`. See
-`settings.definitions.yaml <https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage-Code/blob/main/Configuration/Sets/SitePackage/settings.definitions.yaml>`__ in Github.
-
-It is best practice to use them for values that might
-want to be changed later on like paths, ids of important pages (contact,
-imprint, a system folder that contains certain records, ...).
+Settings can also be used in conditions:
+`Check if a setting/constant is set to a certain value <https://docs.typo3.org/permalink/t3tsref:condition-examples-constant>`_.
