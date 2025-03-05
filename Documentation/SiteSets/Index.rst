@@ -16,7 +16,6 @@ In step :ref:`Minimal site package - Create a basic site
 set <t3sitepackage:minimal-extension-siteset>` we created a basic site set for
 our site package.
 
-In step :ref:`content-mapping-site-set` we added dependencies to our site set.
 
 ..  contents:: Table of Contents
 
