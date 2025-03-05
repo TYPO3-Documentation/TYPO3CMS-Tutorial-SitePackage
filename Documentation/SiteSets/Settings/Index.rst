@@ -82,7 +82,7 @@ Using setting entries in a Fluid template
 
 The site settings are available as variable `{settings}`
 (see :ref:`settings <t3tsref:confval-pageview-data-settings>`) within the templates
-of the page as we as we are using the  `PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_
+of the page as we are using the `PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_
 TypoScript object.
 
 In the site package example we display the logo once in the header in large and
