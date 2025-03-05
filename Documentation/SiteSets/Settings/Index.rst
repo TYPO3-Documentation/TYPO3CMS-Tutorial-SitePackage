@@ -50,6 +50,7 @@ administrators. These categories are defined in lines 1-12.
 Let us now have a look at the definition of a setting entry in detail:
 
 ..  literalinclude:: _setting_entry.yaml
+    :linenos:
     :caption: packages/my_site_package/Configuration/Sets/SitePackage/settings.definitions.yaml (excerpt)
 
 Line 1 defines the identifier of the settings. Identifiers are available
