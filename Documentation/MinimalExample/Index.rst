@@ -51,14 +51,15 @@ then add the following lines:
    page.1.file = EXT:site_package/Resources/Private/Templates/Minimal.html
 
 Create a file named :file:`Minimal.html` in a
-:file:`typo3conf/ext/site_package/Resources/Private/Templates` folder.
+:file:`packages/site_package/Resources/Private/Templates` folder. If the folder
+does not yet exist, create it.
 
 The site package extension has to be :ref:`installed <extension-installation>`
-and requires a :ref:`minimal composer configuration <extension-configuration>` (if composer is used)
-for this to work
+and requires a :ref:`minimal composer configuration <extension-configuration>` 
+(if Composer is used) for this to work
 
 .. code-block:: html
-   :caption: EXT:site_package/Resources/Private/Templates/Minimal.html
+   :caption: packages/site_package/Resources/Private/Templates/Minimal.html
 
    Hello, world.
 
