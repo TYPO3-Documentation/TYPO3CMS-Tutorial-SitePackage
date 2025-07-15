@@ -30,10 +30,10 @@ Your site package already configures the paths to override the templates of
 Fluid Styled Content content elements in file
 :file:`packages/site_package/Configuration/Sets/SitePackage/settings.yaml`:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/settings.yaml
+..  literalinclude:: /CodeSnippets/_settings.yaml
     :caption: packages/my_site_package/Configuration/Sets/SitePackage/settings.yaml
     :linenos:
-    :emphasize-lines: 3-5
+    :emphasize-lines: 1-3
 
 If you wanted to create this file yourself you could do it as follows:
 
