@@ -84,7 +84,7 @@ We override some default settings of the site set
 :ref:`Site set "Fluid Styled
 Content" <typo3/cms-fluid-styled-content:site-set-fluid-styled-content>`:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/settings.yaml
+..  literalinclude:: /CodeSnippets/_settings.yaml
     :caption: packages/my_site_package/Configuration/Sets/SitePackage/settings.yaml
     :language: yaml
     :linenos:
