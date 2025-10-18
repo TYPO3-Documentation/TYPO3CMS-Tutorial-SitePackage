@@ -12,7 +12,7 @@ The pages generated in step
 already contain some example content.
 
 You can add additonal content in the backend. Go to
-:guilabel:`Web > Page` and select any of the pages you created before,
+:guilabel:`Content > Page` and select any of the pages you created before,
 (for example "Page 2"). Click the :guilabel:`+ Create new content` button
 in the column labelled "*Main*" and choose the "Regular Text
 Element" content element.
