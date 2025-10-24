@@ -39,7 +39,7 @@ reloading the backend.
 ..  figure:: PageModule.png
     :alt: Screenshot of the backend module "Page" with the loaded example data
 
-    The page tree in the module :guilabel:`Web > Page` now contains a few example pages.
+    The page tree in the module :guilabel:`Content > Page` now contains a few example pages.
 
 ..  note::
     This only works for site packages of type "Site Package Tutorial". The ones
