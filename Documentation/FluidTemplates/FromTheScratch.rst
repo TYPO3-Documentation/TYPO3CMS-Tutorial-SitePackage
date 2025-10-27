@@ -49,8 +49,6 @@ without any styles or images. We will add them in a further step.
 ..  todo: Link to cache and preview pages in getting started once they exist
 
 ..  todo: Add link to trouble shooting page once
-https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-GettingStarted/issues/441
-is done.
 
 ..  note::
     Each time you change a Fluid template you must flush the caches. Fluid
