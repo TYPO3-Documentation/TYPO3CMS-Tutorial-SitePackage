@@ -3,9 +3,9 @@
 
 ..  _fluid-templates-scratch:
 
-================================
-Fluid Templates from the Scratch
-================================
+============================
+Fluid Templates from Scratch
+============================
 
 
 ..  contents::
