@@ -148,7 +148,7 @@ to link to the start page. The start page is the same as the root page and is fo
 `{site.rootPageId}` variable.
 
 The variable `{site}` is automatically provided by the
-`PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_ Typoscript obejct. All
+`PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_ TypoScript object. All
 variables are described in the TypoScript Reference. See
 `Default variables in Fluid templates <https://docs.typo3.org/permalink/t3tsref:cobj-pageview-data>`_.
 
