@@ -20,11 +20,11 @@ This chapter assumes the following:
 *   You are familiar with `Asset handling in TYPO3 <https://docs.typo3.org/permalink/t3sitepackage:assets-theme>`_
     (CSS, JavaScript, design related images, etc)
 
-After this tutorial you will have a better understanding of fluid templates and
+After this tutorial you will have a better understanding of Fluid templates and
 how to customize them to your needs. You should also be able to create some
-fluid templates yourself.
+Fluid templates yourself.
 
-If you prefer to start with an HTML template and build it up to a fluid template
+If you prefer to start with an HTML template and build it up to a Fluid template
 step by step, have a look at :ref:`fluid-templates-scratch`.
 
 ..  contents:: Topics covered in this chapter
@@ -40,7 +40,7 @@ step by step, have a look at :ref:`fluid-templates-scratch`.
 The page view
 =============
 
-The fluid templates that we will use to output the frontend pages have to be configured via TypoScript.
+The Fluid templates that we will use to output the frontend pages have to be configured via TypoScript.
 
 In the site package that was `Generated for you <https://docs.typo3.org/permalink/t3sitepackage:minimal-design>`_,
 the TypoScript configuration can be found in
@@ -120,7 +120,7 @@ menu and the footer.
 Outermost HTML structure (body, head)
 =====================================
 
-The outermost HTML is not usually handled in fluid templates. It
+The outermost HTML is not usually handled in Fluid templates. It
 is configured via TypoScript configuration of the
 `PAGE <https://docs.typo3.org/permalink/t3tsref:object-type-page>`_ object.
 
