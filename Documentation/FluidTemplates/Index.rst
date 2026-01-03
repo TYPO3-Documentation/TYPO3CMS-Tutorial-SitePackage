@@ -126,7 +126,7 @@ is configured via TypoScript configuration of the
 
 For example, you can use the :ref:`shortcutIcon <t3tsref:confval-page-shortcuticon>`
 option to load a favicon, :ref:`meta <t3tsref:confval-page-meta>` to define meta tags,
-and :ref:`bodyTagAdd <t3tsref:confval-page-bodytagadd>` to add tags to the body tag.
+and :ref:`bodyTagAdd <t3tsref:confval-page-bodytagadd>` to add attributes to the body tag.
 
 The page object, including examples, is described in detail in the TypoScript
 reference. See `Configure the PAGE in TypoScript <https://docs.typo3.org/permalink/t3tsref:guide-page>`_.
