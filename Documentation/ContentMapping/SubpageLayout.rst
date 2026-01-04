@@ -40,7 +40,7 @@ Switch to the two column layout with a sidebar for subpages
 ==========================================================
 
 You can now use the `Two Column` backend layout for the `Start page` subpages
-at :guilabel:` Appearance >  Page Layout > Backend Layout`.
+at :guilabel:` Appearance >  Layout > Backend Layout`.
 Edit the page properties of `Start page` to use the backend layout
 "Two Columns" for subpages.
 

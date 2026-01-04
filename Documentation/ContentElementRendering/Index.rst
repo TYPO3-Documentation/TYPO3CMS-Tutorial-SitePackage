@@ -43,8 +43,9 @@ package extension.
 We will save the settings to the site package but use the settings editor to
 write the YAML for us.
 
-Go to module :guilabel:`Site Management > Settings` and edit the settings of
-your site. Override the paths to the templates of Fluid Styled Content like this:
+Go to module :guilabel:`Sites > Setup` and edit the settings of
+your site by clicking on the button :guilabel:`Edit site settings`. Override
+the paths to the templates of Fluid Styled Content like this:
 
 ..  figure:: /Images/SiteSettingsFsc.png
     :alt: Screenshot demonstrating the site settings module

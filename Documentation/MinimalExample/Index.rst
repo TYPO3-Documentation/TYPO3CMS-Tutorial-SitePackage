@@ -155,14 +155,14 @@ The TYPO3 Explained complete reference is here:
 During installation of your site package a page tree with example content was
 created. The site configuration folder is :path:`config/sites/main`.
 
-If you look at the site configuration in module :guilabel:`Site Management > Sites`
+If you look at the site configuration in module :guilabel:`Sites > Setup`
 it should already contain the "My Site package" set. Other sets can be added here,
 for example :composer:`typo3/cms-form`.
 
 ..  figure:: AddSiteSet.png
     :alt: Screenshot demonstrating adding the "My Site package" to the site main
 
-    Use module :guilabel:`Site Management > Sites` to add the "Example: My Site package"
+    Use module :guilabel:`Sites > Setup` to add the "Example: My Site package"
 
 If you haven't made any changes, the site configuration should look like this:
 
