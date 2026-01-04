@@ -11,7 +11,7 @@ Certain information is used in different parts of the templates over and over
 again like the uid of the data privacy page or the contact e-mail address.
 
 You can keep central information in settings. They can then be adjusted as
-needed in the :guilabel:`Site Management > Settings` module in the backend
+needed in the :guilabel:`Sites > Setup` module in the backend
 by administrators.
 
 ..  _settings-definitions-yaml-constants:
@@ -24,8 +24,8 @@ setup throughout the project.
 
 They are stored in the file :file:`settings.definitions.yaml` in your site set.
 
-The settings can be displayed and adjusted in module
-:guilabel:`Site Management > Settings`:
+The settings can be displayed and adjusted in module :guilabel:`Sites > Setup`
+by clicking on the button :guilabel:`Edit site settings` of your site:
 
 ..  figure:: /Images/Settings/SitePackageSettings.png
     :alt: Screenshot of module "Site Management > Settings" with the settings of the example site package open
