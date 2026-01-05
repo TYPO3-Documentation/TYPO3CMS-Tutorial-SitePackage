@@ -85,7 +85,7 @@ to flush all caches by hitting the button.
     Flush all caches
 
 After flushing the all caches the new backend layout is available in the page
-properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
+properties at :guilabel:` Appearance >  Layout > Backend Layout`.
 
 ..  figure:: /Images/AutomaticScreenshots/ChooseBackendLayout.png
     :class: with-shadow
@@ -98,7 +98,7 @@ Choose the page layout in the page properties
 ---------------------------------------------
 
 Switch to the new backend layout and save the page properties. In the
-:guilabel:`Page` module you will see two areas called "Stage" and
+:guilabel:`Content > Layout` module you will see two areas called "Stage" and
 "Main Content" now.
 
 If you followed step

@@ -39,7 +39,7 @@ reloading the backend.
 ..  figure:: PageModule.png
     :alt: Screenshot of the backend module "Page" with the loaded example data
 
-    The page tree in the module :guilabel:`Content > Page` now contains a few example pages.
+    The page tree in the module :guilabel:`Content > Layout` now contains a few example pages.
 
 ..  note::
     This only works for site packages of type "Site Package Tutorial". The ones
@@ -56,12 +56,12 @@ been created for you.
 
 The site configuration is stored in a file called
 :file:`config/sites/main/config.yaml`. You can edit this file in the
-backend module :guilabel:`Site Management > Sites`:
+backend module :guilabel:`Sites > Setup`:
 
 ..  figure:: SiteConfiguration.png
     :alt: Screenshot of the backend module "Site Management"
 
-    Edit the site configuration in  :guilabel:`Site Management > Sites`
+    Edit the site configuration in  :guilabel:`Sites > Setup`
 
 If you want to create a site configuration manually see
 :ref:`Create a new site configuration <t3start:site-configuration>` in the
