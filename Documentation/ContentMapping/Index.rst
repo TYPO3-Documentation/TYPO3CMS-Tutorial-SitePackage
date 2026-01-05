@@ -98,7 +98,7 @@ Choose the page layout in the page properties
 ---------------------------------------------
 
 Switch to the new backend layout and save the page properties. In the
-:guilabel:`Layout` module you will see two areas called "Stage" and
+:guilabel:`Content > Layout` module you will see two areas called "Stage" and
 "Main Content" now.
 
 If you followed step
