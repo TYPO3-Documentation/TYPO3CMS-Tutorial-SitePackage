@@ -48,8 +48,8 @@ which is provided by the TYPO3 Core, is used.
 .. _main-menu-creation:
 .. _add-menu-processor:
 
-TypoScrip configuration of the main menu
-========================================
+TypoScript configuration of the main menu
+=========================================
 
 We use TypoScript to configure these menus. The main menu is configured like this:
 
