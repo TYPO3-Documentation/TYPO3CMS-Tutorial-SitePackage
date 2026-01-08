@@ -1,4 +1,4 @@
-:navigation-title: Breadcrumb
+:navigation-title: Meta / Footer menu
 
 ..  include:: /Includes.rst.txt
 
