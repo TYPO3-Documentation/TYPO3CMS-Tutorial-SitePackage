@@ -45,7 +45,7 @@ Edit the page properties of `Start page` to use the backend layout
 "Two Columns" for subpages.
 
 ..  figure:: /Images/ContentMapping/SwitchBackendLayoutForSubpages.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: Switch to the Backend Layout "Two Columns" for subpages
 
     Switch to the Backend Layout "Two Columns" for subpages
@@ -59,7 +59,7 @@ The pages generated in step Create initial pages already contain
 "Menu of subpages" an example content in "sidebar" column.
 
 ..  figure:: /Images/ContentMapping/BackendLayoutTwoColumns.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: A new column "Sidebar" appears
 
     A new column "Sidebar" appears
@@ -68,7 +68,7 @@ The pages generated in step Create initial pages already contain
 Preview the page once more. A sidebar will appear in the frontend:
 
 ..  figure:: /Images/ContentMapping/TwoColumnsPreviewPage.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: The sidebar appears in the frontend
 
     The sidebar appears in the frontend

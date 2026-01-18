@@ -37,6 +37,7 @@ Loading the data might take a few seconds. If you do not see the new pages try
 reloading the backend.
 
 ..  figure:: PageModule.png
+    :zoom: lightbox
     :alt: Screenshot of the backend module "Page" with the loaded example data
 
     The page tree in the module :guilabel:`Content > Layout` now contains a few example pages.
@@ -59,6 +60,7 @@ The site configuration is stored in a file called
 backend module :guilabel:`Sites > Setup`:
 
 ..  figure:: SiteConfiguration.png
+    :zoom: lightbox
     :alt: Screenshot of the backend module "Site Management"
 
     Edit the site configuration in  :guilabel:`Sites > Setup`

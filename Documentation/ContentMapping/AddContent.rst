@@ -18,13 +18,13 @@ in the column labelled "*Main*" and choose the "Regular Text
 Element" content element.
 
 ..  figure:: /Images/ContentMapping/AddNewContentElement.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: Create new content element
 
     Create new content element
 
 ..  figure:: /Images/ContentMapping/ChooseRegularTextElement.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: Choose "Regular Text Element"
 
     Choose "Regular Text Element"
@@ -32,13 +32,13 @@ Element" content element.
 Enter a headline and some arbitrary text in the Rich Text Editor (RTE).
 
 ..  figure:: /Images/ContentMapping/EditRegularTextElement1.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: Enter a headline
 
     Enter a headline
 
 ..  figure:: /Images/ContentMapping/EditRegularTextElement2.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: Enter some arbitrary text in the Rich Text Editor (RTE)
 
     Enter some arbitrary text in the Rich Text Editor (RTE)
@@ -47,7 +47,7 @@ Save your changes by clicking button :guilabel:`Save` at the top.
 You can return to the previous view by clicking :guilabel:`Close`.
 
 ..  figure:: /Images/ContentMapping/SaveAndCloseRegularTextElement.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: Save and close the new content element
 
     Save and close the new content element
@@ -56,7 +56,7 @@ You can return to the previous view by clicking :guilabel:`Close`.
 :guilabel:`View webpage`.
 
 ..  figure:: /Images/ContentMapping/PreviewPageButton.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: View webpage button
 
     View webpage button
@@ -64,7 +64,7 @@ You can return to the previous view by clicking :guilabel:`Close`.
 Check that the content is displayed as expected.
 
 ..  figure:: /Images/ContentMapping/VerifyPageContent.png
-    :class: with-shadow
+    :zoom: gallery
     :alt: Verify if your new content is displayed on the page
 
     Verify if your new content is displayed on the page

@@ -80,7 +80,7 @@ When you make changes to the files of an extension it is usually necessary
 to flush all caches by hitting the button.
 
 ..  figure:: /Images/AutomaticScreenshots/FlushAllCaches.png
-    :class: with-shadow
+    :zoom: gallery
 
     Flush all caches
 
@@ -88,7 +88,7 @@ After flushing the all caches the new backend layout is available in the page
 properties at :guilabel:` Appearance >  Layout > Backend Layout`.
 
 ..  figure:: /Images/AutomaticScreenshots/ChooseBackendLayout.png
-    :class: with-shadow
+    :zoom: gallery
 
     Choose the backend layout
 
@@ -106,7 +106,7 @@ If you followed step
 the areas "Stage" and "Main" should already contain some example content.
 
 .. figure:: /Images/AutomaticScreenshots/CreateNewContentElement.png
-   :class: with-shadow
+    :zoom: gallery
 
    Create new content element
 
@@ -155,6 +155,7 @@ like this:
 
 ..  figure:: /Images/ContentMapping/contents_debug.png
     :alt: Screenshot of the debug output of {content}
+    :zoom: gallery
 
     The debug output should contain sections "stage" and "main"
 

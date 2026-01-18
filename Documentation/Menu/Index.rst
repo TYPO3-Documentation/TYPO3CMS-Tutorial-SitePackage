@@ -142,7 +142,7 @@ Whenever you change TypoScript files or Fluid templates, flush all caches:
 
 ..  figure:: /Images/MainMenuCreation/CheckMainMenu.png
     :alt: Checking from the backend if the menu is generated as expected.
-    :class: with-shadow
+    :zoom: lightbox
 
     Checking from the backend if the menu is generated as expected.
 
