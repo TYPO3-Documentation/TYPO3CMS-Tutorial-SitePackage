@@ -160,6 +160,7 @@ it should already contain the "My Site package" set. Other sets can be added her
 for example :composer:`typo3/cms-form`.
 
 ..  figure:: AddSiteSet.png
+    :zoom: lightbox
     :alt: Screenshot demonstrating adding the "My Site package" to the site main
 
     Use module :guilabel:`Sites > Setup` to add the "Example: My Site package"
@@ -218,7 +219,7 @@ you need to :guilabel:`Flush frontend caches` in the menu in the
 top bar before previewing the page:
 
 ..  figure:: /Images/AutomaticScreenshots/FlushFrontendCaches.png
-    :class: with-shadow
+    :zoom: lightbox
 
     Flush the frontend cache after changing template files
 
