@@ -24,6 +24,7 @@ You can follow this tutorial to install TYPO3 with DDEV and Composer:
 You should be able to log in into the TYPO3 backend and see the following:
 
 ..  figure:: EmptyInstallation.png
+    :zoom: lightbox
     :alt: Screenshot of a fresh TYPO3 13.4-dev installation with no page in the page tree
 
     A fresh, empty TYPO3 installation (light mode)

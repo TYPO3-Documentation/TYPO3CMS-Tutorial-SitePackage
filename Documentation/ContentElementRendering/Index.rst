@@ -48,6 +48,7 @@ your site. Override the paths to the templates of Fluid Styled Content like this
 
 ..  figure:: /Images/SiteSettingsFsc.png
     :alt: Screenshot demonstrating the site settings module
+    :zoom: lightbox
 
     Override the templates of Fluid Styled Content
 
@@ -85,6 +86,7 @@ is activated:
 
 ..  figure:: /Images/MenuContentElement.png
     :alt: Screenshot demonstrating the backend debug mode for Content element "Subpages" on "Page 1"
+    :zoom: lightbox
 
     You can now see that the Type (saved in field `CType`) is stored as `menu_subpages`
 

@@ -64,6 +64,7 @@ You can now replace the content element in the area "Stage" of start page with
 one of type "Jumbotron".
 
 ..  figure:: /Images/ContentBlocks/CreateContentElement.png
+    :zoom: lightbox
     :alt: Screenshot of the "New Page Content" dialog with the Carousel and Jumbotron as additional features
 
     The new Content Blocks "Jumbotron" and "Carousel"
