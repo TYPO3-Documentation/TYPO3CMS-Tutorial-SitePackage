@@ -171,12 +171,6 @@ Content Block specific assets
 
 The assets in folder :directory:`assets` can be loaded in the
 :ref:`Frontend Template <carousel-fluid>`. They will only be loaded when the
-Content Block is loaded on the current page. If compression
-(:ref:`config.compressCss <t3tsref:confval-config-compresscss>`,
-:ref:`config.compressJs <t3tsref:confval-config-compressjs>`) and concatenation
-(:ref:`config.concatenateCss <t3tsref:confval-config-concatenatecss>`,
-:ref:`concatenateJs <t3tsref:confval-config-concatenatejs>`) are enabled
-all assets are compressed and concatenated into as few as possible small asset
-files.
+Content Block is loaded on the current page.
 
 This also has the advantage that your JavaScript is only loaded if needed.
