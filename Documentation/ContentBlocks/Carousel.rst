@@ -138,6 +138,7 @@ Line 1: We are using the layout `Preview`, which already gives some structure to
 the display of the backend element:
 
 ..  figure:: /Images/ContentBlocks/BackendLayout.png
+    :zoom: lightbox
     :alt: Screenshot of a Content Block in the TYPO3 Backend, demonstrating the sections of the layout
 
     The sections of a content element backend layout: (1) Header, (2) Content, (3) Footer

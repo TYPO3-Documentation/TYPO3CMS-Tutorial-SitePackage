@@ -28,6 +28,7 @@ The settings can be displayed and adjusted in module
 :guilabel:`Site Management > Settings`:
 
 ..  figure:: /Images/Settings/SitePackageSettings.png
+    :zoom: lightbox
     :alt: Screenshot of module "Site Management > Settings" with the settings of the example site package open
 
     Administrators can view and adjust settings and save them here.
