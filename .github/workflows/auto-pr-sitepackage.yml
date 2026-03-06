@@ -8,6 +8,9 @@ on:
 jobs:
   auto-pr:
     name: Create PR for Site Package Changes
+    permissions:
+      contents: write        # needed to push the backport branch
+      pull-requests: write   # needed to open the PR
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' # Ensures the job only runs on the main branch
 
@@ -55,7 +58,7 @@ jobs:
 
       - name: Create Pull Request
         if: env.FIX_NEEDED == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.NEW_BRANCH }} # Source branch (newly created branch)
