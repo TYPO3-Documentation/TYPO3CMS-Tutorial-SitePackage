@@ -58,13 +58,18 @@ In case you installed a site package before it had a folder called
 :path:`Resources/Public` the symlinks did not get automatically created
 during Composer installation.
 
-In that case you can tell Composer to
-re-perform this initialization-process, which is done in the "dump-autoload" step.
-During that process the symlinks will also be created by Composer.
+In that case you can use the :ref:`asset:publish <t3coreapi:console-command-asset-publish>`
+command to re-perform this initialization-process.
 
 ..  code-block:: bash
 
-    ddev composer dump-autoload
+    ddev typo3 asset:publish
+
+..  versionadded:: 14
+    In TYPO3 14 the new command: :ref:`asset:publish <t3coreapi:console-command-asset-publish>`
+    were added.
+    This allows you to create the symlinks to the public resources without
+    any Composer command.
 
 ..  _asset-dependencies:
 
