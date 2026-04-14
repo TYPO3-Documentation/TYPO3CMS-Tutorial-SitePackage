@@ -1,14 +1,14 @@
-base: '/'
+base: /
 dependencies:
   - my-vendor/my-site-package
 languages:
   -
     title: English
     enabled: true
-    languageId: 0
-    base: /
     locale: en_US.UTF-8
+    base: /
     navigationTitle: English
     flag: us
+    languageId: 0
 rootPageId: 1
 websiteTitle: 'My Site Package'
