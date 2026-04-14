@@ -36,9 +36,9 @@ run the following command:
 Loading the data might take a few seconds. If you do not see the new pages try
 reloading the backend.
 
-..  figure:: PageModule.png
+..  figure:: LayoutModule.png
     :zoom: lightbox
-    :alt: Screenshot of the backend module "Page" with the loaded example data
+    :alt: Screenshot of the backend module "Content" with the loaded example data
 
     The page tree in the module :guilabel:`Content > Layout` now contains a few example pages.
 
@@ -61,7 +61,7 @@ backend module :guilabel:`Sites > Setup`:
 
 ..  figure:: SiteConfiguration.png
     :zoom: lightbox
-    :alt: Screenshot of the backend module "Site Management"
+    :alt: Screenshot of the backend module "Sites"
 
     Edit the site configuration in  :guilabel:`Sites > Setup`
 
