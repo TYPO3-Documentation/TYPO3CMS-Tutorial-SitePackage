@@ -12,7 +12,7 @@ contain the content, into its own section. This section is however still filled
 with dummy content:
 
 ..  literalinclude:: _codesnippets/_SectionMain.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html
 
 ..  contents::
 
@@ -148,7 +148,7 @@ You can debug this variable in the main section of your template using the
 :ref:`Debug ViewHelper <f:debug> <t3viewhelper:typo3-fluid-debug>`:
 
 ..  literalinclude:: _codesnippets/_SectionMainDebug.diff
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html
 
 The debug output after clearing all caches and previewing the page should look
 like this:
@@ -174,7 +174,7 @@ like this:
 TypoScript mapping in Fluid template
 ====================================
 
-Open the file :file:`Resources/Private/Templates/Page/Default.html` and locate the
+Open the file :file:`Resources/Private/Templates/Page/Default.fluid.html` and locate the
 main content area. It contains a headline (look for the :code:`<h2>`-tags) and
 some dummy content (look for the :code:`<p>`-tags).
 
@@ -183,7 +183,7 @@ rendering each content element using the
 :ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`:
 
 ..  literalinclude:: _codesnippets/_SectionMainRender.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (diff)
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html (diff)
 
 For content elements the main type is always `tt_content`. Therefore we include
 the TypoScript object :typoscript:`tt_content` here. It is defined in the TypoScript
@@ -210,12 +210,12 @@ the records of the page layout area to be rendered as variable `records` to
 the partial:
 
 ..  literalinclude:: _codesnippets/_SectionMainRenderPartial.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (diff)
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html (diff)
 
 The partial then looks like this:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Content.html
-    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Content.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Content.fluid.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Content.fluid.html
     :linenos:
 
 .. _content-element-typoscript:
