@@ -24,11 +24,8 @@ the file created in step :ref:`Minimal site package - The TYPO3 Fluid
 version <t3sitepackage:minimal-extension-fluid>`. The file name must begin
 with a capital letter
 
-The template name `Default.html` is used as a fall back if no other template
+The template name `Default.fluid.html` is used as a fall back if no other template
 names are defined. Do not change it for now.
-
-Even though this file ends on `.html` it will be interpreted by the templating
-engine Fluid.
 
 TYPO3 takes care of creating the outermost HTML structure of the site, including
 the `<html>` and `<head>` tags therefore they need to be removed from the
@@ -37,7 +34,7 @@ template:
 ..  literalinclude:: _codesnippets/_remove_head.diff
     :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
-The Fluid template :file:`Default.html` now contains only the HTML
+The Fluid template :file:`Default.fluid.html` now contains only the HTML
 code inside the body:
 
 ..  literalinclude:: _codesnippets/_DefaultWithoutHead.html
@@ -138,14 +135,14 @@ You should now have the following files:
 
         *   Pages
 
-            *   Default.html
-            *   Subpage.html
+            *   Default.fluid.html
+            *   Subpage.fluid.html
 
         *   Partials
 
-            *   Footer.html
-            *   Header.html
-            *   Stage.html
+            *   Footer.fluid.html
+            *   Header.fluid.html
+            *   Stage.fluid.html
 
 The Fluid template :file:`Resources/Private/Templates/Pages/Default.fluid.html`
 should now look like this:
@@ -269,24 +266,24 @@ Repeat the same for file :file:`Resources/Private/Templates/Pages/Default.fluid.
 
         *   Layouts
 
-            *   Layout.html
+            *   Layout.fluid.html
 
         *   Pages
 
-            *   Default.html
-            *   Subpage.html
+            *   Default.fluid.html
+            *   Subpage.fluid.html
 
         *   Partials
 
             *   Navigation
 
-                *   Breadcrumb.html
-                *   FooterMenu.html
-                *   Menu.html
+                *   Breadcrumb.fluid.html
+                *   FooterMenu.fluid.html
+                *   Menu.fluid.html
 
-            *   Footer.html
-            *   Header.html
-            *   Stage.html
+            *   Footer.fluid.html
+            *   Header.fluid.html
+            *   Stage.fluid.html
 
 You can use the `Site Package Builder <https://get.typo3.org/sitepackage>`_ to
 create a customized site package. If you want to follow this tutorial, choose
