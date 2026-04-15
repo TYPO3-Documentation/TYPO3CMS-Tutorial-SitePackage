@@ -13,7 +13,7 @@ To understand the following section you need basic knowledge of the
 
 This chapter assumes the following:
 
-*   A Composer-based TYPO3 installation, at least version 13.4.
+*   A Composer-based TYPO3 installation, at least version 14.3.
 *   You have installed a
     `Generate a site package of type "Site Package Tutorial" <https://docs.typo3.org/permalink/t3sitepackage:minimal-design>`_,
     including the example page tree loaded in `Create initial pages <https://docs.typo3.org/permalink/t3sitepackage:typo3-backend-create-initial-pages>`_.
@@ -82,11 +82,15 @@ Let's have a look at this default page template:
     :file:`packages/my_site_package/Resources/Private/Templates/Layouts/PageLayout.fluid.html`.
 *   Line 2 starts a section called "Main", using the
     `Section ViewHelper <f:section> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-section>`_.
-*   Lines 4 and 7 load partial templates from the :path:`Partials` folder. They follow
-    the same naming scheme as the layout: they are located in
-    :file:`packages/my_site_package/Resources/Private/Templates/Partials/Content.fluid.html`
-    and :file:`packages/my_site_package/Resources/Private/Templates/Partials/Stage.fluid.html`.
-    The partials are loaded with the `Render ViewHelper <f:render> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render>`_.
+*   Line 4 loads the partial template for the "Stage" from the :path:`Partials` folder. They follow
+    the same naming scheme as the layout. The partial for the "Stage" is located in
+    :file:`packages/my_site_package/Resources/Private/PageView/Partials/Stage.fluid.html`.
+    The partial is loaded with the `Render ViewHelper <f:render> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render>`_.
+*   Line 7 uses the `f:render.contentArea` ViewHelper. All elements of a content area can be rendered with that single
+    ViewHelper call. The value for the `contentArea` argument is determined by the variable name
+    of the content object defined in `page-content data processor <https://docs.typo3.org/permalink/t3tsref:pagecontentfetchingprocessor>`_ and the `identifier in the
+    backend layout <https://docs.typo3.org/permalink/t3tsref:confval-mod-web-layout-backendlayouts-backendlayout-title-config-backend-layout-rows-row-columns-col-identifier>`_.
+
 
 ..  _layout-template:
 
@@ -113,7 +117,7 @@ is defined in lines 2-10 of the "Default" page template. It is possible to defin
 optional sections (not shown here).
 
 Our layout template also loads some partials, for example, to display the
-menu and the footer.
+menu (in the header partial) and the footer.
 
 ..  _page-html-structure:
 
