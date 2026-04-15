@@ -99,11 +99,11 @@ Choose the page layout in the page properties
 
 Switch to the new backend layout and save the page properties. In the
 :guilabel:`Content > Layout` module you will see two areas called "Stage" and
-"Main Content" now.
+"Normal" now.
 
 If you followed step
 :ref:`Load the example data automatically <t3sitepackage:load-example-data>`
-the areas "Stage" and "Main" should already contain some example content.
+the areas "Stage" and "Normal" should already contain some example content.
 
 .. figure:: /Images/AutomaticScreenshots/CreateNewContentElement.png
     :zoom: gallery
