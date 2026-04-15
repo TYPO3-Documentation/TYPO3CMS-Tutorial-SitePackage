@@ -58,8 +58,8 @@ The special type `directory` delivers the items of the meta menu as an array.
 Therefore we can use the `For ViewHelper <f:for> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-for>`_
 to loop through these elements:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Navigation/FooterMenu.html
-    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Navigation/FooterMenu.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Navigation/FooterMenu.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Navigation/FooterMenu.html
     :linenos:
 
 The menu items can be displayed just as we have done in the

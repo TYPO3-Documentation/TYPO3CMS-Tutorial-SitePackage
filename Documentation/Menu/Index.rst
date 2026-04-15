@@ -70,15 +70,15 @@ A complete reference of this menu can be found in the TypoScript Reference:
 Fluid partial of the main menu
 ==============================
 
-In :path:`packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html`
+In :path:`packages/my_site_package/Resources/Private/Templates/Partials/Navigation/Menu.html`
 you can find the partial that renders the main menu.
 
 A menu usually contains several menu entries. We use the
 :ref:`t3viewhelper:typo3fluid-fluid-for` to iterate over all menu entries
 and render them in turn:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html
-    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Navigation/Menu.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Navigation/Menu.html
     :linenos:
 
 In each loop the current menu item is stored in variable `{menuItem}`.
@@ -87,7 +87,7 @@ You can use the :ref:`t3viewhelper:typo3-fluid-debug` to debug what kind of
 data the variable contains like this:
 
 ..  code-block:: diff
-    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Menu.html (changed for debug output)
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Navigation/Menu.html (changed for debug output)
 
      <ul class="navbar-nav mr-auto">
          <f:for each="{menu}" as="menuItem">
@@ -156,7 +156,7 @@ to demonstrate different menu types:
 
 *   A breadcrumb configured in
     :file:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/breadcrumb.typoscript`
-    and rendered in :file:`packages/my_site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html`.
+    and rendered in :file:`packages/my_site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html`.
 *   A footer menu consisting of pages within a selected folder configured in
     :file:`packages/my_site_package/Configuration/Sets/SitePackage/TypoScript/Navigation/footerMenu.typoscript`
-    and rendered in :file:`packages/my_site_package/Resources/Private/PageView/Partials/Navigation/FooterMenu.html`.
+    and rendered in :file:`packages/my_site_package/Resources/Private/Templates/Partials/Navigation/FooterMenu.html`.

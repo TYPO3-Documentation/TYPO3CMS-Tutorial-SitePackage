@@ -91,8 +91,8 @@ In the site package example we display the logo once in the header in large and
 once in the footer in smaller and use the settings to determine the path and alt
 text in both cases:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Footer.html
-    :caption: packages/my_site_package/Resources/Private/PageView/Partials/Footer.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Footer.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Footer.html
 
 At the time of writing the settings are not available out-of-the-box in
 templates configured by `FLUIDTEMPLATE <https://docs.typo3.org/permalink/t3tsref:cobj-template>`_
