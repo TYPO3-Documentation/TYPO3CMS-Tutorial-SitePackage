@@ -38,7 +38,7 @@ reloading the backend.
 
 ..  figure:: LayoutModule.png
     :zoom: lightbox
-    :alt: Screenshot of the backend module "Content" with the loaded example data
+    :alt: Screenshot of the backend module "Content > Layout" with the loaded example data
 
     The page tree in the module :guilabel:`Content > Layout` now contains a few example pages.
 
