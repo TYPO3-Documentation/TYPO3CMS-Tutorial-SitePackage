@@ -62,9 +62,9 @@ in which we will store the page layouts.
 We now create a default page layout with two areas: One for the main content and
 one for the stage.
 
-..  literalinclude:: _codesnippets/_Default.tsconfig
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig
     :language: typoscript
-    :caption: packages/my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig
     :linenos:
 
 ..  versionchanged:: TYPO3 13
