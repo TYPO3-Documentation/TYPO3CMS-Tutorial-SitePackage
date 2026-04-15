@@ -61,7 +61,7 @@ backend module :guilabel:`Sites > Setup`:
 
 ..  figure:: SiteConfiguration.png
     :zoom: lightbox
-    :alt: Screenshot of the backend module "Sites"
+    :alt: Screenshot of the backend module "Sites > Setup"
 
     Edit the site configuration in  :guilabel:`Sites > Setup`
 
