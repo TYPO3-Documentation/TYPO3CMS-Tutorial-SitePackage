@@ -25,11 +25,18 @@ setup throughout the project.
 They are stored in the file :file:`settings.definitions.yaml` in your site set.
 
 The settings can be displayed and adjusted in module :guilabel:`Sites > Setup`
+
+..  figure:: /Images/Settings/SitePackageSettingsButton.png
+    :zoom: lightbox
+    :alt: Screenshot of module "Sites > Setup" with the button to edit the site
+    settings
+
 by clicking on the button :guilabel:`Edit site settings` of your site:
 
 ..  figure:: /Images/Settings/SitePackageSettings.png
     :zoom: lightbox
-    :alt: Screenshot of module "Site Management > Settings" with the settings of the example site package open
+    :alt: Screenshot of module "Sites > Setup > Site Settings" with the settings
+    of the example site package open
 
     Administrators can view and adjust settings and save them here.
 
