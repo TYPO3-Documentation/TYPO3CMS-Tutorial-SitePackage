@@ -57,7 +57,7 @@ Line 3 defines that Fluid templates should be configured using the
 Line 6 defines the default path to the page view templates. We can add further
 paths to the definition in line 7 with a site setting later on. For now assume all Fluid
 templates for the page can be found in folder
-:path:`packages/my_site_package/Resources/Private/PageView`.
+:path:`packages/my_site_package/Resources/Private/Templates`.
 
 ..  _default-page-template:
 
@@ -66,26 +66,26 @@ The default page template
 
 Unless a different page layout is chosen, `PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_
 expects the main template of the page to be :file:`PageView/Pages/Default.html` in
-the folder :path:`packages/my_site_package/Resources/Private/PageView` (the path
+the folder :path:`packages/my_site_package/Resources/Private/Templates` (the path
 that we defined above).
 
 Let's have a look at this default page template:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Pages/Default.html
-    :caption: packages/my_site_package/Resources/Private/PageView/Pages/Default.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Pages/Default.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Pages/Default.html
     :linenos:
     :emphasize-lines:  1,2,4
 
 *   In line 1 the `Layout ViewHelper <f:layout> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-layout>`_
     loads a layout template from the :path:`PageView/Layouts` folder. The layout
     file is referred to by name, with an `.html` on the end. The layout file here is
-    :file:`packages/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html`.
+    :file:`packages/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html`.
 *   Line 2 starts a section called "Main", using the
     `Section ViewHelper <f:section> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-section>`_.
 *   Lines 4 and 7 load partial templates from the :path:`Partials` folder. They follow
     the same naming scheme as the layout: they are located in
-    :file:`packages/my_site_package/Resources/Private/PageView/Partials/Content.html`
-    and :file:`packages/my_site_package/Resources/Private/PageView/Partials/Stage.html`.
+    :file:`packages/my_site_package/Resources/Private/Templates/Partials/Content.html`
+    and :file:`packages/my_site_package/Resources/Private/Templates/Partials/Stage.html`.
     The partials are loaded with the `Render ViewHelper <f:render> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render>`_.
 
 ..  _layout-template:
@@ -95,8 +95,8 @@ The Fluid layout template
 
 The outermost HTML on a page/pages is defined by a layout template:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html
-    :caption: /CodeSnippets/my_site_package/Resources/Private/PageView/Layouts/PageLayout.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html
+    :caption: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html
     :linenos:
     :emphasize-lines:  5
 
@@ -138,8 +138,8 @@ The footer: Example of a partial template
 
 In the :ref:`layout template <layout-template>` the following partial was loaded:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Footer.html
-    :caption: /CodeSnippets/my_site_package/Resources/Private/PageView/Partials/Footer.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Footer.html
+    :caption: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Footer.html
     :linenos:
     :emphasize-lines:  5-7,11
 

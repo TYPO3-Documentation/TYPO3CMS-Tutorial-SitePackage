@@ -8,7 +8,7 @@ Additional subpage layout
 =========================
 
 Edit the file
-:file:`packages/my-site-package/Resources/Private/PageView/Pages/Subpage.html`.
+:file:`packages/my-site-package/Resources/Private/Templates/Pages/Subpage.html`.
 
 Exchange the main content area just as we have done before with the default
 template. Now
@@ -16,7 +16,7 @@ replace the content area of the sidebar with the content elements in the Fluid
 variable :html:`{sidebarContent}`.
 
 ..  literalinclude:: _codesnippets/_SubpageWithSection.diff
-    :caption: Resources/Private/PageView/Pages/Subpage.html (diff)
+    :caption: Resources/Private/Templates/Pages/Subpage.html (diff)
 
 ..  contents::
 
