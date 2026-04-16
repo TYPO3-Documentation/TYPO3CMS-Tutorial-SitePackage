@@ -13,7 +13,7 @@ To understand the following section you need basic knowledge of the
 
 This chapter assumes the following:
 
-*   A Composer-based TYPO3 installation, at least version 13.4.
+*   A Composer-based TYPO3 installation, at least version 14.3.
 *   You have installed a
     `Generate a site package of type "Site Package Tutorial" <https://docs.typo3.org/permalink/t3sitepackage:minimal-design>`_,
     including the example page tree loaded in `Create initial pages <https://docs.typo3.org/permalink/t3sitepackage:typo3-backend-create-initial-pages>`_.
@@ -65,28 +65,32 @@ The default page template
 =========================
 
 Unless a different page layout is chosen, `PAGEVIEW <https://docs.typo3.org/permalink/t3tsref:cobj-pageview>`_
-expects the main template of the page to be :file:`PageView/Pages/Default.html` in
+expects the main template of the page to be :file:`Templates/Pages/Default.fluid.html` in
 the folder :path:`packages/my_site_package/Resources/Private/Templates` (the path
 that we defined above).
 
 Let's have a look at this default page template:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Pages/Default.html
-    :caption: packages/my_site_package/Resources/Private/Templates/Pages/Default.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Pages/Default.fluid.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Pages/Default.fluid.html
     :linenos:
     :emphasize-lines:  1,2,4
 
 *   In line 1 the `Layout ViewHelper <f:layout> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-layout>`_
-    loads a layout template from the :path:`PageView/Layouts` folder. The layout
-    file is referred to by name, with an `.html` on the end. The layout file here is
-    :file:`packages/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html`.
+    loads a layout template from the :path:`Templates/Layouts` folder. The layout
+    file is referred to by name, with an `.fluid.html` on the end. The layout file here is
+    :file:`packages/my_site_package/Resources/Private/Templates/Layouts/PageLayout.fluid.html`.
 *   Line 2 starts a section called "Main", using the
     `Section ViewHelper <f:section> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-section>`_.
-*   Lines 4 and 7 load partial templates from the :path:`Partials` folder. They follow
-    the same naming scheme as the layout: they are located in
-    :file:`packages/my_site_package/Resources/Private/Templates/Partials/Content.html`
-    and :file:`packages/my_site_package/Resources/Private/Templates/Partials/Stage.html`.
-    The partials are loaded with the `Render ViewHelper <f:render> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render>`_.
+*   Line 4 loads the partial template for the "Stage" from the :path:`Partials` folder. They follow
+    the same naming scheme as the layout. The partial for the "Stage" is located in
+    :file:`packages/my_site_package/Resources/Private/PageView/Partials/Stage.fluid.html`.
+    The partial is loaded with the `Render ViewHelper <f:render> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render>`_.
+*   Line 7 uses the `f:render.contentArea` ViewHelper. All elements of a content area can be rendered with that single
+    ViewHelper call. The value for the `contentArea` argument is determined by the variable name
+    of the content object defined in `page-content data processor <https://docs.typo3.org/permalink/t3tsref:pagecontentfetchingprocessor>`_ and the `identifier in the
+    backend layout <https://docs.typo3.org/permalink/t3tsref:confval-mod-web-layout-backendlayouts-backendlayout-title-config-backend-layout-rows-row-columns-col-identifier>`_.
+
 
 ..  _layout-template:
 
@@ -95,8 +99,8 @@ The Fluid layout template
 
 The outermost HTML on a page/pages is defined by a layout template:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html
-    :caption: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.fluid.html
+    :caption: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.fluid.html
     :linenos:
     :emphasize-lines:  5
 
@@ -113,7 +117,7 @@ is defined in lines 2-10 of the "Default" page template. It is possible to defin
 optional sections (not shown here).
 
 Our layout template also loads some partials, for example, to display the
-menu and the footer.
+menu (in the header partial) and the footer.
 
 ..  _page-html-structure:
 
@@ -138,8 +142,8 @@ The footer: Example of a partial template
 
 In the :ref:`layout template <layout-template>` the following partial was loaded:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Footer.html
-    :caption: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Footer.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Footer.fluid.html
+    :caption: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Footer.fluid.html
     :linenos:
     :emphasize-lines:  5-7,11
 

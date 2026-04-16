@@ -28,7 +28,7 @@ these.
 
     If this becomes a requirement, the TypoScript code used to generate the menu
     (see chapter :ref:`main-menu-creation`) and the Fluid template file that
-    outputs the menu (:file:`Resources/Private/Layouts/Page/Default.html`) need
+    outputs the menu (:file:`Resources/Private/Layouts/Page/Default.fluid.html`) need
     to be updated.
 
     Learn more about the menu data processor :ref:`menu data processor <t3tsref:MenuProcessor>`

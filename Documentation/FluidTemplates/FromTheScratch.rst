@@ -19,7 +19,7 @@ Create the Fluid templates
 
 Copy the main :ref:`static HTML file <theme-example-static-html>` from
 :file:`Resources/Public/StaticTemplate/default.html`
-to :file:`Resources/Private/Templates/Pages/Default.html`. You can override
+to :file:`Resources/Private/Templates/Pages/Default.fluid.html`. You can override
 the file created in step :ref:`Minimal site package - The TYPO3 Fluid
 version <t3sitepackage:minimal-extension-fluid>`. The file name must begin
 with a capital letter
@@ -35,13 +35,13 @@ the `<html>` and `<head>` tags therefore they need to be removed from the
 template:
 
 ..  literalinclude:: _codesnippets/_remove_head.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
 The Fluid template :file:`Default.html` now contains only the HTML
 code inside the body:
 
 ..  literalinclude:: _codesnippets/_DefaultWithoutHead.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html
 
 Flush the caches and preview the page. You should now see a pure HTML page
 without any styles or images. We will add them in a further step.
@@ -68,7 +68,7 @@ Replace `<script>` tags in the body by using the
 :ref:`Asset.script ViewHelper <f:asset.script> <t3viewhelper:typo3-fluid-asset-script>`.
 
 ..  literalinclude:: _codesnippets/_assets.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
 The path to the assets will be resolved by TYPO3. `EXT:` tells TYPO3 that this is
 an extension path. `my_site_package` is the
@@ -96,7 +96,7 @@ Replace all `<img>` tags in the template with the
 :ref:`Image ViewHelper <f:image> <t3viewhelper:typo3-fluid-image>`:
 
 ..  literalinclude:: _codesnippets/_replace_images.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
 Just like happened with the CSS paths in step :ref:`assets` the path to the
 image is now replaced in the output by a path like
@@ -121,10 +121,10 @@ to render the partial in the correct place.
 Remove the header from the template and replace it with a render ViewHelper:
 
 ..  literalinclude:: _codesnippets/_remove_header.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
 Move the Fluid code you just remove to a file called
-:file:`my-site-package/Resources/Private/Templates/Partials/Header.html`.
+:file:`my-site-package/Resources/Private/Templazts/Partials/Header.fluid.html`.
 
 Do the same with the stage, the breadcrumb, and the footer.
 
@@ -147,11 +147,11 @@ You should now have the following files:
             *   Header.html
             *   Stage.html
 
-The Fluid template :file:`Resources/Private/Templates/Pages/Default.html`
+The Fluid template :file:`Resources/Private/Templates/Pages/Default.fluid.html`
 should now look like this:
 
 ..  literalinclude:: _codesnippets/_DefaultWithPartials.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html
 
 You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
 
@@ -161,11 +161,11 @@ Extract the menu into a partial
 -------------------------------
 
 Partials can also be rendered from within another partial. We move the menu in
-the partial :file:`Resources/Private/Templates/Partials/Header.html` to its
-own partial, :file:`Resources/Private/Templates/Partials/Navigation/Menu.html`:
+the partial :file:`Resources/Private/Templazts/Partials/Header.fluid.html` to its
+own partial, :file:`Resources/Private/Templazts/Partials/Navigation/Menu.fluid.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_header.diff
-    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Header.html (Difference)
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Header.fluid.html (Difference)
 
 The :ref:`Render ViewHelper <f:render> <t3viewhelper:typo3-fluid-render>` is used
 the same like from within the template.
@@ -179,16 +179,16 @@ Extract the footer menu into a partial
 -------------------------------
 
 We can also move the footer menu from
-the partial :file:`Resources/Private/Templates/Partials/Footer.html` to its
-own partial, :file:`Resources/Private/Templates/Partials/Navigation/FooterMenu.html`:
+the partial :file:`Resources/Private/Templazts/Partials/Footer.fluid.html` to its
+own partial, :file:`Resources/Private/Templazts/Partials/Navigation/FooterMenu.fluid.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_footer.diff
-    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Footer.html (Difference)
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Footer.fluid.html (Difference)
 
 The footer menu partial looks like this:
 
 ..  literalinclude:: _codesnippets/_FooterMenuPartial.html
-    :caption: Resources/Private/Templates/Partials/Navigation/FooterMenu.html
+    :caption: Resources/Private/Templates/Partials/Navigation/FooterMenu.fluid.html
 
 ..  _create_section:
 
@@ -203,12 +203,12 @@ with argument `section` to render it.
 We move the content, including the Stage into such a section:
 
 ..  literalinclude:: _codesnippets/_move_content_to_section.diff
-    :caption: Resources/Private/Templates/Pages/Default.html (difference)
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
 The result looks like this:
 
 ..  literalinclude:: _codesnippets/_DefaultWithSection.html
-    :caption: Resources/Private/Templates/Pages/Default.html
+    :caption: Resources/Private/Templates/Pages/Default.fluid.html
 
 You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
 
@@ -220,7 +220,7 @@ The Fluid template for the subpage
 We can repeat the above steps for the subpage and write such a template:
 
 ..  literalinclude:: _codesnippets/_SubpageWithSection.html
-    :caption: Resources/Private/Templates/Pages/Subpage.html
+    :caption: Resources/Private/Templates/Pages/Subpage.fluid.html
     :linenos:
     :emphasize-lines: 1-9
 
@@ -235,7 +235,7 @@ you can also move to a partial.
 The breadcrum partial looks like this:
 
 ..  literalinclude:: _codesnippets/_BreadcrumbPartial.html
-    :caption: Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
+    :caption: Resources/Private/Templates/Partials/Navigation/Breadcrumb.fluid.html
 
 ..  _the-website-layout-file:
 
@@ -243,23 +243,23 @@ Extract the repeated part to a layout
 =====================================
 
 Lines 1-9 of file `Subpage.html` in step :ref:`subpage` step are exactly the
-same like in file :file:`Resources/Private/Templates/Pages/Default.html`.
+same like in file :file:`Resources/Private/Templazts/Pages/Default.fluid.html`.
 
 We can extract these lines into a so called Fluid layout and load them with the
 :ref:`Layout ViewHelper <f:layout> <t3viewhelper:typo3fluid-fluid-layout>`:
 
 ..  literalinclude:: _codesnippets/_include_layout.diff
-    :caption: Resources/Private/Templates/Pages/Subpage.html (difference)
+    :caption: Resources/Private/Templates/Pages/Subpage.fluid.html (difference)
 
 Save the extracted layout to a file called
-:file:`Resources/Private/Templates/Layouts/Layout.html`. This file now contains
+:file:`Resources/Private/Templates/Layouts/Layout.fluid.html`. This file now contains
 the following:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html
-    :caption: packages/my_site_package/Resources/Private/Templates/Layouts/PageLayout.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Layouts/PageLayout.fluid.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Layouts/PageLayout.fluid.html
     :linenos:
 
-Repeat the same for file :file:`Resources/Private/Templates/Pages/Default.html`.
+Repeat the same for file :file:`Resources/Private/Templates/Pages/Default.fluid.html`.
 
 ..  directory-tree::
     :level: 3

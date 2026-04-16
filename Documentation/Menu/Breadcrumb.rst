@@ -48,8 +48,8 @@ The special type `breadcrumb` delivers the items of the rootline as an array.
 Therefore we can use the `For ViewHelper <f:for> <https://docs.typo3.org/permalink/t3viewhelper:typo3fluid-fluid-for>`_
 to loop through these elements:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
-    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.fluid.html
+    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.fluid.html
     :linenos:
 
 

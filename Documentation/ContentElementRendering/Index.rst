@@ -76,7 +76,7 @@ Override the "Menu of Subpages" template
 
 Your site package already overrides the template `MenuSubpages` of
 Fluid Styled Content in file
-:file:`packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html`.
+:file:`packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.fluid.html`.
 
 If you wanted to create this Template manually you could do it like this:
 
@@ -100,14 +100,14 @@ structured similarly to your site package extension and you can find the origina
 templates in folder :path:`Resources/Private/Templates` here.
 
 By convention the templates of Fluid Styled Content have the name of the `CType` in CamelCase. Copy file
-:path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/MenuSubpages.html`
-into folder :path:`packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html`
+:path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/MenuSubpages.fluid.html`
+into folder :path:`packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.fluid.html`
 
 Edit the file to add some classes as used in menus in Bootstrap, for example
 like this:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html
-    :caption: packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.fluid.html
+    :caption: packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSubpages.fluid.html
     :linenos:
 
 In most parts the changes we made are pretty straight forward. In line 9
@@ -121,12 +121,12 @@ Override the sitemap template
 =============================
 
 In a similar fashion we now copy and adjust the template for the sitemap from
-:path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/MenuSitemap.html`
-into folder :path:`packages/site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html`
+:path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/MenuSitemap.fluid.html`
+into folder :path:`packages/site_package/Resources/Private/ContentElements/Templates/MenuSitemap.fluid.html`
 and then adjust it:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html
-    :caption: packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSitemap.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Templates/MenuSitemap.fluid.html
+    :caption: packages/my_site_package/Resources/Private/ContentElements/Templates/MenuSitemap.fluid.html
     :linenos:
 
 We want to adjust the HTML output of the sitemap for different levels. The
@@ -160,25 +160,25 @@ Partials in turn can include different partials.
 The templates for "Image" and "Textpic" both contain the following line:
 
 ..  code-block:: html
-    :caption: vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/Image.html (Excerpt)
+    :caption: vendor/typo3/cms-fluid-styled-content/Resources/Private/Templates/Image.fluid.html (Excerpt)
 
     <f:render partial="Media/Gallery" arguments="{_all}" />
 
 If you open that partial, it includes yet another partial:
 
 ..  code-block:: html
-    :caption: vendor/typo3/cms-fluid-styled-content/Resources/Private/Partials/Media/Gallery.html (Excerpt)
+    :caption: vendor/typo3/cms-fluid-styled-content/Resources/Private/Partials/Media/Gallery.fluid.html (Excerpt)
 
     <f:render partial="Media/Type" arguments="{file: column.media, dimensions: column.dimensions, data: data, settings: settings}" />
 
 Which contains another until we finally arrive at
-:path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Partials/Media/Rendering/Image.html`
+:path:`vendor/typo3/cms-fluid-styled-content/Resources/Private/Partials/Media/Rendering/Image.fluid.html`
 which does contain the actual :ref:`Media ViewHelper <f:media> <t3viewhelper:typo3-fluid-media>`.
 
 By overriding this one partial we can add a class to all images that are
 displayed with the "Image" or "Text with Media" content elements. For example
 we could display all images as circles by adding the class `rounded-circle`:
 
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.html
-    :caption: packages/my_site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.html
+..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.fluid.html
+    :caption: packages/my_site_package/Resources/Private/ContentElements/Partials/Media/Rendering/Image.fluid.html
     :linenos:
