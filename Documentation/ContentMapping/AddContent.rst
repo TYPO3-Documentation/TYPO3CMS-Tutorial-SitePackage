@@ -14,7 +14,7 @@ already contain some example content.
 You can add additonal content in the backend. Go to
 :guilabel:`Content > Layout` and select any of the pages you created before,
 (for example "Page 2"). Click the :guilabel:`+ Create new content` button
-in the column labelled "*Main*" and choose the "Regular Text
+in the column labelled "*Normal*" and choose the "Regular Text
 Element" content element.
 
 ..  figure:: /Images/ContentMapping/AddNewContentElement.png
@@ -51,6 +51,10 @@ You can return to the previous view by clicking :guilabel:`Close`.
     :alt: Save and close the new content element
 
     Save and close the new content element
+
+.. tip::
+    For a quick way to close and save a content element and return to the previews
+    view just click the :guilabel:`Close` button and press :guilabel:`Enter`.
 
 :ref:`Preview the page <t3sitepackage:cm-preview-page>` by clicking button
 :guilabel:`View webpage`.
