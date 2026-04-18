@@ -17,28 +17,19 @@ Fluid Templates from Scratch
 Create the Fluid templates
 ==========================
 
-Copy the main :ref:`static HTML file <theme-example-static-html>` from
-:file:`Resources/Public/StaticTemplate/default.html`
-to :file:`Resources/Private/Templates/Pages/Default.fluid.html`. You can override
-the file created in step :ref:`Minimal site package - The TYPO3 Fluid
-version <t3sitepackage:minimal-extension-fluid>`. The file name must begin
-with a capital letter
+Create a new file :file:`Resources/Private/Templates/Pages/Default.fluid.html`.
 
-The template name `Default.html` is used as a fall back if no other template
+The template name `Default.fluid.html` is used as a fall back if no other template
 names are defined. Do not change it for now.
 
-Even though this file ends on `.html` it will be interpreted by the templating
-engine Fluid.
+..  versionadded:: 14
+    In TYPO3 versions < 14 the file name must begin with a capital letter. This is not
+    longer necessary. Now fluid template files can start with a lowercase letter.
+    See `Template Resolving <https://docs.typo3.org/permalink/fluid:template-resolving>`_
+    for more informations about the naming of fluid template files.
 
 TYPO3 takes care of creating the outermost HTML structure of the site, including
-the `<html>` and `<head>` tags therefore they need to be removed from the
-template:
-
-..  literalinclude:: _codesnippets/_remove_head.diff
-    :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
-
-The Fluid template :file:`Default.html` now contains only the HTML
-code inside the body:
+the `<html>` and `<head>` tags therefore the following code example should be sufficient:
 
 ..  literalinclude:: _codesnippets/_DefaultWithoutHead.html
     :caption: Resources/Private/Templates/Pages/Default.fluid.html
@@ -138,14 +129,14 @@ You should now have the following files:
 
         *   Pages
 
-            *   Default.html
-            *   Subpage.html
+            *   Default.fluid.html
+            *   Subpage.fluid.html
 
         *   Partials
 
-            *   Footer.html
-            *   Header.html
-            *   Stage.html
+            *   Footer.fluid.html
+            *   Header.fluid.html
+            *   Stage.fluid.html
 
 The Fluid template :file:`Resources/Private/Templates/Pages/Default.fluid.html`
 should now look like this:
@@ -243,7 +234,7 @@ Extract the repeated part to a layout
 =====================================
 
 Lines 1-9 of file `Subpage.html` in step :ref:`subpage` step are exactly the
-same like in file :file:`Resources/Private/Templazts/Pages/Default.fluid.html`.
+same like in file :file:`Resources/Private/Templates/Pages/Default.fluid.html`.
 
 We can extract these lines into a so called Fluid layout and load them with the
 :ref:`Layout ViewHelper <f:layout> <t3viewhelper:typo3fluid-fluid-layout>`:
@@ -269,24 +260,24 @@ Repeat the same for file :file:`Resources/Private/Templates/Pages/Default.fluid.
 
         *   Layouts
 
-            *   Layout.html
+            *   Layout.fluid.html
 
         *   Pages
 
-            *   Default.html
-            *   Subpage.html
+            *   Default.fluid.html
+            *   Subpage.fluid.html
 
         *   Partials
 
             *   Navigation
 
-                *   Breadcrumb.html
-                *   FooterMenu.html
-                *   Menu.html
+                *   Breadcrumb.fluid.html
+                *   FooterMenu.fluid.html
+                *   Menu.fluid.html
 
-            *   Footer.html
-            *   Header.html
-            *   Stage.html
+            *   Footer.fluid.html
+            *   Header.fluid.html
+            *   Stage.fluid.html
 
 You can use the `Site Package Builder <https://get.typo3.org/sitepackage>`_ to
 create a customized site package. If you want to follow this tutorial, choose
