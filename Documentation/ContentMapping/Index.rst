@@ -62,9 +62,9 @@ in which we will store the page layouts.
 We now create a default page layout with two areas: One for the main content and
 one for the stage.
 
-..  literalinclude:: _codesnippets/_Default.tsconfig
+..  literalinclude:: /CodeSnippets/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig
     :language: typoscript
-    :caption: packages/my_site_package/Configuration/TsConfig/Page/PageLayout/Default.tsconfig
+    :caption: packages/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig
     :linenos:
 
 ..  versionchanged:: TYPO3 13
@@ -99,11 +99,11 @@ Choose the page layout in the page properties
 
 Switch to the new backend layout and save the page properties. In the
 :guilabel:`Content > Layout` module you will see two areas called "Stage" and
-"Main Content" now.
+"Normal" now.
 
 If you followed step
 :ref:`Load the example data automatically <t3sitepackage:load-example-data>`
-the areas "Stage" and "Main" should already contain some example content.
+the areas "Stage" and "Normal" should already contain some example content.
 
 .. figure:: /Images/AutomaticScreenshots/CreateNewContentElement.png
     :zoom: gallery
@@ -171,24 +171,19 @@ like this:
 
 ..  _cm-fluid-typoscript-mapping:
 
-TypoScript mapping in Fluid template
+Content rendering in Fluid template
 ====================================
 
 Open the file :file:`Resources/Private/Templates/Page/Default.fluid.html` and locate the
 main content area. It contains a headline (look for the :code:`<h2>`-tags) and
 some dummy content (look for the :code:`<p>`-tags).
 
-Replace these lines with a :ref:`Fluid for-loop <t3viewhelper:typo3fluid-fluid-for>`,
-rendering each content element using the
-:ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`:
-
-..  literalinclude:: _codesnippets/_SectionMainRender.diff
-    :caption: Resources/Private/Templates/Pages/Default.fluid.html (diff)
-
-For content elements the main type is always `tt_content`. Therefore we include
-the TypoScript object :typoscript:`tt_content` here. It is defined in the TypoScript
-of the system extension :composer:`typo3/cms-fluid-styled-content`. We included
-the site set of that extension in step :ref:`content-mapping-site-set`.
+Use the :code:`<f:render.contentArea contentArea="{content.main}"/>` ViewHelper
+to replace these lines.
+That's it! No more loops with TypoScript objects are needed in TYPO3 14 on using
+this new ViewHelper.
+Just define which identifier (you find the identifiers in the deubg output) from
+the backend_layout should be used to render it's content elemnts.
 
 `fluid-styled-content` internally uses
 Fluid templates and TypoScript with data processors just like the ones we were
@@ -201,22 +196,8 @@ you could override the Fluid templates of the extension
 Extract the content element rendering to a partial
 ==================================================
 
-As we want to reuse the Fluid part about rendering content elements in the
-next steps, we extract it into a partial, like we did with the menu in
-step :ref:`Extract the menu into a partial <t3sitepackage:create_partial_header>`.
-
-We want to be able to render content elements of **any content area**. Therefore pass
-the records of the page layout area to be rendered as variable `records` to
-the partial:
-
-..  literalinclude:: _codesnippets/_SectionMainRenderPartial.diff
-    :caption: Resources/Private/Templates/Pages/Default.fluid.html (diff)
-
-The partial then looks like this:
-
-..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Content.fluid.html
-    :caption: packages/my_site_package/Resources/Private/Templates/Partials/Content.fluid.html
-    :linenos:
+Extracting the rendering for content into partials it's not longer necessary and not suggested
+with the new :code:`render.contentArea` ViewHelper.
 
 .. _content-element-typoscript:
 
