@@ -69,6 +69,18 @@ Clipboard instead, then save it to the following file:
         partialRootPath: 'EXT:my_site_package/Resources/Private/ContentElements/Partials'
         layoutRootPath: 'EXT:my_site_package/Resources/Private/ContentElements/Layouts'
 
+.. tip::
+    If you don't see the :guilabel:`YAML export` button, click the :guilabel:`View`
+    button to switch to the "Advanced" mode.
+
+..  figure:: /Images/SiteSettingsButtonAdvanced.png
+    :alt: Screenshot to show the buttons to switch between "Basic" and "Advanced" mode
+    :zoom: lightbox
+
+    Use :guilabel:`View` button to get the "Advanced" mode in the site settings
+    module
+
+
 ..  _content-element-rendering-menu-subpages:
 
 Override the "Menu of Subpages" template
