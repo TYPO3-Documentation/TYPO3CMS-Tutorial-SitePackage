@@ -2,7 +2,7 @@ name: my-site-package/jumbotron
 typeName: my_site_package_jumbotron
 group: my_site_package
 prefixFields: true
-prefixType: full
+priority: 10
 fields:
   -
     identifier: header
