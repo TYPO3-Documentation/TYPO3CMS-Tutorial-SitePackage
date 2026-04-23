@@ -76,6 +76,27 @@ Videos on YouTube
 
 TYPO3 has an `official YouTube channel <https://www.youtube.com/channel/UCwpl8LY9Tr3PB26Kk2FYW_w>`__.
 
+..  _using-route-enhancers:
+
+Using Route Enhancers
+---------------------
+
+TYPO3 offers a simple way to create attractive, readable URLs for pages.
+If you want readable URLs for records from extensions, a small extra manual
+work is required. Then you need the `Routing Enhancers <https://docs.typo3.org/permalink/t3coreapi:routing-advanced-routing-configuration-enhancers>`_.
+
+Most of the time the thing you need is a `Extbase plugin enhancer <https://docs.typo3.org/permalink/t3coreapi:routing-extbase-plugin-enhancer>`_.
+If you follow the link, you see an example routing configuration for the
+`News <https://docs.typo3.org/permalink/georgringer-news:start>`_ Extension.
+
+.. note::
+    By default the routing configuration must be set in the Site Config of your
+    TYPO3 installation. But it's also possible to `use it with imports <https://docs.typo3.org/permalink/t3coreapi:routing-examples-imports>`_
+    to get the routing configuration directly from your Site Package.
+    Put your routing configuration into: `my_site_package/Configuration/Routes`
+    and use the :yaml:`import` command.
+
+
 ..  _next-steps-questions:
 
 Where to ask questions
