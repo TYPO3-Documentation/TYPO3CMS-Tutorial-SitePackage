@@ -43,8 +43,8 @@ Additionally it supplies a template for its display in the backend.
 
         *   templates
 
-            *   backend-preview.html
-            *   frontend.html
+            *   backend-preview.fluid.html
+            *   frontend.fluid.html
 
         *   config.yaml
 
@@ -82,8 +82,8 @@ and enable the Rich-Text Editor (line 23).
 Frontend template: Fluid template for a Content Block with a Collection
 =======================================================================
 
-..  literalinclude:: /CodeSnippets/my_site_package/ContentBlocks/ContentElements/carousel/templates/frontend.html
-    :caption: packages/my_site_package/ContentBlocks/ContentElements/carousel/templates/frontend.html
+..  literalinclude:: /CodeSnippets/my_site_package/ContentBlocks/ContentElements/carousel/templates/frontend.fluid.html
+    :caption: packages/my_site_package/ContentBlocks/ContentElements/carousel/templates/frontend.fluid.html
     :linenos:
 
 Line 1: We use `Asset.css ViewHelper <f:asset.css> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-asset-css>`_
@@ -103,7 +103,7 @@ to loop through each item. We then render a button for each carousel item.
 
 Line 11: We loop the items a second time to now display all carousel slides.
 
-Line 13: The field `image` was defined with option `relationship: manyToOne` in
+Line 13: The field `image` was defined with option `relationship: oneToOne` in
 the :ref:`config.yaml <carousel-configuration>` it can therefore only contain
 one image at maximum. As supplying an image is also mandatory `minitems: 1`
 we can be sure there is always exactly one image. And just use the
@@ -111,8 +111,14 @@ we can be sure there is always exactly one image. And just use the
 to display the image.
 
 Line 16: As the field `{item.description}` is of type Textarea with rich-text
-enabled we have to use the `Format.html ViewHelper <f:format.html> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-format-html>`_
+enabled we have to use the `Render.text ViewHelper <f:render.text> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-text>`_
 to properly display it.
+
+.. versionadded:: 14.2
+    The `render.text` ViewHelper handles the processing of both simple and rich
+    text fields.
+    `Render.text ViewHelper <f:render.text> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-text>`_
+    It should be used now instead of the old `Format.html ViewHelper <f:format.html> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-format-html>`_
 
 Line 23, 27: The previous and next buttons use localized text for their labels.
 We use the `Translate ViewHelper <f:translate> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-translate>`_
@@ -127,8 +133,8 @@ Content Block with backend template
 This Content Block contains a template to influence how the content elements
 should be displayed in the TYPO3 backend in the Page module:
 
-..  literalinclude:: /CodeSnippets/my_site_package/ContentBlocks/ContentElements/carousel/templates/backend-preview.html
-    :caption: packages/my_site_package/ContentBlocks/ContentElements/carousel/templates/backend-preview.html
+..  literalinclude:: /CodeSnippets/my_site_package/ContentBlocks/ContentElements/carousel/templates/backend-preview.fluid.html
+    :caption: packages/my_site_package/ContentBlocks/ContentElements/carousel/templates/backend-preview.fluid.html
     :linenos:
 
 The same fields like for the frontend template are available and the same
@@ -137,9 +143,10 @@ ViewHelpers can be used. However we display them in a simplified form.
 Line 1: We are using the layout `Preview`, which already gives some structure to
 the display of the backend element:
 
-..  figure:: /Images/ContentBlocks/BackendLayout.png
+..  figure:: /Images/ContentBlocks/BackendPreview.png
     :zoom: lightbox
-    :alt: Screenshot of a Content Block in the TYPO3 Backend, demonstrating the sections of the layout
+    :alt: Screenshot of a Content Block in the TYPO3 Backend, demonstrating the
+    sections of the backend preview
 
     The sections of a content element backend layout: (1) Header, (2) Content, (3) Footer
 
