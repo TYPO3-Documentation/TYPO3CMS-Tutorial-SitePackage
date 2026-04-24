@@ -21,14 +21,11 @@ create a customized site package. If you want to follow this tutorial, choose
     not intended for use in production environments.
 
 ..  versionadded:: 14
-    If you need a ready to use site package for your TYPO3 installation
-    then maybe the new `Camino theme <https://docs.typo3.org/permalink/typo3-theme-camino:introduction>`_
-    is what you need.
-    
-    Unlike the site package from this tutorial, the Camino theme is designed to
-    get you up and running quickly and then use this as your site package
-    within TYPO3. You can then make customizations directly within this new
-    site package.
+    If you need a ready to use site package TYPO3 provides the
+    `Camino theme <https://docs.typo3.org/permalink/typo3-theme-camino:introduction>`_
+    as an alternative starting point for new installations. Unlike the
+    site package created in this tutorial, it is a preconfigured site package
+    that can be installed and then adapted as needed.
 
 ----
 
