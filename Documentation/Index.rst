@@ -28,7 +28,7 @@ create a customized site package. If you want to follow this tutorial, choose
     Unlike the site package from this tutorial, the Camino theme is designed to
     get you up and running quickly and then use this as your site package
     within TYPO3. You can then make customizations directly within this new
-    Site Package.
+    site package.
 
 ----
 
