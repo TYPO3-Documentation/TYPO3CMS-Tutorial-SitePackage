@@ -38,7 +38,9 @@ is not part of the TYPO3 Core but maintained by a group of community members.
 There are plans to integrate this extension into the Core, however at the
 time of writing there are no finite decisions yet.
 
-First install the extension :composer:`friendsoftypo3/content-blocks`:
+If you are using the "Site Package Tutorial" Content Blocks should be already
+installed due to requirements in the `composer.json`.
+If not first install the extension :composer:`friendsoftypo3/content-blocks`:
 
 ..  code-block:: bash
 
@@ -100,7 +102,7 @@ The jumbotron consists of the following files:
 
         *   templates
 
-            *   frontend.html
+            *   frontend.fluid.html
 
         *   config.yaml
 
@@ -140,8 +142,8 @@ template. You already used Fluid for the
 and to adjust the templates of Fluid-Styled Content elements in chapter
 `Overriding the default templates of content elements <https://docs.typo3.org/permalink/t3sitepackage:content-element-rendering>`_.
 
-..  literalinclude:: /CodeSnippets/my_site_package/ContentBlocks/ContentElements/jumbotron/templates/frontend.html
-    :caption: packages/my_site_package/ContentBlocks/ContentElements/jumbotron/templates/frontend.html
+..  literalinclude:: /CodeSnippets/my_site_package/ContentBlocks/ContentElements/jumbotron/templates/frontend.fluid.html
+    :caption: packages/my_site_package/ContentBlocks/ContentElements/jumbotron/templates/frontend.fluid.html
     :linenos:
 
 Line 3: The values of the database entry of the current content element can be
@@ -150,8 +152,10 @@ found in variable `{data}`. In this line we render the content of the field
 
 Line 4: Here we output the content of field `bodytext` as this field is a
 Rich-Text Editor we use the
-`Format.html ViewHelper <f:format.html> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-format-html>`_
-to format and sanitize the output.
+`Render.text ViewHelper <f:render.text> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-text>`_
+to format and sanitize the output. This is the new recommended ViewHelper to
+render text fields in TYPO3 14. They handles the processing of both simple and
+rich text fields.
 
 Line 5: We use the `Link.typolink ViewHelper <f:link.typolink> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-link-typolink>`_
 to render a link to the target that was defined in our custom field `button_link`.
