@@ -17,8 +17,15 @@ create a customized site package. If you want to follow this tutorial, choose
 "Site Package Tutorial" as base package.
 
 ..  note::
-    The example site package is structured for educational purposes and is
+    The example site package is designed for educational purposes only and
     not intended for use in production environments.
+
+..  versionadded:: 14
+    If you need a ready-to-use site package, the TYPO3
+    `Camino theme <https://docs.typo3.org/permalink/typo3-theme-camino:introduction>`_
+    is an alternative starting point for new installations. Unlike the
+    site package created in this tutorial, it is a preconfigured site package
+    that can be installed and adapted to your requirements.
 
 ----
 
