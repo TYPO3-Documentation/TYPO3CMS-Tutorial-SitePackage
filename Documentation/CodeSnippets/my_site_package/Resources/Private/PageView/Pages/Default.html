@@ -4,7 +4,7 @@
     <f:render partial="Stage" arguments="{_all}"/>
 
     <div class="container">
-        <f:render.contentArea contentArea="{content.main}"/>
+        <f:render partial="Content" arguments="{records: content.main.records}"/>
     </div>
 
 </f:section>

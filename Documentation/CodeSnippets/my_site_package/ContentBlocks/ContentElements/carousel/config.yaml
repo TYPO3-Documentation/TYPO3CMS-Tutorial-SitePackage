@@ -2,6 +2,7 @@ name: my-site-package/carousel
 typeName: my_site_package_carousel
 group: my_site_package
 prefixFields: true
+prefixType: full
 fields:
   - identifier: carousel_items
     type: Collection
@@ -14,7 +15,7 @@ fields:
         type: File
         allowed: common-image-types
         minitems: 1
-        relationship: oneToOne
+        relationship: manyToOne
       - identifier: header
         type: Text
       - identifier: description
