@@ -1,12 +1,33 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-curl -X 'POST' \
-  'https://get.typo3.org/api/v1/sitepackage/' \
-  -H 'accept: application/zip' \
-  -H 'Content-Type: application/json' \
-  -d @"$(dirname "$0")/data.json" --output Documentation/CodeSnippets/my_site_package.zip
+set -euo pipefail
 
-rm -rf Documentation/CodeSnippets/my_site_package/*
-rm -rf Documentation/CodeSnippets/my_site_package/.*
-unzip Documentation/CodeSnippets/my_site_package.zip -d "Documentation/CodeSnippets/my_site_package/"
-rm Documentation/CodeSnippets/my_site_package.zip
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+
+SOURCE_REPOSITORY="https://github.com/TYPO3-Documentation/site_package.git"
+SOURCE_BRANCH="main"
+TARGET_DIR="${PROJECT_ROOT}/Documentation/CodeSnippets/my_site_package"
+
+TEMP_DIR="$(mktemp -d)"
+
+cleanup() {
+  rm -rf "${TEMP_DIR}"
+}
+
+trap cleanup EXIT
+
+git clone \
+  --depth 1 \
+  --branch "${SOURCE_BRANCH}" \
+  "${SOURCE_REPOSITORY}" \
+  "${TEMP_DIR}/site_package"
+
+rm -rf "${TARGET_DIR}"
+mkdir -p "${TARGET_DIR}"
+
+rsync -a \
+  --exclude ".git" \
+  --exclude ".github" \
+  "${TEMP_DIR}/site_package/" \
+  "${TARGET_DIR}/"

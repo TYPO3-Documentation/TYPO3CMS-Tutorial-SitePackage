@@ -134,9 +134,6 @@ Your project should now have the following structure:
 A look at the basic site set
 ============================
 
-..  versionadded:: 13.1
-    :ref:`Site sets <t3coreapi:site-sets>` have been introduced.
-
 The site package built by Site Package Builder comes with a ready-to-use
 site set in folder :path:`packages/my_site_package/Configuration/Sets/SitePackage/`.
 
@@ -175,9 +172,6 @@ If you haven't made any changes, the site configuration should look like this:
 
 The site set as TypoScript Provider
 ===================================
-
-..  versionadded:: 13.1
-    A site set can be used as :ref:`TypoScript provider <t3coreapi:site-sets-typoscript>`.
 
 TYPO3 uses TypoScript as a configuration language. TypoScript is used to
 configure templates created with the Fluid templating language.

@@ -9,9 +9,6 @@
 Site settings: Further configuration options
 ============================================
 
-..  versionadded:: 13.1
-    Site sets and settings therein have been introduced with TYPO3 13.1.
-
 In step :ref:`Minimal site package - Create a basic site
 set <t3sitepackage:minimal-extension-siteset>` we created a basic site set for
 our site package.
@@ -29,12 +26,6 @@ our site package.
 
 The site set
 ============
-
-..  versionchanged:: 13.1
-    In TYPO3 v13.1 and above the TypoScript files are made available as
-    sets and included in the site. For TYPO3 v12 read the section in
-    the tutorial for TYPO3 v12.4:
-    :ref:`Make TypoScript available (TYPO3 v12.4) <t3sitepackage-12:make-typoscript-available>`.
 
 In step :ref:`Create a basic site set <t3sitepackage:minimal-extension-siteset>`
 we already created a basic site set for your site package.
