@@ -6,6 +6,6 @@ ExtensionManagementUtility::addTcaSelectItemGroup(
     'tt_content',
     'CType',
     'my_site_package',
-    'LLL:site_package.backend.content_elements:group.site_package',
+    'site_package.backend.content_elements:group.site_package',
     'after:default',
 );

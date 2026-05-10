@@ -1,7 +1,7 @@
 # TYPO3 Site Package Tutorial Example
 
 This Site Package can be used to follow the [TYPO3 Site
-Package Tutorial](https://docs.typo3.org/permalink/t3sitepackage:start@13.4).
+Package Tutorial](https://docs.typo3.org/permalink/t3sitepackage:start@14.3).
 Team.
 
 The tutorial describes the steps required to turn a basic design
@@ -37,7 +37,7 @@ all paths and commands in the Tutorial are based on that type of installation.
 
 Download the Site Package and save it into folder `typo3conf/ext/` in the root of your TYPO3 installation.
 
-Activate extension "My Site Package" with key my_site_package in the Extension Manager.
+Activate extension "Site Package" with key my_site_package in the Extension Manager.
 
 ## Load Example data
 
@@ -56,19 +56,21 @@ vendor/bin/typo3 extension:setup
 If automatic loading fails you can also try to use the import command:
 
 ```
-ddev typo3 impexp:import EXT:my_site_package/Initialisation/data.xml
+ddev typo3 impexp:import EXT:y_site_package/Initialisation/data.xml
 ```
 
-## Include the Set manually
+## Include the Site set in your Site configuration
 
-If you decide not to load the Example data, the Set of this Site Package needs to be included manually:
+If not done by the extension setup or import command, you can copy the `Initialisation/Site/main`
+folder to your [Site configuration storage](https://docs.typo3.org/permalink/t3coreapi:site-storage).
 
-Include the Set "My Site Package" in your site configuration.
-See also: [Create a basic site set](https://docs.typo3.org/permalink/t3sitepackage:minimal-extension-siteset).
-
-You can also edit the file `config/sites/mysite/config.yaml` and include the following lines:
+If you want to use an existing Site configuration, set the Site set "Site Package" as dependency.
+You can do this in backend module "Sites -> Setup" or edit the file `config/sites/mysite/config.yaml`
+and include the following lines:
 
 ```
 dependencies:
-  - my-vendor/my-site-package
+  - t3docs/site-package
 ```
+
+See also: [Create a basic site set](https://docs.typo3.org/permalink/t3sitepackage:minimal-extension-siteset).
