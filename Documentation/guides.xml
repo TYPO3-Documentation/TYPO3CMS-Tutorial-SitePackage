@@ -14,8 +14,8 @@
                project-issues="https://github.com/TYPO3-Documentation/TYPO3CMS-Tutorial-SitePackage/issues"
     />
     <project title="Site Package Tutorial"
-             version="main (development)"
-             release="main (development)"
+             version="14.3"
+             release="14.3"
              copyright="since 2017 by the TYPO3 contributors"
     />
 </guides>
