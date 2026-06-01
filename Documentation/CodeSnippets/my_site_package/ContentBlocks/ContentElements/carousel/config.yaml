@@ -1,6 +1,6 @@
-name: my-site-package/carousel
-typeName: my_site_package_carousel
-group: my_site_package
+name: site-package/carousel
+typeName: site_package_carousel
+group: site_package
 prefixFields: true
 fields:
   - identifier: carousel_items
