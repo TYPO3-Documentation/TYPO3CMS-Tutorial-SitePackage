@@ -44,12 +44,12 @@ First install the extension :composer:`friendsoftypo3/content-blocks`:
 
     ddev composer req friendsoftypo3/content-blocks
 
-Set up the extension and delete all caches:
+First, flush all caches. Then, set up the extension.
 
 ..  code-block:: bash
 
-    ddev typo3 extension:setup
     ddev typo3 cache:flush
+    ddev typo3 extension:setup
 
 ..  _content-blocks-jumbotron:
 
