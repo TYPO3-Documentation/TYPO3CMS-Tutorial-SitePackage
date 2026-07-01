@@ -40,7 +40,7 @@ mod {
                         }
                     }
                 }
-                icon = EXT:my_site_package/Resources/Public/Icons/BackendLayouts/subpage.svg
+                icon = EXT:site_package/Resources/Public/Icons/BackendLayouts/subpage.svg
             }
         }
     }

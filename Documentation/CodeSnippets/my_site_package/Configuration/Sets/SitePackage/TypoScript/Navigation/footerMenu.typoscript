@@ -5,7 +5,7 @@ page {
             40 {
                 as = footerMenu
                 special = directory
-                special.value = {$MySitePackage.footerMenuRoot}
+                special.value = {$SitePackage.footerMenuRoot}
             }
         }
     }

@@ -21,13 +21,13 @@ in the root of your TYPO3 installation.
 Require the Site Package using Composer and DDEV:
 
 ```
-ddev composer req my-vendor/my-site-package:"@dev"
+ddev composer req t3docs/site-package:"@dev"
 ```
 
 Or just Composer:
 
 ```
-composer req my-vendor/my-site-package:"@dev"
+composer req t3docs/site-package:"@dev"
 ```
 
 ## Classic TYPO3 installations
@@ -37,7 +37,7 @@ all paths and commands in the Tutorial are based on that type of installation.
 
 Download the Site Package and save it into folder `typo3conf/ext/` in the root of your TYPO3 installation.
 
-Activate extension "Site Package" with key my_site_package in the Extension Manager.
+Activate extension "Site Package" with key site_package in the Extension Manager.
 
 ## Load Example data
 
@@ -56,7 +56,7 @@ vendor/bin/typo3 extension:setup
 If automatic loading fails you can also try to use the import command:
 
 ```
-ddev typo3 impexp:import EXT:y_site_package/Initialisation/data.xml
+ddev typo3 impexp:import EXT:site_package/Initialisation/data.xml
 ```
 
 ## Include the Site set in your Site configuration
