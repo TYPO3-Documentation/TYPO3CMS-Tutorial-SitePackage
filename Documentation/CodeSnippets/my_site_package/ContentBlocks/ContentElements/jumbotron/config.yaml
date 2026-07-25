@@ -1,6 +1,6 @@
-name: my-site-package/jumbotron
-typeName: my_site_package_jumbotron
-group: my_site_package
+name: site-package/jumbotron
+typeName: site_package_jumbotron
+group: site_package
 prefixFields: true
 priority: 10
 fields:
