@@ -1,7 +1,7 @@
 {
-    "name": "my-vendor/my-site-package",
+    "name": "t3docs/site-package",
     "type": "typo3-cms-extension",
-    "description": "My Site package to follow the tutorial.",
+    "description": "Site Package - This site package is an example used to understand the TYPO3 Site Package Tutorial.",
     "homepage": "https://docs.typo3.org/permalink/t3sitepackage:start",
     "license": [
         "GPL-2.0-or-later"
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MyVendor\\MySitePackage\\": "Classes/"
+            "T3docs\\SitePackage\\": "Classes/"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "my_site_package",
+            "extension-key": "site_package",
             "version": "1.0.0",
             "Package": {
                 "providesPackages": {}

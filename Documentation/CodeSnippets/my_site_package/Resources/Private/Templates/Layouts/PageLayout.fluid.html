@@ -4,11 +4,11 @@
 />
 <f:asset.css
     identifier="main"
-    href="EXT:my_site_package/Resources/Public/Css/main.css"
+    href="EXT:site_package/Resources/Public/Css/main.css"
 />
 <main>
     <f:render partial="Header" arguments="{_all}" />
-    <f:render section="Main" />
+    <f:render section="Main" arguments="{_all}" />
     <f:render partial="Footer" arguments="{_all}" />
 </main>
 <f:asset.script
@@ -17,5 +17,5 @@
 />
 <f:asset.script
     identifier="main"
-    src="EXT:my_site_package/Resources/Public/JavaScript/main.js"
+    src="EXT:site_package/Resources/Public/JavaScript/main.js"
 />
