@@ -1,48 +1,48 @@
 categories:
-  MySitePackage:
-    label: 'My Site Package'
-  MySitePackage.templates:
+  SitePackage:
+    label: 'Site Package'
+  SitePackage.templates:
     label: 'Templates'
-    parent: MySitePackage
-  MySitePackage.layout:
+    parent: SitePackage
+  SitePackage.layout:
     label: 'Layout'
-    parent: MySitePackage
-  MySitePackage.menus:
+    parent: SitePackage
+  SitePackage.menus:
     label: 'Menus'
-    parent: MySitePackage
+    parent: SitePackage
 
 settings:
-  MySitePackage.template_path:
+  SitePackage.template_path:
     label: 'Page template path'
-    category: MySitePackage.templates
-    description: 'Path to the templates of the My Site Package.'
+    category: SitePackage.templates
+    description: 'Path to the templates of the Site Package.'
     type: string
-    default: 'EXT:my_site_package/Resources/Private/Templates/'
+    default: 'EXT:site_package/Resources/Private/Templates/'
 
-  MySitePackage.logo:
+  SitePackage.logo:
     label: 'Logo'
-    category: MySitePackage.layout
-    description: 'Path to the logo of My Site Package.'
+    category: SitePackage.layout
+    description: 'Path to the logo of Site Package.'
     type: string
-    default: 'EXT:my_site_package/Resources/Public/Images/logo.svg'
+    default: 'EXT:site_package/Resources/Public/Images/logo.svg'
 
-  MySitePackage.logo-alt:
+  SitePackage.logo-alt:
     label: 'Logo Alt text'
-    category: MySitePackage.layout
+    category: SitePackage.layout
     description: 'Alternative text of the logo for the visually impaired'
     type: string
     default: 'Logo'
 
-  MySitePackage.favicon:
+  SitePackage.favicon:
     label: 'Favicon'
     description: 'This icon is displayed in search engine results and in the browser tab'
-    category: MySitePackage.layout
+    category: SitePackage.layout
     type: string
-    default: 'EXT:my_site_package/Resources/Public/Icons/favicon.ico'
+    default: 'EXT:site_package/Resources/Public/Icons/favicon.ico'
 
-  MySitePackage.footerMenuRoot:
-      label: 'Footer menu root uid'
+  SitePackage.footerMenuRoot:
+      label: 'Footer menu root page uid'
       description: 'The subpages of this page are displayed in the footer'
-      category: MySitePackage.menus
-      type: int
+      category: SitePackage.menus
+      type: page
       default: 2
