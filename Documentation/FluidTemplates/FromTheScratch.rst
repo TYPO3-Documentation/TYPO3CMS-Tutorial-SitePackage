@@ -1,4 +1,4 @@
-:navigation-title: Fluid from the scratch
+:navigation-title: Fluid from scratch
 ..  include:: /Includes.rst.txt
 
 ..  _fluid-templates-scratch:
@@ -115,7 +115,7 @@ Remove the header from the template and replace it with a render ViewHelper:
     :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
 Move the Fluid code you just remove to a file called
-:file:`my-site-package/Resources/Private/Templazts/Partials/Header.fluid.html`.
+:file:`my-site-package/Resources/Private/Templates/Partials/Header.fluid.html`.
 
 Do the same with the stage, the breadcrumb, and the footer.
 
@@ -152,8 +152,8 @@ Extract the menu into a partial
 -------------------------------
 
 Partials can also be rendered from within another partial. We move the menu in
-the partial :file:`Resources/Private/Templazts/Partials/Header.fluid.html` to its
-own partial, :file:`Resources/Private/Templazts/Partials/Navigation/Menu.fluid.html`:
+the partial :file:`Resources/Private/Templates/Partials/Header.fluid.html` to its
+own partial, :file:`Resources/Private/Templates/Partials/Navigation/Menu.fluid.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_header.diff
     :caption: packages/my_site_package/Resources/Private/Templates/Partials/Header.fluid.html (Difference)
@@ -170,8 +170,8 @@ Extract the footer menu into a partial
 -------------------------------
 
 We can also move the footer menu from
-the partial :file:`Resources/Private/Templazts/Partials/Footer.fluid.html` to its
-own partial, :file:`Resources/Private/Templazts/Partials/Navigation/FooterMenu.fluid.html`:
+the partial :file:`Resources/Private/Templates/Partials/Footer.fluid.html` to its
+own partial, :file:`Resources/Private/Templates/Partials/Navigation/FooterMenu.fluid.html`:
 
 ..  literalinclude:: _codesnippets/_remove_menu_from_footer.diff
     :caption: packages/my_site_package/Resources/Private/Templates/Partials/Footer.fluid.html (Difference)
