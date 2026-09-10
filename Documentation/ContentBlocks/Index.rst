@@ -124,12 +124,12 @@ should be unique within your project. (Line 1)
 It is possible to use fields that are already pre-defined in the TYPO3 Core like
 `header` (Line 8) and `bodytext` (Line 11).
 
-We also newly define two fields, one of type `Text <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-text>`_
-(Line 15-19) and one of type `Link <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-link>`_
-(Line 21-23). You can find all available types here: `Field Types <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-types>`_.
+We also newly define two fields, one of type `Text <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:field-type-text>`_
+(Line 15-19) and one of type `Link <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:field-type-link>`_
+(Line 21-23). You can find all available types here: `Field Types <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:field-types>`_.
 
 The meaning behind the other settings here can be found in the
-`YAML reference of the Content Blocks guide <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:yaml-reference>`_.
+`YAML reference of the Content Blocks guide <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:yaml-reference>`_.
 
 ..  _content-blocks-jumbotron-template:
 
@@ -176,5 +176,5 @@ It is described in chapter `Carousel Content Block example <https://docs.typo3.o
 Next steps
 ==========
 
-*   Learn how to use the `Kickstart command <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:cb-skeleton>`_
+*   Learn how to use the `Kickstart command <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:cb-skeleton>`_
     to create your own Content Blocks.
