@@ -61,20 +61,20 @@ header, and description:
     :linenos:
 
 Line 8: We use a field of type
-`Collection <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-collection>`_
+`Collection <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:field-type-collection>`_
 to contain the items to be displayed in the carousel. This field type expects
 an array of fields (line 10ff).
 
 Line 15: We use the type
-`File <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-file>`_
+`File <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:field-type-file>`_
 to reference the image for the carousel item. We allow images only (line 16)
 and require exactly one image (lines 17 and 18).
 
 Line 20: The title should be one line of text. We use the type
-`Text <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-text>`_.
+`Text <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:field-type-text>`_.
 
 Line 22: The description may contain rich text. Therefore, we use the type
-`Textarea <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:field-type-textarea>`_
+`Textarea <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:field-type-textarea>`_
 and enable the Rich-Text Editor (line 23).
 
 ..  _carousel-fluid:
@@ -169,7 +169,7 @@ context we prefixed all labels to be used in the backend with `backend.`.
 
 ..  tip::
     See also chapter `Backend Preview in the Content Blocks
-    manual <https://docs.typo3.org/permalink/friendsoftypo3/content-blocks:api-backend-preview>`_.
+    manual <https://docs.typo3.org/permalink/friendsoftypo3-content-blocks:api-backend-preview>`_.
 
 
 ..  _carousel-assets:
