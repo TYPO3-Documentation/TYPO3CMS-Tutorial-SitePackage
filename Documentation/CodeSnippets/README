@@ -1,0 +1,21 @@
+# Generated code snippets — do not edit
+
+`my_site_package/` is a copy of the
+[site_package](https://github.com/TYPO3-Documentation/site_package) repository
+(branch `main`). The tutorial includes files from it so that the code on the
+page is the code of the real site package the reader builds, rather than a
+second copy that drifts away from it.
+
+**Do not fix anything inside `my_site_package/` here.** `make codesnippets`
+runs `Build/DownloadSitePackage/generate_sitepackage.sh`, which deletes the
+whole directory and copies it again from that repository; a scheduled workflow
+does the same on the first of every month and opens a pull request with the
+result. A change made here is gone at that point, without a conflict and
+without a warning.
+
+Fix it in [site_package](https://github.com/TYPO3-Documentation/site_package)
+instead. The next regeneration carries it over.
+
+The `_codesnippets/` directories inside the chapters (`ContentMapping/`,
+`FluidTemplates/`) are the opposite: hand-written fragments and diffs with no
+upstream counterpart. Those are edited here as normal.
