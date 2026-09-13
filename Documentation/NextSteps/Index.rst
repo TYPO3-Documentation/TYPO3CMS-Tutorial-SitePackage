@@ -91,6 +91,6 @@ Specifically, choose one of these options:
 #.  The TYPO3 community has a forum at https://talk.typo3.org/ where you can
     `Ask TYPO3 related questions <https://talk.typo3.org/c/typo3-questions/19>`__.
 #.  `Meet the TYPO3 Community <https://typo3.org/community/meet>`__ you
-    can go to a `Local TYPO3 User Group <https://typo3.org/community/meet/user-groups>`__
+    can go to a `Local TYPO3 User Group <https://typo3.community/meet/user-groups>`__
     meet us online on Slack (`How to get your TYPO3 Slack account <https://typo3.org/community/meet/chat-slack>`__)
     and/or find us at numerous `events <https://typo3.org/community/events>`_.
