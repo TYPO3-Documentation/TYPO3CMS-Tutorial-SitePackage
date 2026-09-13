@@ -1,0 +1,15 @@
+Generated code snippets — do not edit
+
+`my_site_package/` is generated, not source of this manual.
+`make codesnippets` posts `Build/DownloadSitePackage/data.json` to the Site
+Package Builder at https://get.typo3.org/api/v1/sitepackage/, empties this
+directory and unpacks the ZIP it receives.
+
+**Do not fix anything inside `my_site_package/` here.** A change made here is
+gone at the next regeneration, without a conflict and without a warning. The
+file to change is `data.json`, which decides the package title, the TYPO3
+version and the author details.
+
+The `_codesnippets/` directories inside the chapters (`ContentMapping/`,
+`FluidTemplates/`) are the opposite: hand-written fragments and diffs with no
+upstream counterpart. Those are edited here as normal.
