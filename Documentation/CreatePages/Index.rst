@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. _typo3-backend-create-initial-pages:
+..  _typo3-backend-create-initial-pages:
 
 ====================
 Create initial pages
@@ -47,7 +47,7 @@ reloading the backend.
     based on the Bootstrap Package or Fluid Styled Content do not contain example
     data.
 
-.. _typo3-backend-site:
+..  _typo3-backend-site:
 
 Site configuration
 ==================

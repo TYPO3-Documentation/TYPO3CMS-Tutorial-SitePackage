@@ -16,8 +16,8 @@ So we start by generating a basic extension.
 
 ..  contents::
 
-.. _minimal-extension:
-.. _minimal-site-package-builder:
+..  _minimal-extension:
+..  _minimal-site-package-builder:
 
 Generate and download a site package
 ====================================
@@ -38,7 +38,7 @@ To follow this tutorial, choose the "Site Package Tutorial".
 Download and unzip the file into the
 `packages/my_site_package` folder and :ref:`install it <extension-installation>`.
 
-.. _extension-installation:
+..  _extension-installation:
 
 Extension installation
 ======================
@@ -51,7 +51,7 @@ followed these steps:
 
 :ref:`Installing TYPO3 with DDEV <t3start:installation-ddev-tutorial>`
 
-.. _extension-installation-site-package:
+..  _extension-installation-site-package:
 
 Install the site package you just created
 -----------------------------------------
@@ -64,19 +64,19 @@ folder. Then *require* the extension via Composer using the
 package name defined in the site package extension's :file:`composer.json` (now located
 at :file:`packages/my_site_package/`)
 
-.. code-block:: json
-   :caption: packages/my-site-package/composer.json
+..  code-block:: json
+    :caption: packages/my-site-package/composer.json
 
-   {
-      "name": "my-vendor/my-site-package"
-   }
+    {
+       "name": "my-vendor/my-site-package"
+    }
 
 *require* it with:
 
 ..  code-block:: bash
-   :caption: Execute in directory page_root
+    :caption: Execute in directory page_root
 
-    ddev composer require my-vendor/my-site-package:@dev
+     ddev composer require my-vendor/my-site-package:@dev
 
 ..  _extension-installation-project-structure:
 
@@ -129,7 +129,7 @@ Your project should now have the following structure:
     *   composer.json
     *   composer.lock
 
-.. _minimal-extension-siteset:
+..  _minimal-extension-siteset:
 
 A look at the basic site set
 ============================
@@ -167,8 +167,8 @@ If you haven't made any changes, the site configuration should look like this:
 ..  literalinclude:: /CodeSnippets/my_site_package/Initialisation/Site/main/config.yaml
     :caption: config/sites/main/config.yaml
 
-.. _minimal-extension-typoscript:
-.. _make-typoscript-available:
+..  _minimal-extension-typoscript:
+..  _make-typoscript-available:
 
 The site set as TypoScript Provider
 ===================================
@@ -185,7 +185,7 @@ Learn more about the TypoScript syntax used here in chapter
 :ref:`A minimal page created by pure TypoScript <t3start:typoscript>`
 in the "Getting Started Tutorial".
 
-.. _minimal-extension-fluid:
+..  _minimal-extension-fluid:
 
 The TYPO3 Fluid version
 =======================
@@ -220,7 +220,7 @@ top bar before previewing the page:
 You can then preview your page by clicking on the :guilabel:`View webpage` button
 in the page module.
 
-.. _extension-configuration-composer:
+..  _extension-configuration-composer:
 
 Composer configuration :file:`composer.json`
 ============================================

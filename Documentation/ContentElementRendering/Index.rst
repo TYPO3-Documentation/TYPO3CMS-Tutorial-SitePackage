@@ -69,7 +69,7 @@ Clipboard instead, then save it to the following file:
         partialRootPath: 'EXT:my_site_package/Resources/Private/ContentElements/Partials'
         layoutRootPath: 'EXT:my_site_package/Resources/Private/ContentElements/Layouts'
 
-.. tip::
+..  tip::
     If you don't see the :guilabel:`YAML export` button, click the :guilabel:`View`
     button to switch to the "Advanced" mode.
 
