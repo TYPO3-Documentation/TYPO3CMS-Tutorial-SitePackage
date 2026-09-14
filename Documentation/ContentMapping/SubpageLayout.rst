@@ -34,7 +34,7 @@ containing :ref:`page TSconfig <t3tsref:setting-page-tsconfig>`. :
     :caption: packages/my_site_package/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/subpage.tsconfig
     :linenos:
 
-.. _cm-switch_backend_layout:
+..  _cm-switch_backend_layout:
 
 Switch to the two column layout with a sidebar for subpages
 ==========================================================
