@@ -1,7 +1,7 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. _file-setup-typoscript:
-.. _typoscript-configuration:
+..  _file-setup-typoscript:
+..  _typoscript-configuration:
 
 ==================
 TypoScript imports
@@ -24,7 +24,7 @@ Familiarize yourself with the TypoScript `@import` syntax first:
 
 ..  contents::
 
-.. _typoscript-import:
+..  _typoscript-import:
 
 Import the TypoScript from a different location
 ===============================================
@@ -43,7 +43,7 @@ Then change the latter file to contain the following:
 
 Flush the caches and preview the page. The output should be unchanged.
 
-.. _typoscript-import-wildcard:
+..  _typoscript-import-wildcard:
 
 Import all TypoScript files from a folder using a wildcard
 ==========================================================
@@ -59,7 +59,7 @@ wildcard:
 Only files from the folder directly will be imported. If you create subfolders
 later on you have to import them separately.
 
-.. _typoscript-import-configuration:
+..  _typoscript-import-configuration:
 
 Structure of the `Configuration` directory
 ==========================================

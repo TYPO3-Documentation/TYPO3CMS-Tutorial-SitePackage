@@ -16,7 +16,7 @@ with dummy content:
 
 ..  contents::
 
-.. _content-mapping-site-set:
+..  _content-mapping-site-set:
 
 Include the site sets of fluid-styled-content as dependency
 ===========================================================
@@ -105,10 +105,10 @@ If you followed step
 :ref:`Load the example data automatically <t3sitepackage:load-example-data>`
 the areas "Stage" and "Normal" should already contain some example content.
 
-.. figure:: /Images/AutomaticScreenshots/CreateNewContentElement.png
-    :zoom: gallery
+..  figure:: /Images/AutomaticScreenshots/CreateNewContentElement.png
+     :zoom: gallery
 
-   Create new content element
+    Create new content element
 
 In the database each content element record is stored in the table
 :sql:`tt_content`. This table has a column called `colPos`. If the value stored
@@ -191,7 +191,7 @@ defining above. If you desire to change the output of these content elements
 you could override the Fluid templates of the extension
 :composer:`typo3/cms-fluid-styled-content`.
 
-.. _content-element-partial:
+..  _content-element-partial:
 
 Extract the content element rendering to a partial
 ==================================================
@@ -199,7 +199,7 @@ Extract the content element rendering to a partial
 Extracting the rendering for content into partials it's not longer necessary and not suggested
 with the new :code:`render.contentArea` ViewHelper.
 
-.. _content-element-typoscript:
+..  _content-element-typoscript:
 
 Splitting up the TypoScript into files
 ======================================

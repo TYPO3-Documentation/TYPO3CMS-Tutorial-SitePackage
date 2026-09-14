@@ -45,8 +45,8 @@ which is provided by the TYPO3 Core, is used.
     Some extensions like :composer:`b13/menus` offer performant menus for
     large sites or like :composer:`georgringer/news` menus for special purposes.
 
-.. _main-menu-creation:
-.. _add-menu-processor:
+..  _main-menu-creation:
+..  _add-menu-processor:
 
 TypoScript configuration of the main menu
 =========================================
@@ -65,7 +65,7 @@ and pages excluded from the navigation are excluded.
 A complete reference of this menu can be found in the TypoScript Reference:
 `menu data processor <https://docs.typo3.org/permalink/t3tsref:menuprocessor>`_.
 
-.. _fluid-implement-main-menu:
+..  _fluid-implement-main-menu:
 
 Fluid partial of the main menu
 ==============================
@@ -129,7 +129,7 @@ output the string "active" if `{menuItem.active}` is set. The syntax might look
 confusing at first. It is an :ref:`t3viewhelper:typo3fluid-fluid-if`
 displayed in the :ref:`Fluid inline notation <t3coreapi:fluid-inline-notation>`.
 
-.. _main-menu-creation-preview:
+..  _main-menu-creation-preview:
 
 Preview the page and use the menu
 =================================
@@ -146,7 +146,7 @@ Whenever you change TypoScript files or Fluid templates, flush all caches:
 
     Checking from the backend if the menu is generated as expected.
 
-.. _menu-types:
+..  _menu-types:
 
 Different menu types
 ====================

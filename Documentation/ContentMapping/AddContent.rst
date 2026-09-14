@@ -52,7 +52,7 @@ You can return to the previous view by clicking :guilabel:`Close`.
 
     Save and close the new content element
 
-.. tip::
+..  tip::
     For a quick way to close and save a content element and return to the previews
     view just click the :guilabel:`Close` button and press :guilabel:`Enter`.
 
