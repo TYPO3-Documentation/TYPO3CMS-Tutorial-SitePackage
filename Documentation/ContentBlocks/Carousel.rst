@@ -114,7 +114,7 @@ Line 16: As the field `{item.description}` is of type Textarea with rich-text
 enabled we have to use the `Render.text ViewHelper <f:render.text> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-text>`_
 to properly display it.
 
-.. versionadded:: 14.2
+..  versionadded:: 14.2
     The `render.text` ViewHelper handles the processing of both simple and rich
     text fields.
     `Render.text ViewHelper <f:render.text> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-text>`_
