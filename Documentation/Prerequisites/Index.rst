@@ -1,7 +1,7 @@
 :navigation-title: Prerequisites
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. _prerequisites:
+..  _prerequisites:
 
 ======================================================
 Prerequisites to create a TYPO3 site package extension
