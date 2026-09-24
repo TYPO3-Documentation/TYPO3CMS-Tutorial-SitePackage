@@ -52,7 +52,8 @@ reloading the backend.
 Site configuration
 ==================
 
-If you followed :ref:`load-example-data` a basic configuration has
+If you followed :ref:`Load the example data automatically <load-example-data>`
+a basic configuration has
 been created for you.
 
 The site configuration is stored in a file called
