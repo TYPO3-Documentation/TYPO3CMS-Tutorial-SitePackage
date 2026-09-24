@@ -7,7 +7,8 @@
 Display the content elements on your page
 =========================================
 
-In step :ref:`create-section` we moved the part of our template, that will
+In step :ref:`Move the content into a section <create-section>` we moved the
+part of our template, that will
 contain the content, into its own section. This section is however still filled
 with dummy content:
 
