@@ -52,7 +52,8 @@ without any styles or images. We will add them in a further step.
 Load assets (CSS, JavaScript)
 -----------------------------
 
-Load all CSS which had been removed in step :ref:`create_template`
+Load all CSS which had been removed in step
+:ref:`Create the Fluid templates <create_template>`
 using the :ref:`Asset.css ViewHelper <f:asset.css> <t3viewhelper:typo3-fluid-asset-css>`.
 
 Replace `<script>` tags in the body by using the
@@ -89,7 +90,8 @@ Replace all `<img>` tags in the template with the
 ..  literalinclude:: _codesnippets/_replace_images.diff
     :caption: Resources/Private/Templates/Pages/Default.fluid.html (difference)
 
-Just like happened with the CSS paths in step :ref:`assets` the path to the
+Just like happened with the CSS paths in step
+:ref:`Load assets (CSS, JavaScript) <assets>` the path to the
 image is now replaced in the output by a path like
 `/_assets/99a57ea771f379715c522bf185e9a315/Images/logo.svg?1728057333`.
 
@@ -144,7 +146,8 @@ should now look like this:
 ..  literalinclude:: _codesnippets/_DefaultWithPartials.html
     :caption: Resources/Private/Templates/Pages/Default.fluid.html
 
-You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
+You will learn how to display the dynamic content in chapter
+:ref:`Display the content elements on your page <content-mapping>`.
 
 ..  _create_partial_header:
 
@@ -201,7 +204,8 @@ The result looks like this:
 ..  literalinclude:: _codesnippets/_DefaultWithSection.html
     :caption: Resources/Private/Templates/Pages/Default.fluid.html
 
-You will learn how to display the dynamic content in chapter :ref:`content-mapping`.
+You will learn how to display the dynamic content in chapter
+:ref:`Display the content elements on your page <content-mapping>`.
 
 ..  _subpage:
 
@@ -233,7 +237,8 @@ The breadcrum partial looks like this:
 Extract the repeated part to a layout
 =====================================
 
-Lines 1-9 of file `Subpage.html` in step :ref:`subpage` step are exactly the
+Lines 1-9 of file `Subpage.html` in step
+:ref:`The Fluid template for the subpage <subpage>` are exactly the
 same like in file :file:`Resources/Private/Templates/Pages/Default.fluid.html`.
 
 We can extract these lines into a so called Fluid layout and load them with the

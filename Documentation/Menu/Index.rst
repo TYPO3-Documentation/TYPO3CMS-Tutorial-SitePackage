@@ -74,7 +74,8 @@ In :path:`packages/my_site_package/Resources/Private/Templates/Partials/Navigati
 you can find the partial that renders the main menu.
 
 A menu usually contains several menu entries. We use the
-:ref:`t3viewhelper:typo3fluid-fluid-for` to iterate over all menu entries
+:ref:`f:for ViewHelper <t3viewhelper:typo3fluid-fluid-for>` to iterate over
+all menu entries
 and render them in turn:
 
 ..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Navigation/Menu.fluid.html
@@ -83,7 +84,8 @@ and render them in turn:
 
 In each loop the current menu item is stored in variable `{menuItem}`.
 
-You can use the :ref:`t3viewhelper:typo3-fluid-debug` to debug what kind of
+You can use the :ref:`f:debug ViewHelper <t3viewhelper:typo3-fluid-debug>` to
+debug what kind of
 data the variable contains like this:
 
 ..  code-block:: diff
@@ -126,7 +128,8 @@ The following data is of interest:
 
 The construct `{f:if(condition: menuItem.active, then: 'active')}`
 output the string "active" if `{menuItem.active}` is set. The syntax might look
-confusing at first. It is an :ref:`t3viewhelper:typo3fluid-fluid-if`
+confusing at first. It is an
+:ref:`f:if ViewHelper <t3viewhelper:typo3fluid-fluid-if>`
 displayed in the :ref:`Fluid inline notation <t3coreapi:fluid-inline-notation>`.
 
 ..  _main-menu-creation-preview:
