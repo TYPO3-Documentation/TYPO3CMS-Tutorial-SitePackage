@@ -27,7 +27,8 @@ these.
     sub-pages.
 
     If this becomes a requirement, the TypoScript code used to generate the menu
-    (see chapter :ref:`main-menu-creation`) and the Fluid template file that
+    (see :ref:`TypoScript configuration of the main menu <main-menu-creation>`)
+    and the Fluid template file that
     outputs the menu (:file:`Resources/Private/Layouts/Page/Default.html`) need
     to be updated.
 

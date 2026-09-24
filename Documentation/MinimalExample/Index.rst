@@ -147,7 +147,7 @@ The set itself is defined in the :file:`config.yaml` file inside this folder:
     :emphasize-lines: 1-2
 
 You will learn more about site sets in chapter
-:ref:`site_set`.
+:ref:`the site set <site_set>`.
 
 The TYPO3 Explained complete reference is here:
 :ref:`Site sets <t3coreapi:site-sets>`.
@@ -207,7 +207,8 @@ below defines the rendering of the site with Fluid templates:
 Line 6 sets the directory the Fluid Templates are loaded from. Line 7 sets a value
 from the site package settings.
 
-Learn more about using Fluid Templates in chapter :ref:`fluid-templates`.
+Learn more about using Fluid templates in chapter
+:ref:`Fluid Templates <fluid-templates>`.
 
 ..  _cm-preview-page:
 
