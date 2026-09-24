@@ -7,7 +7,8 @@
 Display the content elements on your page
 =========================================
 
-In step :ref:`create-section` we moved the part of our template, that will
+In step :ref:`Move the content into a section <create-section>` we moved the
+part of our template, that will
 contain the content, into its own section. This section is however still filled
 with dummy content:
 
@@ -188,7 +189,9 @@ rendering each content element using the
 For content elements the main type is always `tt_content`. Therefore we include
 the TypoScript object :typoscript:`tt_content` here. It is defined in the TypoScript
 of the system extension :composer:`typo3/cms-fluid-styled-content`. We included
-the site set of that extension in step :ref:`content-mapping-site-set`.
+the site set of that extension in step
+:ref:`Include the site sets of fluid-styled-content as dependency
+<content-mapping-site-set>`.
 
 `fluid-styled-content` internally uses
 Fluid templates and TypoScript with data processors just like the ones we were
