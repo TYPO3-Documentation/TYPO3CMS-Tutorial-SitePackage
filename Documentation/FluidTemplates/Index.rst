@@ -25,7 +25,8 @@ how to customize them to your needs. You should also be able to create some
 Fluid templates yourself.
 
 If you prefer to start with an HTML template and build it up to a Fluid template
-step by step, have a look at :ref:`fluid-templates-scratch`.
+step by step, have a look at
+:ref:`Fluid templates from scratch <fluid-templates-scratch>`.
 
 ..  contents:: Topics covered in this chapter
 
