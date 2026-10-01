@@ -206,7 +206,7 @@ Extract the content element rendering to a partial
 
 As we want to reuse the Fluid part about rendering content elements in the
 next steps, we extract it into a partial, like we did with the menu in
-step :ref:`Extract the menu into a partial <t3sitepackage:create_partial_header>`.
+step :ref:`Extract the menu into a partial <t3sitepackage:create-partial-header>`.
 
 We want to be able to render content elements of **any content area**. Therefore pass
 the records of the page layout area to be rendered as variable `records` to
