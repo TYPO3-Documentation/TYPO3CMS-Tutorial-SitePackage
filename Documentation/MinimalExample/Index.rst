@@ -144,7 +144,7 @@ The set itself is defined in the :file:`config.yaml` file inside this folder:
     :emphasize-lines: 1-2
 
 You will learn more about site sets in chapter
-:ref:`the site set <site_set>`.
+:ref:`the site set <site-set>`.
 
 The TYPO3 Explained complete reference is here:
 :ref:`Site sets <t3coreapi:site-sets>`.
