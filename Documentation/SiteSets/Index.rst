@@ -22,7 +22,7 @@ our site package.
 
     */Index
 
-..  _site_set:
+..  _site-set:
 
 The site set
 ============
@@ -63,7 +63,7 @@ Your site set folder now contains the following files:
         *   page.tsconfig
         *   setup.typoscript
 
-..  _site_settings:
+..  _site-settings:
 
 Introduce site settings to configure fluid-styled-content
 =========================================================
