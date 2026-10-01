@@ -93,7 +93,7 @@ properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 
     Choose the backend layout
 
-..  _choose_page_layout:
+..  _choose-page-layout:
 
 Choose the page layout in the page properties
 ---------------------------------------------
@@ -165,7 +165,7 @@ like this:
 
     *   Is `{content}` spelled correctly and uses the correct syntax?
     *   Did you :ref:`define and include the page layout <backend-page-layouts>`?
-    *   Did you :ref:`choose the correct page layout in the page properties <choose_page_layout>`?
+    *   Did you :ref:`choose the correct page layout in the page properties <choose-page-layout>`?
     *   Did you define the correct data processor `page-content` in TypoScript?
     *   Did you override the default variable name using
         :confval:`as <t3tsref:pagecontentfetchingprocessor-as>` in the data processor?
@@ -206,7 +206,7 @@ Extract the content element rendering to a partial
 
 As we want to reuse the Fluid part about rendering content elements in the
 next steps, we extract it into a partial, like we did with the menu in
-step :ref:`Extract the menu into a partial <t3sitepackage:create_partial_header>`.
+step :ref:`Extract the menu into a partial <t3sitepackage:create-partial-header>`.
 
 We want to be able to render content elements of **any content area**. Therefore pass
 the records of the page layout area to be rendered as variable `records` to
