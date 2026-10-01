@@ -93,7 +93,7 @@ properties at :guilabel:` Appearance >  Page Layout > Backend Layout`.
 
     Choose the backend layout
 
-..  _choose_page_layout:
+..  _choose-page-layout:
 
 Choose the page layout in the page properties
 ---------------------------------------------
@@ -165,7 +165,7 @@ like this:
 
     *   Is `{content}` spelled correctly and uses the correct syntax?
     *   Did you :ref:`define and include the page layout <backend-page-layouts>`?
-    *   Did you :ref:`choose the correct page layout in the page properties <choose_page_layout>`?
+    *   Did you :ref:`choose the correct page layout in the page properties <choose-page-layout>`?
     *   Did you define the correct data processor `page-content` in TypoScript?
     *   Did you override the default variable name using
         :confval:`as <t3tsref:pagecontentfetchingprocessor-as>` in the data processor?

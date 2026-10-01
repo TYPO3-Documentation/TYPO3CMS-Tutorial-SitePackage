@@ -12,7 +12,7 @@ Fluid Templates from Scratch
 
 ..  _implement-templates-files:
 ..  _the-page-layout-file:
-..  _create_template:
+..  _create-template:
 
 Create the Fluid templates
 ==========================
@@ -62,7 +62,7 @@ Load assets (CSS, JavaScript)
 -----------------------------
 
 Load all CSS which had been removed in step
-:ref:`Create the Fluid templates <create_template>`
+:ref:`Create the Fluid templates <create-template>`
 using the :ref:`Asset.css ViewHelper <f:asset.css> <t3viewhelper:typo3-fluid-asset-css>`.
 
 Replace `<script>` tags in the body by using the
@@ -104,7 +104,7 @@ Just like happened with the CSS paths in step
 image is now replaced in the output by a path like
 `/_assets/99a57ea771f379715c522bf185e9a315/Images/logo.svg?1728057333`.
 
-..  _create_partial_jumbotron:
+..  _create-partial-jumbotron:
 ..  _partials:
 
 Split up the template into partials
@@ -158,7 +158,7 @@ should now look like this:
 You will learn how to display the dynamic content in chapter
 :ref:`Display the content elements on your page <content-mapping>`.
 
-..  _create_partial_header:
+..  _create-partial-header:
 
 Extract the menu into a partial
 -------------------------------
@@ -176,7 +176,7 @@ the same like from within the template.
 Chapter :ref:`Main menu <t3sitepackage:main-menu-creation>` will teach you how
 to make the menu work.
 
-..  _create_partial_footer_menu:
+..  _create-partial-footer-menu:
 
 Extract the footer menu into a partial
 -------------------------------
@@ -193,7 +193,7 @@ The footer menu partial looks like this:
 ..  literalinclude:: _codesnippets/_FooterMenuPartial.html
     :caption: Resources/Private/PageView/Partials/Navigation/FooterMenu.html
 
-..  _create_section:
+..  _create-section:
 
 Move the content into a section
 -------------------------------
@@ -228,7 +228,7 @@ We can repeat the above steps for the subpage and write such a template:
     :linenos:
     :emphasize-lines: 1-9
 
-..  _create_partial_breadcrumb:
+..  _create-partial-breadcrumb:
 
 Extract the breadcrumb into a partial
 -------------------------------------
