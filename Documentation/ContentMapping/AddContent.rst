@@ -54,7 +54,7 @@ You can return to the previous view by clicking :guilabel:`Close`.
 
 ..  tip::
     For a quick way to close and save a content element and return to the previews
-    view just click the :guilabel:`Close` button and press :guilabel:`Enter`.
+    view, click the :guilabel:`Close` button and press :guilabel:`Enter`.
 
 :ref:`Preview the page <t3sitepackage:cm-preview-page>` by clicking button
 :guilabel:`View webpage`.

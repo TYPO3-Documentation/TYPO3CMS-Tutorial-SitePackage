@@ -48,7 +48,7 @@ Using a content area with slide mode
 
 The content elements will be automatically found and provided to your template.
 Therefore the template for the area "Stage" looks no different from the one
-for the main area except that is uses the corresponding variable of course:
+for the main area except that is uses the corresponding variable:
 
 ..  literalinclude:: /CodeSnippets/my_site_package/Resources/Private/Templates/Partials/Stage.fluid.html
     :caption: packages/my_site_package/Resources/Private/Templates/Partials/Stage.fluid.html
