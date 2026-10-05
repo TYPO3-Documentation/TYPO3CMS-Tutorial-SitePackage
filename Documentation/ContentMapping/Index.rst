@@ -183,7 +183,7 @@ Use the :code:`<f:render.contentArea contentArea="{content.main}"/>` ViewHelper
 to replace these lines.
 That's it! No more loops with TypoScript objects are needed in TYPO3 14 on using
 this new ViewHelper.
-Just define which identifier (you find the identifiers in the deubg output) from
+Define which identifier (you find the identifiers in the deubg output) from
 the backend_layout should be used to render it's content elemnts.
 
 `fluid-styled-content` internally uses

@@ -107,7 +107,7 @@ Line 11: We loop the items a second time to now display all carousel slides.
 Line 13: The field `image` was defined with option `relationship: oneToOne` in
 the :ref:`config.yaml <carousel-configuration>` it can therefore only contain
 one image at maximum. As supplying an image is also mandatory `minitems: 1`
-we can be sure there is always exactly one image. And just use the
+we can be sure there is always exactly one image. Use the
 `Image ViewHelper <f:image> <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-image>`_
 to display the image.
 
