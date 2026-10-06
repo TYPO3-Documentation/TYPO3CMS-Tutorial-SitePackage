@@ -4,7 +4,7 @@
 
 ```
 Documentation/                              # the actual manual (reST source, published to docs.typo3.org)
-Documentation/CodeSnippets/my_site_package/ # GENERATED copy of the site_package repo — never edit, see rule 6
+Documentation/CodeSnippets/my_site_package/ # GENERATED copy of the site_package repo — never edit, see rule 7
 Documentation/<Chapter>/_codesnippets/      # hand-written snippets and diffs — edit these here
 Build/DownloadSitePackage/                  # the script that fetches the generated copy
 CONTRIBUTING.md                             # how to contribute
@@ -33,7 +33,11 @@ https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument):
    anchors are never removed once published; see
    `Documentation/Reference/ReStructuredText/Links/Anchors.rst` in the
    how-to-document guide.
-6. **Do not hand-edit `Documentation/CodeSnippets/my_site_package/`** — it is a
+6. **Link TYPO3 documentation with permalinks**, also inside this manual,
+   and give every link its own link text; see
+   `Documentation/Reference/ReStructuredText/Links/Documentation.rst` in the
+   how-to-document guide. Do not suggest replacing a permalink with `:ref:`.
+7. **Do not hand-edit `Documentation/CodeSnippets/my_site_package/`** — it is a
    copy of the [site_package](https://github.com/TYPO3-Documentation/site_package)
    repository, not source of this manual. `make codesnippets` deletes the whole
    directory and fetches it again, and a scheduled workflow does the same on the
@@ -42,8 +46,8 @@ https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument):
    carries it over. The `_codesnippets/` directories inside the chapters
    (`ContentMapping/`, `FluidTemplates/`) only look similar — they are
    hand-written and are edited here as normal.
-7. **Validate before committing** — run `make test-docs`.
-8. **Never commit or push without being asked.**
+8. **Validate before committing** — run `make test-docs`.
+9. **Never commit or push without being asked.**
 
 ## Commit message format
 
