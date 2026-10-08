@@ -1,6 +1,8 @@
 :orphan:
 ..  include:: /Includes.rst.txt
 
+..  _extension-configuration-moved:
+
 =======================
 Extension configuration
 =======================
