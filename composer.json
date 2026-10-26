@@ -23,7 +23,6 @@
         "vendor-dir": ".Build/vendor"
     },
     "require-dev": {
-        "t3docs/codesnippet": "dev-main",
         "typo3/cms-adminpanel": "dev-main as 13.3.0",
         "typo3/cms-backend": "dev-main as 13.3.0",
         "typo3/cms-belog": "dev-main as 13.3.0",
@@ -60,13 +59,5 @@
         "typo3/cms-workspaces": "dev-main as 13.3.0",
         "t3docs/examples": "dev-main",
         "t3docs/site-package": "dev-main"
-    },
-    "scripts": {
-        "generate:codesnippets": [
-            ".Build/vendor/bin/typo3 codesnippet:create Documentation/CodeSnippets/"
-        ],
-        "generate": [
-            "@generate:codesnippets"
-        ]
     }
 }
